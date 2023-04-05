@@ -1,0 +1,40 @@
+.d-flex-size{
+    width: 600px;
+}
+.nav-border{
+    border: 0px;
+    border-bottom: 5px;
+    border-color: #6200EA;
+    border-style: outset;
+}
+
+.col-gradient{
+    background-image: linear-gradient(to right, #7C4DFF, #FF4081);
+    border-radius: 10px;
+}
+
+
+/*tela login*/
+
+.section-gradient{
+    background-image: linear-gradient(to bottom, #3005ce, #a303a3);
+    border-radius: 10px;
+}
+
+section{
+    width: 500px;
+}
+
+.h2-login{
+    text-align: center;
+    color: white; 
+}
+
+.botao-entrar{
+    float: right
+}
+
+.link-criar{
+    color: white;
+    font-size: 18px;
+}
