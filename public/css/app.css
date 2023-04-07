@@ -1,40 +1,34 @@
-.d-flex-size{
-    width: 600px;
-}
-.nav-border{
-    border: 0px;
-    border-bottom: 5px;
-    border-color: #6200EA;
-    border-style: outset;
-}
+/*NavBar: Começo*/
 
-.col-gradient{
-    background-image: linear-gradient(to right, #7C4DFF, #FF4081);
-    border-radius: 10px;
-}
+    /*Cor navbar*/
+
+    #nav.navbar{
+        background-color: #252327;
+        border: 0;
+        border-bottom: 5px;
+        border-color: rgb(204, 3, 197);
+        border-style: outset;
+    }
+
+    /*Cor navbar*/
+
+/*NavBar: Fim*/
 
 
-/*tela login*/
+/*Botões OffCanvas: Começo*/
 
-.section-gradient{
-    background-image: linear-gradient(to bottom, #3005ce, #a303a3);
-    border-radius: 10px;
-}
+    /*Cor dos Botões*/
 
-section{
-    width: 500px;
-}
+    #botoesMenus.btn-custom {
+        background-color: #b811b8;
+        color: #ffffff; /* opcional: define a cor do texto para branco */
+    }
 
-.h2-login{
-    text-align: center;
-    color: white; 
-}
+    #botoesMenus.btn-custom:hover {
+        background-color: #701570; /* cor diferente quando o mouse está em cima */
+        color: #ffffff;
+    }
 
-.botao-entrar{
-    float: right
-}
+  /*Cor dos Botões*/
 
-.link-criar{
-    color: white;
-    font-size: 18px;
-}
+/*Botões OffCanvas: Fim*/
