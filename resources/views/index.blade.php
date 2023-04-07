@@ -4,11 +4,10 @@
     
 @section('content')
 
-<br> <br> <br>
+
     
-          <h1 style="text-align: center;">TELA INICIAL</h1>
+          <h1 style="text-align: center; padding: 10rem">TELA INICIAL</h1>
     
-          <br> <br>
 
 @endsection
 

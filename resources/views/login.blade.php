@@ -1,8 +1,10 @@
 @extends('layouts.main')
 
-@section('title', 'PL - Inicio')
+@section('title', 'PL - Login')
     
 @section('content')
+
+<h1 style="text-align: center; padding: 8rem">Login</h1>
 
 <form class="row gy-2 gx-3 align-items-center">
     <div class="col-auto">

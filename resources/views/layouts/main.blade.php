@@ -8,9 +8,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/app.css">
         
-
         <title>@yield('title')</title>
-
+CU BEM GR
     </head>
 
 
@@ -23,11 +22,12 @@
 
     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
       Perfil Menu</button>
+      
       <!-- Obs: Depois de abrir o offcanvas, se clicar fora o menu continua aberto.
       Procurar jeito de como fazer com que ele suma ao clicar fora do menu. -->
 
-      <a href="/index" class="navbar-brand">
-        <img src="img/icon-piggy(semcopy).png" width="40px" id="IconePorquinho">
+      <a href="/" class="navbar-brand" id="IconePorquinho">
+        <img src="img/icon-piggy(semcopy).png" width="40px">
       </a>
   </div>
 </nav> 
@@ -42,8 +42,8 @@
   </div>
   <div class="offcanvas-body " id="sideBar">
     <div class="d-grid gap-2">
-      <button id="botoesMenus" class="btn btn-custom text-start border-start-0 border-end-0" type="button">Button</button>
-      <button id="botoesMenus" class="btn btn-custom text-start border-start-0 border-end-0" type="button">Button</button>
+      <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button">  Login   </a>
+      <a id="botoesMenus" class="btn btn-custom text-start" type="button">  Cursos  </a>
     </div>
   </div>
 </div>
