@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
 
         <meta charset="utf-8">
@@ -9,7 +10,7 @@
         <link rel="stylesheet" href="css/app.css">
         
         <title>@yield('title')</title>
-CU BEM GR
+
     </head>
 
 
@@ -17,17 +18,19 @@ CU BEM GR
 
 <!-- Navbar -->
 
-<nav class="navbar nav-border" id="nav">
+<nav class="navbar nav-border fixed-top" id="nav">
   <div class="container-fluid">
 
-    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-      Perfil Menu</button>
+    <a href="#" id="menuButton" class="btn btn-custom" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+      <img width="30px" src="img/user-defaut(semcopy).png" alt="Perfil Menu">
+    </a>
+    
       
       <!-- Obs: Depois de abrir o offcanvas, se clicar fora o menu continua aberto.
       Procurar jeito de como fazer com que ele suma ao clicar fora do menu. -->
 
-      <a href="/" class="navbar-brand" id="IconePorquinho">
-        <img src="img/icon-piggy(semcopy).png" width="40px">
+      <a href="/" class="navbar-brand" id="offCanvasButton">
+        <img  width="40px" src="img/icon-piggy(semcopy).png" alt="IconePorquinho">
       </a>
   </div>
 </nav> 

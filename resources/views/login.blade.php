@@ -4,41 +4,38 @@
     
 @section('content')
 
-<h1 style="text-align: center; padding: 8rem">Login</h1>
+<h1 style="text-align: center; padding-top: 10rem; padding-bottom: 4rem">Login</h1>
 
-<form class="row gy-2 gx-3 align-items-center">
-    <div class="col-auto">
-      <label class="visually-hidden" for="autoSizingInput">Name</label>
-      <input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe">
-    </div>
-    <div class="col-auto">
-      <label class="visually-hidden" for="autoSizingInputGroup">Username</label>
-      <div class="input-group">
-        <div class="input-group-text">@</div>
-        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card bg-gradient-custom" id="cardLogin">
+        <div class="card-body">
+          <h5 style="font-family: " class="card-title">Formulário de Cadastro</h5>
+          <hr>
+          <form>
+            <div class="mb-3">
+              <label for="usuario" class="form-label">Usuário</label>
+              <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Digite seu nome de usuário">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
+            </div>
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="col-auto">
-      <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-      <select class="form-select" id="autoSizingSelect">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-    </div>
-    <div class="col-auto">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
-        <label class="form-check-label" for="autoSizingCheck">
-          Remember me
-        </label>
-      </div>
-    </div>
-    <div class="col-auto">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </form>
+  </div>
+</div>
+
+
+
 
 @endsection
 

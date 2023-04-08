@@ -1,34 +1,59 @@
-/*NavBar: Começo*/
+/*Index*/
 
-    /*Cor navbar*/
+    /*NavBar: Start*/
 
-    #nav.navbar{
-        background-color: #252327;
-        border: 0;
-        border-bottom: 5px;
-        border-color: rgb(204, 3, 197);
-        border-style: outset;
+        /*Cor navbar e borda*/
+        #nav.navbar
+        {
+            background-color: #252327;
+            border: 0;
+            border-bottom: 5px;
+            border-color: rgb(175, 5, 169);
+            border-style: outset;
+        }
+
+        /*Cor do fundo do icone do usuario*/
+        #menuButton.btn-custom
+        {
+            background-color: rgb(175, 5, 169);   
+        }
+    /*NavBar: End*/
+
+
+    /*Botões OffCanvas: Start*/
+
+        /*Cor dos Botões*/
+        #botoesMenus.btn-custom 
+        {
+            background-color: #b811b8;
+            color: #ffffff; /* opcional: define a cor do texto para branco */
+        }
+
+        #botoesMenus.btn-custom:hover 
+        {
+            background-color: #701570; /* cor diferente quando o mouse está em cima */
+            color: #ffffff;
+        }
+
+
+    /*Botões OffCanvas: End*/
+
+/*Index*/
+
+
+
+/*Login*/
+
+    /*Form de Criar a area de login: Start*/
+
+    /*Cor da Caixa de login*/
+    #cardLogin.bg-gradient-custom 
+    {
+        background: linear-gradient(to bottom right, rgba(255, 64, 129, 1) 15%,rgba(124, 77, 255, 1) 100%);
+        color: #ffffff;  
     }
 
-    /*Cor navbar*/
+    /*Form de Criar a area de login: End*/ 
 
-/*NavBar: Fim*/
-
-
-/*Botões OffCanvas: Começo*/
-
-    /*Cor dos Botões*/
-
-    #botoesMenus.btn-custom {
-        background-color: #b811b8;
-        color: #ffffff; /* opcional: define a cor do texto para branco */
-    }
-
-    #botoesMenus.btn-custom:hover {
-        background-color: #701570; /* cor diferente quando o mouse está em cima */
-        color: #ffffff;
-    }
-
-  /*Cor dos Botões*/
-
-/*Botões OffCanvas: Fim*/
+/*Login*/
+    
