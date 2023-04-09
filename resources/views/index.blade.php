@@ -4,8 +4,10 @@
     
 @section('content')
 
+
+<h1 id="tituloP" style="text-align: center; padding-top: 10rem; padding-bottom: 4rem; font-family:Carlito">
+    Tela Inicial</h1>
     
-          <h1 style="text-align: center; padding: 10rem">TELA INICIAL</h1>
     
 
 @endsection

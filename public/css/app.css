@@ -1,14 +1,18 @@
-/*Index*/
+
+
+
+
+/* Main.blade */
 
     /*NavBar: Start*/
 
         /*Cor navbar e borda*/
         #nav.navbar
         {
-            background-color: #252327;
+            background-color: #1c1b1d;
             border: 0;
             border-bottom: 5px;
-            border-color: rgb(175, 5, 169);
+            border-color: rgb(185, 39, 230);
             border-style: outset;
         }
 
@@ -17,6 +21,15 @@
         {
             background-color: rgb(175, 5, 169);   
         }
+
+        #sidebar-linhaCima.btn-custom {
+            background-color: #1c1b1d;
+            border: 0;
+            border-bottom: 5px;
+            border-color: rgb(185, 39, 230);
+            border-style: outset;
+
+        } 
     /*NavBar: End*/
 
 
@@ -38,22 +51,30 @@
 
     /*Botões OffCanvas: End*/
 
-/*Index*/
+/* Main.blade */
 
 
 
-/*Login*/
+/* Area de Login */
 
     /*Form de Criar a area de login: Start*/
 
     /*Cor da Caixa de login*/
     #cardLogin.bg-gradient-custom 
-    {
-        background: linear-gradient(to bottom right, rgba(255, 64, 129, 1) 15%,rgba(124, 77, 255, 1) 100%);
+    {     
+        background: linear-gradient(to bottom right, rgb(194, 61, 221) 10%,rgb(48, 23, 112) 100%);
         color: #ffffff;  
     }
 
+    #cardLogin.card 
+    {
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+    }
+      
+
     /*Form de Criar a area de login: End*/ 
 
-/*Login*/
-    
+/* Area de Login */
+
+
+tituloP
