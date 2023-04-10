@@ -12,8 +12,6 @@
       <title>@yield('title')</title>
 
   </head>
-
-
 <body style="font-family:Jamrul">
 
   <!-- Navbar -->
