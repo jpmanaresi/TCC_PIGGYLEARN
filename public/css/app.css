@@ -9,8 +9,8 @@
         {
             background-color: #1c1b1d;
             border: 0;
-            border-bottom: 5px;
-            border-color: rgb(185, 39, 230);
+            border-bottom: 3px;
+            border-color: rgb(175, 5, 169);
             border-style: outset;
         }
 
@@ -23,8 +23,9 @@
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
             border: 0;
-            border-bottom: 5px;
-            border-color: rgb(185, 39, 230);
+            padding-top: 15px;
+            border-bottom: 3px;
+            border-color: rgb(175, 5, 169);
             border-style: outset;
 
         } 
@@ -73,6 +74,14 @@
     /*Form de Criar a area de login: End*/ 
 
 /* Area de Login */
+
+    #corpoP.body 
+    {
+        font-family: Jamrul;
+        background-image: url(img/piggy-bank-fill.jpg);
+        background-size: 1%; /* define o tamanho da imagem como 10% */
+        background-repeat: repeat; /* define a repetição da imagem por toda a página */
+    }
 
 /* Area de Login 
 #tituloP.

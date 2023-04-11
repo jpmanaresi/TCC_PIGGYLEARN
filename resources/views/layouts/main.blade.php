@@ -14,8 +14,9 @@
       
       <title>@yield('title')</title>
 
+
   </head>
-<body style="font-family:Jamrul">
+<body  id="corpoP">
 
   <!-- Navbar -->
     <nav class="navbar nav-border fixed-top" id="nav">
@@ -87,7 +88,7 @@
     
     
   <!-- Conteudo -->
-<div style="margin-top: 6rem"> 
+<div style="margin-top: 6rem;"> 
 
     @yield('content')
     
