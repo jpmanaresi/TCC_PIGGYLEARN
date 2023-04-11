@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card bg-gradient-custom" id="cardLogin">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div id="titulocard" class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

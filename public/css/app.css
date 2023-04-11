@@ -1,8 +1,14 @@
-    /* fonte de todo html */
-    *{
-        font-family: "JetBrains Mono";
-    }   
+/* fonte de todo html */
+*{
+    font-family: "Carlito";
+}   
 
+/* Divisão entre o topo da pagina com o conteudo */
+#corpot
+{
+    margin-top: 6rem;
+}
+    
 /* main'.blade */
     
     /*NavBar: Start*/
@@ -57,6 +63,21 @@
 
 /* index.blade */
 
+    /* Titulos da pagina */
+    #tituloP1
+    {
+        text-align: center; 
+        padding-bottom: 4rem; 
+        font-family:JetBrains Mono;
+    }
+
+    #titulocard{
+        text-align: center; 
+        font-family:JetBrains Mono;
+    }
+
+
+    
 /* index.blade */
 
 

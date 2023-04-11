@@ -16,7 +16,7 @@
 
 
   </head>
-<body  id="corpoP">
+<body>
 
   <!-- Navbar -->
     <nav class="navbar nav-border fixed-top" id="nav">
@@ -88,7 +88,7 @@
     
     
   <!-- Conteudo -->
-<div style="margin-top: 6rem;"> 
+<div id="corpot"> 
 
     @yield('content')
     
