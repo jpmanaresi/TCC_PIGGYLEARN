@@ -12,7 +12,7 @@
         {
             background-color: #1c1b1d;
             border: 0;
-            border-bottom: 3px;
+            border-bottom: 5px;
             border-color: rgb(175, 5, 169);
             border-style: outset;
         }
@@ -27,7 +27,7 @@
             background-color: #1c1b1d;
             border: 0;
             padding-top: 15px;
-            border-bottom: 3px;
+            border-bottom: 5px;
             border-color: rgb(175, 5, 169);
             border-style: outset;
 
