@@ -1,10 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container">
+
+<div style="font-family:Carlito" class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+      <div class="col-md-6">
+        <div class="card bg-gradient-custom" id="cardLogin">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
