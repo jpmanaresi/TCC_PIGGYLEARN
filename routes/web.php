@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [UserController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Auth::routes();
 

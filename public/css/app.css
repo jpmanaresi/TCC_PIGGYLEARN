@@ -1,5 +1,7 @@
 /* Main.blade */
-
+* {
+    font-family: "JetBrains Mono";
+}
     /*NavBar: Start*/
 
         /*Cor navbar e borda*/
