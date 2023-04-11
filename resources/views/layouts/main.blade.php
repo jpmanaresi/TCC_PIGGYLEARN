@@ -49,15 +49,16 @@
           <a href="/" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
             Tela Inicial 
           </a>
-
+@guest
           <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
             Login   
           </a>
-
+@endguest
+@auth
           <a id="botoesMenus" class="btn btn-custom text-start" type="button"> 
             Cursos  
           </a>
-
+@endauth
         </div>
       </div>
 
