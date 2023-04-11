@@ -1,7 +1,10 @@
-/* Main.blade */
-* {
-    font-family: "JetBrains Mono";
-}
+    /* fonte de todo html */
+    *{
+        font-family: "JetBrains Mono";
+    }   
+
+/* main'.blade */
+    
     /*NavBar: Start*/
 
         /*Cor navbar e borda*/
@@ -50,11 +53,14 @@
 
     /*Botões OffCanvas: End*/
 
-/* Main.blade */
+/* main.blade */
+
+/* index.blade */
+
+/* index.blade */
 
 
-
-/* Area de Login */
+/* login.blade */
 
     /*Form de Criar a area de login: Start*/
 
@@ -73,16 +79,4 @@
 
     /*Form de Criar a area de login: End*/ 
 
-/* Area de Login */
-
-    #corpoP.body 
-    {
-        font-family: Jamrul;
-        background-image: url(img/piggy-bank-fill.jpg);
-        background-size: 1%; /* define o tamanho da imagem como 10% */
-        background-repeat: repeat; /* define a repetição da imagem por toda a página */
-    }
-
-/* Area de Login 
-#tituloP.
-*/
+/* login.blade */
