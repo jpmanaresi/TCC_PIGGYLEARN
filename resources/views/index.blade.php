@@ -53,7 +53,7 @@
           </div>
           <div class="col-md-6 col-lg-3 mb-4">
             <div id="cardbody2" class="card">
-              <div class="card-body">
+              <div class="card-body"> 
                 <h5 id="tituloCardIndex" class="card-title">Card 4</h5>
                 <p id="cardtext" class="card-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
