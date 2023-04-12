@@ -79,50 +79,73 @@
         font-family:JetBrains Mono;
     }
 
-    #tituloCardIndex
+    #tituloCardIndex1
     {
         text-align: start; 
         font-size: larger;
         font-weight: bold;
         font-family:JetBrains Mono;
     }
+
+    #tituloCardIndex2
+    {
+        text-align: start; 
+        font-size: larger;
+        font-weight: normal;
+        font-family:JetBrains Mono;
+    }
     
     /* Personalização dos card do index */
     #cardbody1
     {
+        border: 0;
         border-radius: 15px;
-
         font-weight: bold;
-
-        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
         color: #ffffff; 
+        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
     }
 
     #cardbody2
     {
+        border: 0;
         border-radius: 15px;
         font-weight: normal;
-        font-family:JetBrains Mono;
-        background: linear-gradient(to bottom right, rgb(216, 86, 241) 10%,rgb(31, 13, 78) 100%);
         color: #ffffff; 
+        background: linear-gradient(to bottom right, rgb(216, 86, 241) 10%,rgb(31, 13, 78) 100%);
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
     }
 
-    #cardtext
-    {
+    
+    #cardtext {
         background-color: #ffffff;
-        
         color: #1c1b1d;
         font-weight: normal;
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
         text-align: justify;
-        font-size: 18px;
+        font-size: 16px;
         padding: 20px;
+        padding-top: 10px;
         line-height: 23px;
-    padding-top: 10px;
+
         border-radius: 10px 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-    }
+
+        max-height: 150px; /* define o limite de 150 pixels de altura */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6; /* limita o número de linhas */
+      }
+      
+      .destaque {
+        transform: scale(1.1); /* aumenta o tamanho em 10% */
+        z-index: 1; /* coloca o card em primeiro plano */
+        border: 2px solid #f00; /* adiciona uma borda vermelha */
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* adiciona uma sombra */
+      }
+      
 
     
 /* index.blade */
