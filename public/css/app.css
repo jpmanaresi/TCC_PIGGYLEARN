@@ -64,18 +64,65 @@
 /* index.blade */
 
     /* Titulos da pagina */
-    #tituloP1
+    #tituloPagina
     {
         text-align: center; 
-        padding-bottom: 4rem; 
+        padding-bottom: 2rem; 
         font-family:JetBrains Mono;
     }
 
-    #titulocard{
+    /* Titulos da pagina */
+    #tituloCardlogin
+    {
         text-align: center; 
+        font-size: larger;
         font-family:JetBrains Mono;
     }
 
+    #tituloCardIndex
+    {
+        text-align: start; 
+        font-size: larger;
+        font-weight: bold;
+        font-family:JetBrains Mono;
+    }
+    
+    /* Personalização dos card do index */
+    #cardbody1
+    {
+        border-radius: 15px;
+
+        font-weight: bold;
+
+        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+        color: #ffffff; 
+    }
+
+    #cardbody2
+    {
+        border-radius: 15px;
+        font-weight: normal;
+        font-family:JetBrains Mono;
+        background: linear-gradient(to bottom right, rgb(216, 86, 241) 10%,rgb(31, 13, 78) 100%);
+        color: #ffffff; 
+    }
+
+    #cardtext
+    {
+        background-color: #ffffff;
+        
+        color: #1c1b1d;
+        font-weight: normal;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        text-align: justify;
+        font-size: 18px;
+        padding: 20px;
+        line-height: 23px;
+    padding-top: 10px;
+        border-radius: 10px 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 
     
 /* index.blade */
