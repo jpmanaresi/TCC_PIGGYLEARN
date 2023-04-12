@@ -57,6 +57,9 @@
           <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             Login   
           </a>
+          <a href="/register" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
+            Criar Conta   
+          </a>
 @endguest
 @auth
   

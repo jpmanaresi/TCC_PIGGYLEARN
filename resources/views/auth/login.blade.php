@@ -63,6 +63,7 @@
                                         {{ __('Esqueceu sua senha?') }}
                                     </a>
                                 @endif
+                                <p> Ainda não tem usuário? <a class="btn btn-link" href="/register">Criar Conta</a>
                             </div>
                         </div>
                     </form>
