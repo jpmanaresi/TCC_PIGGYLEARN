@@ -16,12 +16,20 @@
         /*Cor navbar e borda*/
         #nav.navbar
         {
+            height: 70px;
             background-color: #1c1b1d;
             border: 0;
             border-bottom: 5px;
             border-color: rgb(175, 5, 169);
             border-style: outset; 
         }
+        
+        .container-fluid {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+          }
+          
 
         /*Cor do fundo do icone do usuario*/
         #menuButton.btn-custom
@@ -61,6 +69,9 @@
 
 /* main.blade */
 
+
+
+
 /* index.blade */
 
     /* Titulos da pagina */
@@ -71,84 +82,103 @@
         font-family:JetBrains Mono;
     }
 
-    /* Titulos da pagina */
-    #tituloCardlogin
-    {
-        text-align: center; 
-        font-size: larger;
-        font-family:JetBrains Mono;
-    }
+    /* Cards */
 
-    #tituloCardIndex1
-    {
-        text-align: start; 
-        font-size: larger;
-        font-weight: bold;
-        font-family:JetBrains Mono;
-    }
+        /* Titulos dos cards 
+        Estão separados para que o primeiro card tenha um destaque maior */ */
+        
+        #tituloCardlogin
+        {
+            text-align: center; 
+            font-size: larger;
+            font-family:JetBrains Mono;
+        }
 
-    #tituloCardIndex2
-    {
-        text-align: start; 
-        font-size: larger;
-        font-weight: normal;
-        font-family:JetBrains Mono;
-    }
-    
-    /* Personalização dos card do index */
-    #cardbody1
-    {
-        border: 0;
-        border-radius: 15px;
-        font-weight: bold;
-        color: #ffffff; 
-        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-    }
+        #tituloCardIndex1
+        {
+            padding-left: 5PX;
+            text-align: start; 
+            font-size: larger;
+            font-weight: bold;
+            font-family:JetBrains Mono;
+        }
 
-    #cardbody2
-    {
-        border: 0;
-        border-radius: 15px;
-        font-weight: normal;
-        color: #ffffff; 
-        background: linear-gradient(to bottom right, rgb(216, 86, 241) 10%,rgb(31, 13, 78) 100%);
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-    }
+        #tituloCardIndex2
+        {
+            padding-left: 5PX;
+            text-align: start; 
+            font-size: larger;
+            font-weight: normal;
+            font-family:JetBrains Mono;
+        }
 
-    
-    #cardtext {
-        background-color: #ffffff;
-        color: #1c1b1d;
-        font-weight: normal;
-        text-align: justify;
-        font-size: 16px;
-        padding: 20px;
-        padding-top: 10px;
-        line-height: 23px;
+        /* Configurações gerais dos cards do Index*/
 
-        border-radius: 10px 10px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        #cardbody1
+        {
+            border: 0;
+            border-radius: 10px;
+            font-weight: bold;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3PX;
+            color: #ffffff; 
+            background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        }
 
-        max-height: 150px; /* define o limite de 150 pixels de altura */
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6; /* limita o número de linhas */
-      }
-      
-      .destaque {
-        transform: scale(1.1); /* aumenta o tamanho em 10% */
-        z-index: 1; /* coloca o card em primeiro plano */
-        border: 2px solid #f00; /* adiciona uma borda vermelha */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* adiciona uma sombra */
-      }
-      
+        #cardbody2
+        {
+            border: 0;
+            border-radius: 10px;
+            font-weight: normal;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3PX;
+            color: #ffffff; 
+            background: linear-gradient(to bottom right, rgb(216, 86, 241) 10%,rgb(31, 13, 78) 100%);
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        }
 
-    
+            
+        #cardtext 
+        {
+            background-color: #ffffff;
+            color: #1c1b1d;
+            font-weight: normal;
+            text-align: justify;
+            font-size: 16px;
+            padding: 20px;
+            padding-top: 10px;
+            line-height: 23px;
+
+            border-radius: 10px 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            max-height: 150px; /* define o limite de 150 pixels de altura */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6; /* limita o número de linhas */
+        }
+
+            /* Configurações gerais dos cards */
+
+        /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
+        #cardjenala.card-body
+        {
+            padding-left: 5px; 
+            padding-bottom: 5px; 
+            padding-right: 5px;
+        }
+        
+    /* Cards */   
+          
 /* index.blade */
+
+
 
 
 /* login.blade */

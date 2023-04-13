@@ -9,12 +9,13 @@
         Tela Inicial
     </h1>
 
+    
 
     <div class="container">
         <div class="row">   
-          <div class="col-md-6 col-lg-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div id="cardbody1" class="card destaque">
-              <div class="card-body">
+              <div id="cardjenala" class="card-body">
                 <h5 id="tituloCardIndex1" class="card-title">
                   Titulo Generico
                 </h5>
@@ -28,9 +29,9 @@
             </div>
           </div>
           
-          <div class="col-md-6 col-lg-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div id="cardbody2" class="card">
-              <div class="card-body">
+              <div id="cardjenala" class="card-body">
                 <h5 id="tituloCardIndex2" class="card-title">
                   Titulo Foda
                 </h5>
@@ -44,9 +45,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div id="cardbody2" class="card">
-              <div class="card-body">
+              <div id="cardjenala" class="card-body">
                 <h5 id="tituloCardIndex2" class="card-title">
                   Titulo Muito Foda
                 </h5>
@@ -60,9 +61,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3 mb-4">
+          <div class="col-md-6 mb-4">
             <div id="cardbody2" class="card">
-              <div class="card-body"> 
+              <div id="cardjenala" class="card-body"> 
                 <h5 id="tituloCardIndex2" class="card-title">
                   Vai se Lascar vai
                 </h5>
