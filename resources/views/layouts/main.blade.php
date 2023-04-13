@@ -31,7 +31,7 @@
           </div>
         </a>
       
-        <a href="/" class="navbar-brand" id="offCanvasButton">
+        <a href="/" class="navbar-brand">
           <img width="40px" src="img/icon-piggy(semcopy).png" alt="IconePorquinho">
         </a>
 
