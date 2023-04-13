@@ -24,12 +24,7 @@
             border-style: outset; 
         }
         
-        .container-fluid {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-          }
-          
+        
 
         /*Cor do fundo do icone do usuario*/
         #menuButton.btn-custom
