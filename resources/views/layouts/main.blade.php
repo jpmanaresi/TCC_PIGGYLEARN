@@ -31,7 +31,7 @@
           </div>
         </a>
       
-        <a href="/" class="justify-content-end"">
+        <a href="/" class="justify-content-end">
           <img width="40px" src="img/icon-piggy(semcopy).png" alt="IconePorquinho">
         </a>
 
