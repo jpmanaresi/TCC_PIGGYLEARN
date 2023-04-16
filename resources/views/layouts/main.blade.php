@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="css/app.css">
+      <link rel="stylesheet" href="/css/app.css">
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono" rel="stylesheet">
@@ -24,15 +24,15 @@
     
         <a href="#" id="menuButton" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <div class="col-auto">
-            <img width="30px" src="img/user-defaut(semcopy).png" alt="Perfil Menu">
+            <img width="30px" src="/img/user-defaut(semcopy).png" alt="Perfil Menu">
           </div> 
           <div class="col d-flex align-items-center ms-2">
-            <img width="30px" src="img/tresbarrinhas.svg" alt="Tres barrinhas">
+            <img width="30px" src="/img/tresbarrinhas.svg" alt="Tres barrinhas">
           </div>
         </a>
       
         <a href="/" class="justify-content-end">
-          <img width="40px" src="img/icon-piggy(semcopy).png" alt="IconePorquinho">
+          <img width="40px" src="/img/icon-piggy(semcopy).png" alt="IconePorquinho">
         </a>
 
       </div>
@@ -73,6 +73,9 @@
               Sair
             </a>
           </form>
+          <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
+            Criar Curso  
+          </a>
 @endauth
         </div>
       </div>
@@ -91,12 +94,21 @@
     
     
   <!-- Conteudo -->
-<div id="corpot"> 
 
-    @yield('content')
+  <main>
     
-</div>    
-
+    <div id="corpot"> 
+      <div class="container-fluid">
+        <div class="row">
+            @if(session('msg'))
+            <p class="msg">{{session('msg')}}</p>
+            @endif
+        </div>
+    </div>
+      @yield('content')
+      
+  </div>    
+</main>
   <!-- Footer
     <div class="container">
       <footer class="py-3 my-4">

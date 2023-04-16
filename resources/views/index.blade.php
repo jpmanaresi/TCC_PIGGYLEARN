@@ -20,8 +20,9 @@
                 <h5 id="tituloCardIndex2" class="card-title">
                  {{$course->course_title}}
                 </h5>
+
                 <p id="cardtext" class="card-text">
-                    {{$course->course_description}}
+                    {{$course->course_description}} </p>
               </div>
             </div>
           </div>

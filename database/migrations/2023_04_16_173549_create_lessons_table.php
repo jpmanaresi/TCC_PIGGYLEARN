@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('usertype')->default(0);
+        Schema::create('lessons', function (Blueprint $table) {
+            $table->id();
+            $table->timestamps();
+            $table->text('content');
+            $table->foreignId('course_id')->constrained();
         });
     }
 
@@ -21,8 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('usertype');
-        });
+        Schema::dropIfExists('lessons');
     }
 };

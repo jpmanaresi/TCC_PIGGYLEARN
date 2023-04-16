@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('course_title');
             $table->text('course_description');
-            $table->integer('classcount');
+            $table->integer('classcount')->default(0);
             $table->timestamps();
         });
     }
