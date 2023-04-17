@@ -1,14 +1,18 @@
 /* fonte de todo html */
 *{
     font-family: "Carlito";
+    
 }   
 
 /* Divisão entre o topo da pagina com o conteudo */
 #corpot
 {
     margin-top: 6rem;
+    border-image: fill;
 }
-    
+ 
+
+
 /* main'.blade */
     
     /*NavBar: Start*/
@@ -35,7 +39,7 @@
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
             border: 0;
-            padding-top: 15px;
+            padding-top: 14px;
             border-bottom: 5px;
             border-color: rgb(175, 5, 169);
             border-style: outset;
@@ -131,10 +135,25 @@
             padding-bottom: 3px;
             padding-right: 3PX;
             color: #ffffff; 
-            background: linear-gradient(to bottom right, rgb(216, 86, 241) 10%,rgb(31, 13, 78) 100%);
+            background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
         }
 
+        /* Joga o card pra frente. Função basica do hover né */ 
+        #cardbody1.card:hover 
+        {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        }
+
+        #cardbody2.card:hover 
+        {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        }
+            
             
         #cardtext 
         {
@@ -159,7 +178,7 @@
             -webkit-line-clamp: 6; /* limita o número de linhas */
         }
 
-            /* Configurações gerais dos cards */
+        
 
         /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
         #cardjenala.card-body
@@ -168,8 +187,10 @@
             padding-bottom: 5px; 
             padding-right: 5px;
         }
+
+        /* Configurações gerais dos cards */
         
-    /* Cards */   
+ards */   
           
 /* index.blade */
 
