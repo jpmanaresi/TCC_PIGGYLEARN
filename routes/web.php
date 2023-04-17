@@ -19,6 +19,8 @@ Route::get('/', [CourseController::class, 'index']);
 
 Route::get('/login', [UserController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/courses/create', [CourseController::class, 'create']);
+Route::post('/courses',[CourseController::class, 'store']);
 
 Auth::routes();
 
