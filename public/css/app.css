@@ -11,9 +11,7 @@
     border-image: fill;
 }
  
-
-
-/* main'.blade */
+/* main*/
     
     /*NavBar: Start*/
 
@@ -28,8 +26,6 @@
             border-style: outset; 
         }
         
-        
-
         /*Cor do fundo do icone do usuario*/
         #menuButton.btn-custom
         {
@@ -39,18 +35,45 @@
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
             border: 0;
-            padding-top: 14px;
+            padding-top: 13px;
             border-bottom: 5px;
             border-color: rgb(175, 5, 169);
             border-style: outset;
-
         } 
+
+        /* Cor dos Botões de entrar da navbar */
+        #botoesEntrarNav.btn-custom 
+        {
+            
+            color: #ffffff; /* opcional: define a cor do texto para branco */
+        }
+
+        #botoesEntrarNav.btn-custom:hover 
+        {
+            background-color: #701570; /* cor diferente quando o mouse está em cima */
+            color: #ffffff;
+        }
+
+        /* Cor dos Botões de login da navbar */
+        #botoesCriarCoNav.btn-custom 
+        {
+            background-color: #b811b8;
+            border-radius: 30px;
+            color: #ffffff; /* opcional: define a cor do texto para branco */
+        }
+
+        #botoesCriarCoNav.btn-custom:hover 
+        {
+            background-color: #701570; /* cor diferente quando o mouse está em cima */
+            color: #ffffff;
+        }
+
     /*NavBar: End*/
 
 
-    /*Botões OffCanvas: Start*/
+    /*Botões OffCanvas */
 
-        /*Cor dos Botões*/
+        /* Cor dos Botões do OffCanvas */
         #botoesMenus.btn-custom 
         {
             background-color: #b811b8;
@@ -63,18 +86,53 @@
             color: #ffffff;
         }
 
-
     /*Botões OffCanvas: End*/
 
-/* main.blade */
+/* main */
+
+
+
+/* login */
+
+    /* Form de Criar a area de login */
+
+    /* Cor da Caixa de login*/
+    #cardLogin.bg-gradient-custom 
+    {     
+        background: linear-gradient(to bottom right, rgb(194, 61, 221) 10%,rgb(48, 23, 112) 100%);
+        color: #ffffff;  
+    }
+
+    #cardLogin.card 
+    {
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+    }
+      
+
+    /* Form de Criar a area de login */ 
+
+
+
+    /* Mensagem que aparece na tela */
+    .msg {
+        background-color: #D4EDDA;
+        color: #155724;
+        border: 1px solid #C3E6CB;
+        width: 100%;
+        margin-bottom: 0;
+        text-align: center;
+        padding: 10px;
+      }
+
+/* login  */
 
 
 
 
-/* index.blade */
+/* index */
 
     /* Titulos da pagina */
-    #tituloPagina
+    #tituloInicialI
     {
         text-align: center; 
         padding-bottom: 2rem; 
@@ -83,9 +141,6 @@
 
     /* Cards */
 
-        /* Titulos dos cards 
-        Estão separados para que o primeiro card tenha um destaque maior */ */
-        
         #tituloCardlogin
         {
             text-align: center; 
@@ -93,6 +148,7 @@
             font-family:JetBrains Mono;
         }
 
+        /* Index1 = Destaque */
         #tituloCardIndex1
         {
             padding-left: 5PX;
@@ -101,7 +157,7 @@
             font-weight: bold;
             font-family:JetBrains Mono;
         }
-
+        /* Index2 = S. Destaque */
         #tituloCardIndex2
         {
             padding-left: 5PX;
@@ -113,7 +169,8 @@
 
         /* Configurações gerais dos cards do Index*/
 
-        #cardbody1
+        /* Index1 = Destaque */
+        #cardBodyIndex1
         {
             border: 0;
             border-radius: 10px;
@@ -126,7 +183,8 @@
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
         }
 
-        #cardbody2
+        /* Index2 = S. Destaque */
+        #cardBodyIndex2
         {
             border: 0;
             border-radius: 10px;
@@ -139,23 +197,25 @@
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
         }
 
+        /* Index1 = Destaque */
         /* Joga o card pra frente. Função basica do hover né */ 
-        #cardbody1.card:hover 
+        #cardBodyIndex1.card:hover 
         {
             transform: scale(1.010);
             transition: all 0.01s ease-in-out;
             box-shadow: 0 8px 16px rgba(0,0,0,0.50);
         }
 
-        #cardbody2.card:hover 
+        /* Index2 = S. Destaque */
+        #cardBodyIndex2.card:hover 
         {
             transform: scale(1.010);
             transition: all 0.01s ease-in-out;
             box-shadow: 0 8px 16px rgba(0,0,0,0.50);
         }
             
-            
-        #cardtext 
+        /* Formatação da caixa de descrição */    
+        #cardDescIndex
         {
             background-color: #ffffff;
             color: #1c1b1d;
@@ -178,10 +238,8 @@
             -webkit-line-clamp: 6; /* limita o número de linhas */
         }
 
-        
-
         /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
-        #cardjenala.card-body
+        #cardJenalaIndex.card-body
         {
             padding-left: 5px; 
             padding-bottom: 5px; 
@@ -189,44 +247,41 @@
         }
 
         /* Configurações gerais dos cards */
-        
-ards */   
+    
+    /* Cards */    
           
-/* index.blade */
+/* index */
 
+/* cursos */
 
+    /* courses.create */
 
-
-/* login.blade */
-
-    /*Form de Criar a area de login: Start*/
-
-    /*Cor da Caixa de login*/
-    #cardLogin.bg-gradient-custom 
-    {     
-        background: linear-gradient(to bottom right, rgb(194, 61, 221) 10%,rgb(48, 23, 112) 100%);
-        color: #ffffff;  
-    }
-
-    #cardLogin.card 
+    #tituloInicialC
     {
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        text-align: start; 
+        font-family:JetBrains Mono;
+        padding-bottom: 2rem;
     }
-      
 
-    /*Form de Criar a area de login: End*/ 
+    #tituloCurso1
+    {
+        text-align: center; 
+        padding: 10px; 
+        font-family:JetBrains Mono;
+    }
 
+    #corpoCriarCurso
+    {
+        color: #ffffff;
+        background-color: #1c1b1d;
+        padding: 3rem;
+    }
 
+    #botaoCriar
+    {
+        
+    }
+    /* courses.create */
 
-    /* Mensagem que aparece na tela */
+/* cursos */
 
-    .msg {
-        background-color: #D4EDDA;
-        color: #155724;
-        border: 1px solid #C3E6CB;
-        width: 100%;
-        margin-bottom: 0;
-        text-align: center;
-        padding: 10px;
-      }
-/* login.blade */

@@ -5,7 +5,7 @@
 @section('content')
 
 
-    <h1 id="tituloPagina">
+    <h1 id="tituloInicialI">
         Tela Inicial
     </h1>
 
@@ -15,41 +15,31 @@
         <div class="row">  
 
           @foreach ($courses as $course) 
-<<<<<<< HEAD
-          
+
             <div class="col-md-6 mb-4">
-              <div id="cardbody1" class="card">
-                <div id="cardjenala" class="card-body">
+              <div id="cardBodyIndex1" class="card">
+                <div id="cardJenalaIndex" class="card-body">
                   <h5 id="tituloCardIndex1" class="card-title">
                   {{$course->course_title}}
                   </h5>
-                  <p id="cardtext" class="card-text">
-                      {{$course->course_description}}
-                </div>
-=======
-          <div class="col-md-6 mb-4">
-            <div id="cardbody2" class="card destaque">
-              <div id="cardjenala" class="card-body">
-                <h5 id="tituloCardIndex2" class="card-title">
-                 {{$course->course_title}}
-                </h5>
 
-                <p id="cardtext" class="card-text">
-                    {{$course->course_description}} </p>
->>>>>>> refs/remotes/origin/teste
+                  <p id="cardDescIndex" class="card-text">
+                    {{$course->course_description}} 
+                  </p>
+                </div>
               </div>
             </div>
 
           @endforeach
 
           <div class="col-md-6 mb-4">
-            <div id="cardbody2" class="card">
-              <div id="cardjenala" class="card-body">
+            <div id="cardBodyIndex2" class="card">
+              <div id="cardJenalaIndex" class="card-body">
                 <h5 id="tituloCardIndex2" class="card-title">
                   Titulo Foda
                 </h5>
 
-                <p id="cardtext" class="card-text">
+                <p id="cardDescIndex" class="card-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Donec nibh dolor, gravida ac consequat sit amet, posuere sit amet augue. 
                     Donec lobortis id nunc et iaculis. Nunc nisl mi, venenatis non tristique eget, lobortis sit amet nulla. 
@@ -59,13 +49,13 @@
             </div>
           </div>
           <div class="col-md-6 mb-4">
-            <div id="cardbody2" class="card">
-              <div id="cardjenala" class="card-body">
+            <div id="cardBodyIndex2" class="card">
+              <div id="cardJenalaIndex" class="card-body">
                 <h5 id="tituloCardIndex2" class="card-title">
                   Titulo Muito Foda
                 </h5>
 
-                <p id="cardtext" class="card-text">
+                <p id="cardDescIndex" class="card-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Donec nibh dolor, gravida ac consequat sit amet, posuere sit amet augue. 
                     Donec lobortis id nunc et iaculis. Nunc nisl mi, venenatis non tristique eget, lobortis sit amet nulla. 
@@ -75,13 +65,13 @@
             </div>
           </div>
           <div class="col-md-6 mb-4">
-            <div id="cardbody2" class="card">
-              <div id="cardjenala" class="card-body"> 
+            <div id="cardBodyIndex2" class="card">
+              <div id="cardJenalaIndex" class="card-body"> 
                 <h5 id="tituloCardIndex2" class="card-title">
                   Vai se Lascar vai
                 </h5>
 
-                <p id="cardtext" class="card-text">
+                <p id="cardDescIndex" class="card-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Donec nibh dolor, gravida ac consequat sit amet, posuere sit amet augue. 
                     Donec lobortis id nunc et iaculis. Nunc nisl mi, venenatis non tristique eget, lobortis sit amet nulla. 

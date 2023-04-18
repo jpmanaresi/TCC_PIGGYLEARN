@@ -25,16 +25,24 @@
     
         <a href="#" id="menuButton" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <div class="col-auto">
-            <img width="30px" src="/img/user-defaut(semcopy).png" alt="Perfil Menu">
+            <img width="30px" src="/img/icon-piggy(semcopy).png" alt="Icone Porquinho">
           </div> 
+
           <div class="col d-flex align-items-center ms-2">
             <img width="30px" src="/img/tresbarrinhas.svg" alt="Tres barrinhas">
           </div>
         </a>
-      
-        <a href="/" class="justify-content-end">
-          <img width="40px" src="/img/icon-piggy(semcopy).png" alt="IconePorquinho">
-        </a>
+              
+        @guest
+          <div>
+            <a href="/login" id="botoesEntrarNav" class="btn btn-custom text-start" type="button" > 
+              Login   
+            </a>
+            <a href="/register" id="botoesCriarCoNav" class="btn btn-custom text-start" type="button" > 
+              Criar Conta   
+            </a>
+          </div>
+        @endguest
 
       </div>
     </nav>
@@ -54,41 +62,45 @@
           <a href="/" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
             Tela Inicial 
           </a>
-@guest
+
+        @guest
           <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             Login   
           </a>
           <a href="/register" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             Criar Conta   
           </a>
-@endguest
-@auth
-  
+        @endguest
+
+        @auth
           <a id="botoesMenus" class="btn btn-custom text-start" type="button"> 
             Cursos  
           </a>
-          <form action="/logout" method="post">
-            @csrf
-              <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
-          this.closest('form').submit();"> 
-              Sair
-            </a>
-          </form>
+
           <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             Criar Curso  
           </a>
-@endauth
+
+          <form action="/logout" method="post" class="mt-auto">
+            @csrf
+            <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
+            this.closest('form').submit();"> 
+              Sair
+            </a>
+          </form>
+        @endauth
+
         </div>
       </div>
-
-        <div class="container">
-          <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
-              <p class="text-center text-muted" style="padding-bottom: 3rem; padding: 0">
-                &copy; 2023 PiggyLearn, Inc
-              </p>
-          </footer>
-        </div>
+      
+      <div class="container">
+        <footer class="py-3 my-4">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
+            <p class="text-center text-muted" style="padding-bottom: 3rem; padding: 0">
+              &copy; 2023 PiggyLearn, Inc
+            </p>
+        </footer>
+      </div>
 
     </div>
 
@@ -98,10 +110,6 @@
 
   <main>
     
-<<<<<<< HEAD
-</div>    
-
-=======
     <div id="corpot"> 
       <div class="container-fluid">
         <div class="row">
@@ -110,19 +118,13 @@
             @endif
         </div>
     </div>
+    
       @yield('content')
       
-  </div>    
-</main>
-  <!-- Footer
-    <div class="container">
-      <footer class="py-3 my-4">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
-          <p class="text-center text-muted">&copy; 2023 PiggyLearn, Inc</p>
-      </footer>
-    </div>
-  -->
->>>>>>> refs/remotes/origin/teste
+    </div> 
+      
+  </main>
+
 
 </body>
     
