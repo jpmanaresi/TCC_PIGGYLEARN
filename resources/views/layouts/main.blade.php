@@ -71,9 +71,6 @@
             Criar Conta   
           </a>
 
-          <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-            Meu Perfil
-          </a>
         @endguest
 
         @auth
@@ -83,6 +80,10 @@
 
           <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             Criar Curso  
+          </a>
+
+          <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+            Meu Perfil
           </a>
 
           <form action="/logout" method="post" class="mt-auto">
