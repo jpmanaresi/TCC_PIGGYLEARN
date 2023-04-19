@@ -34,6 +34,7 @@
         </a>
               
         @guest
+
           <div>
             <a href="/login" id="botoesEntrarNav" class="btn btn-custom text-start" type="button" > 
               Login   
@@ -42,6 +43,7 @@
               Criar Conta   
             </a>
           </div>
+          
         @endguest
 
       </div>
@@ -60,39 +62,38 @@
         <div class="d-grid gap-2">
           
           <a href="/" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+            <img id="botoesImg" src="img/house.svg" alt="">
             Tela Inicial 
           </a>
 
-        @guest
-          <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
-            Login   
-          </a>
-          <a href="/register" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
-            Criar Conta   
-          </a>
-
-        @endguest
+        
 
         @auth
-          <a id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-            Cursos  
+
+          <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+            <img id="botoesImg" src="img/file-person.svg" alt="Perfil">
+            Meu Perfil
           </a>
 
           <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
+            <img id="botoesImg" src="img/pencil-fill.svg" alt="">
             Criar Curso  
           </a>
 
-          <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-            Meu Perfil
+          <a id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+           <img id="botoesImg"  src="img/card-list.svg" alt=""> 
+           Cursos  
           </a>
 
           <form action="/logout" method="post" class="mt-auto">
             @csrf
             <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
             this.closest('form').submit();"> 
+              <img id="botoesImg" src="img/box-arrow-in-right.svg" alt="Img de Sair">
               Sair
             </a>
           </form>
+
         @endauth
 
         </div>

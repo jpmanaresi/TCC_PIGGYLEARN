@@ -7,90 +7,86 @@
 /* Divisão entre o topo da pagina com o conteudo */
 #corpot
 {
-    margin-top: 6rem;
+    margin-top: 7rem;
     border-image: fill;
 }
  
 /* main*/
     
-    /*NavBar: Start*/
+    /*NavBar*/
 
-        /*Cor navbar e borda */
+        /* Cor navbar e borda */
         #nav.navbar
         {
-            height: 70px;
+            height: 75px;
             background-color: #1c1b1d;
             border: 0;
-            border-bottom: 5px;
-            border-color: rgb(216, 8, 209);
+            border-bottom: 6px;
+            border-color: rgb(255, 0, 247);
             border-style: outset; 
         }
-    
 
-        #sidebar-linhaCima.btn-custom {
-            background-color: #1c1b1d;
-            border: 0;
-            padding-top: 13px;
-            border-bottom: 5px;
-            border-color: rgb(216, 8, 209);
-            border-style: outset;
-        } 
-
-        /* Cor dos Botões de entrar da navbar */
+        /* Cor dos Botões de entrar e login da navbar */
         #botoesEntrarNav.btn-custom 
         {
             color: #ffffff; /* opcional: define a cor do texto para branco */
+            border-radius: 30px;
         }
 
         #botoesEntrarNav.btn-custom:hover 
         {
-            background-color: #701570; /* cor diferente quando o mouse está em cima */
+            background-color: #921992; /* cor diferente quando o mouse está em cima */
             color: #ffffff;
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         }
 
-        /* Cor dos Botões de login da navbar */
         #botoesCriarCoNav.btn-custom 
         {
-            background-color: #b811b8;
+            background-color: #7e18ad;
             border-radius: 30px;
             color: #ffffff; /* opcional: define a cor do texto para branco */
         }
 
         #botoesCriarCoNav.btn-custom:hover 
         {
-            background-color: #701570; /* cor diferente quando o mouse está em cima */
-            color: #ffffff;
+            background-color: #ff00ff; /* cor diferente quando o mouse está em cima */
+            color: #000000;
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         }
 
-    /*NavBar: End*/
+    /* NavBar */
 
 
     /* OffCanvas */
-
+        
         /* Titulo do Offcanvas */
         #tituloInicialSB
         {
             font-family:JetBrains Mono;
         }    
 
-        /* Cor dos Botões do OffCanvas */
-        #botoesMenus.btn-custom 
+
+        /* Barra de menu */
+        #sidebar-linhaCima.btn-custom {
+            background-color: #1c1b1d;
+            border: 0;
+            border-bottom: 6px;
+            border-color: rgb(216, 8, 209);
+            border-style: outset;
+        } 
+
+        /* Formatação das imagens */
+        #botoesImg
         {
-            background-color: #b811b8;
-            color: #ffffff; /* opcional: define a cor do texto para branco */
+            margin-right: 10px;
         }
 
-        /* Cor dos Botões do OffCanvas: */
-        #botoesMenus.btn-custom:hover 
+        /* Cor dos Botões */
+        #botoesMenus.btn-custom 
         {
-            background-color: #701570; /* cor diferente quando o mouse está em cima */
-            color: #ffffff;
-            transform: scale(1.01);
-            transition: all 0.01s ease-in-out;
+            color: #ffffff; /* opcional: define a cor do texto para branco */
         }
 
         /* Cor dos Botão de sair */
@@ -99,6 +95,15 @@
             background-color: #b811b8;
             color: #ffffff;
         }  
+
+        /* Cor dos Botões: Hover */
+        #botoesMenus.btn-custom:hover 
+        {
+            background-color: #b811b8; /* cor diferente quando o mouse está em cima */
+            color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        }
 
         /* Cor dos Botão de sair: Hover */
         #botoesMenusS.btn-custom:hover 
