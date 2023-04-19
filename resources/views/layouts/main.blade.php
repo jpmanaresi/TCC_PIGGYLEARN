@@ -21,15 +21,15 @@
 
   <!-- Navbar -->
     <nav class="navbar nav-border fixed-top" id="nav">
-      <div class="container-fluid">
+      <div class="container-fluid" alt="botaoMenu" >
     
-        <a href="#" id="menuButton" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+        <a href="#" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <div class="col-auto">
-            <img width="30px" src="/img/icon-piggy(semcopy).png" alt="Icone Porquinho">
+            <img width="40px" src="/img/User-60.svg" alt="Icone Porquinho">
           </div> 
 
           <div class="col d-flex align-items-center ms-2">
-            <img width="30px" src="/img/tresbarrinhas.svg" alt="Tres barrinhas">
+            <img style="" width="25px" src="/img/list.svg" alt="Tres barrinhas">
           </div>
         </a>
               
@@ -50,7 +50,7 @@
   <!-- Offcanvas -->  
     <div class="offcanvas offcanvas-start text-white navbar-fixed-top" data-bs-theme="dark" data-bs-backdrop="false" data-bs-scroll="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div id="sidebar-linhaCima" class="offcanvas-header btn-custom">
-        <h4 style="font-family: Jamrul" class="offcanvas-title" id="offcanvasScrollingLabel">
+        <h4 id="tituloInicialSB" class="offcanvas-title" id="offcanvasScrollingLabel">
           Menu
         </h4>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -70,6 +70,10 @@
           <a href="/register" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             Criar Conta   
           </a>
+
+          <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+            Meu Perfil
+          </a>
         @endguest
 
         @auth
@@ -83,7 +87,7 @@
 
           <form action="/logout" method="post" class="mt-auto">
             @csrf
-            <a href="/login" id="botoesMenus" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
+            <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
             this.closest('form').submit();"> 
               Sair
             </a>

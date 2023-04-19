@@ -15,36 +15,30 @@
     
     /*NavBar: Start*/
 
-        /*Cor navbar e borda*/
+        /*Cor navbar e borda */
         #nav.navbar
         {
             height: 70px;
             background-color: #1c1b1d;
             border: 0;
             border-bottom: 5px;
-            border-color: rgb(175, 5, 169);
+            border-color: rgb(216, 8, 209);
             border-style: outset; 
         }
-        
-        /*Cor do fundo do icone do usuario*/
-        #menuButton.btn-custom
-        {
-            background-color: rgb(175, 5, 169);   
-        }
+    
 
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
             border: 0;
             padding-top: 13px;
             border-bottom: 5px;
-            border-color: rgb(175, 5, 169);
+            border-color: rgb(216, 8, 209);
             border-style: outset;
         } 
 
         /* Cor dos Botões de entrar da navbar */
         #botoesEntrarNav.btn-custom 
         {
-            
             color: #ffffff; /* opcional: define a cor do texto para branco */
         }
 
@@ -52,6 +46,8 @@
         {
             background-color: #701570; /* cor diferente quando o mouse está em cima */
             color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
         }
 
         /* Cor dos Botões de login da navbar */
@@ -66,12 +62,20 @@
         {
             background-color: #701570; /* cor diferente quando o mouse está em cima */
             color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
         }
 
     /*NavBar: End*/
 
 
-    /*Botões OffCanvas */
+    /* OffCanvas */
+
+        /* Titulo do Offcanvas */
+        #tituloInicialSB
+        {
+            font-family:JetBrains Mono;
+        }    
 
         /* Cor dos Botões do OffCanvas */
         #botoesMenus.btn-custom 
@@ -80,13 +84,32 @@
             color: #ffffff; /* opcional: define a cor do texto para branco */
         }
 
+        /* Cor dos Botões do OffCanvas: */
         #botoesMenus.btn-custom:hover 
         {
             background-color: #701570; /* cor diferente quando o mouse está em cima */
             color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
         }
 
-    /*Botões OffCanvas: End*/
+        /* Cor dos Botão de sair */
+        #botoesMenusS.btn-custom
+        {
+            background-color: #b811b8;
+            color: #ffffff;
+        }  
+
+        /* Cor dos Botão de sair: Hover */
+        #botoesMenusS.btn-custom:hover 
+        {
+            background-color: #fa294c;
+            color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        }
+
+    /* OffCanvas */
 
 /* main */
 
@@ -252,6 +275,8 @@
           
 /* index */
 
+
+
 /* cursos */
 
     /* courses.create */
@@ -277,10 +302,25 @@
         padding: 3rem;
     }
 
-    #botaoCriar
+    #botaoCriar.btn-custom
     {
-        
+        margin-top: 1rem;   
+        background-color: #b811b8;
+        color: #ffffff;
+        border: 0; 
     }
+
+    #botaoCriar.btn-custom:hover 
+    {
+        margin-top: 1rem;   
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    }
+
+   
     /* courses.create */
 
 /* cursos */
