@@ -21,7 +21,7 @@ Route::get('/login', [UserController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/courses/create', [CourseController::class, 'create']);
 Route::post('/courses',[CourseController::class, 'store']);
-
+Route::get('/profile', [UserController::class, 'profile']);
 Auth::routes();
 
 Route::get('/home', [CourseController::class, 'index'])->name('home');

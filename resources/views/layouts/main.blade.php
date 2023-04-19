@@ -70,6 +70,10 @@
           <a href="/register" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             Criar Conta   
           </a>
+
+          <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+            Meu Perfil
+          </a>
         @endguest
 
         @auth
