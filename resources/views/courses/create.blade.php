@@ -24,7 +24,7 @@
             <textarea name="description" id="description" class="form-control" placeholder="O que será ensinado?"></textarea>
         </div>
 
-        <input id="botaoCriar" type="submit" value="Criar Curso" class="btn btn-primary">
+        <input id="botaoCriar" type="submit" value="Criar Curso" class="btn btn-custom">
         </form>
 
     </div>
