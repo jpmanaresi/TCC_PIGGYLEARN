@@ -25,6 +25,7 @@ Route::get('/profile', [UserController::class, 'profile']);
 Auth::routes();
 
 Route::get('/home', [CourseController::class, 'index'])->name('home');
+Route::get('/dashboard', [CourseController::class, 'dashboard'])->middleware('auth');
 
 Auth::routes();
 

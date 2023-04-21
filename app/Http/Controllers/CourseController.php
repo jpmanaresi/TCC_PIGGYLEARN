@@ -55,4 +55,18 @@ class CourseController extends Controller
         return view('courses.show', ['course' => $course, 'eventOwner' => $eventOwner, 'hasUserJoined' => $hasUserJoined]);
         
     }
-}
+
+
+        public function dashboard() {
+
+            $user = auth()->user();
+
+            $courses = $user->courses;
+
+
+            return view('courses.dashboard', 
+                ['courses' => $courses]
+            );
+
+        }
+    }
