@@ -32,27 +32,41 @@ class CourseController extends Controller
         return redirect('/')->with('msg', 'Curso criado com sucesso!');
     }
 
+    public function update(Request $request, $id)
+{
+    $curso = Curso::findOrFail($id);
+
+    // verifica se o formulário está sendo utilizado para edição
+    $isEdit = $request->input('is_edit') === 'true';
+
+    // se for edição, atualiza os dados do curso
+    if ($isEdit) {
+        $course->fill([
+            // campos do curso a serem atualizados
+        ]);
+        $course->save();
+
+        // redireciona para a página de listagem de cursos
+        return redirect()->route('cursos.index');
+    } else {
+        // se for criação, cria um novo curso
+        $course = new Course([
+            // campos do curso
+        ]);
+        $course->save();
+
+        // redireciona para a página de criação de aula, passando o id do curso
+        return redirect()->route('lessons.create', $course->id);
+    }
+}
+
     public function show($id) {
 
         $course = Course::findOrFail($id);
 
         $user = auth()->user();
-
-        if($user) {
-
-            $userEvents = $user->eventsAsParticipant->toArray();
-
-            foreach($userEvents as $userEvent) {
-                if($userEvent['id'] == $id) {
-                    $hasUserJoined = true;
-                }
-            }
-
-        }
-
-        $eventOwner = User::where('id', $event->user_id)->first()->toArray();
-
-        return view('courses.show', ['course' => $course, 'eventOwner' => $eventOwner, 'hasUserJoined' => $hasUserJoined]);
+      
+        return view('courses.show', ['course' => $course]);
         
     }
 

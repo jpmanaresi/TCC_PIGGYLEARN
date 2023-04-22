@@ -211,6 +211,15 @@
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
         }
 
+        #cardBodyIndex1 a{
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+
+        }
+
         /* Index2 = S. Destaque */
         #cardBodyIndex2
         {
@@ -223,6 +232,15 @@
             color: #ffffff; 
             background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        }
+
+        #cardBodyIndex2 a{
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+
         }
 
         /* Index1 = Destaque */
