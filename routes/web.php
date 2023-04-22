@@ -33,9 +33,4 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [CourseController::class, 'dashboard'])->middleware('auth');
 Auth::routes();
 
-
-
-
-Auth::routes();
-
 /*Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
