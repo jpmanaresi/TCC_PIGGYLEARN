@@ -213,6 +213,15 @@
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
         }
 
+        #cardBodyIndex1 a{
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+
+        }
+
         /* Index2 = S. Destaque */
         #cardBodyIndex2
         {
@@ -225,6 +234,15 @@
             color: #ffffff; 
             background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
             box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        }
+
+        #cardBodyIndex2 a{
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+
         }
 
         /* Index1 = Destaque */
@@ -337,6 +355,64 @@
         /*imagem profile*/
         #imagemperfil
         {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
         }
+
+         /*fonte profile*/
+         #tituloProfileI
+         {
+            font-size: 50px;
+            font-family: 'Mukta', sans-serif;
+            text-align: center;
+         }
+
+         /*BORDA DO CONTAINER PROFILE*/
+         #profileborda
+         {  
+            border-width: 2px; 
+            border-color: #000000;
+            border: solid;
+         }
+
+         /*TAMANHO TEXTO LABEL TELA DE PROFILE*/
+         #p-label
+         {
+            text-align: left;
+            font-size: 20px;
+         }
+
+         /*AJUSTES DO INPUT DO FORM PROFILE*/
+         #exampleInput1{
+            border-color: black;
+            width: 550px;
+            margin-right: 5px;
+         }
+
+         #displayflex{
+            display: flex;
+         }
+
+         #regua 
+         {
+            display:block; 
+            padding:0; 
+            margin: 10px 0; 
+            width:100%; 
+            height:1px; 
+            background-color:#000000
+        }
+
+/* Dashboard */
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  .dashboard-events-container th {
+    width: 25%;
+  }
+  
+  .dashboard-events-container form {
+    display: inline-block;
+  }

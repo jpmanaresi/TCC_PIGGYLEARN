@@ -18,7 +18,7 @@
 
             <div class="col-md-6 mb-4">
               <div id="cardBodyIndex1" class="card">
-                <div id="cardJenalaIndex" class="card-body">
+                <a href="/courses/show/{{$course->id}}"><div id="cardJenalaIndex" class="card-body">
                   <h5 id="tituloCardIndex1" class="card-title">
                   {{$course->course_title}}
                   </h5>
@@ -27,7 +27,7 @@
                     {{$course->course_description}} 
                   </p>
                 </div>
-              </div>
+              </div></a>
             </div>
 
           @endforeach

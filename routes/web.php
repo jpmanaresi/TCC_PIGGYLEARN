@@ -14,17 +14,27 @@ use App\Http\Controllers\CourseController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/* Index */
 Route::get('/', [CourseController::class, 'index']);
+Route::get('/home', [CourseController::class, 'index'])->name('home');
 
+
+/* Rotas das Views de Cursos */
+Route::get('/courses/create', [CourseController::class, 'create']);
+Route::get('/courses/show/{id}',[CourseController::class, 'show']);
+Route::post('/courses',[CourseController::class, 'store']);
+
+/*Aulas*/
+Route::get('/courses/{id}/lessons/create',[LessonController::class, 'create']);
+/* Usuário */
+Route::get('/profile', [UserController::class, 'profile']);
 Route::get('/login', [UserController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
-Route::get('/courses/create', [CourseController::class, 'create']);
-Route::post('/courses',[CourseController::class, 'store']);
-Route::get('/profile', [UserController::class, 'profile']);
+Route::get('/dashboard', [CourseController::class, 'dashboard'])->middleware('auth');
 Auth::routes();
 
-Route::get('/home', [CourseController::class, 'index'])->name('home');
+
+
 
 Auth::routes();
 
