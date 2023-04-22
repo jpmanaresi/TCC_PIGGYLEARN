@@ -18,7 +18,7 @@
 
 
   </head>
-<body style="background-image: url('img/background.svg');">
+<body style="background-image: url('/img/background.svg');">
 
 
   <!-- Navbar -->
