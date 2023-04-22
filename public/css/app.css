@@ -8,9 +8,9 @@
 #corpot
 {
     margin-top: 7rem;
-    border-image: fill;
 }
- 
+
+
 /* main*/
     
     /*NavBar*/
@@ -65,6 +65,7 @@
         #tituloInicialSB
         {
             font-family:JetBrains Mono;
+            color: white;
         }    
 
 
@@ -163,6 +164,7 @@
     #tituloInicialI
     {
         text-align: center; 
+        color: white;
         padding-bottom: 2rem; 
         font-family:JetBrains Mono;
     }
