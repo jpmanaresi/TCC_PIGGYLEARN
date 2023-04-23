@@ -10,6 +10,22 @@
     margin-top: 7rem;
 }
 
+#background
+{
+    background-image: url('/img/background.svg');
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    
+}
+
+@media screen and (max-width: 767px) {
+    #secao1 {
+      background-size: contain;
+      background-position: center bottom;
+    }
+  }
+  
 
 /* main*/
     
@@ -72,10 +88,11 @@
         /* Barra de menu */
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
+            height: 75px;
             border: 0;
             border-bottom: 6px;
-            border-color: rgb(216, 8, 209);
-            border-style: outset;
+            border-color: rgb(255, 0, 247);
+            border-style: outset; 
         } 
 
         /* Formatação das imagens */
@@ -165,7 +182,7 @@
     {
         text-align: center; 
         color: white;
-        padding-bottom: 2rem; 
+        padding-bottom: 4rem; 
         font-family:JetBrains Mono;
     }
 
@@ -309,6 +326,8 @@
     #tituloInicialC
     {
         text-align: start; 
+        color: white;
+        padding-left: 10px;
         font-family:JetBrains Mono;
         padding-bottom: 2rem;
     }
@@ -349,6 +368,8 @@
     /* courses.create */
 
 /* cursos */
+
+
 
 /* profile */
 
