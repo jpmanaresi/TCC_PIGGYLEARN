@@ -404,6 +404,22 @@
             background-color:#000000
         }
 
+        #basic-addon1
+        {
+            border-color: black;
+            width: 50px;
+        }
+
+        #exampleInput2{
+            border-color: black;
+            width: 490px;
+            margin-right: 5px;
+            border-top-right-radius: 5px ;
+            border-bottom-right-radius: 5px ;
+
+        }
+
+
 /* Dashboard */
 .dashboard-title-container {
     margin-bottom: 30px;
