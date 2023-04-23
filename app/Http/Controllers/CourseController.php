@@ -29,7 +29,7 @@ class CourseController extends Controller
 
         $course->save();
 
-        return redirect('/')->with('msg', 'Curso criado com sucesso!');
+        return view('courses.lessons.create',['course' => $course])->with('msg', 'Curso criado com sucesso!');
     }
 
     public function update(Request $request, $id)
