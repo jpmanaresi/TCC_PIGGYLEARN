@@ -394,6 +394,8 @@
             border-width: 2px; 
             border-color: #000000;
             border: solid;
+            background-color: whitesmoke;
+            border-radius: 20px;
          }
 
          /*TAMANHO TEXTO LABEL TELA DE PROFILE*/
@@ -401,13 +403,14 @@
          {
             text-align: left;
             font-size: 20px;
+            font-family: 'Mukta', sans-serif;
          }
 
          /*AJUSTES DO INPUT DO FORM PROFILE*/
          #exampleInput1{
             border-color: black;
-            width: 550px;
             margin-right: 5px;
+            
          }
 
          #displayflex{
@@ -423,6 +426,65 @@
             height:1px; 
             background-color:#000000
         }
+
+        #marginrow
+        {
+            margin-bottom: 30px;
+         
+        }
+
+        #fontProfile
+        {
+            font-family: 'Mukta', sans-serif;
+        }
+
+        #basic-addon1
+        {
+            border-color: black;
+            width: 50px;
+        }
+
+        #exampleInput2{
+            border-color: black;
+            margin-right: 5px;
+           
+            border-top-right-radius: 5px ;
+            border-bottom-right-radius: 5px ;
+            float: left;
+
+        }
+
+        #exampleInput3
+        {
+            border-color: black;
+            margin-right: 5px;
+        }
+        #arquivo
+        {
+            display: none;
+        }
+
+        #uploadbtn
+        {
+            display: flex;
+            width: 40px;
+            height: 30px;   
+            background: #5C636A;
+            color: white;
+            display: block;
+            cursor: pointer;
+            transition: .5s;
+            border: 1px solid #5C636A;
+            border-radius: 5px;
+            margin-left: 53%;
+        }
+
+        #uploadbtn:hover
+        {
+            color: #5C636A;
+            background: rgb(180, 180, 180);
+        }
+
 
 /* Dashboard */
 .dashboard-title-container {

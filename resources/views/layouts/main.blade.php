@@ -75,6 +75,7 @@
             Meu Perfil
           </a>
 
+
           <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
             <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
             Criar Curso  
