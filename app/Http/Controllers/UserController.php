@@ -16,4 +16,6 @@ class UserController extends Controller
     {
         return view('auth.profile');
     }
+
+   
 }
