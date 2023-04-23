@@ -478,3 +478,10 @@
   .dashboard-events-container form {
     display: inline-block;
   }
+
+  /* Form criação de Aula */
+
+  #lesson-form-container {
+    background-color: whitesmoke;
+    border: 2px solid black;
+  }

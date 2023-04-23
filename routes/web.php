@@ -27,6 +27,8 @@ Route::post('/courses',[CourseController::class, 'store']);
 
 /*Aulas*/
 Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create']);
+
+
 /* Usuário */
 Route::get('/profile', [UserController::class, 'profile']);
 Route::get('/login', [UserController::class, 'login']);
