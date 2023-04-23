@@ -5,9 +5,9 @@
 @section('content')
 
 <div class="container" id="lesson-form-container">
-    <form method="POST" action="/courses/{{ $course->id }}">
+    <form method="POST" action="/courses/">
         @csrf
-        <input type="hidden" name="course_id" value="{{ $course->id }}">
+        <input type="hidden" name="course_id" value="">
         <div class="form-group">
             <label for="title" >Aula:</label>
             <input type="text" id="title" class="form-control"name="title" placeholder="Título da Aula">
@@ -20,7 +20,7 @@
                 <div class="form-group">
                     <input type="checkbox" name="hasTest" value="1"> Tem avaliação?
                 </div>
-        <button type="submit">Criar aula</button>
+        <button type="submit">Criar Prova</button>
     </form>
 </div>
 @endsection

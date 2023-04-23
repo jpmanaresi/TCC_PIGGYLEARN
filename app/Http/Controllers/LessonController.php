@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
+use App\Models\Lesson;
 class LessonController extends Controller
 {
     public function create($id){
@@ -15,15 +16,24 @@ class LessonController extends Controller
     {
         // Validar dados do formulário de criação de aulas
         $data = request()->validate([
-            'titulo' => 'required',
-            'descricao' => 'required',
+            'title' => 'required',
+            'content' => 'required',
             // Adicione outras validações necessárias
         ]);
     
         // Criar primeira aula relacionada ao curso
-        $course->lessons()->create($data);
-    
+        $lesson = new Lesson;
+        $lesson->title = $request->title;
+        $lesson->content = $request->content;
+        $lesson->course_id = $request->course_id;
+        $lesson->hasTest = $request->hasTest;
+        $lesson->save();
+        
+        if ($lesson->hasTest != true){
         // Redirecionar para a view de detalhes do curso, por exemplo
-        return redirect("/cursos/{$course->id}");
+        return redirect("/courses/create/{$course->id}");
+        } else {
+            return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
+        }
     }
 }
