@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\LessonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::get('/courses/show/{id}',[CourseController::class, 'show']);
 Route::post('/courses',[CourseController::class, 'store']);
 
 /*Aulas*/
-Route::get('/courses/{id}/lessons/create',[LessonController::class, 'create']);
+Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create']);
 /* Usuário */
 Route::get('/profile', [UserController::class, 'profile']);
 Route::get('/login', [UserController::class, 'login']);
