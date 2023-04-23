@@ -11,24 +11,30 @@
     </h1>
         
     <div id="corpoCriarCurso">
-
-        <form action="/courses" method="POST" enctype="multipart/form-data">
-        @csrf
-        <div class="form-group">
-              <label  id="tituloCurso1" for="title" >Título do curso:</label>
-              <input type="text" id="title" class="form-control"name="title" placeholder="Nome do Curso">
+        <div class="row">
+            <div class="col-md-6">
+                <form action="/courses" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group">
+                        <label id="tituloCriarCurso" for="title" >Título:</label>
+                        <input type="text" id="title" class="form-control" name="title" placeholder="Nome do Curso">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div id="descricaoCriarCurso">
+                    <div class="form-group">
+                        <label id="tituloCriarCurso" for="title" >Descrição:</label>
+                        <textarea name="description" id="description" class="form-control" placeholder="O que será ensinado?"></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="form-group">
-            <label id="tituloCurso1" for="title" >Descrição:</label>
-            <textarea name="description" id="description" class="form-control" placeholder="O que será ensinado?"></textarea>
-        </div>
-
         <input id="botaoCriar" type="submit" value="Criar Curso" class="btn btn-custom">
-        </form>
-
     </div>
+    
 
 </div>
-        
+
+
 @endsection

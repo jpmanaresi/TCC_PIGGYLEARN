@@ -14,18 +14,10 @@
 {
     background-image: url('/img/background.svg');
     background-repeat: repeat;
-    background-position: center top;
-    background-size: auto 100%;
-    
+    max-block-size: 1080px;
+    background-position: center;
 }
 
-@media screen and (max-width: 767px) {
-    #secao1 {
-      background-size: contain;
-      background-position: center bottom;
-    }
-  }
-  
 
 /* main*/
     
@@ -95,7 +87,13 @@
             border-style: outset; 
         } 
 
-        /* Formatação das imagens */
+        #botoesImgMenu
+        {
+            margin-right: 10px;
+            width: 40px;
+        }
+
+        /* Formatação das imagens do offCanvas*/
         #botoesImg
         {
             margin-right: 10px;
@@ -332,31 +330,49 @@
         padding-bottom: 2rem;
     }
 
-    #tituloCurso1
+    #tituloCriarCurso
     {
         text-align: center; 
-        padding: 10px; 
+        padding: 5px; 
         font-family:JetBrains Mono;
     }
+
+    #descricaoCriarCurso
+    {
+
+        font-family:JetBrains Mono;
+        border: 0;
+        border-radius: 10px;
+        padding-left: 3px;
+        padding-right: 3PX;
+        color: #ffffff; 
+        background-color: #7e18ad;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+    }
+
+    
 
     #corpoCriarCurso
     {
         color: #ffffff;
-        background-color: #1c1b1d;
-        padding: 3rem;
+        border-radius: 10px;
+        background-image: linear-gradient(-130deg, rgb(0, 0, 0) 40%, #4b0077);
+        padding: 2rem;
+        margin: 1rem;
     }
+
+    
 
     #botaoCriar.btn-custom
     {
-        margin-top: 1rem;   
+        margin-top: 4rem;   
         background-color: #b811b8;
         color: #ffffff;
         border: 0; 
     }
 
     #botaoCriar.btn-custom:hover 
-    {
-        margin-top: 1rem;   
+    { 
         background-color: #701570;
         color: #ffffff;
         border: 0; 
@@ -487,7 +503,7 @@
 
 
 /* Dashboard */
-.dashboard-title-container {
+    .dashboard-title-container {
     margin-bottom: 30px;
     margin-top: 30px;
   }
