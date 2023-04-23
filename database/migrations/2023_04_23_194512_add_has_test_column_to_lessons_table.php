@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('lessons', function (Blueprint $table) {
-            $table->boolean('hasTest')->default(false);
+            $table->boolean('hasTest')->default(0);
             $table->foreignID('test_id')->nullable()->onDelete('set null');
         });
     }

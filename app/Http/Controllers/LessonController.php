@@ -27,6 +27,7 @@ class LessonController extends Controller
         $lesson->content = $request->content;
         $lesson->course_id = $request->course_id;
         $lesson->hasTest = $request->hasTest;
+        $lesson->hasTest = $request->filled('hasTest') ? $request->hasTest : false;
         $lesson->save();
         
         if ($lesson->hasTest != true){
