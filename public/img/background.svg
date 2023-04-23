@@ -6,13 +6,13 @@
       <title>Circulo 1</title>
       <rect x="0" y="0" width="50" height="100" style="fill: rgb(202, 115, 231); stroke-width: 2px;"/>
     </pattern>
-    <pattern id="pattern-0-0" patternTransform="matrix(-0.185122, -0.591917, 0.695625, -0.217556, 100.361787, 121.671312)" xlink:href="#pattern-0"/>
-    <linearGradient gradientUnits="userSpaceOnUse" x1="247.048" y1="251.255" x2="247.048" y2="416.81" id="gradient-0" gradientTransform="matrix(0.838689, -0.18027, 1.167809, 0.185853, -115.962302, 83.841188)" spreadMethod="pad">
+    <pattern id="pattern-0-0" patternTransform="matrix(-0.129851, -0.41519, 0.487935, -0.152601, 100.12805, 89.062727)" xlink:href="#pattern-0"/>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="247.048" y1="251.255" x2="247.048" y2="416.81" id="gradient-0" gradientTransform="matrix(0.63983, -0.100092, 0.890913, 0.103191, -88.466785, 46.551274)" spreadMethod="pad">
       <stop offset="0" style="stop-color: rgb(241, 82, 180);"/>
       <stop offset="0.734" style="stop-color: rgb(138, 85, 209);"/>
       <stop offset="1" style="stop-color: rgb(20, 60, 222);"/>
     </linearGradient>
-    <pattern id="pattern-1" patternTransform="matrix(-0.119642, -0.382547, 0.449571, -0.140603, 502.64793, 208.847003)" xlink:href="#pattern-2"/>
+    <pattern id="pattern-1" patternTransform="matrix(-0.081548, -0.260743, 0.306426, -0.095834, 482.010537, 203.493545)" xlink:href="#pattern-2"/>
     <pattern x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100" id="pattern-2">
       <title>Circulo 2</title>
       <rect x="0" y="0" width="50" height="100" style="fill: rgb(92, 37, 165);"/>
@@ -37,16 +37,16 @@
       <stop offset="1" style="stop-color: rgb(53, 89, 234);"/>
     </linearGradient>
   </defs>
-  <rect width="600" height="500" style="fill-opacity: 0.88; fill: rgb(7, 0, 8);"/>
-  <path d="M 191.445 114.943 C 191.445 159.1 155.648 194.897 111.491 194.897 C 67.334 194.897 31.537 159.1 31.537 114.943 C 31.537 70.786 67.334 34.989 111.491 34.989 C 155.648 34.989 191.445 70.786 191.445 114.943 Z" style="fill-rule: evenodd; fill: url(#pattern-0-0); fill-opacity: 0.5; paint-order: fill; stroke-width: 2px; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.302172, -0.953253, 0.953253, 0.302172, -31.768272, 186.489609)"/>
-  <rect x="385.349" y="84.494" width="196.62" height="36.021" style="fill: url(#gradient-0); stroke-width: 2px; fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.986714, -0.162469, 0.162469, 0.986714, -8.335186, 73.632782)"/>
+  <rect width="600" height="500" style="fill: rgba(12, 0, 14, 0.91);"/>
+  <path d="M 164.017 84.343 C 164.017 115.316 138.908 140.425 107.935 140.425 C 76.961 140.425 51.852 115.316 51.852 84.343 C 51.852 53.37 76.961 28.261 107.935 28.261 C 138.908 28.261 164.017 53.37 164.017 84.343 Z" style="fill-rule: evenodd; fill: url(#pattern-0-0); fill-opacity: 0.5; paint-order: fill; stroke-width: 2px; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.302172, -0.953253, 0.953253, 0.302172, -5.080549, 161.745822)"/>
+  <rect x="293.98" y="46.914" width="150" height="20" style="fill: url(#gradient-0); stroke-width: 2px; fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.986714, -0.162469, 0.162469, 0.986714, 87.925598, 95.869118)"/>
   <g transform="matrix(1.046018, 0, 0, 1.046018, 209.249786, 34.100998)"/>
-  <path d="M 561.513 204.498 C 561.513 233.036 538.378 256.171 509.84 256.171 C 481.302 256.171 458.166 233.036 458.166 204.498 C 458.166 175.96 481.302 152.825 509.84 152.825 C 538.378 152.825 561.513 175.96 561.513 204.498 Z" style="fill-rule: evenodd; fill: url(#pattern-1); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke-width: 2px; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.817354, -0.576136, 0.576136, 0.817354, -24.698447, 331.0876)"/>
+  <path d="M 522.133 200.529 C 522.133 219.981 506.364 235.749 486.913 235.749 C 467.462 235.749 451.692 219.981 451.692 200.529 C 451.692 181.078 467.462 165.309 486.913 165.309 C 506.364 165.309 522.133 181.078 522.133 200.529 Z" style="fill-rule: evenodd; fill: url(#pattern-1); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke-width: 2px; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.817354, -0.576136, 0.576136, 0.817354, -26.599298, 317.153594)"/>
   <rect x="39.012" y="318.79" width="150" height="150" style="fill: url(#gradient-1); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);"/>
   <rect x="-257.636" y="-23.921" width="230" height="4.985" style="stroke-width: 2px; fill: rgb(190, 112, 223); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.879404, -0.476076, -0.544813, -0.842193, 205.99327, 200.200724)"/>
   <rect x="179.224" y="23.924" width="160" height="4.985" style="fill: rgb(90, 72, 210); stroke-width: 2px; fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.731997, 0.681308, 0.624093, -0.78525, 289.856505, 239.942126)"/>
   <rect x="358.147" y="329.654" width="112.004" height="28.66" style="fill: url(#gradient-2); stroke-width: 2px; fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(-0.732684, 0.680569, -0.680569, -0.732684, 870.284058, 308.025879)"/>
   <rect x="524.245" y="218.771" width="48.063" height="149.047" style="stroke-width: 2px; fill: url(#gradient-3); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);"/>
   <rect x="404.569" y="417.025" width="60.833" height="60.833" style="stroke-width: 2px; fill: url(#gradient-4); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);"/>
-  <rect x="-168.023" y="-23.921" width="150" height="4.985" style="stroke-width: 2px; fill: rgb(190, 112, 223); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.956302, 0.292381, 0.217634, -0.979155, 396.911594, 134.565522)"/>
+  <rect x="-112.015" y="-23.921" width="100" height="4.985" style="stroke-width: 2px; fill: rgb(190, 112, 223); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.956302, 0.292381, 0.217634, -0.979155, 339.56622, 140.900454)"/>
 </svg>

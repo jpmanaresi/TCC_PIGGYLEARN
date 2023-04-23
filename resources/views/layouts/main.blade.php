@@ -18,7 +18,7 @@
 
 
   </head>
-<body style="background-image: url('img/background.svg');">
+<body id="background">
 
 
   <!-- Navbar -->
@@ -64,24 +64,24 @@
         <div class="d-grid gap-2">
           
           <a href="/" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-            <img id="botoesImg" src="img/house.svg" alt="Icone Pagina Inicial">
+            <img id="botoesImg" src="/img/house.svg" alt="Icone Pagina Inicial">
             Tela Inicial 
           </a>
 
         @auth
 
           <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-            <img id="botoesImg" src="img/file-person.svg" alt="Icone Perfil">
+            <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
             Meu Perfil
           </a>
 
           <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
-            <img id="botoesImg" src="img/pencil-fill.svg" alt="Icone Editar">
+            <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
             Criar Curso  
           </a>
 
           <a id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-           <img id="botoesImg"  src="img/card-list.svg" alt="Icone Cursos"> 
+           <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
            Cursos  
           </a>
 
@@ -89,7 +89,7 @@
             @csrf
             <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
             this.closest('form').submit();"> 
-              <img id="botoesImg" src="img/box-arrow-in-right.svg" alt="Icone de Sair">
+              <img id="botoesImg" src="/img/box-arrow-in-right.svg" alt="Icone de Sair">
               Sair
             </a>
           </form>
