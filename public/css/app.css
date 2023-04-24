@@ -412,6 +412,7 @@
             border: solid;
             background-color: whitesmoke;
             border-radius: 20px;
+            box-shadow: inset 0 0 10px 10px rgb(219, 219, 219);
          }
 
          /*TAMANHO TEXTO LABEL TELA DE PROFILE*/
@@ -429,10 +430,12 @@
             
          }
 
+         /*DISPLAY PARA ALINHAR OS ELEMENTOS LADO A LADO*/
          #displayflex{
             display: flex;
          }
 
+         /*JEITO MAIS FACIL DE ESTILIZAR UMA LINHA DO QUE O <HR>*/
          #regua 
          {
             display:block; 
@@ -443,43 +446,42 @@
             background-color:#000000
         }
 
+        /*MARGEM NO FIM DO CONTAINER*/
         #marginrow
         {
-            margin-bottom: 30px;
-         
+            margin-bottom: 40px;
         }
 
-        #fontProfile
-        {
-            font-family: 'Mukta', sans-serif;
-        }
-
+        /*+55*/
         #basic-addon1
         {
-            border-color: black;
+            border-color: rgb(0, 0, 0);
             width: 50px;
         }
 
+        /*estilização dos input2*/
         #exampleInput2{
             border-color: black;
-            margin-right: 5px;
-           
+            margin-right: 5px;          
             border-top-right-radius: 5px ;
             border-bottom-right-radius: 5px ;
             float: left;
-
         }
 
+        /*estilização dos input3*/
         #exampleInput3
         {
             border-color: black;
             margin-right: 5px;
         }
+
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
         #arquivo
         {
             display: none;
         }
 
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
         #uploadbtn
         {
             display: flex;
@@ -495,6 +497,7 @@
             margin-left: 53%;
         }
 
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
         #uploadbtn:hover
         {
             color: #5C636A;
