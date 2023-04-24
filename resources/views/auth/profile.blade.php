@@ -35,7 +35,7 @@
 
     <br> <br>
     <span id="regua"></span>
-    <Br>
+    <br>
 
     <form>
 
@@ -92,7 +92,7 @@
                 <!-- texto email -->        
                 <label for="email" class="form-label">
                     <p id="p-label">
-                        Email
+                        Endereço de Email
                     </p>
                  </label>
 
