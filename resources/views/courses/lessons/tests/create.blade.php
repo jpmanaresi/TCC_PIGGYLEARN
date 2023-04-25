@@ -17,9 +17,6 @@
             <textarea name="content" id="content" class="form-control" placeholder="Qual o conteúdo desta aula?"></textarea>
         </div>
 
-                <div class="form-group">
-                    <input type="checkbox" name="hasTest" value="1"> Tem avaliação?
-                </div>
         <button type="submit">Criar Prova</button>
     </form>
 </div>

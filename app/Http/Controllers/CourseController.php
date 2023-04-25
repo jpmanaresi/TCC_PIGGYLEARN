@@ -18,6 +18,10 @@ class CourseController extends Controller
         return view('courses.create');
     }
 
+    public function edit($id){
+        $course= Course::findOrFail($id);
+        return view('courses.create', [ 'id' => $id, 'course' => $course]);
+    }
 
     public function store(Request $request) {
         $course= new Course;
@@ -29,7 +33,12 @@ class CourseController extends Controller
 
         $course->save();
 
-        return view('courses.lessons.create',['course' => $course])->with('msg', 'Curso criado com sucesso!');
+        if ($request->has('concluir')) {
+            return redirect()->route('cursos.index')->with('msg', 'Curso criado com sucesso!');
+        } elseif ($request->has('adicionar_aula')) {
+
+            return view('aulas.create', compact('curso', 'aula'));
+        }
     }
 
     public function update(Request $request, $id)
@@ -42,7 +51,7 @@ class CourseController extends Controller
     // se for edição, atualiza os dados do curso
     if ($isEdit) {
         $course->fill([
-            // campos do curso a serem atualizados
+            
         ]);
         $course->save();
 
