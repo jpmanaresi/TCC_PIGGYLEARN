@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\User;
+use App\Models\Lesson;
 class CourseController extends Controller
 {
     public function index() {
@@ -15,12 +16,15 @@ class CourseController extends Controller
     }
 
     public function create(){
-        return view('courses.create');
+        $course = new Course();
+        $lessons = collect([new Lesson()]);
+        return view('courses.create', ['course' => $course, 'lessons'=> $lessons]);
     }
 
     public function edit($id){
         $course= Course::findOrFail($id);
-        return view('courses.create', [ 'id' => $id, 'course' => $course]);
+        $lessons= Lesson::where('course_id',$course->id)->toArray();
+        return view('courses.create', [ 'id' => $id, 'course' => $course, 'lessons'=> $lessons]);
     }
 
     public function store(Request $request) {

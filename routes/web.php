@@ -21,10 +21,10 @@ Route::get('/home', [CourseController::class, 'index'])->name('home');
 
 
 /* Rotas das Views de Cursos */
-Route::get('/courses/create', [CourseController::class, 'create']);
-Route::get('/courses/edit/{id}', [CourseController::class, 'edit']);
+Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create');
+Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('courses.edit');
 Route::get('/courses/show/{id}',[CourseController::class, 'show']);
-Route::post('/courses',[CourseController::class, 'store']);
+Route::post('/courses',[CourseController::class, 'store'])->name('courses.store');
 
 /*Aulas*/
 Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create']);

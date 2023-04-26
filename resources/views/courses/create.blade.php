@@ -17,12 +17,12 @@
     <input type="hidden" name="is_edit" value="{{ isset($course) ? 'true' : 'false' }}">
         <div class="row">
             <div class="col-md-6">
-            @if(isset($curso))
+            @if(isset($course))
              @method('PUT')
             @endif
                     <div class="form-group">
                         <label id="tituloCriarCurso" for="title" >Título:</label>
-                        <input type="text" id="title" class="form-control" name="title" placeholder="Nome do Curso">
+                        <input type="text" id="title" class="form-control" name="title" placeholder="Nome do Curso" @if(isset($course)) value="{{$course->course_title}}"@endif>
                     </div>
                 
             </div>
@@ -30,7 +30,7 @@
                 <div id="descricaoCriarCurso">
                     <div class="form-group">
                         <label id="tituloCriarCurso" for="title" >Descrição:</label>
-                        <textarea name="description" id="description" class="form-control" placeholder="O que será ensinado?"></textarea>
+                        <textarea name="description" id="description" class="form-control" placeholder="O que será ensinado?">@if (isset($course)){{$course->course_description}}@endif</textarea>
                     </div>
                 </div>
             </div>
@@ -38,10 +38,11 @@
         <input id="botaoCriar" type="submit" class="btn btn-custom" type="submit" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
         <button  ></button>
         <div class="col-md-10 offset-md-1 dashboard-title-container">
-            <h1>Meus Eventos</h1>
+            <h1>Aulas</h1>
         </div>
             <div class="col-md-10 offset-md-1 dashboard-events-container">
-                @if(count($courses) > 0)
+                @if (isset($course))
+                @if(count($lessons) > 0)
                 <table class="table">
                     <thead>
                         <tr>
@@ -55,7 +56,7 @@
                         @foreach($courses as $course)
                             <tr>
                                 <td scropt="row">{{ $loop->index + 1 }}</td>
-                                <td><a href="/courses/{{ $course->id }}">{{ $course->course_title }}</a></td>
+                                <td><a href="#">{{ $lesson->title }}</a></td>
                                 <td>0</td>
                                 <td>
                                     <a href="#" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
@@ -69,7 +70,10 @@
                     </tbody>
                 </table>
                 @else
-                <p>Você ainda não tem eventos, <a href="/courses/create">criar evento</a></p>
+                <p>Este curso ainda não possui aulas, <a href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a></p>
+                @endif
+                @else
+                <p>Este curso ainda não possui aulas, <a href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a></p>
                 @endif
             </div>
         </form>
