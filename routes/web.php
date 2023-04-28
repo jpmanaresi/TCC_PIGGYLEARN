@@ -25,9 +25,11 @@ Route::get('/courses/create', [CourseController::class, 'create'])->name('course
 Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('courses.edit');
 Route::get('/courses/show/{id}',[CourseController::class, 'show']);
 Route::post('/courses',[CourseController::class, 'store'])->name('courses.store');
+Route::put('/courses',[CourseController::class, 'update'])->name('courses.update');
+
 
 /*Aulas*/
-Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create']);
+Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create'])->name('lessons.create');
 Route::post('/courses/{id}',[LessonController::class, 'store']);
 
 /* Usuário */

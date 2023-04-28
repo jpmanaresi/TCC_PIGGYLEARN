@@ -20,7 +20,7 @@ class LessonController extends Controller
             'content' => 'required',
             // Adicione outras validações necessárias
         ]);
-    
+        $id = $course->id;
         // Criar primeira aula relacionada ao curso
         $lesson = new Lesson;
         $lesson->title = $request->title;
@@ -30,9 +30,10 @@ class LessonController extends Controller
         $lesson->hasTest = $request->filled('hasTest') ? $request->hasTest : false;
         $lesson->save();
         
+        
         if ($lesson->hasTest != true){
         // Redirecionar para a view de detalhes do curso, por exemplo
-        return redirect("/courses/create/{$course->id}");
+        return redirect()->route('courses.edit', ['id' => $request->course_id]);
         } else {
             return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
         }
