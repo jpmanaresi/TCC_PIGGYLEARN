@@ -91,9 +91,9 @@
             Criar Curso  
           </a>
 
-          <a id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+          <a href="/dashboard" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
            <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
-           Cursos  
+           Cursos (DashBorad)
           </a>
 
           <form action="/logout" method="post" class="mt-auto">
