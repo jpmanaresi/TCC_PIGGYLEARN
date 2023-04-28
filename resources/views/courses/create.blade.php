@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <input id="botaoCriar" type="submit" class="btn btn-custom" type="submit" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
+        <input id="botaoCriar" class="btn btn-custom" type="submit" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
         <button  ></button>
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             <h1>Aulas</h1>
@@ -48,15 +48,15 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">Participantes</th>
+                            <th scope="col"></th>
                             <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($courses as $course)
+                        @foreach($lessons as $lesson)
                             <tr>
                                 <td scropt="row">{{ $loop->index + 1 }}</td>
-                                <td><a href="#">{{ $lesson->title }}</a></td>
+                                <td><a href="#">{{ $lesson['title'] }}</a></td>
                                 <td>0</td>
                                 <td>
                                     <a href="#" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
@@ -73,7 +73,8 @@
                 <p>Este curso ainda não possui aulas, <a href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a></p>
                 @endif
                 @else
-                <p>Este curso ainda não possui aulas, <a href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a></p>
+                <input type="hidden" name="create_course_and_add_lesson" value="1">
+                <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
                 @endif
             </div>
         </form>

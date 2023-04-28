@@ -520,6 +520,11 @@
     display: inline-block;
   }
 
+  #dashboard-background{
+    background-color: whitesmoke;
+    border: 2px solid black;
+  }
+
   /* Form criação de Aula */
 
   #lesson-form-container {

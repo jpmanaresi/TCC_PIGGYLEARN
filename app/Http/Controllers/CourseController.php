@@ -18,12 +18,16 @@ class CourseController extends Controller
     public function create(){
         $course = new Course();
         $lessons = collect([new Lesson()]);
-        return view('courses.create', ['course' => $course, 'lessons'=> $lessons]);
+
+        return view('courses.create', [
+        'course' => $course->exists ? $course : null,
+        'lessons' => $course->exists ? $course->lessons()->orderBy('seq')->get() : $lessons,
+    ]);
     }
 
     public function edit($id){
         $course= Course::findOrFail($id);
-        $lessons= Lesson::where('course_id',$course->id)->toArray();
+        $lessons= Lesson::where('course_id',$course->id)->get()->toArray();
         return view('courses.create', [ 'id' => $id, 'course' => $course, 'lessons'=> $lessons]);
     }
 
@@ -37,11 +41,15 @@ class CourseController extends Controller
 
         $course->save();
 
-        if ($request->has('concluir')) {
+        if ($request->has('create_course_and_add_lesson')) {
+
+        return redirect()->route('lessons.create', ['id' => $course->id]);
+
+        }elseif ($request->has('concluir')) {
             return redirect()->route('cursos.index')->with('msg', 'Curso criado com sucesso!');
         } elseif ($request->has('adicionar_aula')) {
 
-            return view('aulas.create', compact('curso', 'aula'));
+            return view('lessons.create', compact('course', 'lesson'));
         }
     }
 
