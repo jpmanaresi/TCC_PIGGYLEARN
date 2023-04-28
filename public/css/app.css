@@ -526,3 +526,44 @@
     background-color: whitesmoke;
     border: 2px solid black;
   }
+
+
+  /* TELA DE MOSTRAR O CURSO */
+
+        /*tags*/
+
+         /*BORDA DO CONTAINER PROFILE*/
+         #showborda
+         {  
+            margin-top: 30px;
+            border-width: 2px; 
+            border-color: #000000;
+            border: solid;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
+         }
+
+         #tituloCurso
+         {
+            margin-top: 39px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Mukta', sans-serif;
+         }
+
+         #h2-show1
+         {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Mukta', sans-serif;
+         }
+
+         #p-show1
+         {
+            text-align: justify;
+            font-size: 20px;
+            font-family: 'Mukta', sans-serif;  
+            padding-left: 50px;
+            padding-right: 50px;
+         }
