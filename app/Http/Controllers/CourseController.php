@@ -53,27 +53,29 @@ class CourseController extends Controller
         }
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
 {
-    $curso = Curso::findOrFail($id);
+    $data=$request->all();
+    $course = Course::findOrFail($data['id']);
 
     // verifica se o formulário está sendo utilizado para edição
     $isEdit = $request->input('is_edit') === 'true';
 
     // se for edição, atualiza os dados do curso
         if ($isEdit) {
-            $validatedData = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-        ]);
-        $course->update($validatedData);
 
+        $course->update([
+        'course_title' => $data['title'],
+        'course_description' => $data['description']
+        ]);
+
+        var_dump($course);
          if ($request->has('create_course_and_add_lesson')) {
 
         return redirect()->route('lessons.create', ['id' => $course->id]);
 
         }elseif ($request->has('concluir')) {
-            return redirect()->route('cursos.index')->with('msg', 'Edição no curso: '.$course->course_title.' realizada com sucesso!');
+            return redirect()->route('/dashboardhome')->with('msg', 'Edição no curso: '.$course->course_title.' realizada com sucesso!');
         } elseif ($request->has('adicionar_aula')) {
 
             return view('lessons.create', compact('course', 'lesson'));

@@ -19,6 +19,7 @@
             <div class="col-md-6">
             @if(isset($course))
              @method('PUT')
+             <input type="hidden" name="id" value="{{$course->id}}"> 
             @endif
                     <div class="form-group">
                         <label id="tituloCriarCurso" for="title" >Título:</label>
