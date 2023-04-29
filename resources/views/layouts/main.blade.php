@@ -27,7 +27,7 @@
     
         <a href="#" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <div class="col-auto">
-            <img width="40px" src="/img/User-60.svg" alt="Icone Porquinho">
+            <img width="35px" src="/img/User-60.svg" alt="Icone Porquinho">
           </div> 
 
           <div class="col d-flex align-items-center ms-2">

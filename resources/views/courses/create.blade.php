@@ -37,7 +37,7 @@
             </div>
         </div>
         <input id="botaoCriar" class="btn btn-custom" type="submit" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
-        <button  ></button>
+
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             <h1>Aulas</h1>
         </div>
