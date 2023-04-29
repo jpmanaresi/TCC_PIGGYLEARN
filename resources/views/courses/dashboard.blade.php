@@ -26,7 +26,7 @@
                     <td><a href="/courses/show/{{ $course->id }}">{{ $course->course_title }}</a></td>
                     <td>0</td>
                     <td>
-                        <a href="/courses/{id}/edit" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
+                        <a href="/courses/{{$course->id}}/edit" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
                         <form action="#" method="POST">
     
                             <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
