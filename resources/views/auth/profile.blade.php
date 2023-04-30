@@ -7,7 +7,7 @@
 <div class="container-md" id="profileborda">
 
     <br> <br>
-
+    <form>
     <div class="row">
         <div class="col mx-auto text-center">
             <div id="displayflex text-center">
@@ -24,7 +24,7 @@
             </div>
             <br> <br>
             
-        <form>
+        
             <h1 id="tituloProfileI">
                 Nome de Usuário
             </h1>
@@ -35,7 +35,7 @@
 
     <br> <br>
     <span id="regua"></span>
-    <Br>
+    <br>
 
     <form>
 
@@ -92,7 +92,7 @@
                 <!-- texto email -->        
                 <label for="email" class="form-label">
                     <p id="p-label">
-                        Email
+                        Endereço de Email
                     </p>
                  </label>
 

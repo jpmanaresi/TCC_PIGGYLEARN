@@ -10,22 +10,15 @@
     margin-top: 7rem;
 }
 
-#background
+#background 
 {
     background-image: url('/img/background.svg');
     background-repeat: repeat;
-    background-position: center top;
-    background-size: auto 100%;
-    
+    background-position: center;
+    background-size: auto 800px;
 }
-
-@media screen and (max-width: 767px) {
-    #secao1 {
-      background-size: contain;
-      background-position: center bottom;
-    }
-  }
   
+
 
 /* main*/
     
@@ -34,10 +27,10 @@
         /* Cor navbar e borda */
         #nav.navbar
         {
-            height: 75px;
+            height: 70px;
             background-color: #1c1b1d;
             border: 0;
-            border-bottom: 6px;
+            border-bottom: 4px;
             border-color: rgb(255, 0, 247);
             border-style: outset; 
         }
@@ -88,14 +81,20 @@
         /* Barra de menu */
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
-            height: 75px;
+            height: 70px;
             border: 0;
-            border-bottom: 6px;
+            border-bottom: 4px;
             border-color: rgb(255, 0, 247);
             border-style: outset; 
         } 
 
-        /* Formatação das imagens */
+        #botoesImgMenu
+        {
+            margin-right: 10px;
+            width: 40px;
+        }
+
+        /* Formatação das imagens do offCanvas*/
         #botoesImg
         {
             margin-right: 10px;
@@ -332,31 +331,49 @@
         padding-bottom: 2rem;
     }
 
-    #tituloCurso1
+    #tituloCriarCurso
     {
         text-align: center; 
-        padding: 10px; 
+        padding: 5px; 
         font-family:JetBrains Mono;
     }
+
+    #descricaoCriarCurso
+    {
+
+        font-family:JetBrains Mono;
+        border: 0;
+        border-radius: 10px;
+        padding-left: 3px;
+        padding-right: 3PX;
+        color: #ffffff; 
+        background-color: #7e18ad;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+    }
+
+    
 
     #corpoCriarCurso
     {
         color: #ffffff;
-        background-color: #1c1b1d;
-        padding: 3rem;
+        border-radius: 10px;
+        background-image: linear-gradient(-130deg, rgb(0, 0, 0) 40%, #4b0077);
+        padding: 2rem;
+        margin: 1rem;
     }
+
+    
 
     #botaoCriar.btn-custom
     {
-        margin-top: 1rem;   
+        margin-top: 4rem;   
         background-color: #b811b8;
         color: #ffffff;
         border: 0; 
     }
 
     #botaoCriar.btn-custom:hover 
-    {
-        margin-top: 1rem;   
+    { 
         background-color: #701570;
         color: #ffffff;
         border: 0; 
@@ -391,11 +408,13 @@
          /*BORDA DO CONTAINER PROFILE*/
          #profileborda
          {  
+            margin-top: 30px;
             border-width: 2px; 
             border-color: #000000;
             border: solid;
             background-color: whitesmoke;
             border-radius: 20px;
+            box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
          }
 
          /*TAMANHO TEXTO LABEL TELA DE PROFILE*/
@@ -413,10 +432,12 @@
             
          }
 
+         /*DISPLAY PARA ALINHAR OS ELEMENTOS LADO A LADO*/
          #displayflex{
             display: flex;
          }
 
+         /*JEITO MAIS FACIL DE ESTILIZAR UMA LINHA DO QUE O <HR>*/
          #regua 
          {
             display:block; 
@@ -424,46 +445,45 @@
             margin: 10px 0; 
             width:100%; 
             height:1px; 
-            background-color:#000000
+            background-color:#000000;
         }
 
+        /*MARGEM NO FIM DO CONTAINER*/
         #marginrow
         {
-            margin-bottom: 30px;
-         
+            margin-bottom: 40px;
         }
 
-        #fontProfile
-        {
-            font-family: 'Mukta', sans-serif;
-        }
-
+        /*+55*/
         #basic-addon1
         {
-            border-color: black;
+            border-color: rgb(0, 0, 0);
             width: 50px;
         }
 
+        /*estilização dos input2*/
         #exampleInput2{
             border-color: black;
-            margin-right: 5px;
-           
+            margin-right: 5px;          
             border-top-right-radius: 5px ;
             border-bottom-right-radius: 5px ;
             float: left;
-
         }
 
+        /*estilização dos input3*/
         #exampleInput3
         {
             border-color: black;
             margin-right: 5px;
         }
+
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
         #arquivo
         {
             display: none;
         }
 
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
         #uploadbtn
         {
             display: flex;
@@ -479,6 +499,7 @@
             margin-left: 53%;
         }
 
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
         #uploadbtn:hover
         {
             color: #5C636A;
@@ -487,7 +508,7 @@
 
 
 /* Dashboard */
-.dashboard-title-container {
+    .dashboard-title-container {
     margin-bottom: 30px;
     margin-top: 30px;
   }
@@ -500,6 +521,11 @@
     display: inline-block;
   }
 
+  #dashboard-background{
+    background-color: whitesmoke;
+    border: 2px solid black;
+  }
+
   /* Form criação de Aula */
 
   #lesson-form-container {
@@ -507,9 +533,53 @@
     border: 2px solid black;
   }
 
+<<<<<<< HEAD
   /*Mostrar curso */
 
   #course-show-container {
     background-color: whitesmoke;
     border: 2px solid black;
   }
+=======
+
+  /* TELA DE MOSTRAR O CURSO */
+
+        /*tags*/
+
+         /*BORDA DO CONTAINER PROFILE*/
+         #showborda
+         {  
+            margin-top: 30px;
+            border-width: 2px; 
+            border-color: #000000;
+            border: solid;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
+         }
+
+         #tituloCurso
+         {
+            margin-top: 39px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Mukta', sans-serif;
+         }
+
+         #h2-show1
+         {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Mukta', sans-serif;
+         }
+
+         #p-show1
+         {
+            text-align: justify;
+            font-size: 20px;
+            font-family: 'Mukta', sans-serif;  
+            padding-left: 50px;
+            padding-right: 50px;
+            margin-bottom: 30px;
+         }
+>>>>>>> 41ec641626eaec17a69243e9beb062169bc86fc7

@@ -27,7 +27,7 @@
     
         <a href="#" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <div class="col-auto">
-            <img width="40px" src="/img/User-60.svg" alt="Icone Porquinho">
+            <img width="35px" src="/img/User-60.svg" alt="Icone Porquinho">
           </div> 
 
           <div class="col d-flex align-items-center ms-2">
@@ -54,11 +54,21 @@
   <!-- Offcanvas -->  
     <div class="offcanvas offcanvas-start text-white navbar-fixed-top" data-bs-theme="dark" data-bs-backdrop="false" data-bs-scroll="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div id="sidebar-linhaCima" class="offcanvas-header btn-custom">
-        <h4 id="tituloInicialSB" class="offcanvas-title" id="offcanvasScrollingLabel">
-          Menu
-        </h4>
+
+        <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+
+          <img src="/img/PorquinhoLogo.svg" alt="Logo Porquinho" id="botoesImgMenu">
+
+          <h4 id="tituloInicialSB" class="offcanvas-title" id="offcanvasScrollingLabel">
+            Menu
+          </h4>
+
+        </div>
+
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      
       </div>
+
 
       <div class="offcanvas-body" id="sideBar">
         <div class="d-grid gap-2">
@@ -81,18 +91,20 @@
             Criar Curso  
           </a>
 
-          <a id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+          <a href="/dashboard" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
            <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
-           Cursos  
+           Cursos (DashBorad)
           </a>
 
           <form action="/logout" method="post" class="mt-auto">
             @csrf
+
             <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
             this.closest('form').submit();"> 
               <img id="botoesImg" src="/img/box-arrow-in-right.svg" alt="Icone de Sair">
               Sair
             </a>
+
           </form>
 
         @endauth
