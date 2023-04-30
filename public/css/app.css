@@ -506,3 +506,10 @@
     background-color: whitesmoke;
     border: 2px solid black;
   }
+
+  /*Mostrar curso */
+
+  #course-show-container {
+    background-color: whitesmoke;
+    border: 2px solid black;
+  }
