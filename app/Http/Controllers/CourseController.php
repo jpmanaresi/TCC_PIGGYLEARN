@@ -40,16 +40,14 @@ class CourseController extends Controller
         $course->user_id = $user->id;
 
         $course->save();
+        //var_dump($request->all());
+        if ($request->action==='Criar') {
+            
+        return redirect()->route('dashboard')->with('msg', 'Curso criado com sucesso!');
 
-        if ($request->has('create_course_and_add_lesson')) {
+        }elseif ($request->has('create_course_and_add_lesson')) {
 
-        return redirect()->route('lessons.create', ['id' => $course->id]);
-
-        }elseif ($request->has('concluir')) {
-            return redirect()->route('cursos.index')->with('msg', 'Curso criado com sucesso!');
-        } elseif ($request->has('adicionar_aula')) {
-
-            return view('lessons.create', compact('course', 'lesson'));
+            return redirect()->route('lessons.create', ['id' => $course->id]);
         }
     }
 
@@ -65,20 +63,19 @@ class CourseController extends Controller
         if ($isEdit) {
 
         $course->update([
-        'course_title' => $data['title'],
-        'course_description' => $data['description']
+        'course_title' => $request->input('title'),
+        'course_description' => $request->input('description'),
         ]);
 
-        var_dump($course);
-         if ($request->has('create_course_and_add_lesson')) {
+        //var_dump($request->all());
+         if  ($request->action==='Atualizar') {
+
+            return redirect()->route('dashboard')->with('msg', 'Edição no curso: '.$course->course_title.' realizada com sucesso!');
+
+        }elseif ($request->has('create_course_and_add_lesson')) {
 
         return redirect()->route('lessons.create', ['id' => $course->id]);
 
-        }elseif ($request->has('concluir')) {
-            return redirect()->route('/dashboardhome')->with('msg', 'Edição no curso: '.$course->course_title.' realizada com sucesso!');
-        } elseif ($request->has('adicionar_aula')) {
-
-            return view('lessons.create', compact('course', 'lesson'));
         }
     } else {
         // se for criação, cria um novo curso
@@ -93,7 +90,7 @@ class CourseController extends Controller
             return redirect()->route('lessons.create', ['id' => $course->id]);
 
         }elseif ($request->has('concluir')) {
-            return redirect()->route('/dashboard')->with('msg', 'Curso criado com sucesso!');
+            return redirect()->route('dashboard')->with('msg', 'Curso criado com sucesso!');
         } elseif ($request->has('adicionar_aula')) {
 
             return view('lessons.create', compact('course', 'lesson'));
