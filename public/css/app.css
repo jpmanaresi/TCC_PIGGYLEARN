@@ -10,13 +10,14 @@
     margin-top: 7rem;
 }
 
-#background
+#background 
 {
     background-image: url('/img/background.svg');
     background-repeat: repeat;
-    max-block-size: 1080px;
     background-position: center;
+    background-size: auto 800px;
 }
+  
 
 
 /* main*/
@@ -26,10 +27,10 @@
         /* Cor navbar e borda */
         #nav.navbar
         {
-            height: 75px;
+            height: 70px;
             background-color: #1c1b1d;
             border: 0;
-            border-bottom: 6px;
+            border-bottom: 4px;
             border-color: rgb(255, 0, 247);
             border-style: outset; 
         }
@@ -80,9 +81,9 @@
         /* Barra de menu */
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
-            height: 75px;
+            height: 70px;
             border: 0;
-            border-bottom: 6px;
+            border-bottom: 4px;
             border-color: rgb(255, 0, 247);
             border-style: outset; 
         } 
@@ -532,6 +533,14 @@
     border: 2px solid black;
   }
 
+<<<<<<< HEAD
+  /*Mostrar curso */
+
+  #course-show-container {
+    background-color: whitesmoke;
+    border: 2px solid black;
+  }
+=======
 
   /* TELA DE MOSTRAR O CURSO */
 
@@ -574,3 +583,4 @@
             margin-bottom: 30px;
             word-wrap: break-word;
          }
+>>>>>>> 41ec641626eaec17a69243e9beb062169bc86fc7
