@@ -15,7 +15,7 @@
 
     <span id="regua"></span>
 
-    <div class="col-md-12" id="description-container">
+    <div class="col" id="description-container">
 
         <h2 id="h2-show1">Sobre o curso:</h2>
 
