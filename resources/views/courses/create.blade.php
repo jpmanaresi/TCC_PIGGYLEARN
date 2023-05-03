@@ -19,6 +19,7 @@
             <div class="col-md-6">
             @if(isset($course))
              @method('PUT')
+             <input type="hidden" name="id" value="{{$course->id}}"> 
             @endif
                     <div class="form-group">
                         <label id="tituloCriarCurso" for="title" >Título:</label>
@@ -35,7 +36,7 @@
                 </div>
             </div>
         </div>
-        <input id="botaoCriar" class="btn btn-custom" type="submit" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
+        <input id="botaoCriar" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
 
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             <h1>Aulas</h1>
@@ -74,7 +75,7 @@
                 @endif
                 @else
                 <input type="hidden" name="create_course_and_add_lesson" value="1">
-                <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
+                <button id="botaoCriar" type="submit" value="create_course_and_add_lesson" class="btn btn-custom">Adicionar Aula</button>
                 @endif
             </div>
         </form>

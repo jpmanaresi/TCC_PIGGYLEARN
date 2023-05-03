@@ -36,7 +36,7 @@ Route::post('/courses/{id}',[LessonController::class, 'store']);
 Route::get('/profile', [UserController::class, 'profile']);
 Route::get('/login', [UserController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
-Route::get('/dashboard', [CourseController::class, 'dashboard'])->middleware('auth');
+Route::get('/dashboard', [CourseController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 Auth::routes();
 
 /*Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/
