@@ -4,15 +4,17 @@
 
 @section('content')
 
-<div class="container" id="course-show-container">
+<div class="container" id="showborda">
     <div class="col-md-10 offset-md-1">
         <div class="row">
-            <div id="info-container" class="col-md-6">
-                <h1>{{$course->course_title}}</h1>
+            <div id="info-container" class="col">
+                <h1 id="tituloCurso">{{$course->course_title}}</h1>
             </div>
+
+            <span id="regua"></span>
             <div class="col-md-12" id="description-container">
-                <h3>Sobre o curso:</h3>
-                <p class="event-description">{{$course->course_description}}</p>
+                <h3 id="h2-show1">Sobre o curso:</h3>
+                <p class="event-description" id="p-show1">{{$course->course_description}}</p>
             </div>
         </div>
     </div>
