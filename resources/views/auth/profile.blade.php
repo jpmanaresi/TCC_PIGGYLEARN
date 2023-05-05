@@ -72,7 +72,7 @@
                  <div id="displayflex"> <!-- div para colocar os elementos um ao lado do outro --> 
                  <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">+55</span>
-                    <input type="text" class="form-control" id="exampleInput2" placeholder="(xx) x xxxx-xxxx" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" id="exampleInput1" placeholder="(xx) x xxxx-xxxx" aria-label="Username" aria-describedby="basic-addon1">
                   
                 
                  <span class="input-group-addon d-grid gap-2 d-md-flex justify-content-md-end">
@@ -120,10 +120,10 @@
    
                  <div id="displayflex"> <!-- div para colocar os elementos um ao lado do outro -->  
                     <select class="form-select" aria-label="Default select example" id="exampleInput1">
-                        <option selected>Selecione...</option>
-                        <option value="1">Feminino</option>
-                        <option value="2">Masculino</option>
-                        <option value="3">Outro</option>
+                        <option id="exampleInput1" selected>Selecione...</option>
+                        <option id="exampleInput1" value="1">Feminino</option>
+                        <option id="exampleInput1" value="2">Masculino</option>
+                        <option id="exampleInput1" value="3">Outro</option>
                       </select>
                    
               </div>

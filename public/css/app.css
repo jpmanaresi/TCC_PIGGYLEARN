@@ -428,6 +428,7 @@
          #exampleInput1{
             border-color: black;
             margin-right: 5px;
+            font-family: 'Mukta', sans-serif;
             
          }
 
@@ -528,9 +529,34 @@
 
   }
 
-  #letra-tr{
-    text-align: left;
+  #letra-dashboard{
+    text-align: center;
     font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  #link-dashboard{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+    color: #a8a8a8;
+    text-decoration: none;
+
+  }
+
+  #link-dashboard:hover{
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Mukta', sans-serif;
+    color: #AB00A6;
+    text-decoration: none;
+   
+  }
+
+
+  #letra-Titulodashboard{
+    text-align: center;
+    font-size: 50px;
     font-family: 'Mukta', sans-serif;
   }
 
