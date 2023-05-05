@@ -143,19 +143,27 @@
     /* Cor da Caixa de login*/
     #cardLogin.bg-gradient-custom 
     {     
-        background: linear-gradient(to bottom right, rgb(194, 61, 221) 10%,rgb(48, 23, 112) 100%);
-        color: #ffffff;  
+        background-color: whitesmoke;  
     }
 
     #cardLogin.card 
     {
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.281);  
     }
       
-
     /* Form de Criar a area de login */ 
 
+    #fontelogin
+    {
+        font-family:  'Mukta', sans-serif;
+    }
 
+    #tituloregister
+    {
+        font-family:  'Mukta', sans-serif;
+        font-size: x-large;
+        text-align: center;
+    }
 
     /* Mensagem que aparece na tela */
     .msg {
@@ -189,8 +197,8 @@
         #tituloCardlogin
         {
             text-align: center; 
-            font-size: larger;
-            font-family:JetBrains Mono;
+            font-size: x-large;
+            font-family: 'Mukta', sans-serif;
         }
 
         /* Index1 = Destaque */
@@ -347,7 +355,7 @@
         padding-right: 3PX;
         color: #ffffff; 
         background-color: #7e18ad;
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
     }
 
     
