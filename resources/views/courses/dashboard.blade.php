@@ -13,23 +13,23 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Participantes</th>
-                <th scope="col">Ações</th>
+                <th id="letra-tr" scope="col">#</th>
+                <th id="letra-tr" scope="col">Nome</th>
+                <th id="letra-tr" scope="col">Participantes</th>
+                <th id="letra-tr" scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
             @foreach($courses as $course)
                 <tr>
-                    <td scropt="row">{{ $loop->index + 1 }}</td>
-                    <td><a href="/courses/show/{{ $course->id }}">{{ $course->course_title }}</a></td>
-                    <td>0</td>
-                    <td>
-                        <a href="/courses/{{$course->id}}/edit" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
+                    <td id="letra-tr" scropt="row">{{ $loop->index + 1 }}</td>
+                    <td  ><a id="letra-tr" href="/courses/show/{{ $course->id }}">{{ $course->course_title }}</a></td>
+                    <td id="letra-tr">0</td>
+                    <td id="letra-tr">
+                        <a id="letra-tr" href="/courses/{{$course->id}}/edit" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
                         <form action="#" method="POST">
     
-                            <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
+                            <button  id="letra-tr" type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
                         </form>
                     </td>
                 </tr>
