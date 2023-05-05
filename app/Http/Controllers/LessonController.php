@@ -36,6 +36,7 @@ class LessonController extends Controller
         return redirect()->route('courses.edit', ['id' => $request->course_id]);
         } else {
             return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
+            
         }
     }
 }
