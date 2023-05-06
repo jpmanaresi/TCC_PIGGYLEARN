@@ -1,6 +1,6 @@
 /* fonte de todo html */
 *{
-    font-family: "Carlito";
+    font-family: 'Mukta', sans-serif;;
     
 }   
 
@@ -72,7 +72,7 @@
         /* Titulo do Offcanvas */
         #tituloInicialSB
         {
-            font-family:JetBrains Mono;
+            font-family:'Mukta', sans-serif;
             color: white;
         }    
 
@@ -143,19 +143,35 @@
     /* Cor da Caixa de login*/
     #cardLogin.bg-gradient-custom 
     {     
-        background: linear-gradient(to bottom right, rgb(194, 61, 221) 10%,rgb(48, 23, 112) 100%);
-        color: #ffffff;  
+        background-color: whitesmoke;  
     }
 
     #cardLogin.card 
     {
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.281);  
+        border: solid 2px black;
     }
       
-
+    #cardregister
+    {
+        border: solid black 2px;
+    }
     /* Form de Criar a area de login */ 
 
+    #fontelogin
+    {
+        font-family:  'Mukta', sans-serif;
+    }
 
+    #tituloregister
+    {
+        font-family:  'Mukta', sans-serif;
+        font-size: x-large;
+        text-align: center;
+        background-color: rgba(171, 0, 165, 0.685);
+        border-bottom: solid black 2px;
+        border-radius: 3px;
+    }
 
     /* Mensagem que aparece na tela */
     .msg {
@@ -181,7 +197,7 @@
         text-align: center; 
         color: white;
         padding-bottom: 4rem; 
-        font-family:JetBrains Mono;
+        font-family:'Mukta', sans-serif;
     }
 
     /* Cards */
@@ -189,8 +205,11 @@
         #tituloCardlogin
         {
             text-align: center; 
-            font-size: larger;
-            font-family:JetBrains Mono;
+            font-size: x-large;
+            font-family: 'Mukta', sans-serif;
+            background-color: rgba(171, 0, 165, 0.685);
+            border-bottom: solid black 2px;
+            border-radius: 3px;
         }
 
         /* Index1 = Destaque */
@@ -200,7 +219,7 @@
             text-align: start; 
             font-size: larger;
             font-weight: bold;
-            font-family:JetBrains Mono;
+            font-family:'Mukta', sans-serif;
         }
         /* Index2 = S. Destaque */
         #tituloCardIndex2
@@ -209,7 +228,7 @@
             text-align: start; 
             font-size: larger;
             font-weight: normal;
-            font-family:JetBrains Mono;
+            font-family:'Mukta', sans-serif;
         }
 
         /* Configurações gerais dos cards do Index*/
@@ -326,7 +345,7 @@
         text-align: start; 
         color: white;
         padding-left: 10px;
-        font-family:JetBrains Mono;
+        font-family:'Mukta', sans-serif;
         padding-bottom: 2rem;
     }
 
@@ -334,29 +353,29 @@
     {
         text-align: center; 
         padding: 5px; 
-        font-family:JetBrains Mono;
+        font-family:'Mukta', sans-serif;
     }
 
     #descricaoCriarCurso
     {
 
-        font-family:JetBrains Mono;
+        font-family: 'Mukta', sans-serif;
         border: 0;
         border-radius: 10px;
         padding-left: 3px;
         padding-right: 3PX;
         color: #ffffff; 
-        background-color: #7e18ad;
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        background-color: #000000;
+        
     }
 
     
 
     #corpoCriarCurso
     {
-        color: #ffffff;
+        color: #000000;
         border-radius: 10px;
-        background-image: linear-gradient(-130deg, rgb(0, 0, 0) 40%, #4b0077);
+        background-color: whitesmoke;
         padding: 2rem;
         margin: 1rem;
     }

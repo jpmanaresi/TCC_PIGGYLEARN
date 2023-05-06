@@ -1,4 +1,4 @@
-@extends('layouts.main')
+'@extends('layouts.main')
 
 @section('title', 'PL - Login')
     
@@ -7,7 +7,7 @@
 <h1 style="text-align: center; padding-top: 10rem; padding-bottom: 4rem; font-family:Carlito">
   Login</h1>
 
-  <div style="font-family:Carlito" class="container">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card bg-gradient-custom" id="cardLogin">
