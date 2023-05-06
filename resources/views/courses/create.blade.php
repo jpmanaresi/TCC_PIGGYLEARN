@@ -56,7 +56,7 @@
                     <tbody>
                         @foreach($lessons as $lesson)
                             <tr>
-                                <td scropt="row">{{ $loop->index + 1 }}</td>
+                                <td scropt="row">{{ $lesson['seq'] }}</td>
                                 <td><a href="#">{{ $lesson['title'] }}</a></td>
                                 <td>0</td>
                                 <td>
@@ -67,7 +67,14 @@
                                     </form>
                                 </td>
                             </tr>
-                        @endforeach    
+                        @endforeach
+                        
+                        <tr>
+                                <td scropt="row"></td>
+                                <td colspan="4">
+                                    <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom"><ion-icon name="create-outline"></ion-icon> Adicionar Aula</a> 
+                                </td>
+                            </tr>    
                     </tbody>
                 </table>
                 @else
@@ -75,7 +82,7 @@
                 @endif
                 @else
                 <input type="hidden" name="create_course_and_add_lesson" value="1">
-                <button id="botaoCriar" type="submit" value="create_course_and_add_lesson" class="btn btn-custom">Adicionar Aula</button>
+                <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
                 @endif
             </div>
         </form>

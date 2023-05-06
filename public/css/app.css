@@ -370,6 +370,16 @@
         color: #ffffff;
         border: 0; 
     }
+    #botaoAdicionarAula.btn-custom
+    {   
+        margin: 5px;
+        background-color: #b811b8;
+        color: #ffffff;
+        border: 0; 
+    }
+    .container-botaoadicionaraula{
+        justify-content: right;
+    }
 
     #botaoCriar.btn-custom:hover 
     { 

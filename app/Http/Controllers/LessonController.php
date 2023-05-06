@@ -22,12 +22,14 @@ class LessonController extends Controller
         ]);
         $id = $course->id;
         // Criar primeira aula relacionada ao curso
+        $lastSeq = Lesson::where('course_id', $id)->orderByDesc('seq')->max()->seq ?? 0;
         $lesson = new Lesson;
         $lesson->title = $request->title;
         $lesson->content = $request->content;
         $lesson->course_id = $request->course_id;
         $lesson->hasTest = $request->hasTest;
         $lesson->hasTest = $request->filled('hasTest') ? $request->hasTest : false;
+        $lesson->seq = $lastSeq + 1;
         $lesson->save();
         
         
@@ -36,7 +38,9 @@ class LessonController extends Controller
         return redirect()->route('courses.edit', ['id' => $request->course_id]);
         } else {
             return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
-            
+         
         }
+       
+        //return($course->lessons()->toArray()); 
     }
 }
