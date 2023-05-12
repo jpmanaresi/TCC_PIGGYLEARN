@@ -30,7 +30,9 @@ Route::put('/courses',[CourseController::class, 'update'])->name('courses.update
 
 /*Aulas*/
 Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create'])->name('lessons.create');
-Route::post('/courses/{id}',[LessonController::class, 'store']);
+Route::post('/courses/{id}',[LessonController::class, 'store'])->name('lessons.store');
+Route::get('/courses/{id}/lessons/edit', [LessonController::class, 'edit'])->name('lessons.edit');
+Route::put('/courses/{id}',[LessonController::class, 'update'])->name('lessons.update');
 
 /* Usuário */
 Route::get('/profile', [UserController::class, 'profile']);
