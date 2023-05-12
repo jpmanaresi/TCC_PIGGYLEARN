@@ -12,7 +12,7 @@ class LessonController extends Controller
         $course = Course::findOrFail($id);
         return view('courses.lessons.create',['course'=> $course]);
     }
-    public function store(Course $course, Request $request)
+    public function store(Request $request)
     {
         // Validar dados do formulário de criação de aulas
         $data = request()->validate([
@@ -20,9 +20,9 @@ class LessonController extends Controller
             'content' => 'required',
             // Adicione outras validações necessárias
         ]);
-        $id = $course->id;
+        $id = $request->id;
         // Criar primeira aula relacionada ao curso
-        $lastSeq = Lesson::where('course_id', $id)->orderByDesc('seq')->max()->seq ?? 0;
+        $lastSeq = Lesson::where('course_id', $id)->orderByDesc('seq')->first()?->seq ?? 0;
         $lesson = new Lesson;
         $lesson->title = $request->title;
         $lesson->content = $request->content;
@@ -37,9 +37,9 @@ class LessonController extends Controller
         // Redirecionar para a view de detalhes do curso, por exemplo
         return redirect()->route('courses.edit', ['id' => $request->course_id]);
         } else {
-            return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
-         
-        }
+          return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
+         return $request;
+            }
        
         //return($course->lessons()->toArray()); 
     }
