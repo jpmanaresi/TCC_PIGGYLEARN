@@ -12,6 +12,13 @@ class LessonController extends Controller
         $course = Course::findOrFail($id);
         return view('courses.lessons.create',['course'=> $course]);
     }
+    public function edit($id, $lesson_id){
+
+        $course = Course::findOrFail($id);
+        $lesson = Lesson::findOrFail($lesson_id);
+
+        return view('courses.lessons.create',['course'=> $course, 'lesson' => $lesson]);
+    }
     public function store(Request $request)
     {
         // Validar dados do formulário de criação de aulas
@@ -38,9 +45,18 @@ class LessonController extends Controller
         return redirect()->route('courses.edit', ['id' => $request->course_id]);
         } else {
           return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
-         return $request;
             }
        
         //return($course->lessons()->toArray()); 
+    }
+    public function update(Request $request) {
+        $data=$request->all();
+        $lesson = Lesson::findOrFail($request->id);
+        $lesson->update([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            ]);
+
+        return redirect()->route('courses.edit', ['id' => $request->course_id]);
     }
 }
