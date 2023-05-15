@@ -61,7 +61,7 @@
                                 <td><a href="#">{{ $lesson['title'] }}</a></td>
                                 <td>0</td>
                                 <td>
-                                    <a href="#" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
+                                    <a href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
                                     <form action="#" method="POST">
                 
                                         <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
