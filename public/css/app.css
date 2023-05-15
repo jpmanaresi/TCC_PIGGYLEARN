@@ -342,11 +342,12 @@
 
     #tituloInicialC
     {
-        text-align: start; 
-        color: white;
+        text-align: center; 
+        color: rgb(0, 0, 0);
         padding-left: 10px;
+        font-size: 50px;
         font-family:'Mukta', sans-serif;
-        padding-bottom: 2rem;
+        padding-top: 3%;
     }
 
     #tituloCriarCurso
@@ -575,7 +576,6 @@
 
   #link-dashboard:hover{
     text-align: center;
-    font-size: 22px;
     font-family: 'Mukta', sans-serif;
     color: #AB00A6;
     text-decoration: none;
@@ -588,6 +588,38 @@
     font-size: 50px;
     font-family: 'Mukta', sans-serif;
   }
+
+  #botaodash.btn-custom
+    { 
+        background-color: #5f0641;
+        color: #ffffff;
+        border: 0; 
+    }
+
+    #botaodash.btn-custom:hover 
+    { 
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    }
+
+    #botaodashb.btn-custom
+    { 
+        background-color: #28065f;
+        color: #ffffff;
+        border: 0; 
+    }
+
+    #botaodashb.btn-custom:hover 
+    { 
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    }
 
   /* Form criação de Aula */
 
