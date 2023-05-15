@@ -26,10 +26,10 @@
                     <td  id="letra-dashboard"><a id="link-dashboard" href="/courses/show/{{ $course->id }}">{{ $course->course_title }}</a></td>
                     <td id="letra-dashboard">0</td>
                     <td id="letra-dashboard">
-                        <a id="letra-dashboard" href="/courses/{{$course->id}}/edit" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
+                        <a id="botaodashb" href="/courses/{{$course->id}}/edit" class="btn btn-custom"><ion-icon name="create-outline"></ion-icon> Editar</a> 
                         <form action="#" method="POST">
     
-                            <button  id="letra-dashboard" type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
+                            <button  id="botaodash" type="submit" class="btn btn-custom"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
                         </form>
                     </td>
                 </tr>

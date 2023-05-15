@@ -5,6 +5,7 @@
 @section('content')
 
 <div alt="course-create-container" class="col-md-6 offset-md-3">
+    <div class="container" id="dashboard-background">
 
     <h1 id="tituloInicialC">
         Criar Curso
@@ -92,5 +93,5 @@
     
 </div>
 
-
+</div>
 @endsection
