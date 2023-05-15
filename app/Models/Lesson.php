@@ -12,6 +12,7 @@ class Lesson extends Model
     protected $fillable = [
         'title',
         'content',
+        'hasTest'
     ];
 
     public function course() {

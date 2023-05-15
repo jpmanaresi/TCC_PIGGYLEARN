@@ -23,7 +23,7 @@
         </div>
 
                 <div class="form-group">
-                    <input type="checkbox" name="hasTest" value="1"> Tem avaliação?
+                    <input type="checkbox" name="hasTest" value="1" {{ isset($lesson) && $lesson->hasTest ? 'checked disabled' : '' }}> Tem avaliação?
                 </div>
         <button type="submit">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }} </button>
     </form>

@@ -34,7 +34,6 @@ class LessonController extends Controller
         $lesson->title = $request->title;
         $lesson->content = $request->content;
         $lesson->course_id = $request->course_id;
-        $lesson->hasTest = $request->hasTest;
         $lesson->hasTest = $request->filled('hasTest') ? $request->hasTest : false;
         $lesson->seq = $lastSeq + 1;
         $lesson->save();
@@ -55,6 +54,7 @@ class LessonController extends Controller
         $lesson->update([
             'title' => $request->input('title'),
             'content' => $request->input('content'),
+            'hasTest' => $request->filled('hasTest') ? $request->hasTest : false,
             ]);
 
         return redirect()->route('courses.edit', ['id' => $request->course_id]);
