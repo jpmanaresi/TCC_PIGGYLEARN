@@ -34,6 +34,8 @@ Route::post('/courses/{id}',[LessonController::class, 'store'])->name('lessons.s
 Route::get('courses/{course}/lessons/{lesson}/edit', [LessonController::class, 'edit'])->name('lessons.edit');
 Route::put('/courses/{id}/lessons/{lesson_id}',[LessonController::class, 'update'])->name('lessons.update');
 
+/*Testes/Avaliações */
+Route::get('/courses/{id}/lessons/{lesson}/tests/create', [LessonController::class, 'create'])->name('tests.create');
 /* Usuário */
 Route::get('/profile', [UserController::class, 'profile']);
 Route::get('/login', [UserController::class, 'login']);

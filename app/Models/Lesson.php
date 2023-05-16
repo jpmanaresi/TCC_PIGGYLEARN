@@ -18,4 +18,8 @@ class Lesson extends Model
     public function course() {
         return $this->belongsTo('App\Models\Course');
     }
+
+    public function test() { 
+        return $this->hasOne('App\Models\Test');
+    }
 }
