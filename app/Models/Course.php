@@ -18,6 +18,6 @@ class Course extends Model
         return $this->belongsTo('App\Models\User');
     }
     public function lessons() {
-        return $this->hasMany('App\Models\Lessons')->orderBy('seq');
+        return $this->hasMany('App\Models\Lesson')->orderBy('seq');
     }
 }

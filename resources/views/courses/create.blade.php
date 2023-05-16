@@ -62,8 +62,9 @@
                                 <td>0</td>
                                 <td>
                                     <a href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
-                                    <form action="#" method="POST">
-                
+                                    <form action="{{ route('lessons.destroy', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
                                         <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
                                     </form>
                                 </td>

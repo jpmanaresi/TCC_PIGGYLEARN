@@ -33,6 +33,7 @@ Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create'])-
 Route::post('/courses/{id}',[LessonController::class, 'store'])->name('lessons.store');
 Route::get('courses/{course}/lessons/{lesson}/edit', [LessonController::class, 'edit'])->name('lessons.edit');
 Route::put('/courses/{id}/lessons/{lesson_id}',[LessonController::class, 'update'])->name('lessons.update');
+Route::delete('/courses/{course}/lessons/{lesson}', [LessonController::class, 'destroy'])->name('lessons.destroy');
 
 /*Testes/Avaliações */
 Route::get('/courses/{id}/lessons/{lesson}/tests/create', [LessonController::class, 'create'])->name('tests.create');

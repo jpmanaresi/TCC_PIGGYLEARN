@@ -43,7 +43,7 @@ class LessonController extends Controller
         // Redirecionar para a view de detalhes do curso, por exemplo
         return redirect()->route('courses.edit', ['id' => $request->course_id]);
         } else {
-          return view('courses.lessons.tests.create',['lesson'=> $lesson->id]);
+          return view('courses.lessons.tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
             }
        
         //return($course->lessons()->toArray()); 
@@ -73,4 +73,31 @@ class LessonController extends Controller
                 return redirect()->route('courses.edit', ['id' => $lesson->course_id]);
         }
     }
+    public function destroy($id)
+{
+    $lesson = Lesson::find($id);
+    // Verificar se a lesson tem um teste relacionado
+    if ($lesson->hasTest!=true) {
+        // Se tiver um teste relacionado, atualizar o hasTest para false e excluir o teste
+        $lesson->hasTest = false;
+        //$lesson->test()->delete();
+    }
+
+    // Obter o curso relacionado à lesson
+    $course = $lesson->course;
+
+    // Obter as lessons do curso com sequência maior que a da lesson a ser excluída
+    $lessonsToUpdate = $course->lessons()->where('seq', '>', $lesson->seq)->get();
+
+    // Atualizar a sequência das lessons remanescentes
+    foreach ($lessonsToUpdate as $lessonToUpdate) {
+        $lessonToUpdate->seq -= 1;
+        $lessonToUpdate->save();
+    }
+
+    // Excluir a lesson
+    $lesson->delete();
+
+    return redirect()->route('courses.edit', ['course' => $course->id]);
+}
 }
