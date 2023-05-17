@@ -75,7 +75,9 @@ class LessonController extends Controller
     }
     public function destroy($id)
 {
-    $lesson = Lesson::find($id);
+    $lesson = Lesson::where('id', $id)->first();
+    var_dump($lesson);
+    /*
     // Verificar se a lesson tem um teste relacionado
     if ($lesson->hasTest!=true) {
         // Se tiver um teste relacionado, atualizar o hasTest para false e excluir o teste
@@ -98,6 +100,7 @@ class LessonController extends Controller
     // Excluir a lesson
     $lesson->delete();
 
-    return redirect()->route('courses.edit', ['course' => $course->id]);
+    return redirect()->route('courses.edit', ['id' => $course->id]); */
+
 }
 }
