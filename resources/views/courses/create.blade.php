@@ -5,7 +5,7 @@
 @section('content')
 
 <div alt="course-create-container" class="col-md-6 offset-md-3">
-    <div class="container" id="dashboard-background">
+    <div class="container" id="dashboard-background-create">
 
     <h1 id="tituloInicialC">
         Criar Curso
@@ -17,31 +17,36 @@
 
     <input type="hidden" name="is_edit" value="{{ isset($course) ? 'true' : 'false' }}">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
             @if(isset($course))
              @method('PUT')
              <input type="hidden" name="id" value="{{$course->id}}"> 
             @endif
                     <div class="form-group">
                         <label id="tituloCriarCurso" for="title" >Título:</label>
-                        <input type="text" id="title" class="form-control" name="title" placeholder="Nome do Curso" @if(isset($course)) value="{{$course->course_title}}"@endif>
+                        <input type="text" id="titlecriar" class="form-control" name="title" placeholder="Nome do Curso" @if(isset($course)) value="{{$course->course_title}}"@endif>
                     </div>
-                
+                    <br>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div id="descricaoCriarCurso">
                     <div class="form-group">
                         <label id="tituloCriarCurso" for="title" >Descrição:</label>
-                        <textarea name="description" id="description" class="form-control" placeholder="O que será ensinado?">@if (isset($course)){{$course->course_description}}@endif</textarea>
+                        <textarea name="description" id="titlecriar" class="form-control" placeholder="O que será ensinado?">@if (isset($course)){{$course->course_description}}@endif</textarea>
                     </div>
                 </div>
             </div>
         </div>
         <input id="botaoCriar" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
+    </div>
+    <br>
 
+    <div id="corpoCriarCurso">
+        <span id="regua"></span>
         <div class="col-md-10 offset-md-1 dashboard-title-container">
-            <h1>Aulas</h1>
+            <h1>Criar aulas</h1>
         </div>
+
             <div class="col-md-10 offset-md-1 dashboard-events-container">
                 @if (isset($course))
                 @if(count($lessons) > 0)
