@@ -42,9 +42,11 @@
     <br>
 
     <div id="corpoCriarCurso">
+        <span id="regua"></span>
         <div class="col-md-10 offset-md-1 dashboard-title-container">
-            <h1>Aulas</h1>
+            <h1>Criar aulas</h1>
         </div>
+
             <div class="col-md-10 offset-md-1 dashboard-events-container">
                 @if (isset($course))
                 @if(count($lessons) > 0)

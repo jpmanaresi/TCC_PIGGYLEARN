@@ -346,25 +346,25 @@
         color: rgb(255, 255, 255);
         padding-left: 10px;
         font-size: 50px;
-        font-family:'Mukita', sans-serif;
+        font-family:'Mukta', sans-serif;
         padding-top: 3%;
     }
 
     #titlecriar
     {
-        font-family:'Mukita', sans-serif;
+        font-family:'Mukta', sans-serif;
     }
     #tituloCriarCurso
     {
         text-align: center; 
         padding: 5px; 
-        font-family:'Mukita', sans-serif;
+        font-family:'Mukta', sans-serif;
     }
 
     #descricaoCriarCurso
     {
 
-        font-family: 'Mukita', sans-serif;
+        font-family: 'Mukta', sans-serif;
         border: 0;
         border-radius: 10px;
         padding-left: 3px;
@@ -481,6 +481,7 @@
             background-color:#000000;
         }
 
+        
         /*MARGEM NO FIM DO CONTAINER*/
         #marginrow
         {
