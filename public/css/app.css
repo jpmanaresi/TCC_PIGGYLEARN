@@ -343,30 +343,33 @@
     #tituloInicialC
     {
         text-align: center; 
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
         padding-left: 10px;
         font-size: 50px;
-        font-family:'Mukta', sans-serif;
+        font-family:'Mukita', sans-serif;
         padding-top: 3%;
     }
 
+    #titlecriar
+    {
+        font-family:'Mukita', sans-serif;
+    }
     #tituloCriarCurso
     {
         text-align: center; 
         padding: 5px; 
-        font-family:'Mukta', sans-serif;
+        font-family:'Mukita', sans-serif;
     }
 
     #descricaoCriarCurso
     {
 
-        font-family: 'Mukta', sans-serif;
+        font-family: 'Mukita', sans-serif;
         border: 0;
         border-radius: 10px;
         padding-left: 3px;
         padding-right: 3PX;
-        color: #ffffff; 
-        background-color: #000000;
+        color: #000000; 
         
     }
 
@@ -556,7 +559,12 @@
     border: 2px solid black;
     border-radius: 20px;
     box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
+  }
 
+  #dashboard-background-create{
+    background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF; 
+    border: 2px solid black;
+    border-radius: 20px;
   }
 
   #letra-dashboard{
