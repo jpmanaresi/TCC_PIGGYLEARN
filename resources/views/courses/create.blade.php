@@ -45,7 +45,7 @@
             <div class="col-md-10 offset-md-1 dashboard-events-container">
                 @if (isset($course))
                 @if(count($lessons) > 0)
-                <table class="table">
+                <table class="table">     
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -55,26 +55,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($lessons as $lesson)
-                            <tr>
-                                <td scropt="row">{{ $lesson['seq'] }}</td>
-                                <td><a href="#">{{ $lesson['title'] }}</a></td>
-                                <td>0</td>
-                                <td>
-                                    <a href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
-                                    <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
+                    @foreach($lessons as $lesson)
+                    <tr>
+                        <td scropt="row">{{ $lesson['seq'] }}</td>
+                        <td><a href="#">{{ $lesson['title'] }}</a></td>
+                        <td>0</td>
+                        <td>
+                            <a href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn">Editar</a> 
+                            <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+
                         
                         <tr>
                                 <td scropt="row"></td>
                                 <td colspan="4">
-                                    <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom"><ion-icon name="create-outline"></ion-icon> Adicionar Aula</a> 
+                                    <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom">Adicionar Aula</a> 
                                 </td>
                             </tr>    
                     </tbody>

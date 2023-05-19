@@ -29,6 +29,7 @@ class CourseController extends Controller
         $course= Course::findOrFail($id);
         $lessons= Lesson::where('course_id',$course->id)->get()->toArray();
         return view('courses.create', [ 'id' => $id, 'course' => $course, 'lessons'=> $lessons]);
+        //return ($lessons);
     }
 
     public function store(Request $request) {
