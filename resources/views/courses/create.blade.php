@@ -48,7 +48,8 @@
         </div>
 
             <div class="col-md-10 offset-md-1 dashboard-events-container">
-                @if (isset($course))
+                @if (isset($course))        
+</form>
                 @if(count($lessons) > 0)
                 <table class="table">     
                     <thead>
