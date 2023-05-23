@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LessonController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,9 @@ Route::put('/courses/{id}/lessons/{lesson_id}',[LessonController::class, 'update
 Route::delete('/courses/{course}/lessons/{id}', [LessonController::class, 'destroy'])->name('lessons.destroy');
 
 /*Testes/Avaliações */
-Route::get('/courses/{id}/lessons/{lesson}/tests/create', [LessonController::class, 'create'])->name('tests.create');
+Route::get('/courses/{id}/lessons/{lesson}/tests/create', [TestController::class, 'create'])->name('tests.create');
+Route::post('/tests',[TestController::class, 'store'])->name('tests.store');
+
 /* Usuário */
 Route::get('/profile', [UserController::class, 'profile']);
 Route::get('/login', [UserController::class, 'login']);

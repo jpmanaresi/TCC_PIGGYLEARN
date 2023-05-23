@@ -12,7 +12,7 @@
     </h1>
         
     <div id="corpoCriarCurso">
-    <form action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store') }}" method="POST">
+    <form action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
     @csrf
 
     <input type="hidden" name="is_edit" value="{{ isset($course) ? 'true' : 'false' }}">

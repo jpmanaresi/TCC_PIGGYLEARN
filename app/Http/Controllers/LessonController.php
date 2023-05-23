@@ -43,7 +43,7 @@ class LessonController extends Controller
         // Redirecionar para a view de detalhes do curso, por exemplo
         return redirect()->route('courses.edit', ['id' => $request->course_id]);
         } else {
-          return view('courses.lessons.tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
+          return redirect()->route('tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
             }
        
         //return($course->lessons()->toArray()); 

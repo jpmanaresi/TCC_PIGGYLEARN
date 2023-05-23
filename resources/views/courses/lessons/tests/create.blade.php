@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container" id="lesson-form-container">
-    <form method="POST" action="/courses/">
+    <form method="POST" action="{{route('tests.store')}}">
         @csrf
         <input type="hidden" name="lesson_id" value="{{$lesson->id}}">
         <div class="form-group">
