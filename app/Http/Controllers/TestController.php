@@ -9,22 +9,24 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function create($lesson_id){
+    public function create($id, $lesson_id){
         $lesson = Lesson::Find($lesson_id);
         return view ('courses.lessons.tests.create', [ 'lesson' => $lesson]);
-        //return($lesson);
+        return($lesson);
     }
     public function store( Request $request) {
+
         $test = new Test();
-        $test->title = $request->title;
+        $lesson = Lesson::Find($request->lesson_id);
+        $test->title = "Avaliação: Aula ".$lesson->seq;
         $test->description = $request->description;
         $test->lesson_id = $request->lesson_id;
         $test->save();
-        $lesson = Lesson::Find($test->lesson_id);
         $lesson->update([
             'test_id' => $test->id,
         ]);
         return redirect()->route('courses.edit', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
+        //return($lesson);
     }
     
 }

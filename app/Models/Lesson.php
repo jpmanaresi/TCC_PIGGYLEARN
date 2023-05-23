@@ -12,7 +12,8 @@ class Lesson extends Model
     protected $fillable = [
         'title',
         'content',
-        'hasTest'
+        'hasTest',
+        'test_id'
     ];
 
     public function course() {
@@ -21,5 +22,25 @@ class Lesson extends Model
 
     public function test() { 
         return $this->hasOne('App\Models\Test');
+    }
+    
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Evento 'deleting' para excluir o Test antes de excluir a Lesson
+        static::deleting(function ($lesson) {
+            $test = $lesson->test;
+            $courseId = $lesson->course_id;
+            $seq = $lesson->seq;
+            if ($test) {
+                $test->delete();
+            }
+
+            // Atualizar o campo 'seq' das lessons com 'seq' maior que a lesson sendo excluída
+            Lesson::where('course_id', $courseId)
+                ->where('seq', '>', $seq)
+                ->decrement('seq');
+        });
     }
 }
