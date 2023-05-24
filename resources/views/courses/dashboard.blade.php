@@ -27,8 +27,9 @@
                     <td id="letra-dashboard">0</td>
                     <td id="letra-dashboard">
                         <a id="botaodashb" href="/courses/{{$course->id}}/edit" class="btn btn-custom"><ion-icon name="create-outline"></ion-icon> Editar</a> 
-                        <form action="#" method="POST">
-    
+                        <form action="{{ route('courses.destroy',['id' => $course->id])}}" method="POST">
+                            @csrf
+                            @method('DELETE')
                             <button  id="botaodash" type="submit" class="btn btn-custom"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
                         </form>
                     </td>

@@ -20,4 +20,14 @@ class Course extends Model
     public function lessons() {
         return $this->hasMany('App\Models\Lesson')->orderBy('seq');
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Evento 'deleting' para deletar as lessons relacionadas
+        static::deleting(function ($course) {
+            $course->lessons()->delete();
+        });
+    }
 }

@@ -27,18 +27,22 @@ Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('cours
 Route::get('/courses/show/{id}',[CourseController::class, 'show']);
 Route::post('/courses',[CourseController::class, 'store'])->name('courses.store');
 Route::put('/courses',[CourseController::class, 'update'])->name('courses.update');
+Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
 
 
 /*Aulas*/
 Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create'])->name('lessons.create');
-Route::post('/courses/{id}',[LessonController::class, 'store'])->name('lessons.store');
 Route::get('courses/{course}/lessons/{lesson}/edit', [LessonController::class, 'edit'])->name('lessons.edit');
+Route::post('/courses/{id}',[LessonController::class, 'store'])->name('lessons.store');
 Route::put('/courses/{id}/lessons/{lesson_id}',[LessonController::class, 'update'])->name('lessons.update');
 Route::delete('/courses/{course}/lessons/{id}', [LessonController::class, 'destroy'])->name('lessons.destroy');
 
 /*Testes/Avaliações */
 Route::get('/courses/{id}/lessons/{lesson}/tests/create', [TestController::class, 'create'])->name('tests.create');
 Route::post('/tests',[TestController::class, 'store'])->name('tests.store');
+Route::put('/tests/{id}',[TestController::class, 'store'])->name('tests.update');
+Route::delete('/tests/{id}', [TestController::class, 'destroy'])->name('tests.destroy');
+
 
 /* Usuário */
 Route::get('/profile', [UserController::class, 'profile']);

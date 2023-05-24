@@ -103,6 +103,16 @@ class CourseController extends Controller
         }
     }
 }
+public function destroy($id)
+    {
+        
+        $course = Course::find($id);
+
+        $course->delete();
+
+        return redirect()->route('dashboard')->with('msg', 'Curso: '.$course->course_title.' excluído com sucesso!');
+
+    }
 
     public function show($id) {
 
