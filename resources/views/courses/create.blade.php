@@ -42,7 +42,6 @@
     <br>
 
     <div id="corpoCriarCurso">
-        <span id="regua"></span>
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             <h1>Criar aulas</h1>
         </div>
