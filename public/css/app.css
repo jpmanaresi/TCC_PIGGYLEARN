@@ -388,18 +388,30 @@
 
     #botaoCriar.btn-custom
     {
+        margin-left: 372px;
         margin-top: 4rem;   
         background-color: #b811b8;
         color: #ffffff;
         border: 0; 
     }
+    #botaoAdicionarAula.btn-custom:hover
+    {   
+        margin-left: 372px;
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    }
+
     #botaoAdicionarAula.btn-custom
     {   
-        margin: 5px;
+        margin-left: 372px;
         background-color: #b811b8;
         color: #ffffff;
         border: 0; 
     }
+
     .container-botaoadicionaraula{
         justify-content: right;
     }
@@ -412,6 +424,14 @@
         transform: scale(1.01);
         transition: all 0.01s ease-in-out;
     }
+
+    #botaoCriarAulas{
+        margin-left: 330px;
+        background-color: #b811b8;
+        color: #ffffff;
+        border: 0; 
+    }
+
 
    
     /* courses.create */
@@ -678,4 +698,8 @@
             margin-right: 50px;
             margin-bottom: 30px;
             word-wrap: break-word;
+         }
+
+         #cortexto{
+            color: #000000;
          }

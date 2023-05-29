@@ -38,10 +38,10 @@
             </div>
         </div>
         <input id="botaoCriar" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
-    </div>
-    <br>
-
-    <div id="corpoCriarCurso">
+    
+    <br> <br> <Br>
+<span id="regua"></span>
+    
         <div class="col-md-10 offset-md-1 dashboard-title-container">
             <h1>Criar aulas</h1>
         </div>
@@ -76,17 +76,20 @@
                     </tr>
                     @endforeach
 
-                       
+                  
                         <tr>
                                 <td scropt="row"></td>
                                 <td colspan="4">
-                                    <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom">Adicionar Aula</a> 
+                                    <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula"  class="btn btn-custom">Adicionar Aula</a> 
                                 </td>
                             </tr>    
+                       
                     </tbody>
                 </table>
                 @else
-                <p>Este curso ainda não possui aulas, <a href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a></p>
+                <div id="divcriaraula">
+                <p id="cortexto">Este curso ainda não possui aulas</p><a id="botaoCriarAulas" class="btn btn-custom" href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a>
+                </div>
                 @endif
                 @else
                 <input type="hidden" name="create_course_and_add_lesson" value="1">
@@ -94,7 +97,6 @@
                 @endif
             </div>
         </form>
-    </div>
     
 
     
