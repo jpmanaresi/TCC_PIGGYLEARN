@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
+@section('title', 'PL - Criar Conta')
+
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

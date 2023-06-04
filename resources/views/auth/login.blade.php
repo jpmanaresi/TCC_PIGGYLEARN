@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', 'PL - Entrar')
+
 @section('content')
 
 <div class="container">
