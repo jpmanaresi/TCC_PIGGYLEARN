@@ -18,10 +18,11 @@
 
 
   </head>
+
 <body id="background">
 
-
   <!-- Navbar -->
+
     <nav class="navbar nav-border fixed-top" id="nav">
       <div class="container-fluid" alt="botaoMenu" >
     
@@ -52,23 +53,21 @@
     </nav>
     
   <!-- Offcanvas -->  
+
     <div class="offcanvas offcanvas-start text-white navbar-fixed-top" data-bs-theme="dark" data-bs-backdrop="false" data-bs-scroll="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
       <div id="sidebar-linhaCima" class="offcanvas-header btn-custom">
-
         <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
 
           <img src="/img/PorquinhoLogo.svg" alt="Logo Porquinho" id="botoesImgMenu">
-
+          <!-- Inicio da SideBar -->
           <h4 id="tituloInicialSB" class="offcanvas-title" id="offcanvasScrollingLabel">
-            Menu
+            Opções
           </h4>
-
         </div>
 
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      
-      </div>
 
+      </div>
 
       <div class="offcanvas-body" id="sideBar">
         <div class="d-grid gap-2">
@@ -78,53 +77,51 @@
             Tela Inicial 
           </a>
 
-        @auth
+          @auth
 
-          <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-            <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
-            Meu Perfil
-          </a>
-
-
-          <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
-            <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
-            Criar Curso  
-          </a>
-
-          <a href="/dashboard" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-           <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
-           Cursos (DashBorad)
-          </a>
-
-          <form action="/logout" method="post" class="mt-auto">
-            @csrf
-
-            <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault();
-            this.closest('form').submit();"> 
-              <img id="botoesImg" src="/img/box-arrow-in-right.svg" alt="Icone de Sair">
-              Sair
+            <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+              <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
+              Meu Perfil
             </a>
 
-          </form>
 
-        @endauth
+            <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
+              <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
+              Criar Curso  
+            </a>
 
-        </div>
+            <a href="/dashboard" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+              <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
+              Meus Cursos
+            </a>
+
+            <form action="/logout" method="post" class="mt-auto">
+            @csrf
+              <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault(); this.closest('form').submit();"> 
+                <img id="botoesImg" src="/img/box-arrow-in-right.svg" alt="Icone de Sair">
+                Sair
+              </a>
+            </form>
+
+          @endauth
+
+        </div>        
       </div>
-      
+      <!-- Creditos -->
       <div class="container">
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
+
             <p class="text-center text-muted" style="padding-bottom: 3rem; padding: 0">
               &copy; 2023 PiggyLearn, Inc
             </p>
+
         </footer>
       </div>
 
     </div>
 
-    
-    
+      
   <!-- Conteudo -->
 
   <main>
@@ -132,18 +129,18 @@
     <div id="corpot"> 
       <div class="container-fluid">
         <div class="row">
+
             @if(session('msg'))
-            <p class="msg">{{session('msg')}}</p>
+              <p class="msg">{{session('msg')}}</p>
             @endif
+
         </div>
-    </div>
+      </div>
     
       @yield('content')
       
-    </div> 
-      
+    </div>       
   </main>
-
 
 </body>
     

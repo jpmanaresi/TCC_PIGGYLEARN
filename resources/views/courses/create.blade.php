@@ -12,8 +12,8 @@
     </h1>
         
     <div id="corpoCriarCurso">
-    <form action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
-    @csrf
+        <form action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
+            @csrf
 
     <input type="hidden" name="is_edit" value="{{ isset($course) ? 'true' : 'false' }}">
         <div class="row">
@@ -22,6 +22,7 @@
              @method('PUT')
              <input type="hidden" name="id" value="{{$course->id}}"> 
             @endif
+
                     <div class="form-group">
                         <label id="tituloCriarCurso" for="title" >Título:</label>
                         <input type="text" id="titlecriar" class="form-control" name="title" placeholder="Nome do Curso" @if(isset($course)) value="{{$course->course_title}}"@endif>

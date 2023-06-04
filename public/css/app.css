@@ -7,7 +7,7 @@
 /* Divisão entre o topo da pagina com o conteudo */
 #corpot
 {
-    margin-top: 7rem;
+    margin-top: 10rem;
 }
 
 #background 
@@ -19,9 +19,12 @@
 }
   
 
-/* main*/
+
+
+
+/* main.blade */
     
-    /*NavBar*/
+    /* NavBar */
 
         /* Cor navbar e borda */
         #nav.navbar
@@ -132,71 +135,74 @@
 
     /* OffCanvas */
 
-/* main */
+/* main.blade */
 
 
 
-/* login */
+
+
+/* login.blade */
 
     /* Form de Criar a area de login */
 
-    /* Cor da Caixa de login*/
-    #cardLogin.bg-gradient-custom 
-    {     
-        background-color: whitesmoke;  
-    }
+        /* Cor da Caixa de login*/
+        #cardLogin.bg-gradient-custom 
+        {     
+            background-color: whitesmoke;  
+        }
 
-    #cardLogin.card 
-    {
-        box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.281);  
-        border: solid 2px black;
-    }
-      
-    #cardregister
-    {
-        border: solid black 2px;
-    }
-    /* Form de Criar a area de login */ 
+        #cardLogin.card 
+        {
+            box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.281);  
+            border: solid 2px black;
+        }
+        
+        /* Form de Criar a area de login */ 
+        #cardregister
+        {
+            border: solid black 2px;
+        }
 
-    #fontelogin
-    {
-        font-family:  'Mukta', sans-serif;
-    }
+        #fontelogin
+        {
+            font-family:  'Mukta', sans-serif;
+        }
 
-    #tituloregister
-    {
-        font-family:  'Mukta', sans-serif;
-        font-size: x-large;
-        text-align: center;
-        background-color: rgba(171, 0, 165, 0.685);
-        border-bottom: solid black 2px;
-        border-radius: 3px;
-    }
+        #tituloregister
+        {
+            font-family:  'Mukta', sans-serif;
+            font-size: x-large;
+            text-align: center;
+            background-color: rgba(171, 0, 165, 0.685);
+            border-bottom: solid black 2px;
+            border-radius: 3px;
+        }
 
-    /* Mensagem que aparece na tela */
-    .msg {
-        background-color: #D4EDDA;
-        color: #155724;
-        border: 1px solid #C3E6CB;
-        width: 100%;
-        margin-bottom: 0;
-        text-align: center;
-        padding: 10px;
-      }
+        /* Mensagem que aparece na tela */
+        .msg {
+            background-color: #D4EDDA;
+            color: #155724;
+            border: 1px solid #C3E6CB;
+            width: 100%;
+            margin-bottom: 0;
+            text-align: center;
+            padding: 10px;
+        }
 
 /* login  */
 
 
 
 
-/* index */
+
+/* index.blade */
 
     /* Titulos da pagina */
     #tituloInicialI
     {
         text-align: center; 
         color: white;
-        padding-bottom: 4rem; 
+        padding-bottom: 3rem; 
         font-family:'Mukta', sans-serif;
     }
 
@@ -233,110 +239,112 @@
 
         /* Configurações gerais dos cards do Index*/
 
-        /* Index1 = Destaque */
-        #cardBodyIndex1
-        {
-            border: 0;
-            border-radius: 10px;
-            font-weight: bold;
-            padding-left: 3px;
-            padding-bottom: 3px;
-            padding-right: 3PX;
-            color: #ffffff; 
-            background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
-            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-        }
+            /* Index1 = Destaque */
+            #cardBodyIndex1
+            {
+                border: 0;
+                border-radius: 10px;
+                font-weight: bold;
+                padding-left: 3px;
+                padding-bottom: 3px;
+                padding-right: 3PX;
+                color: #ffffff; 
+                background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+            }
 
-        #cardBodyIndex1 a{
-            color:inherit;
-            text-decoration: inherit;
-            font-family: inherit;
-            font-weight: inherit;
-            font-size:inherit;
+            #cardBodyIndex1 a{
+                color:inherit;
+                text-decoration: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+                font-size:inherit;
 
-        }
+            }
 
-        /* Index2 = S. Destaque */
-        #cardBodyIndex2
-        {
-            border: 0;
-            border-radius: 10px;
-            font-weight: normal;
-            padding-left: 3px;
-            padding-bottom: 3px;
-            padding-right: 3PX;
-            color: #ffffff; 
-            background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
-            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-        }
+            /* Index2 = S. Destaque */
+            #cardBodyIndex2
+            {
+                border: 0;
+                border-radius: 10px;
+                font-weight: normal;
+                padding-left: 3px;
+                padding-bottom: 3px;
+                padding-right: 3PX;
+                color: #ffffff; 
+                background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
+                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+            }
 
-        #cardBodyIndex2 a{
-            color:inherit;
-            text-decoration: inherit;
-            font-family: inherit;
-            font-weight: inherit;
-            font-size:inherit;
+            #cardBodyIndex2 a{
+                color:inherit;
+                text-decoration: inherit;
+                font-family: inherit;
+                font-weight: inherit;
+                font-size:inherit;
 
-        }
+            }
 
-        /* Index1 = Destaque */
-        /* Joga o card pra frente. Função basica do hover né */ 
-        #cardBodyIndex1.card:hover 
-        {
-            transform: scale(1.010);
-            transition: all 0.01s ease-in-out;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-        }
+            /* Index1 = Destaque */
+            /* Joga o card pra frente. Função basica do hover né */ 
+            #cardBodyIndex1.card:hover 
+            {
+                transform: scale(1.010);
+                transition: all 0.01s ease-in-out;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+            }
 
-        /* Index2 = S. Destaque */
-        #cardBodyIndex2.card:hover 
-        {
-            transform: scale(1.010);
-            transition: all 0.01s ease-in-out;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-        }
-            
-        /* Formatação da caixa de descrição */    
-        #cardDescIndex
-        {
-            background-color: #ffffff;
-            color: #1c1b1d;
-            font-weight: normal;
-            text-align: justify;
-            font-size: 16px;
-            padding: 20px;
-            padding-top: 10px;
-            line-height: 23px;
+            /* Index2 = S. Destaque */
+            #cardBodyIndex2.card:hover 
+            {
+                transform: scale(1.010);
+                transition: all 0.01s ease-in-out;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+            }
+                
+            /* Formatação da caixa de descrição */    
+            #cardDescIndex
+            {
+                background-color: #ffffff;
+                color: #1c1b1d;
+                font-weight: normal;
+                text-align: justify;
+                font-size: 16px;
+                padding: 20px;
+                padding-top: 10px;
+                line-height: 23px;
 
-            border-radius: 10px 10px;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+                border-radius: 10px 10px;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
 
-            max-height: 150px; /* define o limite de 150 pixels de altura */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 6; /* limita o número de linhas */
-        }
+                max-height: 150px; /* define o limite de 150 pixels de altura */
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6; /* limita o número de linhas */
+            }
 
-        /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
-        #cardJenalaIndex.card-body
-        {
-            padding-left: 5px; 
-            padding-bottom: 5px; 
-            padding-right: 5px;
-        }
+            /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
+            #cardJenalaIndex.card-body
+            {
+                padding-left: 5px; 
+                padding-bottom: 5px; 
+                padding-right: 5px;
+            }
 
         /* Configurações gerais dos cards */
     
     /* Cards */    
           
-/* index */
+/* index.blade */
 
 
 
-/* cursos */
+
+
+/* courses.blade */
 
     /* courses.create */
 
@@ -354,6 +362,7 @@
     {
         font-family:'Mukta', sans-serif;
     }
+    
     #tituloCriarCurso
     {
         text-align: center; 
@@ -363,17 +372,13 @@
 
     #descricaoCriarCurso
     {
-
         font-family: 'Mukta', sans-serif;
         border: 0;
         border-radius: 10px;
         padding-left: 3px;
         padding-right: 3PX;
         color: #000000; 
-        
     }
-
-    
 
     #corpoCriarCurso
     {
@@ -384,8 +389,6 @@
         margin: 1rem;
     }
 
-    
-
     #botaoCriar.btn-custom
     {
         margin-left: 372px;
@@ -394,6 +397,7 @@
         color: #ffffff;
         border: 0; 
     }
+
     #botaoAdicionarAula.btn-custom:hover
     {   
         margin-left: 372px;
@@ -432,11 +436,9 @@
         border: 0; 
     }
 
-
-   
     /* courses.create */
 
-/* cursos */
+/* courses */
 
 
 
@@ -560,146 +562,3 @@
             background: rgb(180, 180, 180);
         }
 
-
-/* Dashboard */
-    .dashboard-title-container {
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-  
-  .dashboard-events-container th {
-    width: 25%;
-  }
-  
-  .dashboard-events-container form {
-    display: inline-block;
-  }
-
-  #dashboard-background{
-    background-color: whitesmoke;
-    border: 2px solid black;
-    border-radius: 20px;
-    box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
-  }
-
-  #dashboard-background-create{
-    background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF; 
-    border: 2px solid black;
-    border-radius: 20px;
-  }
-
-  #letra-dashboard{
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Mukta', sans-serif;
-  }
-
-  #link-dashboard{
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Mukta', sans-serif;
-    color: #a8a8a8;
-    text-decoration: none;
-
-  }
-
-  #link-dashboard:hover{
-    text-align: center;
-    font-family: 'Mukta', sans-serif;
-    color: #AB00A6;
-    text-decoration: none;
-   
-  }
-
-
-  #letra-Titulodashboard{
-    text-align: center;
-    font-size: 50px;
-    font-family: 'Mukta', sans-serif;
-  }
-
-  #botaodash.btn-custom
-    { 
-        background-color: #5f0641;
-        color: #ffffff;
-        border: 0; 
-    }
-
-    #botaodash.btn-custom:hover 
-    { 
-        background-color: #701570;
-        color: #ffffff;
-        border: 0; 
-        transform: scale(1.01);
-        transition: all 0.01s ease-in-out;
-    }
-
-    #botaodashb.btn-custom
-    { 
-        background-color: #28065f;
-        color: #ffffff;
-        border: 0; 
-    }
-
-    #botaodashb.btn-custom:hover 
-    { 
-        background-color: #701570;
-        color: #ffffff;
-        border: 0; 
-        transform: scale(1.01);
-        transition: all 0.01s ease-in-out;
-    }
-
-  /* Form criação de Aula */
-
-  #lesson-form-container {
-    background-color: whitesmoke;
-    border: 2px solid black;
-  }
-
-
-  /* TELA DE MOSTRAR O CURSO */
-
-        /*tags*/
-
-         /*BORDA DO CONTAINER*/
-         #showborda
-         {  
-            margin-top: 30px;
-            border-width: 2px; 
-            border-color: #000000;
-            border: solid;
-            background-color: whitesmoke;
-            border-radius: 20px;
-            box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
-         }
-
-         #tituloCurso
-         {
-            margin-top: 39px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-family: 'Mukta', sans-serif;
-         }
-
-         #h2-show1
-         {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-family: 'Mukta', sans-serif;
-         }
-
-         #p-show1
-         {
-            text-align: justify;
-            font-size: 20px;
-            font-family: 'Mukta', sans-serif;  
-            margin-left: 50px;
-            margin-right: 50px;
-            margin-bottom: 30px;
-            word-wrap: break-word;
-         }
-
-         #cortexto{
-            color: #000000;
-         }
