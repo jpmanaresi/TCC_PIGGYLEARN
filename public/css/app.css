@@ -1,34 +1,705 @@
-/*NavBar: Começo*/
+/* fonte de todo html */
+*{
+    font-family: 'Mukta', sans-serif;;
+    
+}   
 
-    /*Cor navbar*/
+/* Divisão entre o topo da pagina com o conteudo */
+#corpot
+{
+    margin-top: 7rem;
+}
 
-    #nav.navbar{
-        background-color: #252327;
+#background 
+{
+    background-image: url('/img/background.svg');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: auto 800px;
+}
+  
+
+/* main*/
+    
+    /*NavBar*/
+
+        /* Cor navbar e borda */
+        #nav.navbar
+        {
+            height: 70px;
+            background-color: #1c1b1d;
+            border: 0;
+            border-bottom: 4px;
+            border-color: rgb(255, 0, 247);
+            border-style: outset; 
+        }
+
+        /* Cor dos Botões de entrar e login da navbar */
+        #botoesEntrarNav.btn-custom 
+        {
+            color: #ffffff; /* opcional: define a cor do texto para branco */
+            border-radius: 30px;
+        }
+
+        #botoesEntrarNav.btn-custom:hover 
+        {
+            background-color: #921992; /* cor diferente quando o mouse está em cima */
+            color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        }
+
+        #botoesCriarCoNav.btn-custom 
+        {
+            background-color: #7e18ad;
+            border-radius: 30px;
+            color: #ffffff; /* opcional: define a cor do texto para branco */
+        }
+
+        #botoesCriarCoNav.btn-custom:hover 
+        {
+            background-color: #ff00ff; /* cor diferente quando o mouse está em cima */
+            color: #000000;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        }
+
+    /* NavBar */
+
+
+    /* OffCanvas */
+        
+        /* Titulo do Offcanvas */
+        #tituloInicialSB
+        {
+            font-family:'Mukta', sans-serif;
+            color: white;
+        }    
+
+
+        /* Barra de menu */
+        #sidebar-linhaCima.btn-custom {
+            background-color: #1c1b1d;
+            height: 70px;
+            border: 0;
+            border-bottom: 4px;
+            border-color: rgb(255, 0, 247);
+            border-style: outset; 
+        } 
+
+        #botoesImgMenu
+        {
+            margin-right: 10px;
+            width: 40px;
+        }
+
+        /* Formatação das imagens do offCanvas*/
+        #botoesImg
+        {
+            margin-right: 10px;
+        }
+
+        /* Cor dos Botões */
+        #botoesMenus.btn-custom 
+        {
+            color: #ffffff; /* opcional: define a cor do texto para branco */
+        }
+
+        /* Cor dos Botão de sair */
+        #botoesMenusS.btn-custom
+        {
+            background-color: #b811b8;
+            color: #ffffff;
+        }  
+
+        /* Cor dos Botões: Hover */
+        #botoesMenus.btn-custom:hover 
+        {
+            background-color: #b811b8; /* cor diferente quando o mouse está em cima */
+            color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        }
+
+        /* Cor dos Botão de sair: Hover */
+        #botoesMenusS.btn-custom:hover 
+        {
+            background-color: #fa294c;
+            color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        }
+
+    /* OffCanvas */
+
+/* main */
+
+
+
+/* login */
+
+    /* Form de Criar a area de login */
+
+    /* Cor da Caixa de login*/
+    #cardLogin.bg-gradient-custom 
+    {     
+        background-color: whitesmoke;  
+    }
+
+    #cardLogin.card 
+    {
+        box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.281);  
+        border: solid 2px black;
+    }
+      
+    #cardregister
+    {
+        border: solid black 2px;
+    }
+    /* Form de Criar a area de login */ 
+
+    #fontelogin
+    {
+        font-family:  'Mukta', sans-serif;
+    }
+
+    #tituloregister
+    {
+        font-family:  'Mukta', sans-serif;
+        font-size: x-large;
+        text-align: center;
+        background-color: rgba(171, 0, 165, 0.685);
+        border-bottom: solid black 2px;
+        border-radius: 3px;
+    }
+
+    /* Mensagem que aparece na tela */
+    .msg {
+        background-color: #D4EDDA;
+        color: #155724;
+        border: 1px solid #C3E6CB;
+        width: 100%;
+        margin-bottom: 0;
+        text-align: center;
+        padding: 10px;
+      }
+
+/* login  */
+
+
+
+
+/* index */
+
+    /* Titulos da pagina */
+    #tituloInicialI
+    {
+        text-align: center; 
+        color: white;
+        padding-bottom: 4rem; 
+        font-family:'Mukta', sans-serif;
+    }
+
+    /* Cards */
+
+        #tituloCardlogin
+        {
+            text-align: center; 
+            font-size: x-large;
+            font-family: 'Mukta', sans-serif;
+            background-color: rgba(171, 0, 165, 0.685);
+            border-bottom: solid black 2px;
+            border-radius: 3px;
+        }
+
+        /* Index1 = Destaque */
+        #tituloCardIndex1
+        {
+            padding-left: 5PX;
+            text-align: start; 
+            font-size: larger;
+            font-weight: bold;
+            font-family:'Mukta', sans-serif;
+        }
+        /* Index2 = S. Destaque */
+        #tituloCardIndex2
+        {
+            padding-left: 5PX;
+            text-align: start; 
+            font-size: larger;
+            font-weight: normal;
+            font-family:'Mukta', sans-serif;
+        }
+
+        /* Configurações gerais dos cards do Index*/
+
+        /* Index1 = Destaque */
+        #cardBodyIndex1
+        {
+            border: 0;
+            border-radius: 10px;
+            font-weight: bold;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3PX;
+            color: #ffffff; 
+            background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        }
+
+        #cardBodyIndex1 a{
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+
+        }
+
+        /* Index2 = S. Destaque */
+        #cardBodyIndex2
+        {
+            border: 0;
+            border-radius: 10px;
+            font-weight: normal;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3PX;
+            color: #ffffff; 
+            background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        }
+
+        #cardBodyIndex2 a{
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+
+        }
+
+        /* Index1 = Destaque */
+        /* Joga o card pra frente. Função basica do hover né */ 
+        #cardBodyIndex1.card:hover 
+        {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        }
+
+        /* Index2 = S. Destaque */
+        #cardBodyIndex2.card:hover 
+        {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        }
+            
+        /* Formatação da caixa de descrição */    
+        #cardDescIndex
+        {
+            background-color: #ffffff;
+            color: #1c1b1d;
+            font-weight: normal;
+            text-align: justify;
+            font-size: 16px;
+            padding: 20px;
+            padding-top: 10px;
+            line-height: 23px;
+
+            border-radius: 10px 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            max-height: 150px; /* define o limite de 150 pixels de altura */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6; /* limita o número de linhas */
+        }
+
+        /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
+        #cardJenalaIndex.card-body
+        {
+            padding-left: 5px; 
+            padding-bottom: 5px; 
+            padding-right: 5px;
+        }
+
+        /* Configurações gerais dos cards */
+    
+    /* Cards */    
+          
+/* index */
+
+
+
+/* cursos */
+
+    /* courses.create */
+
+    #tituloInicialC
+    {
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        padding-left: 10px;
+        font-size: 50px;
+        font-family:'Mukta', sans-serif;
+        padding-top: 3%;
+    }
+
+    #titlecriar
+    {
+        font-family:'Mukta', sans-serif;
+    }
+    #tituloCriarCurso
+    {
+        text-align: center; 
+        padding: 5px; 
+        font-family:'Mukta', sans-serif;
+    }
+
+    #descricaoCriarCurso
+    {
+
+        font-family: 'Mukta', sans-serif;
         border: 0;
-        border-bottom: 5px;
-        border-color: rgb(204, 3, 197);
-        border-style: outset;
+        border-radius: 10px;
+        padding-left: 3px;
+        padding-right: 3PX;
+        color: #000000; 
+        
     }
 
-    /*Cor navbar*/
+    
 
-/*NavBar: Fim*/
+    #corpoCriarCurso
+    {
+        color: #000000;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        padding: 2rem;
+        margin: 1rem;
+    }
 
+    
 
-/*Botões OffCanvas: Começo*/
-
-    /*Cor dos Botões*/
-
-    #botoesMenus.btn-custom {
+    #botaoCriar.btn-custom
+    {
+        margin-left: 372px;
+        margin-top: 4rem;   
         background-color: #b811b8;
-        color: #ffffff; /* opcional: define a cor do texto para branco */
-    }
-
-    #botoesMenus.btn-custom:hover {
-        background-color: #701570; /* cor diferente quando o mouse está em cima */
         color: #ffffff;
+        border: 0; 
+    }
+    #botaoAdicionarAula.btn-custom:hover
+    {   
+        margin-left: 372px;
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
     }
 
-  /*Cor dos Botões*/
+    #botaoAdicionarAula.btn-custom
+    {   
+        margin-left: 372px;
+        background-color: #b811b8;
+        color: #ffffff;
+        border: 0; 
+    }
 
-/*Botões OffCanvas: Fim*/
+    .container-botaoadicionaraula{
+        justify-content: right;
+    }
+
+    #botaoCriar.btn-custom:hover 
+    { 
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    }
+
+    #botaoCriarAulas{
+        margin-left: 330px;
+        background-color: #b811b8;
+        color: #ffffff;
+        border: 0; 
+    }
+
+
+   
+    /* courses.create */
+
+/* cursos */
+
+
+
+/* profile */
+
+        /*imagem profile*/
+        #imagemperfil
+        {
+            width: 160px;
+            height: 160px;
+        }
+
+         /*fonte profile*/
+         #tituloProfileI
+         {
+            font-size: 50px;
+            font-family: 'Mukta', sans-serif;
+            text-align: center;
+         }
+
+         /*BORDA DO CONTAINER PROFILE*/
+         #profileborda
+         {  
+            margin-top: 30px;
+            border-width: 2px; 
+            border-color: #000000;
+            border: solid;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
+         }
+
+         /*TAMANHO TEXTO LABEL TELA DE PROFILE*/
+         #p-label
+         {
+            text-align: left;
+            font-size: 20px;
+            font-family: 'Mukta', sans-serif;
+         }
+
+         /*AJUSTES DO INPUT DO FORM PROFILE*/
+         #exampleInput1{
+            border-color: black;
+            margin-right: 5px;
+            font-family: 'Mukta', sans-serif;
+            
+         }
+
+         /*DISPLAY PARA ALINHAR OS ELEMENTOS LADO A LADO*/
+         #displayflex{
+            display: flex;
+         }
+
+         /*JEITO MAIS FACIL DE ESTILIZAR UMA LINHA DO QUE O <HR>*/
+         #regua 
+         {
+            display:block; 
+            padding:0; 
+            margin: 10px 0; 
+            width:100%; 
+            height:1px; 
+            background-color:#000000;
+        }
+
+        
+        /*MARGEM NO FIM DO CONTAINER*/
+        #marginrow
+        {
+            margin-bottom: 40px;
+        }
+
+        /*+55*/
+        #basic-addon1
+        {
+            border-color: rgb(0, 0, 0);
+            width: 50px;
+        }
+
+        /*estilização dos input2*/
+        #exampleInput2{
+            border-color: black;
+            margin-right: 5px;          
+            border-top-right-radius: 5px ;
+            border-bottom-right-radius: 5px ;
+            float: left;
+        }
+
+        /*estilização dos input3*/
+        #exampleInput3
+        {
+            border-color: black;
+            margin-right: 5px;
+        }
+
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
+        #arquivo
+        {
+            display: none;
+        }
+
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
+        #uploadbtn
+        {
+            display: flex;
+            width: 40px;
+            height: 30px;   
+            background: #5C636A;
+            color: white;
+            display: block;
+            cursor: pointer;
+            transition: .5s;
+            border: 1px solid #5C636A;
+            border-radius: 5px;
+            margin-left: 53%;
+        }
+
+        /*ESTILIZAÇÃO DO BOTÃO DE UPLOAD*/
+        #uploadbtn:hover
+        {
+            color: #5C636A;
+            background: rgb(180, 180, 180);
+        }
+
+
+/* Dashboard */
+    .dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  
+  .dashboard-events-container th {
+    width: 25%;
+  }
+  
+  .dashboard-events-container form {
+    display: inline-block;
+  }
+
+  #dashboard-background{
+    background-color: whitesmoke;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
+  }
+
+  #dashboard-background-create{
+    background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF; 
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+
+  #letra-dashboard{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  #link-dashboard{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Mukta', sans-serif;
+    color: #a8a8a8;
+    text-decoration: none;
+
+  }
+
+  #link-dashboard:hover{
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+    color: #AB00A6;
+    text-decoration: none;
+   
+  }
+
+
+  #letra-Titulodashboard{
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Mukta', sans-serif;
+  }
+
+  #botaodash.btn-custom
+    { 
+        background-color: #5f0641;
+        color: #ffffff;
+        border: 0; 
+    }
+
+    #botaodash.btn-custom:hover 
+    { 
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    }
+
+    #botaodashb.btn-custom
+    { 
+        background-color: #28065f;
+        color: #ffffff;
+        border: 0; 
+    }
+
+    #botaodashb.btn-custom:hover 
+    { 
+        background-color: #701570;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    }
+
+  /* Form criação de Aula */
+
+  #lesson-form-container {
+    background-color: whitesmoke;
+    border: 2px solid black;
+  }
+
+
+  /* TELA DE MOSTRAR O CURSO */
+
+        /*tags*/
+
+         /*BORDA DO CONTAINER*/
+         #showborda
+         {  
+            margin-top: 30px;
+            border-width: 2px; 
+            border-color: #000000;
+            border: solid;
+            background-color: whitesmoke;
+            border-radius: 20px;
+            box-shadow: inset 0 0 10px 10px rgb(218, 218, 218);
+         }
+
+         #tituloCurso
+         {
+            margin-top: 39px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Mukta', sans-serif;
+         }
+
+         #h2-show1
+         {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-family: 'Mukta', sans-serif;
+         }
+
+         #p-show1
+         {
+            text-align: justify;
+            font-size: 20px;
+            font-family: 'Mukta', sans-serif;  
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+            word-wrap: break-word;
+         }
+
+         #cortexto{
+            color: #000000;
+         }

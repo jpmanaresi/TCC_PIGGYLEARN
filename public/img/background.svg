@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:grid x="-150.627" y="485.352" width="100.213" height="97.908"/>
+    <pattern x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100" id="pattern-0">
+      <title>Circulo 1</title>
+      <rect x="0" y="0" width="50" height="100" style="fill: rgb(202, 115, 231); stroke-width: 2px;"/>
+    </pattern>
+    <pattern id="pattern-0-0" patternTransform="matrix(-0.129851, -0.41519, 0.487935, -0.152601, 100.12805, 89.062727)" xlink:href="#pattern-0"/>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="247.048" y1="251.255" x2="247.048" y2="416.81" id="gradient-0" gradientTransform="matrix(0.63983, -0.100092, 0.890913, 0.103191, -88.466785, 46.551274)" spreadMethod="pad">
+      <stop offset="0" style="stop-color: rgb(241, 82, 180);"/>
+      <stop offset="0.734" style="stop-color: rgb(138, 85, 209);"/>
+      <stop offset="1" style="stop-color: rgb(20, 60, 222);"/>
+    </linearGradient>
+    <pattern id="pattern-1" patternTransform="matrix(-0.081548, -0.260743, 0.306426, -0.095834, 482.010537, 203.493545)" xlink:href="#pattern-2"/>
+    <pattern x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100" id="pattern-2">
+      <title>Circulo 2</title>
+      <rect x="0" y="0" width="50" height="100" style="fill: rgb(92, 37, 165);"/>
+    </pattern>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="247.048" y1="251.255" x2="247.048" y2="416.81" id="gradient-1" gradientTransform="matrix(-0.642668, 0.664884, -0.902144, -0.907582, 574.05587, 532.573311)" spreadMethod="pad">
+      <stop offset="0" style="stop-color: rgb(241, 82, 180);"/>
+      <stop offset="0.855" style="stop-color: rgb(138, 85, 209);"/>
+      <stop offset="1" style="stop-color: rgb(53, 89, 234);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="247.048" y1="251.255" x2="247.048" y2="416.81" id="gradient-2" gradientTransform="matrix(-0.47988, 0.127037, -0.67363, -0.173408, 757.664314, 370.500857)" spreadMethod="pad">
+      <stop offset="0" style="stop-color: rgb(164, 44, 118);"/>
+      <stop offset="0.315" style="stop-color: rgb(138, 85, 209);"/>
+      <stop offset="1" style="stop-color: rgb(77, 105, 219);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="247.048" y1="251.255" x2="247.048" y2="416.81" id="gradient-3" gradientTransform="matrix(-0.00659, -0.553749, 0.561117, 0.73966, 384.718729, 175.972435)" spreadMethod="pad">
+      <stop offset="0" style="stop-color: rgb(215, 9, 136);"/>
+      <stop offset="1" style="stop-color: rgb(30, 63, 195);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="247.048" y1="251.255" x2="247.048" y2="416.81" id="gradient-4" gradientTransform="matrix(-0.260638, 0.269647, -0.36587, -0.368075, 621.559341, 503.726065)" spreadMethod="pad">
+      <stop offset="0" style="stop-color: rgb(241, 82, 180);"/>
+      <stop offset="0.176" style="stop-color: rgb(138, 85, 209);"/>
+      <stop offset="1" style="stop-color: rgb(53, 89, 234);"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="500" style="fill: rgba(12, 0, 14, 0.91);"/>
+  <path d="M 164.017 84.343 C 164.017 115.316 138.908 140.425 107.935 140.425 C 76.961 140.425 51.852 115.316 51.852 84.343 C 51.852 53.37 76.961 28.261 107.935 28.261 C 138.908 28.261 164.017 53.37 164.017 84.343 Z" style="fill-rule: evenodd; fill: url(#pattern-0-0); fill-opacity: 0.5; paint-order: fill; stroke-width: 2px; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.302172, -0.953253, 0.953253, 0.302172, -5.080549, 161.745822)"/>
+  <rect x="293.98" y="46.914" width="150" height="20" style="fill: url(#gradient-0); stroke-width: 2px; fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.986714, -0.162469, 0.162469, 0.986714, 87.925598, 95.869118)"/>
+  <g transform="matrix(1.046018, 0, 0, 1.046018, 209.249786, 34.100998)"/>
+  <path d="M 522.133 200.529 C 522.133 219.981 506.364 235.749 486.913 235.749 C 467.462 235.749 451.692 219.981 451.692 200.529 C 451.692 181.078 467.462 165.309 486.913 165.309 C 506.364 165.309 522.133 181.078 522.133 200.529 Z" style="fill-rule: evenodd; fill: url(#pattern-1); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke-width: 2px; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.817354, -0.576136, 0.576136, 0.817354, -26.599298, 317.153594)"/>
+  <rect x="39.012" y="318.79" width="150" height="150" style="fill: url(#gradient-1); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);"/>
+  <rect x="-257.636" y="-23.921" width="230" height="4.985" style="stroke-width: 2px; fill: rgb(190, 112, 223); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.879404, -0.476076, -0.544813, -0.842193, 205.99327, 200.200724)"/>
+  <rect x="179.224" y="23.924" width="160" height="4.985" style="fill: rgb(90, 72, 210); stroke-width: 2px; fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.731997, 0.681308, 0.624093, -0.78525, 289.856505, 239.942126)"/>
+  <rect x="358.147" y="329.654" width="112.004" height="28.66" style="fill: url(#gradient-2); stroke-width: 2px; fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(-0.732684, 0.680569, -0.680569, -0.732684, 870.284058, 308.025879)"/>
+  <rect x="524.245" y="218.771" width="48.063" height="149.047" style="stroke-width: 2px; fill: url(#gradient-3); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);"/>
+  <rect x="404.569" y="417.025" width="60.833" height="60.833" style="stroke-width: 2px; fill: url(#gradient-4); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);"/>
+  <rect x="-112.015" y="-23.921" width="100" height="4.985" style="stroke-width: 2px; fill: rgb(190, 112, 223); fill-opacity: 0.5; paint-order: fill; stroke-opacity: 0.5; stroke: rgba(76, 51, 78, 0);" transform="matrix(0.956302, 0.292381, 0.217634, -0.979155, 339.56622, 140.900454)"/>
+</svg>
