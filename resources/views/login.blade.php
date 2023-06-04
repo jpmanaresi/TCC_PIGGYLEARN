@@ -1,11 +1,12 @@
-'@extends('layouts.main')
+@extends('layouts.main')
 
 @section('title', 'PL - Login')
     
 @section('content')
 
 <h1 style="text-align: center; padding-top: 10rem; padding-bottom: 4rem; font-family:Carlito">
-  Login</h1>
+  Login
+</h1>
 
   <div class="container">
     <div class="row justify-content-center">
@@ -48,9 +49,4 @@
   </div>
   
   
-    
-
-
 @endsection
-
-
