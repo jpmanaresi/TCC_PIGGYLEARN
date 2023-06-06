@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +17,11 @@ use App\Http\Controllers\TestController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
 /* Index */
 Route::get('/', [CourseController::class, 'index']);
 Route::get('/home', [CourseController::class, 'index'])->name('home');
-
 
 /* Rotas das Views de Cursos */
 Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create');
@@ -29,20 +31,26 @@ Route::post('/courses',[CourseController::class, 'store'])->name('courses.store'
 Route::put('/courses',[CourseController::class, 'update'])->name('courses.update');
 Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
 
-
-/*Aulas*/
+/* Aulas */
 Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create'])->name('lessons.create');
 Route::get('courses/{course}/lessons/{lesson}/edit', [LessonController::class, 'edit'])->name('lessons.edit');
 Route::post('/courses/{id}',[LessonController::class, 'store'])->name('lessons.store');
 Route::put('/courses/{id}/lessons/{lesson_id}',[LessonController::class, 'update'])->name('lessons.update');
 Route::delete('/courses/{course}/lessons/{id}', [LessonController::class, 'destroy'])->name('lessons.destroy');
 
-/*Testes/Avaliações */
+/* Testes/Avaliações */
 Route::get('/courses/{id}/lessons/{lesson}/tests/create', [TestController::class, 'create'])->name('tests.create');
+Route::get('/lessons/{lesson}/tests/{id}/edit', [TestController::class, 'create'])->name('tests.edit');
 Route::post('/tests',[TestController::class, 'store'])->name('tests.store');
 Route::put('/tests/{id}',[TestController::class, 'store'])->name('tests.update');
 Route::delete('/tests/{id}', [TestController::class, 'destroy'])->name('tests.destroy');
 
+/* Questões das avaliações */
+Route::get('/courses/{course}/lessons/{lesson}/tests/{id}/questions/create', [QuestionController::class, 'create'])->name('questions.create');
+Route::get('//tests/{test}/questions/{id}/edit/', [QuestionController::class, 'create'])->name('questions.edit');
+Route::post('/questions',[QuestionController::class, 'store'])->name('questions.store');
+Route::put('/questions/{id}',[QuestionController::class, 'store'])->name('questions.update');
+Route::delete('/questions/{id}', [QuestionController::class, 'destroy'])->name('questions.destroy');
 
 /* Usuário */
 Route::get('/profile', [UserController::class, 'profile']);
