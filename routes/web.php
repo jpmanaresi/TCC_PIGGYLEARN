@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,7 @@ Route::put('/tests/{id}',[TestController::class, 'store'])->name('tests.update')
 Route::delete('/tests/{id}', [TestController::class, 'destroy'])->name('tests.destroy');
 
 /* Questões das avaliações */
-Route::get('/courses/{id}/lessons/{lesson}/tests/{id}/questions/create', [QuestionController::class, 'create'])->name('questions.create');
+Route::get('/courses/{course}/lessons/{lesson}/tests/{id}/questions/create', [QuestionController::class, 'create'])->name('questions.create');
 Route::get('//tests/{test}/questions/{id}/edit/', [QuestionController::class, 'create'])->name('questions.edit');
 Route::post('/questions',[QuestionController::class, 'store'])->name('questions.store');
 Route::put('/questions/{id}',[QuestionController::class, 'store'])->name('questions.update');
