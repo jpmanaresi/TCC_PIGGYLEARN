@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card bg-gradient-custom" id="cardLogin">
-                <div id="tituloCardlogin" class="card-header">{{ __('Login') }}</div>
+                <div id="tituloCardlogin" class="card-header">Area de Login</div>
 
                 <div class="card-body">
                     <form method="POST"action="{{ route('login') }}">
