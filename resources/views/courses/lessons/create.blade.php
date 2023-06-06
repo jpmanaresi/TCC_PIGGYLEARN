@@ -4,6 +4,7 @@
     
 @section('content')
 
+<!-- Criar Aulas --> 
 <div class="container" id="lesson-form-container">
     <form method="POST" action="{{ isset($lesson) ? route('lessons.update',[$course->id, $lesson->id]) : route('lessons.store', $course->id) }}">
         @csrf
@@ -28,4 +29,5 @@
         <button type="submit">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }} </button>
     </form>
 </div>
+
 @endsection
