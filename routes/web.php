@@ -39,6 +39,7 @@ Route::delete('/courses/{course}/lessons/{id}', [LessonController::class, 'destr
 
 /*Testes/Avaliações */
 Route::get('/courses/{id}/lessons/{lesson}/tests/create', [TestController::class, 'create'])->name('tests.create');
+Route::get('/lessons/{lesson}/tests/{id}/edit', [TestController::class, 'create'])->name('tests.edit');
 Route::post('/tests',[TestController::class, 'store'])->name('tests.store');
 Route::put('/tests/{id}',[TestController::class, 'store'])->name('tests.update');
 Route::delete('/tests/{id}', [TestController::class, 'destroy'])->name('tests.destroy');
