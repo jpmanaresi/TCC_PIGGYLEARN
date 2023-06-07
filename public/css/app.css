@@ -375,14 +375,7 @@ VOCE TA AQUI FILHA DA PUTA
         color: #000000; 
     }
 
-    #corpoCriarCurso
-    {
-        color: #000000;
-        border-radius: 10px;
-        background-color: whitesmoke;
-        padding: 2rem;
-        margin: 1rem;
-    }
+    
 
     #botaoCriar.btn-custom
     {
@@ -430,6 +423,15 @@ VOCE TA AQUI FILHA DA PUTA
         color: #ffffff;
         border: 0; 
     }
+
+    #corpoCriarCurso
+    {
+        color: #000000;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        padding: 2rem;
+        margin: 1rem;
+    } /* Corpo do Card */
 
     /* courses.create */
 
