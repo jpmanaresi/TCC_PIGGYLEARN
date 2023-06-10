@@ -22,9 +22,11 @@
 
 #background 
 {
-    background-color: #dbdbdb;
-    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    /*
+    background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+     This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
   
 
