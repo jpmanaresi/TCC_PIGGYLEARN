@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Course;
 use App\Models\Lesson;
+use App\Models\Test;
 class LessonController extends Controller
 {
     public function create($id){
@@ -16,8 +17,9 @@ class LessonController extends Controller
 
         $course = Course::findOrFail($id);
         $lesson = Lesson::findOrFail($lesson_id);
+        $test = Test::findOrFail($lesson->test_id);
 
-        return view('courses.lessons.create',['course'=> $course, 'lesson' => $lesson]);
+        return view('courses.lessons.create',['course'=> $course, 'lesson' => $lesson, 'test' => $test]);
     }
     public function store(Request $request)
     {

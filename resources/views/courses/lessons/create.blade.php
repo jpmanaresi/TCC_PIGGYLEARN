@@ -28,43 +28,41 @@
                 </div>
                 <div class="col-md-10 offset-md-1 dashboard-events-container">
                     @if (isset($lesson))        
-                    @if($lesson->hastest == true)
+                        @if($lesson->hastest == 1)
 
-                <table class="table"> 
+                    <table class="table"> 
 
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col"></th>
-                            <th scope="col">Ações</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
+                        <thead>
                             <tr>
-                                <td><a href="#">{{ $test['title'] }}</a></td>
-                                <td>0</td>
-                                <td>
-                                    <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'test' => $test['id']]) }}" class="btn btn-info edit-btn">Editar</a> 
-                                    <form action="{{ route('lessons.destroy', ['id' => $test['id']]) }}" method="POST" class="delete-form">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
-                                    </form>
-                                </td>
+                                <th scope="col">Nome</th>
+                                <th scope="col"></th>
+                                <th scope="col">Ações</th>
                             </tr>
-                        @endforeach
- 
-                    </tbody>
+                        </thead>
 
-                </table>
+                        <tbody>
+                                <tr>
+                                    <td><a href="#">{{ $test['title'] }}</a></td>
+                                    <td>0</td>
+                                    <td>
+                                        <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'id' => $test->id]) }}" class="btn btn-info edit-btn">Editar</a> 
+                                        <form action="{{ route('tests.destroy', ['id' => $test['id']]) }}" method="POST" class="delete-form">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
+                                        </form>
+                                    </td>
+                                </tr>
+    
+                        </tbody>
 
-                @else
+                    </table>
+
+
                     <div id="divcriaraula">
-                        <p id="cortexto">Este curso ainda não possui aulas</p><a id="botaoCriarAulas" class="btn btn-custom" href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a>
+                        <p id="cortexto">Esta Aula não possui avaliação</p><a id="botaoCriarAulas" class="btn btn-custom" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">Adicionar Avaliação?</a>
                     </div>
-                @endif
-
+                    @endif
                 @else
                     <input type="hidden" name="create_course_and_add_lesson" value="1">
                     <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
