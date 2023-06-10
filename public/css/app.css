@@ -22,7 +22,7 @@
 
 #background 
 {
-    background-color: #c5c5c5;
+    background-color: #dbdbdb;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
@@ -112,7 +112,7 @@
         {
             background-color: #b811b8;
             color: #ffffff;
-        } /* Cor dos Botão de sair */ --
+        } /* Cor dos Botão de sair */ 
 
         #botoesMenusS.btn-custom:hover 
         {
@@ -315,7 +315,6 @@ VOCE TA AQUI FILHA DA PUTA
 
     /* courses.create */
 
-
     #titlecriar {
         font-family:'Mukta', sans-serif;
     } /* Formatação do texto dentro dos placeholders */
@@ -334,43 +333,46 @@ VOCE TA AQUI FILHA DA PUTA
         font-weight: bold;
     } /* Formatção da descrição encima do placesholder */
 
-
-    #botaoAdicionarAula.btn-custom {   
-        margin-left: 372px;
-        background-color: #b811b8;
-        color: #ffffff;
-        border: 0; 
+    #cortexto {
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
     }
 
+    #botaoAdicionarAula.btn-custom {   
+        position: relative; 
+        background-color: #610661;
+        color: #ffffff;
+        border: 0; 
+    } /* Cor do botão criar Aula */ 
+
     #botaoAdicionarAula.btn-custom:hover {   
-        
         background-color: #701570;
         color: #ffffff;
         border: 0; 
         transform: scale(1.01);
         transition: all 0.01s ease-in-out;
-    }
+    } /* Animação do botão criar Aula */ 
 
-    #botaoCriar.btn-custom {
-        position: relative; 
-        background-color: #610661;
+    #botaoCriarC.btn-custom {
+        position: end; 
+        background-color: #23A98E;
+        margin-top: 10px;
+        margin-bottom: 5px;
         color: #ffffff;
         border: 0; 
-    }
+    } /* Cor do botão criar Curso */ 
 
-    #botaoCriarAulas {
-        margin-left: 330px;
-        background-color: #b811b8;
+    #botaoCriarC.btn-custom:hover {  
+        background-color: #136958;
         color: #ffffff;
-        border: 0; 
-    }
-
-    #botaoCriar.btn-custom:hover {  
-        background-color: #881b57;
-        color: #ffffff;
-        border: 0; 
+        border: 0;
         transform: scale(1.1);
         transition: all 0.01s ease-in-out;
+    } /* Animação do botão criar Curso */ 
+
+    #corpoAulas {
+        background-color: aqua;
     }
 
     #corpoCriarCurso {

@@ -50,12 +50,12 @@
                     </h1> 
                     
 
-                    <div style="background-color: aqua"> 
+                    <div id="corpoAulas"> 
 
                         <div class="col-md-10 offset-md-1 dashboard-events-container">
-                                @if (isset($course))        
-                                    </form> <!-- Gambiara do Jão -->  
-                                @if(count($lessons) > 0)
+                            @if (isset($course))        
+                                </form> <!-- Gambiara do Jão -->  
+                            @if(count($lessons) > 0)
 
                             <table class="table"> 
 
@@ -84,7 +84,6 @@
                                             </td>
                                         </tr>
                                     @endforeach
-        
                                         <tr>
                                             <td scropt="row"></td>
                                             <td colspan="4">
@@ -97,20 +96,24 @@
 
                             @else
                                 <div id="divcriaraula">
-                                    <p id="cortexto">Este curso ainda não possui aulas</p><a id="botaoCriarAulas" class="btn btn-custom" href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a>
+                                    <p id="cortexto">Este curso ainda não possui aulas</p>
+                                    <a id="botaoAdicionarAula" class="btn btn-custom" href="/courses/{{$course->id}}/lessons/create">
+                                        <button id="botaoAdicionarAula" type="submit" class="btn btn-custom">Adicionar Aula</button>
+                                    </a>
                                 </div>
                             @endif
 
                             @else
                                 <input type="hidden" name="create_course_and_add_lesson" value="1">
-                                <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
+                                <button id="botaoAdicionarAula" type="submit" class="btn btn-custom">       Adicionar Aula</button>
                                 <!-- Botão de criar aula -->
                             @endif
 
                         </div>
                     </div>
                 </form> 
-                <input id="botaoCriar" class="btn btn-custom text-md-center " type="submit" name="action" value="{{ isset($course) ? 'Salvar' : 'Criar' }}" >
+
+                <input id="botaoCriarC" class="btn btn-custom text-md-center " type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterções' : 'Criar Curso' }}" >
                 <!-- Falta ter um aviso de "curso criado" -->
 
             </div>
