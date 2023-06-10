@@ -106,8 +106,7 @@
                             @else
                                 <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
                                     <p id="textoSemAula">Este Curso ainda não possui Aulas.</p>
-                                    <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create">
-                                        <button id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button">Adicionar Aula</button>
+                                    <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create" class="btn btn-custom animated-button">Adicionar Aula
                                     </a>
                                 </div>
                             @endif
