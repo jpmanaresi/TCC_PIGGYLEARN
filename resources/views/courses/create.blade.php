@@ -104,13 +104,15 @@
                             @else
                                 <input type="hidden" name="create_course_and_add_lesson" value="1">
                                 <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
+                                <!-- Botão de criar aula -->
                             @endif
 
                         </div>
                     </div>
                 </form> 
                 <input id="botaoCriar" class="btn btn-custom text-md-center " type="submit" name="action" value="{{ isset($course) ? 'Salvar' : 'Criar' }}" >
-                <!-- Botão de criar Curso -->
+                <!-- Falta ter um aviso de "curso criado" -->
+
             </div>
         <!-- CCC --> 
     </div>
