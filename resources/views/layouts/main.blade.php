@@ -58,7 +58,7 @@
     <div id="sidebar-linhaCima" class="offcanvas-header btn-custom">
         
         <div class="d-flex align-items-center" >
-          <img src="/img/PorquinhoLogo.svg" alt="Logo Porquinho" id="botoesImgMenu">
+          <img src="/img/PorquinhoLogo.svg" alt="Logo Porquinho" id="imgopcoes">
           <h4 id="tituloInicialsb" class="offcanvas-title" id="offcanvasScrollingLabel">
               Opções
           </h4>
@@ -73,8 +73,8 @@
       <div class="offcanvas-body" id="sideBar">
         <div class="row">
           <div class="col-md-6">
-            <a href="/" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-              <img id="botoesImg" src="/img/house.svg" alt="Icone Pagina Inicial">
+            <a href="/" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start" type="button">
+              <img id="botoesImg" src="/img/house.svg" alt="Icone Pagina Inicial">            
               Tela Inicial 
             </a>
           </div>
@@ -82,23 +82,24 @@
           @auth
 
           <div class="col-md-6">
-            <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+            <a href="/profile" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start" type="button"> 
               <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
               Meu Perfil
             </a>
           </div>
           <div class="col-md-6">
-            <a href="/dashboard" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+            <a href="/dashboard" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start" type="button"> 
               <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
               Meus Cursos
             </a>
           </div>
           <div class="col-md-6">
-            <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
+            <a href="/courses/create" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start" type="button" > 
               <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
               Criar Curso  
             </a>
           </div>
+          
           
           @endauth
 
