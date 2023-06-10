@@ -24,9 +24,7 @@
 {
     background-color: #ffffff;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-    /*
-    background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
-     This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
   
 
@@ -72,11 +70,10 @@
     /* NB */
 
 
-    /* OffCanvas (OC) */
+    /* SideBar (SB) */
       
         
-        #tituloInicialsb
-        {
+        #tituloInicialsb {
             text-align: center; 
             color: white;
             font-family: 'Inria Sans', sans-serif; 
@@ -90,23 +87,21 @@
             border: 0;
         } /* Barra superior  */
 
-        #imgopcoes
-        {
+        #imgOpcoes {
             width: 30px;
         } /* Formatação do icon do porco na barra superior */
         
-        #botoesImg
-        {
+        #botoesImg {
             margin-right: 10px;
-        } /* Separação do icon e texto */
+        } /* Separação da imagem pro texto */
         
-        #botoesMenus.btn-custom 
-        {
+        #botoesMenus.btn-custom {
             color: #ffffff; 
-        }/* Cor dos Botões */
+            width: 100%;
+            margin: 5px;
+        } /* Cor dos Botões */
 
-        #botoesMenus.btn-custom:hover 
-        {
+        #botoesMenus.btn-custom:hover {
             background-color: #b811b8; 
             color: #ffffff;
             transform: scale(1.01);
@@ -117,7 +112,7 @@
         {
             background-color: #b811b8;
             color: #ffffff;
-        } /* Cor dos Botão de sair */ 
+        } /* Cor dos Botão de sair */ --
 
         #botoesMenusS.btn-custom:hover 
         {
@@ -127,7 +122,7 @@
             transition: all 0.01s ease-in-out;
         } /* Cor dos Botão de sair: Hover */
 
-    /* OC */
+    /* SB */
 
 /* main.blade */
 
