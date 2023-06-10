@@ -4,11 +4,11 @@
 
 @section('content')
 
-<div class="container" id="dashboard-background">
+<div class="container" id="cardBodyIndex1"> <!-- TEMPORARIO PORRA: Isso é a formatação do card inicial. Depois eu faço um proprio e tal -->
 <div class="col-md-10 offset-md-1 dashboard-title-container">
     <h1 id="letra-Titulodashboard">Meus Cursos</h1>
 </div>
-<div class="col-md-10 offset-md-1 dashboard-events-container">
+<div class="col-md-10 offset-md-1 dashboard-events-container" style="background-color: white">
     @if(count($courses) > 0)
     <table class="table">
         <thead>

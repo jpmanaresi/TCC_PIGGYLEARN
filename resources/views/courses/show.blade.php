@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container" id="showborda">
+<div class="container" id="cardBodyIndex1"> <!-- TEMPORARIO PORRA: Isso é a formatação do card inicial. Depois eu faço um proprio e tal -->
     <div class="col-md-10 offset-md-1">
         <div class="row">
             <div id="info-container" class="col">

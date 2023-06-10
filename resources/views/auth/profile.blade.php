@@ -137,7 +137,15 @@
    
 </div>
 
-
+@auth <!-- Botão de Sair -->
+<form action="/logout" method="post" class="mt-auto">
+  @csrf
+    <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault(); this.closest('form').submit();"> 
+      <img id="botoesImg" src="/img/box-arrow-in-right.svg" alt="Icone de Sair">
+      Sair
+    </a>
+</form>
+@endauth
 
 
 

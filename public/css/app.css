@@ -1,6 +1,6 @@
 /* Fonte de todo html */
 *{
-    font-family: 'Inria Sans', sans-serif; 
+    font-family:'Mukta', sans-serif;
 }   
 
 /* Divisão entre o topo da pagina com o conteudo */
@@ -13,76 +13,66 @@
 #tituloInicialp
 {
     text-align: center; 
-    color: white;
+    color: rgb(37, 58, 68);
     padding-bottom: 3rem; 
     font-size: 50px;
     font-weight: bold;
     font-family: 'Inria Sans', sans-serif; 
 }
 
-
 #background 
 {
-    background-image: url('/img/background.svg');
-    background-repeat: repeat;
-    background-position: center;
-    background-size: auto 800px;
+    background-color: #dbdbdb;
+    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
   
 
 
-
 /* main.blade */
     
-    /* NavBar */
+    /* NavBar (NB) */
 
-        /* Cor navbar e borda */
-        #nav.navbar
-        {
-            height: 70px;
+        #nav.navbar {
+            height: 50px;
+            padding-top: 5px;
             background-color: #1c1b1d;
             border: 0;
-            border-bottom: 4px;
-            border-color: rgb(255, 0, 247);
-            border-style: outset; 
-        }
+        } /* Cor e borda */
 
-        /* Cor dos Botões de entrar e login da navbar */
-        #botoesEntrarNav.btn-custom 
-        {
-            color: #ffffff; /* opcional: define a cor do texto para branco */
-            border-radius: 30px;
-        }
+        #botoesEntrarNav.btn-custom {
+            margin: 0px;
+            color: #ffffff;             
+        } /* Cor dos Botões de Entrar */
 
-        #botoesEntrarNav.btn-custom:hover 
-        {
-            background-color: #921992; /* cor diferente quando o mouse está em cima */
-            color: #ffffff;
-            transform: scale(1.01);
+        #botoesEntrarNav.btn-custom:hover {
+            background-color: #921992;
+            font-weight: bolder;
+            transform: scale(1.1);
             transition: all 0.01s ease-in-out;
-        }
+        } /* Animação dos Botões de Entrar */
 
-        #botoesCriarCoNav.btn-custom 
-        {
+        #botoesCriarCoNav.btn-custom {
+            margin-right: 10px;
+            margin-left: 10px;
             background-color: #7e18ad;
-            border-radius: 30px;
-            color: #ffffff; /* opcional: define a cor do texto para branco */
-        }
+            color: #ffffff; 
+        } /* Cor dos Botões de Login */
 
-        #botoesCriarCoNav.btn-custom:hover 
-        {
-            background-color: #ff00ff; /* cor diferente quando o mouse está em cima */
-            color: #000000;
-            transform: scale(1.01);
+        #botoesCriarCoNav.btn-custom:hover {
+            background-color: #ff00ff;
+            color: #ffffff;
+            font-weight: bolder;
+            transform: scale(1.1);
             transition: all 0.01s ease-in-out;
-        }
+        } /* Animação dos Botões de Login */
 
-    /* NavBar */
+    /* NB */
 
 
-    /* OffCanvas */
+    /* OffCanvas (OC) */
+      
         
-        /* Titulo do Offcanvas */
         #tituloInicialsb
         {
             text-align: center; 
@@ -90,63 +80,53 @@
             font-family: 'Inria Sans', sans-serif; 
             font-weight: 400;
             padding-left: 10px;
-        }    
+        } /* Titulo da Side Bar */    
 
-
-        /* Barra de menu */
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
-            height: 70px;
+            height: 50px;
             border: 0;
-            border-bottom: 4px;
-            border-color: rgb(255, 0, 247);
-            border-style: outset; 
-        } 
+
+        } /* Barra superior  */
 
         #botoesImgMenu
         {
-            margin-bottom: px;
-            width: 40px;
-        }
-
-        /* Formatação das imagens do offCanvas*/
+            width: 30px;
+        } /* Formatação do icon do porco na barra superior */
+        
         #botoesImg
         {
             margin-right: 10px;
-        }
-
-        /* Cor dos Botões */
+        } /* Separação do icon e texto */
+        
         #botoesMenus.btn-custom 
         {
-            color: #ffffff; /* opcional: define a cor do texto para branco */
-        }
+            color: #ffffff; 
+        }/* Cor dos Botões */
 
-        /* Cor dos Botão de sair */
+        #botoesMenus.btn-custom:hover 
+        {
+            background-color: #b811b8; 
+            color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        } /* Animação dos Botões */
+
         #botoesMenusS.btn-custom
         {
             background-color: #b811b8;
             color: #ffffff;
-        }  
+        } /* Cor dos Botão de sair */ 
 
-        /* Cor dos Botões: Hover */
-        #botoesMenus.btn-custom:hover 
-        {
-            background-color: #b811b8; /* cor diferente quando o mouse está em cima */
-            color: #ffffff;
-            transform: scale(1.01);
-            transition: all 0.01s ease-in-out;
-        }
-
-        /* Cor dos Botão de sair: Hover */
         #botoesMenusS.btn-custom:hover 
         {
             background-color: #fa294c;
             color: #ffffff;
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
-        }
+        } /* Cor dos Botão de sair: Hover */
 
-    /* OffCanvas */
+    /* OC */
 
 /* main.blade */
 
@@ -157,6 +137,16 @@
 /* login.blade */
 
     /* Form de Criar a area de login */
+
+        #tituloCardlogin
+        {
+            text-align: center; 
+            font-size: x-large;
+            font-family: 'Mukta', sans-serif;
+            background-color: rgba(171, 0, 165, 0.685);
+            border-bottom: solid black 2px;
+            border-radius: 3px;
+        }
 
         /* Cor da Caixa de login*/
         #cardLogin.bg-gradient-custom 
@@ -212,17 +202,6 @@
 
     /* Cards */
 
-        #tituloCardlogin
-        {
-            text-align: center; 
-            font-size: x-large;
-            font-family: 'Mukta', sans-serif;
-            background-color: rgba(171, 0, 165, 0.685);
-            border-bottom: solid black 2px;
-            border-radius: 3px;
-        }
-
-        /* Index1 = Destaque */
         #tituloCardIndex1
         {
             padding-left: 5PX;
@@ -230,8 +209,8 @@
             font-size: larger;
             font-weight: bold;
             font-family:'Mukta', sans-serif;
-        }
-        /* Index2 = S. Destaque */
+        } /* Index1 = Destaque */
+
         #tituloCardIndex2
         {
             padding-left: 5PX;
@@ -239,7 +218,7 @@
             font-size: larger;
             font-weight: normal;
             font-family:'Mukta', sans-serif;
-        }
+        } /* Index2 = S. Destaque */
 
         /* Configurações gerais dos cards do Index*/
 
@@ -353,42 +332,34 @@ VOCE TA AQUI FILHA DA PUTA
     /* courses.create */
 
 
-    #titlecriar
-    {
+    #titlecriar {
         font-family:'Mukta', sans-serif;
-    }
+    } /* Formatação do texto dentro dos placeholders */
     
-    #tituloCriarCurso
-    {
-        text-align: center; 
+    #tituloCriarCurso {
+        text-align: start; 
+        font-size: 16px;
         padding: 5px; 
-        font-family:'Mukta', sans-serif;
-    }
+        font-weight: bold;
+    } /* Formatção do titulos encima do placesholder */
 
-    #descricaoCriarCurso
-    {
-        font-family: 'Mukta', sans-serif;
-        border: 0;
-        border-radius: 10px;
-        padding-left: 3px;
-        padding-right: 3PX;
-        color: #000000; 
-    }
+    #descricaoCriarCurso {
+        text-align: start; 
+        font-size: 14px;
+        padding: 5px; 
+        font-weight: bold;
+    } /* Formatção da descrição encima do placesholder */
 
-    
 
-    #botaoCriar.btn-custom
-    {
+    #botaoAdicionarAula.btn-custom {   
         margin-left: 372px;
-        margin-top: 4rem;   
         background-color: #b811b8;
         color: #ffffff;
         border: 0; 
     }
 
-    #botaoAdicionarAula.btn-custom:hover
-    {   
-        margin-left: 372px;
+    #botaoAdicionarAula.btn-custom:hover {   
+        
         background-color: #701570;
         color: #ffffff;
         border: 0; 
@@ -396,41 +367,39 @@ VOCE TA AQUI FILHA DA PUTA
         transition: all 0.01s ease-in-out;
     }
 
-    #botaoAdicionarAula.btn-custom
-    {   
-        margin-left: 372px;
-        background-color: #b811b8;
+    #botaoCriar.btn-custom {
+        position: relative; 
+        background-color: #610661;
         color: #ffffff;
         border: 0; 
     }
 
-    .container-botaoadicionaraula{
-        justify-content: right;
-    }
-
-    #botaoCriar.btn-custom:hover 
-    { 
-        background-color: #701570;
-        color: #ffffff;
-        border: 0; 
-        transform: scale(1.01);
-        transition: all 0.01s ease-in-out;
-    }
-
-    #botaoCriarAulas{
+    #botaoCriarAulas {
         margin-left: 330px;
         background-color: #b811b8;
         color: #ffffff;
         border: 0; 
     }
 
-    #corpoCriarCurso
-    {
-        color: #000000;
+    #botaoCriar.btn-custom:hover {  
+        background-color: #881b57;
+        color: #ffffff;
+        border: 0; 
+        transform: scale(1.1);
+        transition: all 0.01s ease-in-out;
+    }
+
+    #corpoCriarCurso {
+        border: 0;
         border-radius: 10px;
-        background-color: whitesmoke;
-        padding: 2rem;
-        margin: 1rem;
+        font-weight: bold;
+        margin: 9px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #ffffff; 
+        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
     } /* Corpo do Card */
 
     /* courses.create */
