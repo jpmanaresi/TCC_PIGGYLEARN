@@ -1,6 +1,6 @@
 /* Fonte de todo html */
 *{
-    font-family:'Mukta', sans-serif;
+    font-family:'Inria Sans', sans-serif
 }   
 
 /* Divisão entre o topo da pagina com o conteudo */
@@ -138,7 +138,7 @@
         {
             text-align: center; 
             font-size: x-large;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
             background-color: rgba(171, 0, 165, 0.685);
             border-bottom: solid black 2px;
             border-radius: 3px;
@@ -164,12 +164,12 @@
 
         #fontelogin
         {
-            font-family:  'Mukta', sans-serif;
+            font-family:  'Inria Sans', sans-serif
         }
 
         #tituloregister
         {
-            font-family:  'Mukta', sans-serif;
+            font-family:  'Inria Sans', sans-serif
             font-size: x-large;
             text-align: center;
             background-color: rgba(171, 0, 165, 0.685);
@@ -203,7 +203,7 @@
             text-align: start; 
             font-size: larger;
             font-weight: bold;
-            font-family:'Mukta', sans-serif;
+            font-family:'Inria Sans', sans-serif
         } /* Index1 = Destaque */
 
         #tituloCardIndex2 {
@@ -211,7 +211,7 @@
             text-align: start; 
             font-size: larger;
             font-weight: normal;
-            font-family:'Mukta', sans-serif;
+            font-family:'Inria Sans', sans-serif
         } /* Index2 = Sem Destaque */
 
         /* Configurações gerais dos cards do Index*/
@@ -316,7 +316,7 @@ VOCE TA AQUI FILHA DA PUTA
     /* courses.create */
 
     #titlecriar {
-        font-family:'Mukta', sans-serif;
+        font-family:'Inria Sans', sans-serif
     } /* Formatação do texto dentro dos placeholders */
     
     #tituloCriarCurso {
@@ -333,11 +333,13 @@ VOCE TA AQUI FILHA DA PUTA
         font-weight: bold;
     } /* Formatção da descrição encima do placesholder */
 
-    #cortexto {
+    #textoSemAula {
         font-size: 15px;
+        font-family: 'Inria Sans', sans-serif;
+        color: #000000;
         font-weight: bold;
         text-align: center;
-    }
+    } /* Formatção da descrição encima do placesholder */
 
     #botaoAdicionarAula.btn-custom {   
         position: relative; 
@@ -371,9 +373,9 @@ VOCE TA AQUI FILHA DA PUTA
         transition: all 0.01s ease-in-out;
     } /* Animação do botão criar Curso */ 
 
-    #corpoAulas {
-        background-color: aqua;
-    }
+    #corpoAreasAulas {
+        background-color: #fff;
+    } /* Corpo da Area dos Cursos */
 
     #corpoCriarCurso {
         border: 0;
@@ -407,7 +409,7 @@ VOCE TA AQUI FILHA DA PUTA
          #tituloProfileI
          {
             font-size: 50px;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
             text-align: center;
          }
 
@@ -428,14 +430,14 @@ VOCE TA AQUI FILHA DA PUTA
          {
             text-align: left;
             font-size: 20px;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
          }
 
          /*AJUSTES DO INPUT DO FORM PROFILE*/
          #exampleInput1{
             border-color: black;
             margin-right: 5px;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
             
          }
 

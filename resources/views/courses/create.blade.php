@@ -50,7 +50,7 @@
                     </h1> 
                     
 
-                    <div id="corpoAulas"> 
+                    <div id="corpoAreasAulas"> 
 
                         <div class="col-md-10 offset-md-1 dashboard-events-container">
                             @if (isset($course))        
@@ -96,7 +96,7 @@
 
                             @else
                                 <div id="divcriaraula">
-                                    <p id="cortexto">Este curso ainda não possui aulas</p>
+                                    <p id="textoSemAula">Este Curso ainda não possui Aulas.</p>
                                     <a id="botaoAdicionarAula" class="btn btn-custom" href="/courses/{{$course->id}}/lessons/create">
                                         <button id="botaoAdicionarAula" type="submit" class="btn btn-custom">Adicionar Aula</button>
                                     </a>
