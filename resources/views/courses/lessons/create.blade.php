@@ -26,7 +26,58 @@
                 <div class="form-group">
                     <input type="checkbox" name="hasTest" value="1" {{ isset($lesson) && $lesson->hasTest ? 'checked disabled' : '' }}> Tem avaliação?
                 </div>
-                
+                <div class="col-md-10 offset-md-1 dashboard-events-container">
+                    @if (isset($lesson))        
+                    @if($lesson->hastest == true)
+
+                <table class="table"> 
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col"></th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                            <tr>
+                                <td><a href="#">{{ $test['title'] }}</a></td>
+                                <td>0</td>
+                                <td>
+                                    <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn">Editar</a> 
+                                    <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+
+                            <tr>
+                                <td scropt="row"></td>
+                                <td colspan="4">
+                                <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula"  class="btn btn-custom">Adicionar Aula</a> 
+                                </td>
+                            </tr>    
+                    </tbody>
+
+                </table>
+
+                @else
+                    <div id="divcriaraula">
+                        <p id="cortexto">Este curso ainda não possui aulas</p><a id="botaoCriarAulas" class="btn btn-custom" href="/courses/{{$course->id}}/lessons/create">Adicionar Aula</a>
+                    </div>
+                @endif
+
+                @else
+                    <input type="hidden" name="create_course_and_add_lesson" value="1">
+                    <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
+                    <!-- Botão de criar aula -->
+                @endif
+
+            </div>
         <button type="submit">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }} </button>
     </form>
 </div>

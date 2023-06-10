@@ -1,6 +1,11 @@
 @extends('layouts.main')
 
-@section('title', 'PL - Criar Curso')
+@if(isset($course))
+    @section('title', 'PL - Editar Curso') 
+@else
+    @section('title', 'PL - Criar Curso')           
+@endif
+
     
 @section('content')
 
@@ -9,7 +14,11 @@
         <div class="container" id="dashboard-background-create" style= "padding-left: 0px; padding-right: 0px;" >
 
         <h1 id="tituloInicialp">
-            Criar Curso
+            @if(isset($course))
+            Editar Curso   
+                  @else
+                  Criar Curso            
+            @endif
         </h1>
 
         <!-- Card Criar Curso (CCC) (VOCE TA AQUI FILHA DA PUTA) -->      
@@ -109,10 +118,10 @@
 
                         </div>
                     </div>
-                </form> 
+
                 <input id="botaoCriar" class="btn btn-custom text-md-center " type="submit" name="action" value="{{ isset($course) ? 'Salvar' : 'Criar' }}" >
                 <!-- Falta ter um aviso de "curso criado" -->
-
+            </form> 
             </div>
         <!-- CCC --> 
     </div>
