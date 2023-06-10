@@ -98,12 +98,13 @@
         #botoesMenus.btn-custom {
             color: #ffffff; 
             width: 100%;
-            margin: 5px;
+            margin-top: 5px;
         } /* Cor dos Botões */
 
         #botoesMenus.btn-custom:hover {
             background-color: #b811b8; 
             color: #ffffff;
+            width: 98%;
             transform: scale(1.1);
             transition: all 0.01s ease-in-out;
         } /* Animação dos Botões */
@@ -340,10 +341,10 @@ VOCE TA AQUI FILHA DA PUTA
         color: #000000;
         font-weight: bold;
         text-align: center;
-    } /* Formatção da descrição encima do placesholder */
+    } /* Formatação da descrição encima do placesholder */
 
     #botaoAdicionarAula.btn-custom {   
-        
+        margin: 10px;
         background-color: #7e0a7e;
         color: #ffffff;
         border: 0; 
@@ -356,34 +357,34 @@ VOCE TA AQUI FILHA DA PUTA
         border: 0; 
         transform: scale(1.1);
         transition: all 0.01s ease-in-out;
-    } 
+    } /* Animação do botão criar Aula */  
     
     .animated-button {
         background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
         background-size: 200% 100%;
         transition: background-position 0.5s;
         animation: gradientAnimation 2s infinite;
-      }
+    } /* Animação do botão criar Aula */ 
       
-      .animated-button:hover {
+    .animated-button:hover {
         animation: gradientAnimation 2s infinite;
-      }
+    } /* Animação do botão criar Aula */ 
       
-      @keyframes gradientAnimation {
-        0% {
-          background-position: right;
-        }
-        50% {
-          background-position: left;
-        }
-        100% {
-          background-position: right;
-        }
-      }
+    @keyframes gradientAnimation {
+    0% {
+        background-position: right;
+    }
+    50% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+    } /* Animação do botão criar Aula */ 
       
       
       
-    /* Animação do botão criar Aula */ 
+    
 
     #botaoCriarC.btn-custom {
         padding: 7px; 
