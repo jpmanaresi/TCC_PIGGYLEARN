@@ -45,8 +45,8 @@
                                 <td><a href="#">{{ $test['title'] }}</a></td>
                                 <td>0</td>
                                 <td>
-                                    <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn">Editar</a> 
-                                    <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
+                                    <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'test' => $test['id']]) }}" class="btn btn-info edit-btn">Editar</a> 
+                                    <form action="{{ route('lessons.destroy', ['id' => $test['id']]) }}" method="POST" class="delete-form">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
@@ -54,13 +54,7 @@
                                 </td>
                             </tr>
                         @endforeach
-
-                            <tr>
-                                <td scropt="row"></td>
-                                <td colspan="4">
-                                <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula"  class="btn btn-custom">Adicionar Aula</a> 
-                                </td>
-                            </tr>    
+ 
                     </tbody>
 
                 </table>
