@@ -46,7 +46,7 @@ Route::put('/tests/{id}',[TestController::class, 'store'])->name('tests.update')
 Route::delete('/tests/{id}', [TestController::class, 'destroy'])->name('tests.destroy');
 
 /* Questões das avaliações */
-Route::get('/courses/{course}/lessons/{lesson}/tests/{id}/questions/create', [QuestionController::class, 'create'])->name('questions.create');
+Route::get('/courses/{course}/lessons/{lesson}/tests/{test}/questions/create', [QuestionController::class, 'create'])->name('questions.create');
 Route::get('//tests/{test}/questions/{id}/edit/', [QuestionController::class, 'create'])->name('questions.edit');
 Route::post('/questions',[QuestionController::class, 'store'])->name('questions.store');
 Route::put('/questions/{id}',[QuestionController::class, 'store'])->name('questions.update');

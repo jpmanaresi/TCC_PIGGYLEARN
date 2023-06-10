@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'PL - Adicionar Aula')
+@section('title', 'PL - Criar Teste')
     
 @section('content')
 
