@@ -202,8 +202,7 @@
 
     /* Cards */
 
-        #tituloCardIndex1
-        {
+        #tituloCardIndex1 {
             padding-left: 5PX;
             text-align: start; 
             font-size: larger;
@@ -211,20 +210,17 @@
             font-family:'Mukta', sans-serif;
         } /* Index1 = Destaque */
 
-        #tituloCardIndex2
-        {
+        #tituloCardIndex2 {
             padding-left: 5PX;
             text-align: start; 
             font-size: larger;
             font-weight: normal;
             font-family:'Mukta', sans-serif;
-        } /* Index2 = S. Destaque */
+        } /* Index2 = Sem Destaque */
 
         /* Configurações gerais dos cards do Index*/
-
-            /* Index1 = Destaque */
-            #cardBodyIndex1
-            {
+            
+            #cardBodyIndex1 {
                 border: 0;
                 border-radius: 10px;
                 font-weight: bold;
@@ -234,7 +230,7 @@
                 color: #ffffff; 
                 background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
                 box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-            }
+            } /* Index1 = Destaque */
 
             #cardBodyIndex1 a{
                 color:inherit;
@@ -242,12 +238,10 @@
                 font-family: inherit;
                 font-weight: inherit;
                 font-size:inherit;
+            } /* Index1 = Destaque */
 
-            }
 
-            /* Index2 = S. Destaque */
-            #cardBodyIndex2
-            {
+            #cardBodyIndex2 {
                 border: 0;
                 border-radius: 10px;
                 font-weight: normal;
@@ -257,9 +251,9 @@
                 color: #ffffff; 
                 background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
                 box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-            }
+            } /* Index2 = Sem Destaque */
 
-            #cardBodyIndex2 a{
+            #cardBodyIndex2 {
                 color:inherit;
                 text-decoration: inherit;
                 font-family: inherit;
@@ -267,27 +261,22 @@
                 font-size:inherit;
 
             }
-
-            /* Index1 = Destaque */
-            /* Joga o card pra frente. Função basica do hover né */ 
-            #cardBodyIndex1.card:hover 
-            {
+            
+            #cardBodyIndex1.card:hover {
                 transform: scale(1.010);
                 transition: all 0.01s ease-in-out;
                 box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-            }
+            } /* Joga o card pra frente. Função basica do hover né */ 
 
-            /* Index2 = S. Destaque */
-            #cardBodyIndex2.card:hover 
-            {
+            
+            #cardBodyIndex2.card:hover {
                 transform: scale(1.010);
                 transition: all 0.01s ease-in-out;
                 box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-            }
+            } /* Joga o card pra frente. Função basica do hover né */ 
                 
-            /* Formatação da caixa de descrição */    
-            #cardDescIndex
-            {
+               
+            #cardDescIndex {
                 background-color: #ffffff;
                 color: #1c1b1d;
                 font-weight: normal;
@@ -301,21 +290,20 @@
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
 
-                max-height: 150px; /* define o limite de 150 pixels de altura */
+                max-height: 150px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
-                -webkit-line-clamp: 6; /* limita o número de linhas */
-            }
+                -webkit-line-clamp: 6;
+            } /* Formatação da caixa de descrição */ 
 
-            /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
             #cardJenalaIndex.card-body
             {
                 padding-left: 5px; 
                 padding-bottom: 5px; 
                 padding-right: 5px;
-            }
+            } /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
 
         /* Configurações gerais dos cards */
     
