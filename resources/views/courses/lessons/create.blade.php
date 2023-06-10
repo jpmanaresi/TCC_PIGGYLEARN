@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-10 offset-md-1 dashboard-events-container">
                     @if (isset($lesson))        
-                        @if($lesson->hastest == 1)
+                        @if($lesson->hasTest == 1)
 
                     <table class="table"> 
 
@@ -58,14 +58,14 @@
 
                     </table>
 
-
+                    @else
                     <div id="divcriaraula">
                         <p id="cortexto">Esta Aula não possui avaliação</p><a id="botaoCriarAulas" class="btn btn-custom" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">Adicionar Avaliação?</a>
                     </div>
                     @endif
                 @else
-                    <input type="hidden" name="create_course_and_add_lesson" value="1">
-                    <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
+                    <input type="hidden" name="create_lesson_and_add_test" value="1">
+                    <span id="cortexto">Esta Aula não possui avaliação.</span><button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Avaliação?</button>
                     <!-- Botão de criar aula -->
                 @endif
 

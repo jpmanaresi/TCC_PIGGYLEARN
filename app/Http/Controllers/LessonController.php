@@ -20,6 +20,7 @@ class LessonController extends Controller
         $test = Test::findOrFail($lesson->test_id);
 
         return view('courses.lessons.create',['course'=> $course, 'lesson' => $lesson, 'test' => $test]);
+        //return($lesson);
     }
     public function store(Request $request)
     {
@@ -40,14 +41,11 @@ class LessonController extends Controller
         $lesson->seq = $lastSeq + 1;
         $lesson->save();
         
-        
-        if ($lesson->hasTest != true){
-        // Redirecionar para a view de detalhes do curso, por exemplo
-        return redirect()->route('courses.edit', ['id' => $request->course_id]);
-        } else {
-          return redirect()->route('tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
-         // return ($lesson);
-            }
+        if ($request->has('create_lesson_and_add_test')) {
+            return redirect()->route('tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
+        }else {
+            return redirect()->route('courses.edit', ['id' => $request->course_id]);
+        }
        
         //return($course->lessons()->toArray()); 
     }

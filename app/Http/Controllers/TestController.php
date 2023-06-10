@@ -31,16 +31,17 @@ class TestController extends Controller
         $test->lesson_id = $request->lesson_id;
         $test->save();
         $lesson->update([
+            'hasTest' => 1,
             'test_id' => $test->id,
         ]);
         $action = $request->input('action');
         if ($action === 'create_questions') {
             // Redirecionar para a página de criação de perguntas, passando o ID do teste
-            return redirect()->route('questions.create', ['course'=> $test->lesson->course, 'lesson'=> $test->lesson, 'test' => $test->id])
+            return redirect()->route('questions.create', ['id'=> $test->lesson->course, 'lesson'=> $test->lesson, 'test' => $test->id])
                 ->with('msg', 'Prova criada. Agora você pode adicionar perguntas!');
         } else {
             // Redirecionar para a página de edição do curso relacionado à prova
-            return redirect()->route('courses.edit', ['test' => $test->lesson->course_id])
+            return redirect()->route('courses.edit', ['id' => $test->lesson->course_id])
                 ->with('msg', 'Prova criada com sucesso!');
         }
     }
@@ -55,7 +56,7 @@ class TestController extends Controller
         $test->save();
 
         return redirect()->route('courses.edit', ['id' => $test->lesson->course_id, 'lesson' => $test->lesson->id])
-            ->with('success', 'Prova atualizada com sucesso!');
+            ->with('msg', 'Prova atualizada com sucesso!');
     } 
     // Ação inválida, redireciona para algum lugar apropriado ou retorna uma resposta de erro
 }
