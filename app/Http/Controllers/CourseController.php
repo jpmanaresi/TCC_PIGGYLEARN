@@ -48,7 +48,7 @@ class CourseController extends Controller
 
         $course->save();
         //var_dump($request->all());
-        if ($request->action==='Criar') {
+        if ($request->action==='Criar Curso') {
             
         return redirect()->route('dashboard')->with('msg', 'Curso criado com sucesso!');
 
@@ -75,7 +75,7 @@ class CourseController extends Controller
         ]);
 
         //var_dump($request->all());
-         if  ($request->action==='Atualizar') {
+         if  ($request->action==='Salvar Alterações') {
 
             return redirect()->route('dashboard')->with('msg', 'Edição no curso: '.$course->course_title.' realizada com sucesso!');
 

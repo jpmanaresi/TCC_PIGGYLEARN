@@ -6,7 +6,7 @@
 /* Divisão entre o topo da pagina com o conteudo */
 #corpot
 {
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 /* Titulos Principais */
@@ -104,7 +104,7 @@
         #botoesMenus.btn-custom:hover {
             background-color: #b811b8; 
             color: #ffffff;
-            transform: scale(1.01);
+            transform: scale(1.1);
             transition: all 0.01s ease-in-out;
         } /* Animação dos Botões */
 
@@ -118,7 +118,7 @@
         {
             background-color: #fa294c;
             color: #ffffff;
-            transform: scale(1.01);
+            transform: scale(1.1);
             transition: all 0.01s ease-in-out;
         } /* Cor dos Botão de sair: Hover */
 
@@ -315,10 +315,10 @@ VOCE TA AQUI FILHA DA PUTA
 
     /* courses.create */
 
-    #titlecriar {
-        font-family:'Inria Sans', sans-serif
-    } /* Formatação do texto dentro dos placeholders */
-    
+    {
+        font-family:'Inria Sans', sans-serif;
+    } /* Evitar bug do titulo ficar menor */
+
     #tituloCriarCurso {
         text-align: start; 
         font-size: 16px;
@@ -330,10 +330,11 @@ VOCE TA AQUI FILHA DA PUTA
         text-align: start; 
         font-size: 14px;
         padding: 5px; 
-        font-weight: bold;
     } /* Formatção da descrição encima do placesholder */
 
     #textoSemAula {
+        margin: 10px;
+        margin-top: 0px;
         font-size: 15px;
         font-family: 'Inria Sans', sans-serif;
         color: #000000;
@@ -342,23 +343,52 @@ VOCE TA AQUI FILHA DA PUTA
     } /* Formatção da descrição encima do placesholder */
 
     #botaoAdicionarAula.btn-custom {   
-        position: relative; 
-        background-color: #610661;
+        
+        background-color: #7e0a7e;
         color: #ffffff;
         border: 0; 
     } /* Cor do botão criar Aula */ 
 
     #botaoAdicionarAula.btn-custom:hover {   
-        background-color: #701570;
+        background-color: #500d50;
         color: #ffffff;
+        font-weight: bold;
         border: 0; 
-        transform: scale(1.01);
+        transform: scale(1.1);
         transition: all 0.01s ease-in-out;
-    } /* Animação do botão criar Aula */ 
+    } 
+    
+    .animated-button {
+        background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
+        background-size: 200% 100%;
+        transition: background-position 0.5s;
+        animation: gradientAnimation 2s infinite;
+      }
+      
+      .animated-button:hover {
+        animation: gradientAnimation 2s infinite;
+      }
+      
+      @keyframes gradientAnimation {
+        0% {
+          background-position: right;
+        }
+        50% {
+          background-position: left;
+        }
+        100% {
+          background-position: right;
+        }
+      }
+      
+      
+      
+    /* Animação do botão criar Aula */ 
 
     #botaoCriarC.btn-custom {
-        position: end; 
-        background-color: #23A98E;
+        padding: 7px; 
+        font-size: larger;
+        background-color: #7735a3;
         margin-top: 10px;
         margin-bottom: 5px;
         color: #ffffff;
@@ -366,15 +396,19 @@ VOCE TA AQUI FILHA DA PUTA
     } /* Cor do botão criar Curso */ 
 
     #botaoCriarC.btn-custom:hover {  
-        background-color: #136958;
+        background-color: #3540a3;
         color: #ffffff;
+        height: 10%;
+        font-weight: bold;
         border: 0;
         transform: scale(1.1);
         transition: all 0.01s ease-in-out;
     } /* Animação do botão criar Curso */ 
 
     #corpoAreasAulas {
-        background-color: #fff;
+        background-color: #ffffff91;
+        border-radius: 5px;
+        padding: 5%;
     } /* Corpo da Area dos Cursos */
 
     #corpoCriarCurso {
