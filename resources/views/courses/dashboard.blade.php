@@ -30,7 +30,7 @@
                         <form action="{{ route('courses.destroy',['id' => $course->id])}}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button  id="botaodash" type="submit" class="btn btn-custom"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
+                            <button  id="botoesCriarCoNav" type="submit" class="btn btn-custom"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
                         </form>
                     </td>
                 </tr>
