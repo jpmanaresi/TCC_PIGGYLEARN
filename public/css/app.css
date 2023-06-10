@@ -1,6 +1,6 @@
 /* Fonte de todo html */
 *{
-    font-family:'Mukta', sans-serif;
+    font-family:'Inria Sans', sans-serif
 }   
 
 /* Divisão entre o topo da pagina com o conteudo */
@@ -22,7 +22,7 @@
 
 #background 
 {
-    background-color: #c5c5c5;
+    background-color: #dbdbdb;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
@@ -112,7 +112,7 @@
         {
             background-color: #b811b8;
             color: #ffffff;
-        } /* Cor dos Botão de sair */ --
+        } /* Cor dos Botão de sair */ 
 
         #botoesMenusS.btn-custom:hover 
         {
@@ -138,7 +138,7 @@
         {
             text-align: center; 
             font-size: x-large;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
             background-color: rgba(171, 0, 165, 0.685);
             border-bottom: solid black 2px;
             border-radius: 3px;
@@ -164,12 +164,12 @@
 
         #fontelogin
         {
-            font-family:  'Mukta', sans-serif;
+            font-family:  'Inria Sans', sans-serif
         }
 
         #tituloregister
         {
-            font-family:  'Mukta', sans-serif;
+            font-family:  'Inria Sans', sans-serif
             font-size: x-large;
             text-align: center;
             background-color: rgba(171, 0, 165, 0.685);
@@ -203,7 +203,7 @@
             text-align: start; 
             font-size: larger;
             font-weight: bold;
-            font-family:'Mukta', sans-serif;
+            font-family:'Inria Sans', sans-serif
         } /* Index1 = Destaque */
 
         #tituloCardIndex2 {
@@ -211,7 +211,7 @@
             text-align: start; 
             font-size: larger;
             font-weight: normal;
-            font-family:'Mukta', sans-serif;
+            font-family:'Inria Sans', sans-serif
         } /* Index2 = Sem Destaque */
 
         /* Configurações gerais dos cards do Index*/
@@ -315,9 +315,8 @@ VOCE TA AQUI FILHA DA PUTA
 
     /* courses.create */
 
-
     #titlecriar {
-        font-family:'Mukta', sans-serif;
+        font-family:'Inria Sans', sans-serif
     } /* Formatação do texto dentro dos placeholders */
     
     #tituloCriarCurso {
@@ -334,44 +333,49 @@ VOCE TA AQUI FILHA DA PUTA
         font-weight: bold;
     } /* Formatção da descrição encima do placesholder */
 
+    #textoSemAula {
+        font-size: 15px;
+        font-family: 'Inria Sans', sans-serif;
+        color: #000000;
+        font-weight: bold;
+        text-align: center;
+    } /* Formatção da descrição encima do placesholder */
 
     #botaoAdicionarAula.btn-custom {   
-        margin-left: 372px;
-        background-color: #b811b8;
+        position: relative; 
+        background-color: #610661;
         color: #ffffff;
         border: 0; 
-    }
+    } /* Cor do botão criar Aula */ 
 
     #botaoAdicionarAula.btn-custom:hover {   
-        
         background-color: #701570;
         color: #ffffff;
         border: 0; 
         transform: scale(1.01);
         transition: all 0.01s ease-in-out;
-    }
+    } /* Animação do botão criar Aula */ 
 
-    #botaoCriar.btn-custom {
-        position: relative; 
-        background-color: #610661;
+    #botaoCriarC.btn-custom {
+        position: end; 
+        background-color: #23A98E;
+        margin-top: 10px;
+        margin-bottom: 5px;
         color: #ffffff;
         border: 0; 
-    }
+    } /* Cor do botão criar Curso */ 
 
-    #botaoCriarAulas {
-        margin-left: 330px;
-        background-color: #b811b8;
+    #botaoCriarC.btn-custom:hover {  
+        background-color: #136958;
         color: #ffffff;
-        border: 0; 
-    }
-
-    #botaoCriar.btn-custom:hover {  
-        background-color: #881b57;
-        color: #ffffff;
-        border: 0; 
+        border: 0;
         transform: scale(1.1);
         transition: all 0.01s ease-in-out;
-    }
+    } /* Animação do botão criar Curso */ 
+
+    #corpoAreasAulas {
+        background-color: #fff;
+    } /* Corpo da Area dos Cursos */
 
     #corpoCriarCurso {
         border: 0;
@@ -405,7 +409,7 @@ VOCE TA AQUI FILHA DA PUTA
          #tituloProfileI
          {
             font-size: 50px;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
             text-align: center;
          }
 
@@ -426,14 +430,14 @@ VOCE TA AQUI FILHA DA PUTA
          {
             text-align: left;
             font-size: 20px;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
          }
 
          /*AJUSTES DO INPUT DO FORM PROFILE*/
          #exampleInput1{
             border-color: black;
             margin-right: 5px;
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Inria Sans', sans-serif
             
          }
 
