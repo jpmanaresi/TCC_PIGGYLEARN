@@ -138,7 +138,7 @@
         {
             text-align: center; 
             font-size: x-large;
-            font-family: 'Inria Sans', sans-serif
+            font-family: 'Inria Sans', sans-serif;
             background-color: rgba(171, 0, 165, 0.685);
             border-bottom: solid black 2px;
             border-radius: 3px;
@@ -169,7 +169,7 @@
 
         #tituloregister
         {
-            font-family:  'Inria Sans', sans-serif
+            font-family:  'Inria Sans', sans-serif;
             font-size: x-large;
             text-align: center;
             background-color: rgba(171, 0, 165, 0.685);
@@ -409,7 +409,7 @@ VOCE TA AQUI FILHA DA PUTA
          #tituloProfileI
          {
             font-size: 50px;
-            font-family: 'Inria Sans', sans-serif
+            font-family: 'Inria Sans', sans-serif;
             text-align: center;
          }
 
