@@ -15,11 +15,12 @@ class QuestionController extends Controller
     public function create ($course, $lesson, $id) {
         $test = Test::Find($id);
         $lesson = Lesson::Find($lesson);
-        return view('courses.lessons.tests.questions.create', ['course' => $course, 'lesson' => $lesson, $id => $test]);
+        //return ($test);
+        return view('courses.lessons.tests.questions.create', ['course' => $course, 'lesson' => $lesson, 'test' => $test]);
     }
     public function edit ($test, $id) {
-        $test = Question::Find($id);
-        $lesson = Test::Find($test);
+        $question = Question::Find($id);
+        $test = Test::Find($test);
         return view('courses.lessons.tests.questions.create', ['test' => $test, $id => $question]);
     }
 
