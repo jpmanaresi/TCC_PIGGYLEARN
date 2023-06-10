@@ -11,7 +11,7 @@
         <h1 id="tituloInicialp">
             Criar Curso
         </h1>
-    
+
         <!-- Card Criar Curso (CCC) (VOCE TA AQUI FILHA DA PUTA) -->      
             <div id="corpoCriarCurso">
                 <form action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
@@ -22,7 +22,7 @@
                     <div class="row">
                         <div class="col-md-12">
 
-                             @if(isset($course))
+                            @if(isset($course))
                                 @method('PUT')
                                 <input type="hidden" name="id" value="{{$course->id}}"> 
                             @endif
@@ -30,29 +30,32 @@
                             <div class="form-group">
                                 <label id="tituloCriarCurso" for="title" >      Título      </label>
                                 <input type="text" id="titlecriar" class="form-control" name="title" placeholder="Inserir Título" @if(isset($course)) value="{{$course->course_title}}"@endif>
-                            </div>   
+                            </div> 
+
                         </div>
 
                         <div class="col-md-12">
-                            <div id="descricaoCriarCurso">
-                                <div class="form-group">
-                                    <label id="tituloCriarCurso" for="title" >  Descrição   </label>
-                                    <textarea name="description" id="titlecriar" class="form-control" placeholder="Inserir Descrição">@if (isset($course)){{$course->course_description}}@endif</textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <input id="botaoCriar" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Atualizar' : 'Criar' }}" >
-                    
-                    <div class="col-md-10 offset-md-1 dashboard-title-container">
-                        <h1>Criar aulas</h1>
+                            <div class="form-group">
+                                <label id="descricaoCriarCurso" for="title" >      Descrição   </label>
+                                <textarea name="description" id="titlecriar" class="form-control" placeholder="Inserir Descrição">@if (isset($course)){{$course->course_description}}@endif</textarea>
+                            </div>
+
+                        </div>
+
                     </div>
+        
+                    <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
+                        Aulas
+                    </h1> 
+                    
+
+                    <div style="background-color: aqua"> 
 
                         <div class="col-md-10 offset-md-1 dashboard-events-container">
-                            @if (isset($course))        
-                                </form> <!-- Gambiara do Jão -->  
-                            @if(count($lessons) > 0)
+                                @if (isset($course))        
+                                    </form> <!-- Gambiara do Jão -->  
+                                @if(count($lessons) > 0)
 
                             <table class="table"> 
 
@@ -81,8 +84,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
-
-                                    
+        
                                         <tr>
                                             <td scropt="row"></td>
                                             <td colspan="4">
@@ -90,6 +92,7 @@
                                             </td>
                                         </tr>    
                                 </tbody>
+
                             </table>
 
                             @else
@@ -103,8 +106,11 @@
                                 <button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Aula</button>
                             @endif
 
+                        </div>
                     </div>
-                </form>
+                </form> 
+                <input id="botaoCriar" class="btn btn-custom text-md-center " type="submit" name="action" value="{{ isset($course) ? 'Salvar' : 'Criar' }}" >
+                <!-- Botão de criar Curso -->
             </div>
         <!-- CCC --> 
     </div>

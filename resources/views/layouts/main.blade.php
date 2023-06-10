@@ -27,18 +27,18 @@
     
         <a href="#" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <div class="col-auto">
-            <img width="35px" src="/img/User-60.svg" alt="Icone Usuario">
+            <img width="25px" src="/img/User-60.svg" alt="Icone Usuario">
           </div> 
 
           <div class="col d-flex align-items-center ms-2">
-            <img style="" width="25px" src="/img/list.svg" alt="Tres barrinhas">
+            <img width="15px" src="/img/list.svg" alt="Tres barrinhas">
           </div>
         </a>
 
         <!-- Contas (C) -->      
           @guest
             <div>
-              <a href="/login" id="botoesEntrarNav" class="btn btn-custom text-start" type="button" > 
+              <a href="/login" id="botoesEntrarNav" class="btn btn-custom text-start" type="button" style=""> 
                 Login   
               </a>
               <a href="/register" id="botoesCriarCoNav" class="btn btn-custom text-start" type="button" > 
@@ -54,8 +54,8 @@
   <!-- N -->
 
   <!-- SideBar (SB) -->  
-    <div class="offcanvas offcanvas-start text-white navbar-fixed-top" data-bs-theme="dark" data-bs-backdrop="false" data-bs-scroll="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-      <div id="sidebar-linhaCima" class="offcanvas-header btn-custom">
+<div class="offcanvas offcanvas-start text-white navbar-fixed-top offcanvas-custom" data-bs-theme="dark" data-bs-backdrop="false" data-bs-scroll="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div id="sidebar-linhaCima" class="offcanvas-header btn-custom">
         
         <div class="d-flex align-items-center" >
           <img src="/img/PorquinhoLogo.svg" alt="Logo Porquinho" id="botoesImgMenu">
@@ -71,39 +71,45 @@
       </div>
 
       <div class="offcanvas-body" id="sideBar">
-        <div class="d-grid gap-2">
-          
-          <a href="/" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
-            <img id="botoesImg" src="/img/house.svg" alt="Icone Pagina Inicial">
-            Tela Inicial 
-          </a>
+        <div class="row">
+          <div class="col-md-6">
+            <a href="/" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
+              <img id="botoesImg" src="/img/house.svg" alt="Icone Pagina Inicial">
+              Tela Inicial 
+            </a>
+          </div>
 
           @auth
 
+          <div class="col-md-6">
             <a href="/profile" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
               <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
               Meu Perfil
             </a>
-
+          </div>
+          <div class="col-md-6">
             <a href="/dashboard" id="botoesMenus" class="btn btn-custom text-start" type="button"> 
               <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
               Meus Cursos
             </a>
-
+          </div>
+          <div class="col-md-6">
             <a href="/courses/create" id="botoesMenus" class="btn btn-custom text-start" type="button" > 
               <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
               Criar Curso  
             </a>
-
+          </div>
+          
           @endauth
 
-        </div>        
+        </div>
       </div>
+      
       
       <!-- Creditos -->
       <div class="container">
 
-        @auth <!-- Botão de Sair -->
+       <!-- @auth Coloquei no final do perfil, até porque faz mais sentido a opção de sair estar nas opções 
           <form action="/logout" method="post" class="mt-auto">
             @csrf
               <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault(); this.closest('form').submit();"> 
@@ -111,7 +117,8 @@
                 Sair
               </a>
           </form>
-        @endauth
+          @endauth -->
+      
 
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
