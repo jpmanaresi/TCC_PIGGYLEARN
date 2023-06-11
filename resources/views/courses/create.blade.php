@@ -11,17 +11,17 @@
 
 <!-- Criar Curso (CC) --> 
     <div alt="course-create-container" class="col-md-6 offset-md-3">
-        <div class="container" id="dashboard-background-create" style= "padding-left: 0px; padding-right: 0px;" >
+        <div class="container" id="corpoContainerCC">
 
         <h1 id="tituloInicialp">
             @if(isset($course))
             Editar Curso   
-                  @else
-                  Criar Curso            
+            @else
+            Criar Curso            
             @endif
         </h1>
 
-        <!-- Card Criar Curso (CCC) (VOCE TA AQUI FILHA DA PUTA) -->      
+        <!-- Card Criar Curso (CCC) -->      
             <div id="corpoCriarCurso">
                 <form action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
                     @csrf
@@ -119,8 +119,6 @@
                                         <!-- Botão de criar aula -->
                                 </div>
                             @endif
-                        
-                        
 
                         </div>
                     </div> 
