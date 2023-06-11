@@ -63,7 +63,7 @@
                         <tr>
                             <td scropt="row"></td>
                             <td colspan="4">
-                            <a href="{{route('questions.create', ['course' => $test->lesson->course->id, 'lesson' => $test->lesson->id, 'test' => $test->id])}}" id="botaoAdicionarAula"  class="btn btn-custom">Adicionar Aula</a> 
+                            <a href="{{route('questions.create', ['course' => $test->lesson->course->id, 'lesson' => $test->lesson->id, 'test' => $test->id])}}" id="botaoAdicionarAula"  class="btn btn-custom">Adicionar Questão</a> 
                             </td>
                         </tr>    
                 </tbody>

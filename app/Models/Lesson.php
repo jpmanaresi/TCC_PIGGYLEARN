@@ -41,6 +41,8 @@ class Lesson extends Model
             Lesson::where('course_id', $courseId)
                 ->where('seq', '>', $seq)
                 ->decrement('seq');
+
+                
         });
     }
 }

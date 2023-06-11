@@ -46,7 +46,7 @@
                                     <td><a href="#">{{ $test['title'] }}</a></td>
                                     <td>0</td>
                                     <td>
-                                        <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'id' => $test->id]) }}" class="btn btn-info edit-btn">Editar</a> 
+                                        <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-info edit-btn">Editar</a> 
                                         <form action="{{ route('tests.destroy', ['lesson' => $lesson->id, 'id' => $test->id]) }}" method="POST" class="delete-form">
                                             @csrf
                                             @method('DELETE')

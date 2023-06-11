@@ -41,7 +41,7 @@ class TestController extends Controller
         $action = $request->input('action');
         if ($action === 'create_questions') {
             // Redirecionar para a página de criação de perguntas, passando o ID do teste
-            return redirect()->route('questions.create', ['id'=> $test->lesson->course, 'lesson'=> $test->lesson, 'test' => $test->id])
+            return redirect()->route('questions.create', ['course'=> $test->lesson->course, 'lesson'=> $test->lesson, 'test' => $test->id])
                 ->with('msg', 'Prova criada. Agora você pode adicionar perguntas!');
         } else {
             // Redirecionar para a página de edição do curso relacionado à prova
@@ -55,7 +55,6 @@ class TestController extends Controller
     $action = $request->input('action');
 
     if ($action === 'update_test') {
-        $test->title = $request->input('title');
         $test->description = $request->input('description');
         $test->save();
 

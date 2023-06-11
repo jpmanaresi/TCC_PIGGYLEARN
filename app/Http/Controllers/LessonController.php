@@ -17,7 +17,7 @@ class LessonController extends Controller
 
         $course = Course::findOrFail($id);
         $lesson = Lesson::findOrFail($lesson_id);
-        $test = Test::find($test_id);
+        $test = Test::find($lesson->test_id);
         
         return view('courses.lessons.create',['course'=> $course, 'lesson' => $lesson, 'test' => $test]);
     }

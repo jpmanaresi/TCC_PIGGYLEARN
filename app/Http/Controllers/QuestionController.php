@@ -16,7 +16,7 @@ class QuestionController extends Controller
         $test = Test::Find($id);
         $lesson = Lesson::Find($lesson);
         //return ($test);
-        return view('courses.lessons.tests.questions.create', ['course' => $course, 'lesson' => $lesson, 'test' => $test]);
+        return view('courses.lessons.tests.questions.create', ['course' => $test->lesson->course, 'lesson' => $lesson, 'test' => $test]);
     }
     public function edit ($test, $id) {
         $question = Question::Find($id);
@@ -66,7 +66,25 @@ class QuestionController extends Controller
             'alt_4' => $request->alt_4,
             'answer' => 0
         ]);
-        //return($request);
-        return redirect()->route('tests.edit',['lesson'=>$question->test->lesson, 'test'=> $question->test]);
+        $action= $request->action;
+        //return ($request);
+        if ($action==='create_and_new'){
+            return redirect()->route('questions.create', ['course' => $question->test->lesson->course, 'lesson' => $question->test->lesson, 'test' => $question->test]);
+        }else{
+            return redirect()->route('tests.edit',['lesson'=>$question->test->lesson, 'test'=> $question->test]);
+        }
+    }
+    public function destroy($id)
+    {
+        $question = Question::find($id);
+
+        //return($test->lesson->course->id);
+        $question->delete();
+
+        return redirect()->route('tests.edit', 
+        ['course' => $question->test->lesson->course->id,
+        'lesson'=> $question->test->lesson->id,
+        'test'=> $question->test->id]); 
+
     }
 }

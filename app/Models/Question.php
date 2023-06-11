@@ -21,4 +21,21 @@ class Question extends Model
         'answer',
         'seq'
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        // Evento 'deleting' para excluir o Test antes de excluir a Lesson
+        static::deleting(function ($question) {
+            $testId = $question->test_id;
+            $seq = $question->seq;
+            
+
+            // Atualizar o campo 'seq' das lessons com 'seq' maior que a lesson sendo excluída
+            Question::where('test_id', $testId)
+                ->where('seq', '>', $seq)
+                ->decrement('seq');
+        });
+    }
 }

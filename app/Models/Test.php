@@ -15,11 +15,14 @@ class Test extends Model
     public function questions() {
         return $this->hasMany('App\Models\question')->orderBy('seq');
     }
-
+    protected $fillable = [
+        'title',
+        'description',
+    ];
     protected static function boot()
     {
         parent::boot();
-
+        
         static::deleting(function ($test) {
             $lesson = Lesson::where('test_id', $test->id)->first();
 
