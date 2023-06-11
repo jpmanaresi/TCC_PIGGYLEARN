@@ -10,9 +10,10 @@
 
         @if(isset($test))
             @method('PUT')
+            <input type="hidden" name="test_id" value="{{ isset($test) ? $test->id : '' }}">
         @endif
         <input type="hidden" name="lesson_id" value="{{  $lesson->id }}">
-        <input type="hidden" name="test_id" value="{{ isset($test) ? $test->id : '' }}">
+        
 
         <div class="form-group">
             <label for="title">Aula:</label>
@@ -28,7 +29,49 @@
             <button type="submit" name="action" value="create_questions">Criar Prova e Adicionar Questões</button>
             <button type="submit" name="action" value="create_test">Criar Prova</button>
         @else
+        <div class="col-md-10 offset-md-1 dashboard-events-container">      
+                </form> <!-- Gambiara do Jão -->  
+            @if(count($questions) > 0)
+
+            <table class="table"> 
+
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col"></th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach($questions as $question)
+                        <tr>
+                            <td scropt="row">{{ $question['seq'] }}</td>
+                            <td><a href="#">{{ $question['question'] }}</a></td>
+                            <td>0</td>
+                            <td>
+                                <a href="{{ route('questions.edit', ['test' => $test->id, 'question' => $question['id']]) }}" class="btn btn-info edit-btn">Editar</a> 
+                                <form action="{{ route('questions.destroy', [ 'id' => $question['id']]) }}" method="POST" class="delete-form">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                        <tr>
+                            <td scropt="row"></td>
+                            <td colspan="4">
+                            <a href="{{route('questions.create', ['course' => $test->lesson->course->id, 'lesson' => $test->lesson->id, 'test' => $test->id])}}" id="botaoAdicionarAula"  class="btn btn-custom">Adicionar Aula</a> 
+                            </td>
+                        </tr>    
+                </tbody>
+
+            </table>
+            @endif
             <button type="submit" name="action" value="update_test">Atualizar Prova</button>
+            <a href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-secondary">Adicionar Questão</a>
             <a href="{{ route('courses.edit', ['id' => $lesson->course_id, 'lesson' => $lesson->id]) }}" class="btn btn-secondary">Voltar para Edição do Curso</a>
         @endif
     </form>

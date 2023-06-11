@@ -24,12 +24,13 @@
         </div>
 
                 <div class="form-group">
-                    <input type="checkbox" name="hasTest" value="1" {{ isset($lesson) && $lesson->hasTest ? 'checked disabled' : '' }}> Tem avaliação?
-                </div>
+                    <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
+                        Avaliação
+                    </h1>
                 <div class="col-md-10 offset-md-1 dashboard-events-container">
                     @if (isset($lesson))        
                         @if($lesson->hasTest == 1)
-
+                </form>
                     <table class="table"> 
 
                         <thead>
@@ -46,7 +47,7 @@
                                     <td>0</td>
                                     <td>
                                         <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'id' => $test->id]) }}" class="btn btn-info edit-btn">Editar</a> 
-                                        <form action="{{ route('tests.destroy', ['id' => $test['id']]) }}" method="POST" class="delete-form">
+                                        <form action="{{ route('tests.destroy', ['lesson' => $lesson->id, 'id' => $test->id]) }}" method="POST" class="delete-form">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
@@ -60,17 +61,18 @@
 
                     @else
                     <div id="divcriaraula">
-                        <p id="cortexto">Esta Aula não possui avaliação</p><a id="botaoCriarAulas" class="btn btn-custom" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">Adicionar Avaliação?</a>
+                        <span id="cortexto">Esta Aula não possui avaliação.</span><a id="botaoCriarAulas" class="btn btn-custom" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">Adicionar Avaliação?</a>
                     </div>
                     @endif
                 @else
                     <input type="hidden" name="create_lesson_and_add_test" value="1">
-                    <span id="cortexto">Esta Aula não possui avaliação.</span><button id="botaoCriar" type="submit" class="btn btn-custom">Adicionar Avaliação?</button>
+                    <span id="cortexto">Esta Aula não possui avaliação.</span><button id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button">Adicionar Avaliação?</button>
                     <!-- Botão de criar aula -->
                 @endif
 
             </div>
-        <button type="submit">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }} </button>
+        <button type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}</button>
+        </div>
     </form>
 </div>
 

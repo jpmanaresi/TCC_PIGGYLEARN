@@ -17,10 +17,9 @@ class LessonController extends Controller
 
         $course = Course::findOrFail($id);
         $lesson = Lesson::findOrFail($lesson_id);
-        $test = Test::findOrFail($lesson->test_id);
-
+        $test = Test::find($test_id);
+        
         return view('courses.lessons.create',['course'=> $course, 'lesson' => $lesson, 'test' => $test]);
-        //return($lesson);
     }
     public function store(Request $request)
     {
@@ -37,15 +36,18 @@ class LessonController extends Controller
         $lesson->title = $request->title;
         $lesson->content = $request->content;
         $lesson->course_id = $request->course_id;
-        $lesson->hasTest = $request->filled('hasTest') ? $request->hasTest : false;
         $lesson->seq = $lastSeq + 1;
         $lesson->save();
         
-        if ($request->has('create_lesson_and_add_test')) {
-            return redirect()->route('tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
-        }else {
+        if ($request->action==='Criar Aula') {
+            
             return redirect()->route('courses.edit', ['id' => $request->course_id]);
-        }
+    
+            }elseif ($request->has('create_lesson_and_add_test')) {
+    
+                return redirect()->route('tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
+            }
+          
        
         //return($course->lessons()->toArray()); 
     }
@@ -79,7 +81,6 @@ class LessonController extends Controller
     $lesson = Lesson::find($lesson_id);
     
     $course = $lesson->course;
-
     $lesson->delete();
 
     return redirect()->route('courses.edit', ['id' => $course->id]); 

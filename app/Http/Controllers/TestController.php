@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use App\Models\Lesson;
 use App\Models\Test;
+use App\Models\Question;
 
 use Illuminate\Http\Request;
 
@@ -12,12 +13,15 @@ class TestController extends Controller
     public function create($id, $lesson_id){
         $lesson = Lesson::Find($lesson_id);
         return view ('courses.lessons.tests.create', [ 'lesson' => $lesson]);
-        return($lesson);
+        //return($lesson);
     }
-    public function edit($id, $lesson_id){
+    public function edit($lesson_id, $id){
+        $test= Test::FindOrFail($id);
         $lesson = Lesson::Find($lesson_id);
-        return view ('courses.lessons.tests.create', [ 'lesson' => $lesson]);
-        return($lesson);
+        $questions= Question::where('test_id',$test->id)->get()->toArray();
+        //return($test);
+        return view ('courses.lessons.tests.create', [ 'lesson' => $lesson, 'test' => $test, 'questions' => $questions]);
+        //return($test);
     }
     public function store( Request $request) {
 
@@ -41,7 +45,7 @@ class TestController extends Controller
                 ->with('msg', 'Prova criada. Agora você pode adicionar perguntas!');
         } else {
             // Redirecionar para a página de edição do curso relacionado à prova
-            return redirect()->route('courses.edit', ['id' => $test->lesson->course_id])
+            return redirect()->route('lessons.edit', ['course' => $test->lesson->course_id, 'lesson'=> $test->lesson->id])
                 ->with('msg', 'Prova criada com sucesso!');
         }
     }
@@ -63,12 +67,11 @@ class TestController extends Controller
     public function destroy($id, $test_id)
     {
         $test = Test::find($test_id);
-        $lesson = Lesson::find($test->lesson_id);
-        $course = $lesson->course;
 
+        //return($test->lesson->course->id);
         $test->delete();
 
-        return redirect()->route('courses.edit', ['id' => $course->id]); 
+        return redirect()->route('lessons.edit', ['course' => $test->lesson->course->id, 'lesson'=> $test->lesson->id]); 
 
     }
     
