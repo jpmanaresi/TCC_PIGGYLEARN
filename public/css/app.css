@@ -22,7 +22,7 @@
 
 #background 
 {
-    background-color: #dbdbdb;
+    background-color: #fafafa;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
@@ -67,6 +67,9 @@
             transition: all 0.01s ease-in-out;
         } /* Animação dos Botões de Login */
 
+        #modoDarkNB {
+            padding-right: 5px;
+        }
     /* NB */
 
 
@@ -339,9 +342,8 @@
       
     .animated-button:hover {
         animation: gradientAnimation 2s infinite;
-    } /* Animação do botão criar Aula */ 
-      
-    @keyframes gradientAnimation {
+
+    }   @keyframes gradientAnimation {
     0% {
         background-position: right;
     }
@@ -390,7 +392,12 @@
         color: #ffffff; 
         background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-    } /* Corpo do Card */
+    } /* Corpo do Criar Curso */
+
+    #corpoContainerCC {
+        padding-left: 0px; 
+        padding-right: 0px;
+    } /* Formatação do container */
 
 /* courses */
 
@@ -403,19 +410,98 @@
     #tituloDash {
         margin-bottom: 10px; 
         padding-top: 10px;
-        font-weight: lighter;
+        font-weight: bold;
         color: rgb(255, 255, 255);
+    } /* Formatação do Titulo */
+
+    #corpoContainerDash {
+        margin-left: 0px; 
+        margin-right: 0px;
+        display: contents;
+    } /* Formatação do Container */
+
+    #TituloTabela {
+        font-size: 14px;
+        padding-top: 5px;
+    } /* Formatação da tabela */
+
+    #letraDashboard {
+        font-size: 14px; 
+    } /* Formatação das letras */
+
+    #linkDashboard.custom-link-animation {
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        animation: colorChange 4s infinite;
+    }   @keyframes colorChange {
+        0% {
+            color: purple;
+        }
+        50% {
+            color: rgb(68, 35, 145);
+        }
+        100% {
+            color: rgb(70, 0, 70);
+        }
+    } /* Animação do nome de curso */ 
+    
+    .iconebotao {
+        padding: 2px;
     }
 
+    .btn-padrao {
+        width: 90px;
+        margin: 3px; 
+        padding-left: 12px;
+        padding-right: 12px;
+        color: white;
+    } /* Padronizando os botoes */
+    
+    #botaoDeletar {
+        background-color: rgb(25, 25, 26);
+    } /* cor do botão de deletar */
 
+        #botaoDeletar:hover {
+            background-color: rgb(45, 45, 110);
+            color: white;
+            transform: scale(1.1);
+            transition: all 0.01s ease-in-out;
+        } /* Animação do botão de deletar */
+    
+    #botaoEditar {
+        background-color: #994ae4;
+    } /* cor do botão de editar */ 
+
+        #botaoEditar:hover {
+            background-color: #472269;
+            transform: scale(1.1);
+            color: white;
+            transition: all 0.01s ease-in-out;
+        } /* Animação do botão de editar */ 
+
+    table.table tbody tr {
+        color: rgb(0, 0, 0);  
+    } /* Linhas pretas */ 
+    
+    #corpoTabela {
+        border-radius: 5px;
+        background-color: #ffffff;
+    } /* Formatação da Tabela */
 
     #corpoDash {
+        border: 0;
         border-radius: 5px;
-        justify-content: center;
-        align-items: center; 
-        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;;    
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 15px;
+        margin: 9px;
+        color: #ffffff; 
+        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-    }
+    } /* Formatação do corpo do DashBoard */
+
+
 
 /* dashboard */
 
