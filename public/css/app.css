@@ -131,45 +131,151 @@
 
 
 
+/* index.blade */
+
+    /* Cards */
+
+    #tituloCardIndex1 {
+        padding-left: 5PX;
+        text-align: start; 
+        font-size: larger;
+        font-weight: bold;
+        font-family:'Inria Sans', sans-serif
+    } /* Index1 = Destaque */
+
+    #tituloCardIndex2 {
+        padding-left: 5PX;
+        text-align: start; 
+        font-size: larger;
+        font-weight: normal;
+        font-family:'Inria Sans', sans-serif
+    } /* Index2 = Sem Destaque */
+
+    /* Configurações gerais dos cards do Index*/
+        
+        #cardBodyIndex1 {
+            border: 0;
+            border-radius: 10px;
+            font-weight: bold;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3PX;
+            color: #ffffff; 
+            background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        } /* Index1 = Destaque */
+
+        #cardBodyIndex1 a{
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+        } /* Index1 = Destaque */
+
+
+        #cardBodyIndex2 {
+            border: 0;
+            border-radius: 10px;
+            font-weight: normal;
+            padding-left: 3px;
+            padding-bottom: 3px;
+            padding-right: 3PX;
+            color: #ffffff; 
+            background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
+        } /* Index2 = Sem Destaque */
+
+        #cardBodyIndex2 {
+            color:inherit;
+            text-decoration: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            font-size:inherit;
+
+        }
+        
+        #cardBodyIndex1.card:hover {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        } /* Joga o card pra frente. Função basica do hover né */ 
+
+        
+        #cardBodyIndex2.card:hover {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        } /* Joga o card pra frente. Função basica do hover né */ 
+            
+           
+        #cardDescIndex {
+            background-color: #ffffff;
+            color: #1c1b1d;
+            font-weight: normal;
+            text-align: justify;
+            font-size: 16px;
+            padding: 20px;
+            padding-top: 10px;
+            line-height: 23px;
+
+            border-radius: 10px 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+
+            max-height: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6;
+        } /* Formatação da caixa de descrição */ 
+
+        #cardJenalaIndex.card-body
+        {
+            padding-left: 5px; 
+            padding-bottom: 5px; 
+            padding-right: 5px;
+        } /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
+
+    /* Configurações gerais dos cards */
+
+/* Cards */    
+      
+/* index.blade */
+
+
+
+
+
 /* login.blade */
 
-    /* Form de Criar a area de login */
-
-        #tituloCardlogin
-        {
+        #tituloCardlogin {
             text-align: center; 
             font-size: x-large;
             font-family: 'Inria Sans', sans-serif;
             background-color: rgba(171, 0, 165, 0.685);
             border-bottom: solid black 2px;
             border-radius: 3px;
-        }
+        } /* Formatação do titulo do card */
 
-        /* Cor da Caixa de login*/
-        #cardLogin.bg-gradient-custom 
-        {     
+        
+        #cardLogin.bg-gradient-custom {     
             background-color: whitesmoke;  
-        }
+        } /* Cor da Caixa de login */
 
-        #cardLogin.card 
-        {
+        #cardLogin.card  {
             box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.281);  
             border: solid 2px black;
-        }
+        } /* sombra da caixa de login */
         
-        /* Form de Criar a area de login */ 
-        #cardregister
-        {
+        /* Ver o que que é
+        
+        #cardregister {
             border: solid black 2px;
-        }
+        } 
 
-        #fontelogin
-        {
-            font-family:  'Inria Sans', sans-serif
-        }
-
-        #tituloregister
-        {
+        #tituloregister {
             font-family:  'Inria Sans', sans-serif;
             font-size: x-large;
             text-align: center;
@@ -177,8 +283,7 @@
             border-bottom: solid black 2px;
             border-radius: 3px;
         }
-
-        /* Mensagem que aparece na tela */
+        
         .msg {
             background-color: #D4EDDA;
             color: #155724;
@@ -186,8 +291,10 @@
             width: 100%;
             margin-bottom: 0;
             text-align: center;
-            padding: 10px;
-        }
+            padding: 100px;
+        } /* Mensagem que aparece na tela */
+
+        
 
 /* login  */
 
@@ -195,130 +302,9 @@
 
 
 
-/* index.blade */
-
-    /* Cards */
-
-        #tituloCardIndex1 {
-            padding-left: 5PX;
-            text-align: start; 
-            font-size: larger;
-            font-weight: bold;
-            font-family:'Inria Sans', sans-serif
-        } /* Index1 = Destaque */
-
-        #tituloCardIndex2 {
-            padding-left: 5PX;
-            text-align: start; 
-            font-size: larger;
-            font-weight: normal;
-            font-family:'Inria Sans', sans-serif
-        } /* Index2 = Sem Destaque */
-
-        /* Configurações gerais dos cards do Index*/
-            
-            #cardBodyIndex1 {
-                border: 0;
-                border-radius: 10px;
-                font-weight: bold;
-                padding-left: 3px;
-                padding-bottom: 3px;
-                padding-right: 3PX;
-                color: #ffffff; 
-                background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
-                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-            } /* Index1 = Destaque */
-
-            #cardBodyIndex1 a{
-                color:inherit;
-                text-decoration: inherit;
-                font-family: inherit;
-                font-weight: inherit;
-                font-size:inherit;
-            } /* Index1 = Destaque */
-
-
-            #cardBodyIndex2 {
-                border: 0;
-                border-radius: 10px;
-                font-weight: normal;
-                padding-left: 3px;
-                padding-bottom: 3px;
-                padding-right: 3PX;
-                color: #ffffff; 
-                background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
-                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
-            } /* Index2 = Sem Destaque */
-
-            #cardBodyIndex2 {
-                color:inherit;
-                text-decoration: inherit;
-                font-family: inherit;
-                font-weight: inherit;
-                font-size:inherit;
-
-            }
-            
-            #cardBodyIndex1.card:hover {
-                transform: scale(1.010);
-                transition: all 0.01s ease-in-out;
-                box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-            } /* Joga o card pra frente. Função basica do hover né */ 
-
-            
-            #cardBodyIndex2.card:hover {
-                transform: scale(1.010);
-                transition: all 0.01s ease-in-out;
-                box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-            } /* Joga o card pra frente. Função basica do hover né */ 
-                
-               
-            #cardDescIndex {
-                background-color: #ffffff;
-                color: #1c1b1d;
-                font-weight: normal;
-                text-align: justify;
-                font-size: 16px;
-                padding: 20px;
-                padding-top: 10px;
-                line-height: 23px;
-
-                border-radius: 10px 10px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-
-                max-height: 150px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 6;
-            } /* Formatação da caixa de descrição */ 
-
-            #cardJenalaIndex.card-body
-            {
-                padding-left: 5px; 
-                padding-bottom: 5px; 
-                padding-right: 5px;
-            } /* Deixando o corpo dos cards mais finos, para parecer mais "janelas" */
-
-        /* Configurações gerais dos cards */
-    
-    /* Cards */    
-          
-/* index.blade */
-
-
-
-VOCE TA AQUI FILHA DA PUTA
-
 /* courses.blade */
 
     /* courses.create */
-
-    {
-        font-family:'Inria Sans', sans-serif;
-    } /* Evitar bug do titulo ficar menor */
 
     #tituloCriarCurso {
         text-align: start; 
@@ -335,7 +321,6 @@ VOCE TA AQUI FILHA DA PUTA
 
     #textoSemAula {
         margin: 10px;
-        margin-top: 0px;
         font-size: 15px;
         font-family: 'Inria Sans', sans-serif;
         color: #000000;
@@ -382,10 +367,6 @@ VOCE TA AQUI FILHA DA PUTA
     }
     } /* Animação do botão criar Aula */ 
       
-      
-      
-    
-
     #botaoCriarC.btn-custom {
         padding: 7px; 
         font-size: larger;
