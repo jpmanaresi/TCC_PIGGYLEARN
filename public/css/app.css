@@ -240,7 +240,7 @@
 
 
 
-/* login.blade */
+/* login.blade - Area de Login */
 
 
         #tituloPlaceH {
@@ -250,7 +250,7 @@
         } /* Formatação do Titulo dos placeholders */
 
         #plcaceHoldersL {
-            padding-bottom: 15px;
+            padding-bottom: 18px;
             padding-left: 9px;
             padding-right: 9px;
         } /* Formatação dos placeholders */
@@ -275,10 +275,10 @@
         } /* Cor do botão de Entrar */
 
             #botaoEntrar.btn-custom:hover {
-                background-color: #057e6a;
+                background-color: #0a9c84;
                 color: #ffffff;
                 font-weight: bold;
-                transform: scale(1.1);
+                transform: scale(1.01);
                 transition: all 0.01s ease-in-out;
             } /* Animação do botão de Entrar */
 
@@ -287,7 +287,7 @@
             color: #ffffff;
             border: none;
             width: 100%;
-        } /*  */
+        } /* cor do botão de Criar Conta */
 
             #botaoCriarCo.btn-custom:hover {
                 background-color: #ff00ff;
@@ -304,8 +304,8 @@
             width: 100%;
         } /* Cor do botão de Esqueceu sua senha */
 
-            #botaoEntrar.btn-custom:hover {
-                background-color: #057e6a;
+            #botaoEsqueciS.btn-custom:hover {
+                background-color: #79042b;
                 color: #ffffff;
                 font-weight: bold;
                 transform: scale(1.1);
