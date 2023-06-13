@@ -49,12 +49,13 @@
           @endguest
         <!-- C -->
         
-        <!-- Modo Dark ta sem funcionar. Criar a função depois. Obs: criar uma animação pra quando trocar de modo -->
+        <!-- Modo Dark ta sem funcionar. Criar a função depois. Obs: criar uma animação pra quando trocar de modo 
           
         <a href="" id="modoDarkNB">  
           <img src="\img\moon-stars.svg" style="color: aliceblue" alt="">
         </a>
         
+        -->
 
       </div>
     </nav>
