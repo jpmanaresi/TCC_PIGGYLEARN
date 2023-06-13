@@ -47,7 +47,7 @@
 
                             <div class="form-group">
                                 <label id="descricaoCriarCurso" for="title" >       Descrição       </label>
-                                <textarea name="description" id="titlecriar" class="form-control" placeholder="Inserir Descrição">@if (isset($course)){{$course->course_description}}@endif</textarea>
+                                <textarea name="description" id="placeholderDesc" class="form-control" placeholder="Inserir Descrição">@if (isset($course)){{$course->course_description}}@endif</textarea>
                             </div>
 
                         </div>
