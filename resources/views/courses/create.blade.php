@@ -119,10 +119,11 @@
                                         <!-- Botão de criar aula -->
                                 </div>
                             @endif
-
+                            <input form="create_course" id="visible"  type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}> Tornar Visível
                         </div>
                     </div> 
                     <div class="d-flex justify-content-end">
+                        
                         <input form="create_course" id="botaoCriarC" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
                         <!-- Falta ter um aviso de "curso criado" -->
                     </div>

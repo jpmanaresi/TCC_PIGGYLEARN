@@ -5,7 +5,6 @@ use App\Models\Course;
 use App\Models\Lesson;
 use App\Models\Question;
 use App\Models\Test;
-
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller

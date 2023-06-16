@@ -11,7 +11,7 @@ class CourseController extends Controller
 {
     public function index() {
     
-    $courses = Course::all();
+    $courses = Course::where('setvisible', '1')->get();
     
     return view('index', ['courses' => $courses]);
     }
@@ -29,8 +29,10 @@ class CourseController extends Controller
     public function edit($id){
         $course= Course::findOrFail($id);
         $lessons= Lesson::where('course_id',$course->id)->get()->toArray();
+        if(auth()->user() != $course->user) {
+            return redirect()->route('home');
+        }
         return view('courses.create', [ 'id' => $id, 'course' => $course, 'lessons'=> $lessons]);
-        //return ($lessons);
     }
 
     public function store(Request $request) {
@@ -45,7 +47,7 @@ class CourseController extends Controller
         $course->course_description = $request->description;
         $user = auth()->user();
         $course->user_id = $user->id;
-
+        $course->setvisible = $request->setvisible;
         $course->save();
         //var_dump($request->all());
         if ($request->action==='Criar Curso') {
@@ -73,6 +75,7 @@ class CourseController extends Controller
         $course->update([
         'course_title' => $request->input('title'),
         'course_description' => $request->input('description'),
+        'setvisible' => $request->input('setvisible')
         ]);
 
         //var_dump($request->all());
@@ -121,7 +124,9 @@ public function destroy($id)
         $course = Course::findOrFail($id);
 
         $user = auth()->user();
-      
+       if($course->setvisible <> 1) {
+            return redirect()->route('home');
+        }
         return view('courses.show', ['course' => $course]);
         
     }
