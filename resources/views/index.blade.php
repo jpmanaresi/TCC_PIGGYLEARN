@@ -5,7 +5,7 @@
 @section('content')
 
   <h1 id="tituloInicialp">
-      Tela Inicial
+    Destaques
   </h1>
 
   <div class="container">
