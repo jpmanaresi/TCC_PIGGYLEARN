@@ -26,7 +26,7 @@ Route::get('/home', [CourseController::class, 'index'])->name('home');
 /* Rotas das Views de Cursos */
 Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create');
 Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('courses.edit');
-Route::get('/courses/{id}/show',[CourseController::class, 'show'])->name('courses.show')->middleware()->auth();
+Route::get('/courses/{id}/show',[CourseController::class, 'show'])->name('courses.show')->middleware('auth');
 Route::post('/courses',[CourseController::class, 'store'])->name('courses.store');
 Route::put('/courses',[CourseController::class, 'update'])->name('courses.update');
 Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
