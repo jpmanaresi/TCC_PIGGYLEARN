@@ -54,21 +54,14 @@ class LessonController extends Controller
     public function update(Request $request) {
         $data=$request->all();
         $lesson = Lesson::findOrFail($request->id);
-        $hasTestOld = $lesson->hasTest;
-        $hasTestNow = $request->input('hasTest');
         $lesson->update([
             'title' => $request->input('title'),
             'content' => $request->input('content'),
             'hasTest' => $request->filled('hasTest') ? $request->hasTest : false,
             ]);
             // Verificar a condição para redirecionamento
-        if ($hasTestOld && !$hasTestNow) {
-        // Caso o campo hasTest estivesse marcado anteriormente e foi desmarcado agora
-        // Redirecionar para a rota courses.edit, passando o ID do curso relacionado à aula
-                return redirect()->route('courses.edit', ['id' => $lesson->course_id]);
-        } elseif (!$hasTestOld && $hasTestNow) {
-                // Caso o campo hasTest não estivesse marcado anteriormente e foi marcado agora
-                // Redirecionar para a rota tests.create, passando o ID da lesson
+        if ($request->action=== 'Adicionar Avaliação?') {
+            $lesson->save();
                 return redirect()->route('tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
         } else {
                 // Caso contrário, apenas salvar as alterações e redirecionar para a rota desejada
