@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container" id="lesson-form-container">
-    <form method="POST" action="{{ isset($test) ? route('tests.update', $test->id) : route('tests.store') }}">
+    <form id="create_test" method="POST" action="{{ isset($test) ? route('tests.update', $test->id) : route('tests.store') }}">
         @csrf
 
         @if(isset($test))
@@ -29,8 +29,9 @@
             <button type="submit" name="action" value="create_questions">Criar Prova e Adicionar Questões</button>
             <button type="submit" name="action" value="create_test">Criar Prova</button>
         @else
+        </form> 
         <div class="col-md-10 offset-md-1 dashboard-events-container">      
-                </form> <!-- Gambiara do Jão -->  
+            <!-- Gambiara do Jão -->  
             @if(count($questions) > 0)
 
             <table class="table"> 
@@ -70,11 +71,11 @@
 
             </table>
             @endif
-            <button type="submit" name="action" value="update_test">Atualizar Prova</button>
+            <input form="create_test" type="submit" name="action" value="Atualizar Prova">
             <a href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-secondary">Adicionar Questão</a>
             <a href="{{ route('courses.edit', ['id' => $lesson->course_id, 'lesson' => $lesson->id]) }}" class="btn btn-secondary">Voltar para Edição do Curso</a>
         @endif
-    </form>
+
 </div>
 
 @endsection

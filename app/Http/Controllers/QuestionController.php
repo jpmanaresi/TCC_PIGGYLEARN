@@ -45,7 +45,7 @@ class QuestionController extends Controller
         $question->alt_4 = $request->alt_4;
         $question->answer = 0;
         $question->test_id = $request->test_id;
-        //$question->save();
+        $question->save();
 
         $action= $request->action;
         //return ($request);

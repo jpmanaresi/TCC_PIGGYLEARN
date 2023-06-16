@@ -54,7 +54,7 @@ class TestController extends Controller
     $test = Test::findOrFail($id);
     $action = $request->input('action');
 
-    if ($action === 'update_test') {
+    if ($action === 'Atualizar Prova') {
         $test->description = $request->input('description');
         $test->save();
 
