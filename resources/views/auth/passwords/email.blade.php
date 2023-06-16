@@ -6,43 +6,52 @@
 
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+        <div class="col-md-6">
+            <div class="card" id="cardLogin">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                <div id="tituloCardlogin" class="card-header">{{ __('Recuperação de Senha') }}</div>
+                    <div class="card-body" id="cardLogin2">
 
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
                             </div>
-                        </div>
+                        @endif
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
+                        <form method="POST" action="{{ route('password.email') }}">
+                            @csrf
+
+                            <div class="container text-start">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <label id="tituloPlaceH" for="email" class="col">{{ __('Endereço de Email') }}</label>
+
+                                        <div id="plcaceHoldersL" class="col">
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <footer id="footerAreaL">
+                                    <div class="container text-center">
+
+                                        <div class="row">
+                                            <div class="col">
+                                                <button id="botaoCriarCo2" type="submit" class="btn btn-custom">
+                                                    {{ __('Envie codigo de Recuperação') }}
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
-                        </div>
-                    </form>
-                </div>
+                        </form>
+                    </div>
             </div>
         </div>
     </div>

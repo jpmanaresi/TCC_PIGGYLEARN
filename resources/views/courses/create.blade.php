@@ -54,53 +54,55 @@
 
                     </div>
         
-                    <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
+                    <h1 class="text-center align-self-center" style="margin: 15px; font-weight: bold">
                         Aulas
                     </h1> 
                     
-                    <div id="corpoAreasAulas"> 
+                    <div id="corpoTabela" class="col-md-12"> 
 
-                        <div class="col-md-10 offset-md-1 dashboard-events-container">
+                        <div class="table-responsive">
                             @if (isset($course))        
                                 </form> <!-- Gambiara do Jão -->  
                             @if(count($lessons) > 0)
 
-                            <table class="table"> 
+                            <table class="table">
 
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col"></th>
-                                        <th scope="col">Ações</th>
+                                        <th id="TituloTabela" scope="col" class="text-center align-middle">#</th>
+                                        <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
+                                        <th id="TituloTabela" scope="col" class="text-center align-middle">Participantes</th>
+                                        <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
                                     @foreach($lessons as $lesson)
-                                        <tr>
-                                            <td scropt="row">{{ $lesson['seq'] }}</td>
-                                            <td><a href="#">{{ $lesson['title'] }}</a></td>
-                                            <td>0</td>
-                                            <td>
-                                                <a href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn">Editar</a> 
-                                                <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
-                                                </form>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <td scope="row" class="text-center align-middle">{{ $lesson['seq'] }}</td>
+                                        <td class="text-center align-middle">
+                                            <a href="#">{{ $lesson['title'] }}</a>
+                                        </td>
+                                        <td class="text-center align-middle">0</td>
+                                        <td class="text-center align-middle">
+                                            <a href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn">Editar</a>
+                                            <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
+                                            </form>
+                                        </td>
+                                    </tr>
                                     @endforeach
-                                        <tr>
-                                            <td scropt="row"></td>
-                                            <td colspan="4">
-                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula"  class="btn btn-custom">Adicionar Aula</a> 
-                                            </td>
-                                        </tr>    
+                                    <tr>
+                                        <td scope="row"></td>
+                                        <td colspan="4" class="text-center align-middle">
+                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom">Adicionar Aula</a>
+                                        </td>
+                                    </tr>
                                 </tbody>
-
                             </table>
+                            
                             
                             
                             @else

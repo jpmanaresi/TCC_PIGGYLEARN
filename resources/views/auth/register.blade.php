@@ -19,7 +19,7 @@
                              
                                 <div class="row">
                                     <div class="col"> 
-                                        <label id="tituloPlaceH" for="name" lass="col">{{ __('Nome') }}</label>
+                                        <label id="tituloPlaceH" for="name" lass="col">{{ __('Insira seu nome de usuário:') }}</label>
 
                                         <div id="plcaceHoldersL" class="col">
                                             <input id="name"  type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -35,7 +35,7 @@
 
                                 <div class="row">
                                     <div class="col"> 
-                                        <label id="tituloPlaceH" for="email" lass="col">{{ __('Endereço de Email') }}</label>
+                                        <label id="tituloPlaceH" for="email" lass="col">{{ __('Endereço de E-mail Valido:') }}</label>
 
                                         <div id="plcaceHoldersL" class="col">
                                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -51,7 +51,7 @@
 
                                 <div class="row">
                                     <div class="col"> 
-                                        <label id="tituloPlaceH" for="password" class="col" >{{ __('Senha') }}</label>
+                                        <label id="tituloPlaceH" for="password" class="col" >{{ __('Crie sua Senha:') }}</label>
 
                                         <div id="plcaceHoldersL" class="col">
                                             <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -67,7 +67,7 @@
 
                                 <div class="row">
                                     <div class="col"> 
-                                        <label id="tituloPlaceH" for="password-confirm" lass="col">{{ __('Confirmar Senha') }}</label>
+                                        <label id="tituloPlaceH" for="password-confirm" lass="col">{{ __('Confirme Senha: ') }}</label>
 
                                         <div id="plcaceHoldersL" class="col">
                                             <input type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -78,19 +78,19 @@
                                 
                             </div>
                             <footer id="footerAreaL">
-                                <div>
+                                
 
                                     <div class="container text-center">
                                         <div class="row">
         
                                             <div class="col">
-                                                <button id="botaoEntrar" type="submit" class="btn btn-custom">
-                                                    {{ __('Register') }}
+                                                <button id="botaoCriarCo2" type="submit" class="btn btn-custom">
+                                                    {{ __('Criar Conta') }}
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                
                             </footer>
                         </form>
                     </div>

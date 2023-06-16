@@ -258,20 +258,20 @@
         #checkLembrarU {
             margin-left: 0%;
             padding-left: 9px;
+            padding-top: 6px;
         } /* Formatação do check */
 
         #lembrarUsuario {
             padding-bottom: 15px;
-            padding-left: 9px;
-            padding-right: 9px;
+            padding-left: 6px;
         } /* Formatação texto Lembrar de mim */
         
         #botaoEntrar.btn-custom {
             background-color: #14b69b;
             color: #ffffff;
             border: none;
-            margin-bottom: 12px;
             width: 100%;
+            margin-bottom: 16px;
         } /* Cor do botão de Entrar */
 
             #botaoEntrar.btn-custom:hover {
@@ -281,31 +281,50 @@
                 transform: scale(1.01);
                 transition: all 0.01s ease-in-out;
             } /* Animação do botão de Entrar */
+        
+        #botaoCriarCo2.btn-custom {
+            background-color: #1aa891;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+        } /* Cor do botão de Entrar */
+
+            #botaoCriarCo2.btn-custom:hover {
+                background-color: #087563;
+                color: #ffffff;
+                font-weight: bold;
+                transform: scale(1.01);
+                transition: all 0.01s ease-in-out;
+            } /* Animação do botão de Entrar */    
 
         #botaoCriarCo.btn-custom {
-            background-color: #7e18ad;
+            background-color: #2d79d1;
             color: #ffffff;
             border: none;
             width: 100%;
         } /* cor do botão de Criar Conta */
 
             #botaoCriarCo.btn-custom:hover {
-                background-color: #ff00ff;
+                background-color: #104b8f;
                 color: #ffffff;
+                
                 font-weight: bolder;
-                transform: scale(1.1);
+                transform: scale(1.01);
                 transition: all 0.01s ease-in-out;
             } /* Animação do botão de Entrar */
 
         #botaoEsqueciS.btn-custom {
-            background-color: #bd164e;
+            
             color: #ffffff;
+            font-style: italic;
             border: none;
-            width: 100%;
+            width: 80%;
+            margin-right: 9px;
+            margin-bottom: 18px;
         } /* Cor do botão de Esqueceu sua senha */
 
             #botaoEsqueciS.btn-custom:hover {
-                background-color: #79042b;
+                background-color: #79042e65;
                 color: #ffffff;
                 font-weight: bold;
                 transform: scale(1.1);
@@ -313,9 +332,10 @@
             } /* Animação do botão de Entrar */
 
         #footerAreaL {
-            background-color: #484748;
+            background-color: #3131318a;
             border-radius: 0px 0px 5px 5px;
             padding: 10px;
+            margin-top: 10px;;
         } /* Cor do Footer */
 
         #tituloCardlogin {
@@ -345,37 +365,7 @@
             color: #ffffff; 
             background: linear-gradient(270deg, #FF4081 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
         } /* Formatação da caixa de login */
-
-
-
-        
-        /* Ver o que que é
-
-        #cardregister {
-            border: solid black 2px;
-        } 
-
-        #tituloregister {
-            font-family:  'Inria Sans', sans-serif;
-            font-size: x-large;
-            text-align: center;
-            background-color: rgba(171, 0, 165, 0.685);
-            border-bottom: solid black 2px;
-            border-radius: 3px;
-        }
-        
-        .msg {
-            background-color: #D4EDDA;
-            color: #155724;
-            border: 1px solid #C3E6CB;
-            width: 100%;
-            margin-bottom: 0;
-            text-align: center;
-            padding: 100px;
-        } /* Mensagem que aparece na tela */
-
-        
-
+     
 /* login  */
 
 

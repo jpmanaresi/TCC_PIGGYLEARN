@@ -7,10 +7,10 @@
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6">
-        <div class="card" id="cardLogin">
+        <div id="cardLogin" class="card">
 
             <div id="tituloCardlogin" class="card-header">Area de Login</div>
-                <div class="card-body" id="cardLogin2">
+                <div id="cardLogin2" class="card-body">
 
                     <form method="POST"action="{{ route('login') }}">
                         @csrf
@@ -19,13 +19,13 @@
                             
                             <div class="row">   
                                 <div class="col">             
-                                    <label id="tituloPlaceH" for="email" class="col" id="fontelogin">{{ __('Endereço de Email') }}</label>
+                                    <label id="tituloPlaceH" for="email" class="col">{{ __('Endereço de Email') }}</label>
 
                                     <div id="plcaceHoldersL" class="col">
                                         <input id="email" type="email"  class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                         @error('email')
-                                            <span class="invalid-feedback" role="alert" id="fontelogin" >
+                                            <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
@@ -51,16 +51,22 @@
                         
                             <div class="row">
                                 <div class="col">
-
-                                    <div class="form-check" id="checkLembrarU">
+                                    <div id="checkLembrarU" class="form-check">
                                         <input id="checkLembrarU" class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                        
                                         <label id="lembrarUsuario" class="form-check-label" for="remember">
                                             {{ __('Lembrar de mim') }}
                                         </label>
                                     </div>
                                 </div>
+                                @if (Route::has('password.request'))
+                                    <div class="col text-end">
+                                        <a class="btn btn-custom" id="botaoEsqueciS" href="{{ route('password.request') }}">
+                                            {{ __('Esqueceu sua senha?') }}
+                                        </a>
+                                    </div>
+                                @endif
                             </div>
+                            
                         
 
                             <div class="container text-center">
@@ -76,26 +82,18 @@
                         </div>
                                  
                         <footer id="footerAreaL">
-                            <div>
-                                        
-                                @if (Route::has('password.request'))
-                                <div class="container text-center">
-                                    <div class="row">
-    
-                                        <div class="col">
-                                            <a class="btn btn-custom" id="botaoEsqueciS" href="{{ route('password.request') }}">
-                                                {{ __('Esqueceu sua senha?') }}
-                                            </a>
-                                        </div>    
-                                @endif 
-
+                            <div class="container text-center">    
+                                <div class="row">   
+                                    <h6>Não tem conta?</h5 >
+                                </div>
+                                <div class="row">
                                     <div class="col">        
-                                        <a class="btn btn-custom animated-button" id="botaoCriarCo" href="/register">Criar Conta</a>
+                                        <a class="btn btn-custom" id="botaoCriarCo" href="/register">Criar Conta</a>
                                     </div>
                                         
-                                    </div>
                                 </div>
                             </div>
+                            
                         </footer>
                     </div>
                 </div>
