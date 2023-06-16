@@ -41,6 +41,7 @@
         </div>
         <button type="submit" name="action" value="{{isset($question) ? 'update_and_new' : 'create_and_new'}}">Salvar e Criar Nova</button>
         <button type="submit">{{isset($question) ? 'Salvar e Voltar' : 'Criar e Voltar'}}</button>
+        <a href="{{ route('tests.edit', ['lesson' => $test->lesson_id, 'test' => $test->id]) }}" class="btn btn-secondary">Voltar</a>
     </form>
 </div>
 @endsection

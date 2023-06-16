@@ -27,8 +27,24 @@
             <label for="content" >Descrição:</label>
             <textarea name="content" id="content" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
         </div>
+<<<<<<< HEAD
 
     </form>
+=======
+        </form>
+        <div class="container">
+                <div class="form-group">
+                    <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
+                        Avaliação
+                    </h1>
+
+                <div class="col-md-10 offset-md-1 dashboard-events-container">
+                    @if (isset($lesson))        
+                        @if($lesson->hasTest == 1)
+                        <div id="corpoTabela" class="col-md-12"> 
+                            <div class="table-responsive">
+                    <table class="table"> 
+>>>>>>> 21029ab61f9d99487d90b611a821ed8b4075ae76
 
         <div class="form-group">
             <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
@@ -82,11 +98,19 @@
                     <input type="hidden" name="create_lesson_and_add_test" value="1">
                     <span id="cortexto">Esta Aula não possui avaliação.</span><input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar Avaliação?">
                     <!-- Botão de criar aula -->
+<<<<<<< HEAD
                     @endif
 
             </div>
             
             <button form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}</button>
+=======
+                @endif
+                </div>
+                </div>   
+            </div>
+            <input form="create_lesson" id="botaoCriarC" class="btn btn-custom" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">
+>>>>>>> 21029ab61f9d99487d90b611a821ed8b4075ae76
         </div>
 </div>
 

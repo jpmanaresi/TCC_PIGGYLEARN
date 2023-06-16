@@ -52,7 +52,7 @@
                         </div>
 
                     </div>
-        
+                </form>
                     <h1 class="text-center align-self-center" style="margin: 15px; font-weight: bold">
                         Aulas
                     </h1> 

@@ -31,9 +31,9 @@ class QuestionController extends Controller
             'alt_2' => 'required',
             'alt_3' => 'required',
             'alt_4' => 'required',
-            'seq' => 'required',
             'answer' => 'required'
         ]);
+
         $lastSeq = Question::where('test_id', $request->test_id)->orderByDesc('seq')->first()?->seq ?? 0;
         $question = new Question; 
         $question->seq = $lastSeq + 1;
