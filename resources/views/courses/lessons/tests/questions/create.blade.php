@@ -22,18 +22,22 @@
         <div class="form-group">
             <label for="alt_1" >Alternativa 1:</label>
             <textarea name="alt_1" id="alt_1" class="form-control" placeholder="Alternativa 1">@if (isset($question)){{$question->alt_1}}@endif</textarea>
+            <input type="radio" class="form-check-input" name="answer" value="alt_1" {{ isset($question) && $question->answer == 'alt_1' ? 'checked' : '' }}> Alternativa correta?
         </div>
         <div class="form-group">
             <label for="alt_2" >Alternativa 2:</label>
             <textarea name="alt_2" id="alt_2" class="form-control" placeholder="Alternativa 2">@if (isset($question)){{$question->alt_2}}@endif</textarea>
+            <input type="radio" class="form-check-input" name="answer" value="alt_2" {{ isset($question) && $question->answer == 'alt_2' ? 'checked' : '' }}> Alternativa correta?
         </div>
         <div class="form-group">
             <label for="alt_3" >Alternativa 3:</label>
             <textarea name="alt_3" id="alt_3" class="form-control" placeholder="Alternativa 3">@if (isset($question)){{$question->alt_3}}@endif</textarea>
+            <input type="radio" class="form-check-input" name="answer" value="alt_3" {{ isset($question) && $question->answer == 'alt_3' ? 'checked' : '' }}> Alternativa correta?
         </div>
         <div class="form-group">
             <label for="alt_4" >Alternativa 4:</label>
             <textarea name="alt_4" id="alt_4" class="form-control" placeholder="Alternativa 4">@if (isset($question)){{$question->alt_4}}@endif</textarea>
+            <input type="radio" class="form-check-input" name="answer" value="alt_4" {{ isset($question) && $question->answer == 'alt_4' ? 'checked' : '' }}> Alternativa correta?
         </div>
         <button type="submit" name="action" value="{{isset($question) ? 'update_and_new' : 'create_and_new'}}">Salvar e Criar Nova</button>
         <button type="submit">{{isset($question) ? 'Salvar e Voltar' : 'Criar e Voltar'}}</button>
