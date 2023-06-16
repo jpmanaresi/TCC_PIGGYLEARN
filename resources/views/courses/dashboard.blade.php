@@ -62,12 +62,19 @@
                                         </div>
                                     </td>
                                 </tr>
-                            @endforeach
+                                @endforeach
                         </tbody>
-                    </table>
+                    </table>                 
                     
                     @else
-                    <p id="letraDashboard" >Você ainda não criou nenhum curso, <a href="/courses/create">Criar curso</a></p>
+                    <a href="/courses/create">
+                        <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
+                            <p id="textoSemAula" class="align-self-center mt-3">Você não criou nenhum curso.</p>
+                            <input type="hidden" name="create_course_and_add_lesson" value="1">
+                                <button id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button">Criar Curso</button>
+                                <!-- Botão de criar aula -->
+                        </div>   
+                    </a>
                     @endif
 
                 </div>

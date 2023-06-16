@@ -45,37 +45,37 @@
             color: #ffffff;             
         } /* Cor dos Botões de Entrar */
 
-        #botoesEntrarNav.btn-custom:hover {
-            background-color: #921992;
-            font-weight: bolder;
-            transform: scale(1.1);
-            transition: all 0.01s ease-in-out;
-        } /* Animação dos Botões de Entrar */
+            #botoesEntrarNav.btn-custom:hover {
+                background-color: #921992;
+                font-weight: bolder;
+                transform: scale(1.1);
+                transition: all 0.01s ease-in-out;
+            } /* Animação dos Botões de Entrar */
 
         #botoesCriarCoNav.btn-custom {
             margin-right: 10px;
             margin-left: 10px;
             background-color: #7e18ad;
             color: #ffffff; 
-        } /* Cor dos Botões de Login */
+        } /* Cor dos Botões de Criar Conta */
 
-        #botoesCriarCoNav.btn-custom:hover {
-            background-color: #ff00ff;
-            color: #ffffff;
-            font-weight: bolder;
-            transform: scale(1.1);
-            transition: all 0.01s ease-in-out;
-        } /* Animação dos Botões de Login */
+            #botoesCriarCoNav.btn-custom:hover {
+                background-color: #ff00ff;
+                color: #ffffff;
+                font-weight: bold;
+                transform: scale(1.1);
+                transition: all 0.01s ease-in-out;
+            } /* Animação dos Botões de Criar Conta */
 
         #modoDarkNB {
             padding-right: 5px;
-        }
+        } /* formatação do botão de modo escuro */
+
     /* NB */
 
 
     /* SideBar (SB) */
       
-        
         #tituloInicialsb {
             text-align: center; 
             color: white;
@@ -104,13 +104,13 @@
             margin-top: 5px;
         } /* Cor dos Botões */
 
-        #botoesMenus.btn-custom:hover {
-            background-color: #b811b8; 
-            color: #ffffff;
-            width: 98%;
-            transform: scale(1.1);
-            transition: all 0.01s ease-in-out;
-        } /* Animação dos Botões */
+            #botoesMenus.btn-custom:hover {
+                background-color: #b811b8; 
+                color: #ffffff;
+                width: 98%;
+                transform: scale(1.1);
+                transition: all 0.01s ease-in-out;
+            } /* Animação dos Botões */
 
         #botoesMenusS.btn-custom
         {
@@ -137,7 +137,8 @@
 /* index.blade */
 
     #tituloCardIndex1 {
-        padding-left: 5PX;
+        color: white;
+        padding-left: 5px;
         text-align: start; 
         font-size: larger;
         font-weight: bold;
@@ -164,14 +165,19 @@
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
     } /* Index1 = Destaque */
 
+        #cardBodyIndex1.card:hover {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        } /* Joga o card pra frente. Função basica do hover né */
+
     #cardBodyIndex1 a{
         color:inherit;
         text-decoration: inherit;
         font-family: inherit;
         font-weight: inherit;
         font-size:inherit;
-    } /* Index1 = Destaque */
-
+    } /* Tirando o sublinhado azul da descrição? */
 
     #cardBodyIndex2 {
         border: 0;
@@ -185,27 +191,20 @@
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
     } /* Index2 = Sem Destaque */
 
-    #cardBodyIndex2 {
+        #cardBodyIndex2.card:hover {
+            transform: scale(1.010);
+            transition: all 0.01s ease-in-out;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        } /* Joga o card pra frente. Função basica do hover né */ 
+
+    #cardBodyIndex2 a{
         color:inherit;
         text-decoration: inherit;
         font-family: inherit;
         font-weight: inherit;
         font-size:inherit;
-    }
-        
-    #cardBodyIndex1.card:hover {
-        transform: scale(1.010);
-        transition: all 0.01s ease-in-out;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-    } /* Joga o card pra frente. Função basica do hover né */ 
-
-        
-    #cardBodyIndex2.card:hover {
-        transform: scale(1.010);
-        transition: all 0.01s ease-in-out;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.50);
-    } /* Joga o card pra frente. Função basica do hover né */ 
-              
+    } /* Tirando o sublinhado azul da descrição? */
+               
     #cardDescIndex {
         background-color: #ffffff;
         color: #1c1b1d;
@@ -219,13 +218,14 @@
         border-radius: 10px 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
+        height: 107px;
 
-        max-height: 150px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 6;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
     } /* Formatação da caixa de descrição */ 
 
     #cardJenalaIndex.card-body {
@@ -240,26 +240,114 @@
 
 
 
-/* login.blade */
+/* login.blade - Area de Login */
+
+
+        #tituloPlaceH {
+            padding-bottom: 5px;
+            padding-left: 9px;
+            padding-right: 9px;
+        } /* Formatação do Titulo dos placeholders */
+
+        #plcaceHoldersL {
+            padding-bottom: 18px;
+            padding-left: 9px;
+            padding-right: 9px;
+        } /* Formatação dos placeholders */
+
+        #checkLembrarU {
+            margin-left: 0%;
+            padding-left: 9px;
+        } /* Formatação do check */
+
+        #lembrarUsuario {
+            padding-bottom: 15px;
+            padding-left: 9px;
+            padding-right: 9px;
+        } /* Formatação texto Lembrar de mim */
+        
+        #botaoEntrar.btn-custom {
+            background-color: #14b69b;
+            color: #ffffff;
+            border: none;
+            margin-bottom: 12px;
+            width: 100%;
+        } /* Cor do botão de Entrar */
+
+            #botaoEntrar.btn-custom:hover {
+                background-color: #0a9c84;
+                color: #ffffff;
+                font-weight: bold;
+                transform: scale(1.01);
+                transition: all 0.01s ease-in-out;
+            } /* Animação do botão de Entrar */
+
+        #botaoCriarCo.btn-custom {
+            background-color: #7e18ad;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+        } /* cor do botão de Criar Conta */
+
+            #botaoCriarCo.btn-custom:hover {
+                background-color: #ff00ff;
+                color: #ffffff;
+                font-weight: bolder;
+                transform: scale(1.1);
+                transition: all 0.01s ease-in-out;
+            } /* Animação do botão de Entrar */
+
+        #botaoEsqueciS.btn-custom {
+            background-color: #bd164e;
+            color: #ffffff;
+            border: none;
+            width: 100%;
+        } /* Cor do botão de Esqueceu sua senha */
+
+            #botaoEsqueciS.btn-custom:hover {
+                background-color: #79042b;
+                color: #ffffff;
+                font-weight: bold;
+                transform: scale(1.1);
+                transition: all 0.01s ease-in-out;
+            } /* Animação do botão de Entrar */
+
+        #footerAreaL {
+            background-color: #484748;
+            border-radius: 0px 0px 5px 5px;
+            padding: 10px;
+        } /* Cor do Footer */
 
         #tituloCardlogin {
-            text-align: center; 
-            font-size: x-large;
-            font-family: 'Inria Sans', sans-serif;
-            background-color: rgba(171, 0, 165, 0.685);
-            border-bottom: solid black 2px;
-            border-radius: 5px;
+            font-size: 24px;
+            align-self: center;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            border: none;
+            background-color: transparent; 
         } /* Formatação do titulo do card */
 
-        
-        #cardLogin.bg-gradient-custom {     
-            background-color: whitesmoke;  
-        } /* Cor da Caixa de login */
+        #cardLogin {
+            border: 0;
+            border-radius: 5px;
+            padding: 0%;
+            color: #ffffff; 
+            background: linear-gradient(270deg, #FF4081 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.50);
+        } /* Formatação do header da caixa de login */
 
-        #cardLogin.card  {
-            box-shadow: inset 3px 3px 20px rgba(0, 0, 0, 0.281);  
-            border: solid 2px black;
-        } /* sombra da caixa de login */
+        #cardLogin2 {
+            border: 0;
+            border-radius: 5px;
+            padding: 0%;
+            color: #ffffff; 
+            background: linear-gradient(270deg, #FF4081 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+        } /* Formatação da caixa de login */
+
+
+
         
         /* Ver o que que é
 
@@ -294,7 +382,7 @@
 
 
 
-/* courses.blade */
+/* courses.blade - Criar Curso */
 
     #tituloCriarCurso {
         text-align: start; 
@@ -302,6 +390,10 @@
         padding: 5px; 
         font-weight: bold;
     } /* Formatção do titulos encima do placesholder */
+
+    #placeholderDesc {
+        height: 120px;
+    }
 
     #descricaoCriarCurso {
         text-align: start; 
@@ -324,36 +416,36 @@
         border: 0; 
     } /* Cor do botão criar Aula */ 
 
-    #botaoAdicionarAula.btn-custom:hover {   
-        background-color: #500d50;
-        color: #ffffff;
-        font-weight: bold;
-        border: 0; 
-        transform: scale(1.1);
-        transition: all 0.01s ease-in-out;
-    } /* Animação do botão criar Aula */  
+        #botaoAdicionarAula.btn-custom:hover {   
+            background-color: #500d50;
+            color: #ffffff;
+            font-weight: bold;
+            border: 0; 
+            transform: scale(1.1);
+            transition: all 0.01s ease-in-out;
+        } /* Animação do botão criar Aula */  
     
-    .animated-button {
-        background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
-        background-size: 200% 100%;
-        transition: background-position 0.5s;
-        animation: gradientAnimation 2s infinite;
-    } /* Animação do botão criar Aula */ 
-      
-    .animated-button:hover {
-        animation: gradientAnimation 2s infinite;
+        .animated-button {
+            background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
+            background-size: 200% 100%;
+            transition: background-position 0.5s;
+            animation: gradientAnimation 2s infinite;
+        } /* Animação do botão criar Aula */ 
+        
+        .animated-button:hover {
+            animation: gradientAnimation 2s infinite;
 
-    }   @keyframes gradientAnimation {
-    0% {
-        background-position: right;
-    }
-    50% {
-        background-position: left;
-    }
-    100% {
-        background-position: right;
-    }
-    } /* Animação do botão criar Aula */ 
+        }   @keyframes gradientAnimation {
+        0% {
+            background-position: right;
+        }
+        50% {
+            background-position: left;
+        }
+        100% {
+            background-position: right;
+        }
+        } /* Animação do botão criar Aula */ 
       
     #botaoCriarC.btn-custom {
         padding: 7px; 
@@ -365,15 +457,14 @@
         border: 0; 
     } /* Cor do botão criar Curso */ 
 
-    #botaoCriarC.btn-custom:hover {  
-        background-color: #3540a3;
-        color: #ffffff;
-        height: 10%;
-        font-weight: bold;
-        border: 0;
-        transform: scale(1.1);
-        transition: all 0.01s ease-in-out;
-    } /* Animação do botão criar Curso */ 
+        #botaoCriarC.btn-custom:hover {  
+            background-color: #3540a3;
+            color: #ffffff;
+            font-weight: bold;
+            border: 0;
+            transform: scale(1.1);
+            transition: all 0.01s ease-in-out;
+        } /* Animação do botão criar Curso */ 
 
     #corpoAreasAulas {
         background-color: #ffffff91;

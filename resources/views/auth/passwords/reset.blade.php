@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('title', 'PL - Esqueceu a Senha')
+
 @section('content')
 
 <div class="container">
