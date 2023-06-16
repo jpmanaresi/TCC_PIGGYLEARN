@@ -6,7 +6,7 @@
 
 <!-- Criar Aulas --> 
 <div class="container" id="lesson-form-container">
-    <form method="POST" action="{{ isset($lesson) ? route('lessons.update',[$course->id, $lesson->id]) : route('lessons.store', $course->id) }}">
+    <form id="create_lesson" method="POST" action="{{ isset($lesson) ? route('lessons.update',[$course->id, $lesson->id]) : route('lessons.store', $course->id) }}">
         @csrf
         
         @if(isset($lesson))
@@ -22,15 +22,15 @@
             <label for="content" >Descrição:</label>
             <textarea name="content" id="content" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
         </div>
-
+        </form>
                 <div class="form-group">
                     <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
                         Avaliação
                     </h1>
+
                 <div class="col-md-10 offset-md-1 dashboard-events-container">
                     @if (isset($lesson))        
                         @if($lesson->hasTest == 1)
-                </form>
                     <table class="table"> 
 
                         <thead>
@@ -66,14 +66,14 @@
                     @endif
                 @else
                     <input type="hidden" name="create_lesson_and_add_test" value="1">
-                    <span id="cortexto">Esta Aula não possui avaliação.</span><button id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button">Adicionar Avaliação?</button>
+                    <span id="cortexto">Esta Aula não possui avaliação.</span><input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar Avaliação?">
                     <!-- Botão de criar aula -->
                 @endif
 
             </div>
-        <button type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}</button>
+        <button form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}</button>
         </div>
-    </form>
+
 </div>
 
 @endsection

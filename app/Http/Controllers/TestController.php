@@ -54,11 +54,11 @@ class TestController extends Controller
     $test = Test::findOrFail($id);
     $action = $request->input('action');
 
-    if ($action === 'update_test') {
+    if ($action === 'Atualizar Prova') {
         $test->description = $request->input('description');
         $test->save();
 
-        return redirect()->route('courses.edit', ['id' => $test->lesson->course_id, 'lesson' => $test->lesson->id])
+        return redirect()->route('lessons.edit', ['course' => $test->lesson->course_id, 'lesson' => $test->lesson->id])
             ->with('msg', 'Prova atualizada com sucesso!');
     } 
     // Ação inválida, redireciona para algum lugar apropriado ou retorna uma resposta de erro

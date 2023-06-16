@@ -12,6 +12,7 @@ class Course extends Model
     protected $fillable = [
         'course_title',
         'course_description',
+        'setvisible'
     ];
 
     public function user() {

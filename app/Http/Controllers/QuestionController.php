@@ -5,7 +5,6 @@ use App\Models\Course;
 use App\Models\Lesson;
 use App\Models\Question;
 use App\Models\Test;
-
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -26,7 +25,7 @@ class QuestionController extends Controller
     }
 
     public function store(Request $request) {
-       /* $request->validate([
+        $request->validate([
             'question' => 'required',
             'alt_1' => 'required',
             'alt_2' => 'required',
@@ -34,7 +33,7 @@ class QuestionController extends Controller
             'alt_4' => 'required',
             'seq' => 'required',
             'answer' => 'required'
-        ]);*/
+        ]);
         $lastSeq = Question::where('test_id', $request->test_id)->orderByDesc('seq')->first()?->seq ?? 0;
         $question = new Question; 
         $question->seq = $lastSeq + 1;
@@ -43,9 +42,9 @@ class QuestionController extends Controller
         $question->alt_2 = $request->alt_2;
         $question->alt_3 = $request->alt_3;
         $question->alt_4 = $request->alt_4;
-        $question->answer = 0;
+        $question->answer = $request->answer;
         $question->test_id = $request->test_id;
-        //$question->save();
+        $question->save();
 
         $action= $request->action;
         //return ($request);
@@ -64,7 +63,7 @@ class QuestionController extends Controller
             'alt_2' => $request->alt_2,
             'alt_3' => $request->alt_3,
             'alt_4' => $request->alt_4,
-            'answer' => 0
+            'answer' => $request->answer,
         ]);
         $action= $request->action;
         //return ($request);

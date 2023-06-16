@@ -118,17 +118,7 @@
       <!-- Creditos -->
       <div class="container">
 
-       <!-- @auth Coloquei no final do perfil, até porque faz mais sentido a opção de sair estar nas opções 
 
-        
-          <form action="/logout" method="post" class="mt-auto">
-            @csrf
-              <a href="/login" id="botoesMenusS" class="btn btn-custom text-start" type="button" onclick="event.preventDefault(); this.closest('form').submit();"> 
-                <img id="botoesImg" src="/img/box-arrow-in-right.svg" alt="Icone de Sair">
-                Sair
-              </a>
-          </form>
-          @endauth -->
       
 
         <footer class="py-3 my-4">
