@@ -4,6 +4,10 @@
     
 @section('content')
 
+<h1 id="tituloInicialp">
+    Criar Avaliação
+</h1>
+
 <div class="container" id="lesson-form-container">
     <form id="create_test" method="POST" action="{{ isset($test) ? route('tests.update', $test->id) : route('tests.store') }}">
         @csrf

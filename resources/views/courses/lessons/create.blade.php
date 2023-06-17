@@ -8,6 +8,14 @@
     
 @section('content')
 
+<h1 id="tituloInicialp">
+    @if(isset($lesson))
+    Editar Aula   
+    @else
+    Criar Aula            
+    @endif
+</h1>
+
 <div class="container" id="lesson-form-container">
     <form id="create_lesson" method="POST" action="{{ isset($lesson) ? route('lessons.update',[$course->id, $lesson->id]) : route('lessons.store', $course->id) }}">
         @csrf

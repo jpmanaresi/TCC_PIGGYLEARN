@@ -8,37 +8,37 @@
 
 @section('content')
 
-<!-- Criar Curso (CC) --> 
-    <div alt="container-CriarCurso" class="col-md-6 offset-md-3">
-        <div id="corpoContainerCC" class="container" >
+<h1 id="tituloInicialp">
+    @if(isset($course))
+    Editar Curso   
+    @else
+    Criar Curso            
+    @endif
+</h1>
 
-        <h1 id="tituloInicialp">
-            @if(isset($course))
-            Editar Curso   
-            @else
-            Criar Curso            
-            @endif
-        </h1>
+<!-- Criar Curso (CC) --> 
+<div alt="container-CriarCurso" class="col-md-6 offset-md-3">
+    <div id="corpoContainerCC" class="container" >
 
         <!-- Card Criar Curso (CCC) -->      
-            <div id="corpoCriarCurso">
-                <form id="create_course" action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
-                    @csrf
+        <div id="corpoCriarCurso">
+            <form id="create_course" action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
+                @csrf
 
-                    <input type="hidden" name="is_edit" value="{{ isset($course) ? 'true' : 'false' }}">
+                <input type="hidden" name="is_edit" value="{{ isset($course) ? 'true' : 'false' }}">
                     
-                    <div class="row">
-                        <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
 
-                            @if(isset($course))
-                                @method('PUT')
-                                <input type="hidden" name="id" value="{{$course->id}}"> 
-                            @endif
+                        @if(isset($course))
+                            @method('PUT')
+                            <input type="hidden" name="id" value="{{$course->id}}"> 
+                        @endif
 
-                            <div class="form-group">
-                                <label id="tituloCriarCurso" for="title" >          Título          </label>
-                                <input type="text" class="form-control" name="title" placeholder="Inserir Título" @if(isset($course)) value="{{$course->course_title}}"@endif>
-                            </div> 
+                        <div class="form-group">
+                            <label id="tituloCriarCurso" for="title" >          Título          </label>
+                            <input type="text" class="form-control" name="title" placeholder="Inserir Título" @if(isset($course)) value="{{$course->course_title}}"@endif>
+                        </div> 
 
                         </div>
 

@@ -97,7 +97,7 @@
           <div class="col-md-6">
             <a href="/dashboard" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
               <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
-              Meus Cursos
+              Curso Criados 
             </a>
           </div>
           
