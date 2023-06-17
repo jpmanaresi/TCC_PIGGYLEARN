@@ -99,12 +99,12 @@
                                         <td id="letraDashboard" class="text-center align-middle">
                                             
                                             <div class="d-flex justify-content-center">
-                                                <a id="botaoEditar" class="btn btn-custom mr-2" href="/courses/{{$course->id}}/edit">
+                                                <a id="botaoEditar" class="btn btn-custom mr-2" href="{{route('lessons.edit', ['course' => $course->id, 'lesson' =>$lesson['id']])}}">
                                                     <img src="/img/pencil-square.svg" alt="Ícone Editar">
                                                     <span>Editar</span>
                                                 </a>
                                             
-                                                <form action="{{ route('courses.destroy', ['id' => $course->id]) }}" method="POST">
+                                                <form action="{{route('lessons.destroy', ['course' => $course->id, 'id' =>$lesson['id']])}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button id="botaoDeletar" type="submit" class="btn btn-custom">
