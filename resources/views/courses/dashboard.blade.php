@@ -57,15 +57,15 @@
 
                                         <div class="d-flex justify-content-center align-items-center">
                                             <a id="botaoEditar" class="btn btn-custom" href="/courses/{{$course->id}}/edit">
-                                                <img src="/img/pencil-square.svg" alt="Ícone Editar">
+                                                <img src="/img/pencil-square.svg" alt="Ícone Editar" style="padding-bottom: 2px">
                                                 <span>Editar</span>
                                             </a>
                                             <form action="{{ route('courses.destroy', ['id' => $course->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button id="botaoDeletar" class="btn btn-custom" type="submit">
-                                                    <img src="/img/x-circle.svg" alt="Ícone Deletar">
-                                                    <span>Apagar</span>
+                                                <button id="botaoDeletar" class="btn btn-custom btn-fixed-size" type="submit">
+                                                    <img src="/img/x-circle.svg" alt="Ícone Deletar" style="padding-bottom: 2px">
+                                                    <span>Deletar</span>
                                                 </button>
                                             </form>
                                         </div>
