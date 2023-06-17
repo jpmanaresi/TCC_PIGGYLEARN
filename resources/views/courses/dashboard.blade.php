@@ -54,23 +54,23 @@
                                     </td>
 
                                     <td id="letraDashboard" class="text-center align-middle">
-                                        <div class="d-flex flex-column align-items-center">
 
-                                            <a id="botaoEditar" class="btn btn-custom btn-padrao" href="/courses/{{$course->id}}/edit" >
-                                                <img src="/img/pencil-square.svg" alt="Ícone Editar" class="iconebotao">
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <a id="botaoEditar" class="btn btn-custom" href="/courses/{{$course->id}}/edit">
+                                                <img src="/img/pencil-square.svg" alt="Ícone Editar">
                                                 <span>Editar</span>
                                             </a>
-
-                                            <form action="{{ route('courses.destroy',['id' => $course->id])}}" method="POST">
+                                            <form action="{{ route('courses.destroy', ['id' => $course->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button id="botaoDeletar" type="submit" class="btn btn-custom btn-padrao">
-                                                    <img src="/img/x-circle.svg" alt="Ícone Deletar" class="iconebotao">
-                                                    <span>Deletar</span>
+                                                <button id="botaoDeletar" class="btn btn-custom" type="submit">
+                                                    <img src="/img/x-circle.svg" alt="Ícone Deletar">
+                                                    <span>Apagar</span>
                                                 </button>
                                             </form>
-
                                         </div>
+                                        
+                                        
                                     </td>
                                     
                                 </tr>
