@@ -3,7 +3,6 @@
 @section('title', 'PL - Meus Cursos')
 
 @section('content')
-
 <div alt="course-create-container" class="col-md-10 offset-md-1">
     <div class="container" id="corpoContainerDash">
 
@@ -31,40 +30,44 @@
 
                             <tbody>
                                 @foreach($courses as $course)
-                                    <tr>
-                                        <td id="letraDashboard" scropt="row" class="text-center align-middle">
-                                            {{ $loop->index + 1 }}
-                                        </td>
+                                <tr>
 
-                                        <td id="linkDashboard" class="text-center align-middle">
-                                            <a id="linkDashboard" href="/courses/show/{{ $course->id }}" class="custom-link-animation">
-                                                {{ $course->course_title }}
+                                    <td id="letraDashboard" scropt="row" class="text-center align-middle">
+                                        {{ $loop->index + 1 }}
+                                    </td>
+
+                                    <td id="linkDashboard" class="text-center align-middle">
+                                        <a id="linkDashboard" href="/courses/show/{{ $course->id }}" class="custom-link-animation">
+                                            {{ $course->course_title }}
+                                        </a>
+                                    </td>
+
+                                    <td id="letraDashboard" class="text-center align-middle">
+                                        0
+                                    </td>
+
+                                    <td id="letraDashboard" class="text-center align-middle">
+                                        <div class="d-flex flex-column align-items-center">
+
+                                            <a id="botaoEditar" class="btn btn-custom btn-padrao" href="/courses/{{$course->id}}/edit" >
+                                                <img src="img\pencil-square.svg" alt="Ícone Editar" class="iconebotao">
+                                                <span>Editar</span>
                                             </a>
-                                        </td>
 
-                                        <td id="letraDashboard" class="text-center align-middle">
-                                            0
-                                        </td>
+                                            <form action="{{ route('courses.destroy',['id' => $course->id])}}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button id="botaoDeletar" type="submit" class="btn btn-custom btn-padrao">
+                                                    <img src="img\x-circle.svg" alt="Ícone Deletar" class="iconebotao">
+                                                    <span>Deletar</span>
+                                                </button>
+                                            </form>
 
-                                        <td id="letraDashboard" class="text-center align-middle">
-                                            <div class="d-flex flex-column align-items-center">
-                                                <a id="botaoEditar" href="/courses/{{$course->id}}/edit" class="btn btn-custom btn-padrao">
-                                                    <img src="img\pencil-square.svg" alt="Ícone Editar" class="iconebotao">
-                                                    <span>Editar</span>
-                                                </a>
-
-                                                <form action="{{ route('courses.destroy',['id' => $course->id])}}" method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button id="botaoDeletar" type="submit" class="btn btn-custom btn-padrao">
-                                                        <img src="img\x-circle.svg" alt="Ícone Deletar" class="iconebotao">
-                                                        <span>Deletar</span>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    @endforeach
+                                        </div>
+                                    </td>
+                                    
+                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
 
@@ -85,5 +88,4 @@
         </div>
     </div>
 </div>
-
 @endsection

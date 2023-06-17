@@ -6,7 +6,6 @@
     @section('title', 'PL - Criar Curso')           
 @endif
 
-    
 @section('content')
 
 <!-- Criar Curso (CC) --> 
@@ -79,27 +78,50 @@
                                 <tbody>
                                     @foreach($lessons as $lesson)
                                     <tr>
-                                        <td scope="row" class="text-center align-middle">{{ $lesson['seq'] }}</td>
-                                        <td class="text-center align-middle">
-                                            <a href="#">{{ $lesson['title'] }}</a>
+
+                                        <td id="letraDashboard" scropt="row" class="text-center align-middle">
+                                            {{ $lesson['seq'] }}
                                         </td>
-                                        <td class="text-center align-middle">0</td>
-                                        <td class="text-center align-middle">
-                                            <a href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}" class="btn btn-info edit-btn">Editar</a>
-                                            <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
-                                            </form>
+
+                                        <td id="linkDashboard" class="text-center align-middle">
+                                            <a id="linkDashboard" href="#" class="custom-link-animation">
+                                                {{ $lesson['title'] }}
+                                            </a>
                                         </td>
+
+                                        <td id="letraDashboard" class="text-center align-middle">
+                                            0
+                                        </td>
+
+                                        <td id="letraDashboard" class="text-center align-middle">
+                                            <div class="d-flex flex-column align-items-center">
+
+                                                <a id="botaoEditar" class="btn btn-custom btn-padrao"  href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}">
+                                                    <img src="img\pencil-square.svg" alt="Ícone Editar" class="iconebotao">
+                                                    <span>Editar</span> <!-- Por algum motivo, ele só não consegue carregar a img no html -->
+                                                </a>
+                                                
+                                                <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button id="botaoDeletar" type="submit" class="btn btn-custom btn-padrao">
+                                                        <img src="img\x-circle.svg" alt="Ícone Deletar" class="iconebotao">
+                                                        <span>Deletar</span> <!-- Por algum motivo, ele só não consegue carregar a img no html -->
+                                                    </button>
+                                                </form>
+
+                                            </div>
+                                        </td>
+
                                     </tr>
                                     @endforeach
-                                    <tr>
-                                        <td scope="row"></td>
-                                        <td colspan="4" class="text-center align-middle">
-                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom">Adicionar Aula</a>
+
+                                    <tr> 
+                                        <td colspan="4" class="text-end align-middle"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
+                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom animated-button">Adicionar +</a>
                                         </td>
                                     </tr>
+                                    
                                 </tbody>
                             </table>
                             
@@ -121,11 +143,13 @@
                                         <!-- Botão de criar aula -->
                                 </div>
                             @endif
+
                             <input form="create_course" id="visible"  type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}> Tornar Visível
+                            
                         </div>
                     </div> 
-                    <div class="d-flex justify-content-end">
-                        
+                    
+                    <div class="d-flex justify-content-end">    
                         <input form="create_course" id="botaoCriarC" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
                         <!-- Falta ter um aviso de "curso criado" -->
                     </div>

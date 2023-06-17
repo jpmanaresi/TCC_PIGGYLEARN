@@ -401,6 +401,7 @@
 
     #botaoAdicionarAula.btn-custom {   
         margin: 10px;
+        width: 33%;
         background-color: #7e0a7e;
         color: #ffffff;
         border: 0; 

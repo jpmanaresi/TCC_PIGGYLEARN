@@ -80,8 +80,8 @@
         <div class="row d-flex justify-content-center">
           <div class="col-md-6">
             <a href="/" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
-              <img id="botoesImg" src="/img/house.svg" alt="Icone Pagina Inicial">
-              Tela Inicial 
+              <img id="botoesImg" src="/img/house.svg" alt="Icone Pagina Destaques">
+              Destaques
             </a>
           </div>
       
@@ -109,7 +109,7 @@
           </div>
           
           @endauth
-      
+
         </div>
       </div>
       
@@ -118,16 +118,24 @@
       <!-- Creditos -->
       <div class="container">
 
-
-      
+        @auth <!-- Botão de Sair -->
+        <form action="/logout" method="post" class="mt-auto">
+          @csrf
+            <a href="/login" id="botoesMenusS" class="btn btn-custom btn-block btn-lg text-start" type="button" onclick="event.preventDefault(); this.closest('form').submit();"> 
+              <img id="botoesImg" src="/img/box-arrow-in-right.svg" alt="Icone de Sair">
+              Sair da Conta
+            </a>
+        </form>
+        @endauth
 
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
-            <p class="text-center text-muted" style="padding-bottom: 3rem; padding: 0">
+            <p class="text-center text-muted">
             &copy; 2023 PiggyLearn, Inc </p>
         </footer>
 
       </div>
+
     </div>
   <!-- SB --> 
 
