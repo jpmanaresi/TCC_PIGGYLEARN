@@ -372,7 +372,7 @@
 
 
 
-/* courses.blade - Criar Curso */
+/* courses.blade - Criar Curso / Editar Curso */
 
     #tituloCriarCurso {
         text-align: start; 
@@ -381,15 +381,15 @@
         font-weight: bold;
     } /* Formatção do titulos encima do placesholder */
 
-    #placeholderDesc {
-        height: 120px;
-    }
-
     #descricaoCriarCurso {
         text-align: start; 
         font-size: 14px;
         padding: 5px; 
     } /* Formatção da descrição encima do placesholder */
+
+    #placeholderDesc {
+        height: 120px;
+    } /* Formatção do placeholder da Descrição */
 
     #textoSemAula {
         margin: 10px;
@@ -401,7 +401,7 @@
 
     #botaoAdicionarAula.btn-custom {   
         margin: 10px;
-        width: 33%;
+        width: 120px;
         background-color: #7e0a7e;
         color: #ffffff;
         border: 0; 
@@ -449,13 +449,22 @@
     } /* Cor do botão criar Curso */ 
 
         #botaoCriarC.btn-custom:hover {  
-            background-color: #3540a3;
+            background-color: #4d1964;
             color: #ffffff;
             font-weight: bold;
             border: 0;
             transform: scale(1.1);
             transition: all 0.01s ease-in-out;
         } /* Animação do botão criar Curso */ 
+
+    #ChecktornarVisisel {
+        margin-top: 17px;
+    } /* Formatação do check de Tornar Curso Visivel */
+
+    #tornarVisisel {
+        margin-top: 17px;
+        padding-left: 6px;
+    } /* Formatação texto Lembrar de mim */    
 
     #corpoAreasAulas {
         background-color: #ffffff91;
@@ -545,7 +554,7 @@
     } /* cor do botão de deletar */
 
         #botaoDeletar:hover {
-            background-color: rgb(45, 45, 110);
+            background-color: rgb(70, 19, 32);
             color: white;
             transform: scale(1.1);
             transition: all 0.01s ease-in-out;

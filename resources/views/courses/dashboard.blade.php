@@ -50,7 +50,7 @@
                                         <div class="d-flex flex-column align-items-center">
 
                                             <a id="botaoEditar" class="btn btn-custom btn-padrao" href="/courses/{{$course->id}}/edit" >
-                                                <img src="img\pencil-square.svg" alt="Ícone Editar" class="iconebotao">
+                                                <img src="/img/pencil-square.svg" alt="Ícone Editar" class="iconebotao">
                                                 <span>Editar</span>
                                             </a>
 
@@ -58,7 +58,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <button id="botaoDeletar" type="submit" class="btn btn-custom btn-padrao">
-                                                    <img src="img\x-circle.svg" alt="Ícone Deletar" class="iconebotao">
+                                                    <img src="/img/x-circle.svg" alt="Ícone Deletar" class="iconebotao">
                                                     <span>Deletar</span>
                                                 </button>
                                             </form>

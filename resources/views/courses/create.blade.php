@@ -70,6 +70,7 @@
                                     <tr>
                                         <th id="TituloTabela" scope="col" class="text-center align-middle">#</th>
                                         <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
+                                        <!-- Quantidades de Aulas -->  
                                         <th id="TituloTabela" scope="col" class="text-center align-middle">Participantes</th>
                                         <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
                                     </tr>
@@ -97,16 +98,16 @@
                                             <div class="d-flex flex-column align-items-center">
 
                                                 <a id="botaoEditar" class="btn btn-custom btn-padrao"  href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}">
-                                                    <img src="img\pencil-square.svg" alt="Ícone Editar" class="iconebotao">
-                                                    <span>Editar</span> <!-- Por algum motivo, ele só não consegue carregar a img no html -->
+                                                    <img src="/img/pencil-square.svg" alt="Ícone Editar" class="iconebotao">
+                                                    <span>Editar</span>
                                                 </a>
                                                 
                                                 <form action="{{ route('lessons.destroy', ['course' => $course->id, 'id' => $lesson['id']]) }}" method="POST" class="delete-form">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button id="botaoDeletar" type="submit" class="btn btn-custom btn-padrao">
-                                                        <img src="img\x-circle.svg" alt="Ícone Deletar" class="iconebotao">
-                                                        <span>Deletar</span> <!-- Por algum motivo, ele só não consegue carregar a img no html -->
+                                                        <img src="/img/x-circle.svg" alt="Ícone Deletar" class="iconebotao">
+                                                        <span>Deletar</span>
                                                     </button>
                                                 </form>
 
@@ -117,8 +118,10 @@
                                     @endforeach
 
                                     <tr> 
-                                        <td colspan="4" class="text-end align-middle"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
-                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom animated-button">Adicionar +</a>
+                                        <td colspan="4" class="text-center align-center"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
+                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom animated-button">
+                                                Adicionar +
+                                            </a>
                                         </td>
                                     </tr>
                                     
@@ -144,15 +147,25 @@
                                 </div> <!-- Botão de criar aula -->
                             @endif
 
-                            <input form="create_course" id="visible"  type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}> Tornar Visível
                             
                         </div>
                     </div> 
                     
-                    <div class="d-flex justify-content-end">    
-                        <input form="create_course" id="botaoCriarC" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
-                        <!-- Falta ter um aviso de "curso criado" -->
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-start">
+                                <input id="ChecktornarVisisel" form="create_course" id="visible" type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}>
+                                <label id="tornarVisisel" for="visible">Tornar Curso Visível</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex justify-content-end">
+                                <input form="create_course" id="botaoCriarC" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
+                                <!-- Falta ter um aviso de "curso criado" -->
+                            </div>
+                        </div>
                     </div>
+                    
 
             </div>
         <!-- CCC --> 
