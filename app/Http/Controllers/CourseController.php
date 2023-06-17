@@ -52,8 +52,8 @@ class CourseController extends Controller
         //var_dump($request->all());
         if ($request->action==='Criar Curso') {
             
-       // return redirect()->route('dashboard')->with('msg', 'Curso criado com sucesso!');
-        return ($course);
+        return redirect()->route('dashboard')->with('msg', 'Curso criado com sucesso!');
+        // return ($course); 
         }elseif ($request->action==='Adicionar Aula') {
             //return ($course);
             return redirect()->route('lessons.create', ['id' => $course->id]);
