@@ -527,49 +527,45 @@
         animation: colorChange 4s infinite;
     }   @keyframes colorChange {
         0% {
-            color: purple;
+            color: #800080;
         }
         50% {
-            color: rgb(68, 35, 145);
+            color: #442391;
         }
         100% {
-            color: rgb(70, 0, 70);
+            color: #460046;
         }
     } /* Animação do nome de curso */ 
     
-    .iconebotao {
-        padding: 2px;
-    }
-
-    .btn-padrao {
-        width: 90px;
-        margin: 3px; 
-        padding-left: 12px;
-        padding-right: 12px;
-        color: white;
-    } /* Padronizando os botoes */
-    
-    #botaoDeletar {
-        background-color: rgb(25, 25, 26);
-    } /* cor do botão de deletar */
-
-        #botaoDeletar:hover {
-            background-color: rgb(70, 19, 32);
-            color: white;
-            transform: scale(1.1);
-            transition: all 0.01s ease-in-out;
-        } /* Animação do botão de deletar */
-    
-    #botaoEditar {
+    #botaoEditar.btn-custom {
         background-color: #994ae4;
-    } /* cor do botão de editar */ 
+        margin: 3px; 
+        align-self: center;
+        align-items: center;
+        color: white;
+    } /* Cor do botão de editar */ 
 
-        #botaoEditar:hover {
+        #botaoEditar.btn-custom:hover {
             background-color: #472269;
             transform: scale(1.1);
             color: white;
             transition: all 0.01s ease-in-out;
         } /* Animação do botão de editar */ 
+
+    #botaoDeletar.btn-custom {
+        background-color: #19191a;
+        margin: 3px; 
+        align-self: center;
+        align-items: center;
+        color: white;
+    } /* Cor do botão de deletar */
+    
+        #botaoDeletar.btn-custom:hover {
+            background-color: #461320;
+            color: white;
+            transform: scale(1.1);
+            transition: all 0.01s ease-in-out;
+        } /* Animação do botão de deletar */
 
     table.table tbody tr {
         color: rgb(0, 0, 0);  
