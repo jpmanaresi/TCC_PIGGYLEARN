@@ -71,7 +71,7 @@
                                         <th id="TituloTabela" scope="col" class="text-center align-middle">#</th>
                                         <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
                                         <!-- Quantidades de Aulas -->  
-                                        <th id="TituloTabela" scope="col" class="text-center align-middle">Participantes</th>
+                                        <th id="TituloTabela" scope="col" class="text-center align-middle">Tem teste?</th>
                                         <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
                                     </tr>
                                 </thead>
@@ -91,7 +91,9 @@
                                         </td>
 
                                         <td id="letraDashboard" class="text-center align-middle">
-                                            0
+                                            @if ($lesson['hasTest']==1) Sim
+                                            @else Não
+                                            @endif
                                         </td>
 
                                         <td id="letraDashboard" class="text-center align-middle">

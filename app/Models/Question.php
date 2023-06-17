@@ -12,6 +12,10 @@ class Question extends Model
         return $this->belongsTo('App\Models\Test');
     }
 
+    public function user_questions() {
+        return $this->belongsToMany ('App\Models\Question');
+    }
+
     protected $fillable= [
         'question',
         'alt_1',
