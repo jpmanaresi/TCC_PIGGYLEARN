@@ -13,8 +13,8 @@
         @csrf
         
         @if(isset($lesson))
-        <input type="hidden" name="id" value="{{$lesson->id}}"> 
-        @method('PUT')
+            <input type="hidden" name="id" value="{{$lesson->id}}"> 
+            @method('PUT')
         @endif
 
         <input type="hidden" name="course_id" value="{{ $course->id }}">

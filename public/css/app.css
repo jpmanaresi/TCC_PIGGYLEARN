@@ -441,7 +441,7 @@
     #botaoCriarC.btn-custom {
         padding: 7px; 
         font-size: larger;
-        background-color: #7735a3;
+        background-color: #0f8e9b;
         margin-top: 10px;
         margin-bottom: 5px;
         color: #ffffff;
@@ -449,7 +449,7 @@
     } /* Cor do botão criar Curso */ 
 
         #botaoCriarC.btn-custom:hover {  
-            background-color: #4d1964;
+            background-color: #08646e;
             color: #ffffff;
             font-weight: bold;
             border: 0;

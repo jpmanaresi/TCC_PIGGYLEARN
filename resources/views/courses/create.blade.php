@@ -9,7 +9,7 @@
 @section('content')
 
 <!-- Criar Curso (CC) --> 
-    <div alt="course-create-container" class="col-md-6 offset-md-3">
+    <div alt="container-CriarCurso" class="col-md-6 offset-md-3">
         <div id="corpoContainerCC" class="container" >
 
         <h1 id="tituloInicialp">
@@ -118,7 +118,7 @@
                                     @endforeach
 
                                     <tr> 
-                                        <td colspan="4" class="text-center align-center"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
+                                        <td colspan="4" class="text-center align-center" style="border: 0px"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
                                             <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom animated-button">
                                                 Adicionar +
                                             </a>
