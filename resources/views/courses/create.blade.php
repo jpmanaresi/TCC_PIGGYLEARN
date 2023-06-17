@@ -10,7 +10,7 @@
 
 <!-- Criar Curso (CC) --> 
     <div alt="course-create-container" class="col-md-6 offset-md-3">
-        <div class="container" id="corpoContainerCC">
+        <div id="corpoContainerCC" class="container" >
 
         <h1 id="tituloInicialp">
             @if(isset($course))
@@ -140,8 +140,8 @@
                                     <p id="textoSemAula" class="align-self-center mt-3">Este Curso ainda não possui Aulas.</p>
                                     <input type="hidden" name="create_course_and_add_lesson" value="1">
                                         <input form="create_course" id="botaoAdicionarAula" name="action" type="submit" class="btn btn-custom animated-button" value="Adicionar Aula">
-                                        <!-- Botão de criar aula -->
-                                </div>
+                                     
+                                </div> <!-- Botão de criar aula -->
                             @endif
 
                             <input form="create_course" id="visible"  type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}> Tornar Visível
