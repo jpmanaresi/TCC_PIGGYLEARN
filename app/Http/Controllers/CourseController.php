@@ -47,7 +47,7 @@ class CourseController extends Controller
         $course->course_description = $request->description;
         $user = auth()->user();
         $course->user_id = $user->id;
-        $course->setvisible = $request->setvisible;
+        $course->setvisible = $request->filled('setvisible') ? $request->setvisible : false;
         $course->save();
         //var_dump($request->all());
         if ($request->action==='Criar Curso') {
@@ -75,7 +75,7 @@ class CourseController extends Controller
         $course->update([
         'course_title' => $request->input('title'),
         'course_description' => $request->input('description'),
-        'setvisible' => $request->input('setvisible')
+        'setvisible' => $request->filled('setvisible') ? $request->setvisible : false
         ]);
 
         //var_dump($request->all());
