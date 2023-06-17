@@ -16,6 +16,10 @@
                 <h3 id="h2-show1">Sobre o curso:</h3>
                 <p class="event-description" id="p-show1">{{$course->course_description}}</p>
             </div>
+            
+            <button href="/courses/{{$course->id}}/start" id="botaoAdicionarAula" class="btn btn-custom animated-button">
+                Adicionar +
+            </a>
         </div>
     </div>
 </div>

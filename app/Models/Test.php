@@ -15,6 +15,11 @@ class Test extends Model
     public function questions() {
         return $this->hasMany('App\Models\question')->orderBy('seq');
     }
+
+    public function user_tests() {
+        return $this->belongsToMany ('App\Models\User');
+    }
+    
     protected $fillable = [
         'title',
         'description',

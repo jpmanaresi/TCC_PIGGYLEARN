@@ -24,6 +24,10 @@ class Lesson extends Model
         return $this->hasOne('App\Models\Test');
     }
     
+    public function user_lessons() {
+        return $this->belongsToMany ('App\Models\User');
+    }
+    
     protected static function boot()
     {
         parent::boot();

@@ -21,7 +21,10 @@ class Course extends Model
     public function lessons() {
         return $this->hasMany('App\Models\Lesson')->orderBy('seq');
     }
-
+    public function user_courses() {
+        return $this->belongsToMany ('App\Models\User');
+    }
+    
     protected static function boot()
     {
         parent::boot();
