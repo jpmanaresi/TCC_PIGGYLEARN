@@ -57,7 +57,6 @@ class LessonController extends Controller
         $lesson->update([
             'title' => $request->input('title'),
             'content' => $request->input('content'),
-            'hasTest' => $request->filled('hasTest') ? $request->hasTest : false,
             ]);
             // Verificar a condição para redirecionamento
         if ($request->action=== 'Adicionar Avaliação?') {
