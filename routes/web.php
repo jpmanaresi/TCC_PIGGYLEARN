@@ -28,13 +28,16 @@ Route::get('/courses/create', [CourseController::class, 'create'])->name('course
 Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('courses.edit')->middleware('auth');
 Route::get('/courses/{id}/show',[CourseController::class, 'show'])->name('courses.show')->middleware('auth');
 Route::post('/courses',[CourseController::class, 'store'])->name('courses.store');
+Route::post('/courses/{course}/start',[CourseController::class, 'start'])->name('courses.start');
 Route::put('/courses',[CourseController::class, 'update'])->name('courses.update');
 Route::delete('/courses/{id}', [CourseController::class, 'destroy'])->name('courses.destroy');
 
 /* Aulas */
 Route::get('/courses/{id}/lessons/create', [LessonController::class, 'create'])->name('lessons.create')->middleware('auth');
 Route::get('courses/{course}/lessons/{lesson}/edit', [LessonController::class, 'edit'])->name('lessons.edit')->middleware('auth');
+Route::get('/courses/{course}/lesson/{lesson}/show',[LessonController::class, 'show'])->name('lessons.show')->middleware('auth');
 Route::post('/courses/{id}',[LessonController::class, 'store'])->name('lessons.store');
+Route::post('/courses/{course}/lessons/{lesson}/next',[CourseController::class, 'next'])->name('lessons.next');
 Route::put('/courses/{id}/lessons/{lesson_id}',[LessonController::class, 'update'])->name('lessons.update');
 Route::delete('/courses/{course}/lessons/{id}', [LessonController::class, 'destroy'])->name('lessons.destroy');
 
@@ -59,4 +62,3 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [CourseController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 Auth::routes();
 
-/*Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');*/

@@ -122,12 +122,12 @@ public function destroy($id)
     public function show($id) {
 
         $course = Course::findOrFail($id);
-
         $user = auth()->user();
+        $lessons = Lesson::where('course_id', $course->id)->orderBy('seq')->get();
        if($course->setvisible <> 1) {
             return redirect()->route('home');
         }
-        return view('courses.show', ['course' => $course]);
+        return view('courses.show', ['course' => $course, 'lessons'=>$lessons]);
         
     }
 
@@ -135,13 +135,24 @@ public function destroy($id)
         public function dashboard() {
 
             $user = auth()->user();
-
             $courses = $user->courses;
-
 
             return view('courses.dashboard', 
                 ['courses' => $courses]
             );
 
+        }
+
+        public function start($course) {
+            $course= Course::where('id', $course)->get();
+            return ($course);
+            /*$user= auth()->user();
+            $user->user_courses()->attach($course->id);
+            $firstLesson= Lesson::where('course_id', $course->id)->orderBy('seq')->first()->get();
+
+            return redirect()->route('lessons.show',
+            ['course'=>$course,
+            'lesson' => $firstLesson
+            ]);*/
         }
     }
