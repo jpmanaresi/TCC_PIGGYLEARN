@@ -1,15 +1,12 @@
-/* Fonte de todo html */
 *{
     font-family:'Inria Sans', sans-serif
-}   
+} /* Fonte de todo html */    
 
-/* Divisão entre o topo da pagina com o conteudo */
 #corpot
 {
     margin-top: 8rem;
-}
+} /* Divisão entre o topo da pagina com o conteudo */
 
-/* Titulos Principais */
 #tituloInicialp
 {
     text-align: center; 
@@ -18,7 +15,7 @@
     font-size: 50px;
     font-weight: bold;
     font-family: 'Inria Sans', sans-serif; 
-}
+} /* Titulos Principais */
 
 #background 
 {
@@ -27,7 +24,9 @@
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
   
-
+#imgBotoes {
+    padding-bottom: 2px;
+} /* Formataõ das imagens dentro dos botões */
 
 /* main.blade */
     
@@ -95,7 +94,8 @@
         } /* Formatação do icon do porco na barra superior */
         
         #botoesImg {
-            margin-right: 10px;
+            padding-right: 7px;
+            padding-bottom: 4px;
         } /* Separação da imagem pro texto */
         
         #botoesMenus.btn-custom {
@@ -107,8 +107,7 @@
             #botoesMenus.btn-custom:hover {
                 background-color: #b811b8; 
                 color: #ffffff;
-                width: 98%;
-                transform: scale(1.1);
+                transform: scale(1.01);
                 transition: all 0.01s ease-in-out;
             } /* Animação dos Botões */
 
@@ -166,7 +165,7 @@
     } /* Index1 = Destaque */
 
         #cardBodyIndex1.card:hover {
-            transform: scale(1.010);
+            transform: scale(1.1);
             transition: all 0.01s ease-in-out;
             box-shadow: 0 8px 16px rgba(0,0,0,0.50);
         } /* Joga o card pra frente. Função basica do hover né */
@@ -192,7 +191,7 @@
     } /* Index2 = Sem Destaque */
 
         #cardBodyIndex2.card:hover {
-            transform: scale(1.010);
+            transform: scale(1.1);
             transition: all 0.01s ease-in-out;
             box-shadow: 0 8px 16px rgba(0,0,0,0.50);
         } /* Joga o card pra frente. Função basica do hover né */ 
@@ -211,19 +210,19 @@
         font-weight: normal;
         text-align: justify;
         font-size: 16px;
-        padding: 20px;
-        padding-top: 10px;
+        padding: 10px;
+        padding-bottom: 5px;
+        
         line-height: 23px;
 
         border-radius: 10px 10px;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        height: 107px;
+        height: 100%;
 
-        
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 5;
         overflow: hidden;
         text-overflow: ellipsis;
     } /* Formatação da caixa de descrição */ 
@@ -401,7 +400,7 @@
 
     #botaoAdicionarAula.btn-custom {   
         margin: 10px;
-        width: 120px;
+        width: 130px;
         background-color: #7e0a7e;
         color: #ffffff;
         border: 0; 
@@ -511,11 +510,29 @@
         display: contents;
     } /* Formatação do Container */
 
-    #TituloTabela {
+    #TituloTabelaNu {
         font-size: 14px;
         padding-top: 5px;
-        width: 25%;
-    } /* Formatação da tabela */
+        width: 10%;
+    } /* Formatação do Coluna Responsavel: Numero */
+
+    #TituloTabela2No {
+        font-size: 14px;
+        padding-top: 5px;
+        width: 30%;
+    } /* Formatação do Coluna Responsavel: Nome */
+
+    #TituloTabela3Av {
+        font-size: 14px;
+        padding-top: 5px;
+        width: 30%;
+    } /* Formatação do Coluna Responsavel: Avaliação */
+
+    #TituloTabela4Ac {
+        font-size: 14px;
+        padding-top: 5px;
+        width: 30%;
+    } /* Formatação do Coluna Responsavel: Ações */
 
     #letraDashboard {
         font-size: 14px;

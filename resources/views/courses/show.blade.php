@@ -7,23 +7,25 @@
 <div class="container" id="cardBodyIndex1"> <!-- TEMPORARIO PORRA: Isso é a formatação do card inicial. Depois eu faço um proprio e tal -->
     <div class="col-md-10 offset-md-1">
         <div class="row">
+
             <div id="info-container" class="col">
                 <h1 id="tituloCurso">{{$course->course_title}}</h1>
             </div>
 
             <span id="regua"></span>
+
             <div class="col-md-12" id="description-container">
                 <h3 id="h2-show1">Sobre o curso:</h3>
                 <p class="event-description" id="p-show1">{{$course->course_description}}</p>
             </div>
 
-                <div id="corpoTabela" class="col-md-12"> 
+            <div id="corpoTabela" class="col-md-12"> 
 
-                    <div class="table-responsive">
+                <div class="table-responsive">
 
-                        <table class="table">
+                    <table class="table">
 
-                            <thead>
+                        <thead>
                                 <tr>
                                     <th id="TituloTabela" scope="col" class="text-center align-middle">#</th>
                                     <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>

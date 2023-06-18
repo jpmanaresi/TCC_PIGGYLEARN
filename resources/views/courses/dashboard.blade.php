@@ -4,10 +4,6 @@
 
 @section('content')
 
-<h1 id="tituloInicialp">
-    Meus Cursos
-</h1>
-
 <div alt="course-create-container" class="col-md-10 offset-md-1">
     <div class="container" id="corpoContainerDash">
 
@@ -22,16 +18,17 @@
             <div class="row">
                 <div id="corpoTabela" class="col-md-12" >
                     @if(count($courses) > 0)
+
                     <div class="table-responsive">
 
                         <table class="table">
 
                             <thead>
                                 <tr>
-                                    <th id="TituloTabela" scope="col" class="text-center align-middle">#</th>
-                                    <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
-                                    <th id="TituloTabela" scope="col" class="text-center align-middle">Participantes</th>
-                                    <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
+                                    <th id="TituloTabelaNu" scope="col" class="text-center align-middle">#</th>
+                                    <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
+                                    <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Participantes</th>
+                                    <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
                                 </tr>
                             </thead>
 
@@ -57,22 +54,19 @@
 
                                         <div class="d-flex justify-content-center align-items-center">
                                             <a id="botaoEditar" class="btn btn-custom" href="/courses/{{$course->id}}/edit">
-                                                <img src="/img/pencil-square.svg" alt="Ícone Editar" style="padding-bottom: 2px">
+                                                <img id="imgBotoes" src="/img/pencil-square.svg" alt="Ícone Editar" style="padding-bottom: 2px">
                                                 <span>Editar</span>
                                             </a>
                                             <form action="{{ route('courses.destroy', ['id' => $course->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button id="botaoDeletar" class="btn btn-custom btn-fixed-size" type="submit">
-                                                    <img src="/img/x-circle.svg" alt="Ícone Deletar" style="padding-bottom: 2px">
+                                                    <img id="imgBotoes" src="/img/x-circle.svg" alt="Ícone Deletar">
                                                     <span>Deletar</span>
                                                 </button>
                                             </form>
                                         </div>
-                                        
-                                        
                                     </td>
-                                    
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -89,6 +83,8 @@
                             </a>
                         </div>   
                     @endif
+                    
+                    
 
                 </div>
             </div>
