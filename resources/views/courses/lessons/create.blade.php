@@ -20,7 +20,7 @@
     <div id="corpoContainerCC" class="container" >
         
         <div id="corpoCriarCurso">
-            
+
             <form id="create_course" action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
                 @csrf
         
@@ -37,28 +37,28 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="content" >Descrição:</label>
-                    <textarea name="content" id="content" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
+                    <label id="descricaoCriarCurso" for="title" >       Conteudo      </label>
+                    <textarea name="content" id="placeholderDesc" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
                 </div>
 
             </form>
 
             <div class="form-group">
-                <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
+                <h1 class="text-center align-self-center" style="margin: 15px; font-weight: bold">
                     Avaliação
                 </h1>
 
-                <div class="col-md-10 offset-md-1 dashboard-events-container">
+                <div id="corpoTabela" class="col-md-12"> 
                     @if (isset($lesson))        
                         @if($lesson->hasTest == 1)
 
-                    <table class="table"> 
+                    <div class="table-responsive">
 
                         <thead>
                             <tr>
-                                <th scope="col">Nome</th>
-                                <th scope="col"></th>
-                                <th scope="col">Ações</th>
+                                <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
+                                <th id="TituloTabela" scope="col" class="text-center align-middle">???</th>
+                                <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
                             </tr>
                         </thead>
 

@@ -96,7 +96,7 @@
                                 <td id="letraDashboard" class="text-center">
                                     <div class="d-flex justify-content-center">
                                         <a id="botaoEditar" class="btn btn-custom mr-2" href="{{ route('lessons.edit', ['course' => $course->id, 'lesson' => $lesson['id']]) }}">
-                                            <img src="/img/pencil-square.svg" alt="Ícone Editar">
+                                            <img src="/img/pencil-square.svg" alt="Ícone Editar" style="padding-bottom: 2px;">
                                             <span>Editar</span>
                                         </a>
                                                 
@@ -104,13 +104,13 @@
                                             @csrf
                                             @method('DELETE')
                                             <button id="botaoDeletar" type="submit" class="btn btn-custom">
-                                            <img src="/img/x-circle.svg" alt="Ícone Deletar">
+                                            <img src="/img/x-circle.svg" alt="Ícone Deletar" style="padding-bottom: 2px;">
                                             <span>Deletar</span>
                                             </button>
                                         </form>
                                     </div>    
                                 </tr>
-                        @endforeach
+                            @endforeach
                             <tr> 
                                 <td colspan="4" class="text-center align-center" style="border: 0px"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
                                     <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom animated-button">
