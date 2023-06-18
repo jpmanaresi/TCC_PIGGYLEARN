@@ -514,28 +514,30 @@
     #TituloTabela {
         font-size: 14px;
         padding-top: 5px;
+        width: 25%;
     } /* Formatação da tabela */
 
     #letraDashboard {
-        font-size: 14px; 
+        font-size: 14px;
+        
     } /* Formatação das letras */
 
-    #linkDashboard.custom-link-animation {
-        font-weight: bold;
-        text-transform: uppercase;
-        text-decoration: none;
-        animation: colorChange 4s infinite;
-    }   @keyframes colorChange {
-        0% {
-            color: #800080;
-        }
-        50% {
-            color: #442391;
-        }
-        100% {
-            color: #460046;
-        }
-    } /* Animação do nome de curso */ 
+        #linkDashboard.custom-link-animation {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            animation: colorChange 4s infinite;
+        }   @keyframes colorChange {
+            0% {
+                color: #800080;
+            }
+            50% {
+                color: #442391;
+            }
+            100% {
+                color: #460046;
+            }
+        } /* Animação do nome de curso */ 
     
     #botaoEditar.btn-custom {
         background-color: #994ae4;

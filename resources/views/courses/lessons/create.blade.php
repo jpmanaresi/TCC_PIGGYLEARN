@@ -16,86 +16,94 @@
     @endif
 </h1>
 
-<div class="container" id="lesson-form-container">
-    <form id="create_lesson" method="POST" action="{{ isset($lesson) ? route('lessons.update',[$course->id, $lesson->id]) : route('lessons.store', $course->id) }}">
-        @csrf
+<div alt="container-CriarCurso" class="col-md-6 offset-md-3">
+    <div id="corpoContainerCC" class="container" >
         
-        @if(isset($lesson))
-            <input type="hidden" name="id" value="{{$lesson->id}}"> 
-            @method('PUT')
-        @endif
+        <div id="corpoCriarCurso">
 
-        <input type="hidden" name="course_id" value="{{ $course->id }}">
-        <div class="form-group">
-            <label for="title" >Aula:</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Título da Aula." @if(isset($lesson)) value="{{$lesson->title}}"@endif>
-        </div>
+            <form id="create_course" action="{{ isset($course) ? route('courses.update', $course->id) : route('courses.store')}}" method="POST">
+                @csrf
+        
+                @if(isset($lesson))
+                    <input type="hidden" name="id" value="{{$lesson->id}}"> 
+                    @method('PUT')
+                @endif
 
-        <div class="form-group">
-            <label for="content" >Descrição:</label>
-            <textarea name="content" id="content" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
-        </div>
+                <input type="hidden" name="course_id" value="{{ $course->id }}">
 
-    </form>
+                <div class="form-group">
+                    <label id="tituloCriarCurso" for="title" >          Título da Aula          </label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Título da Aula." @if(isset($lesson)) value="{{$lesson->title}}"@endif>
+                </div>
 
-        <div class="form-group">
-            <h1 class="text-center align-self-center" style="margin: 15px; font-weight: lighter">
-                Avaliação
-            </h1>
+                <div class="form-group">
+                    <label id="descricaoCriarCurso" for="title" >       Conteudo      </label>
+                    <textarea name="content" id="placeholderDesc" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
+                </div>
 
-            <div class="col-md-10 offset-md-1 dashboard-events-container">
-                @if (isset($lesson))        
-                    @if($lesson->hasTest == 1)
+            </form>
 
-                <table class="table"> 
+            <div class="form-group">
+                <h1 class="text-center align-self-center" style="margin: 15px; font-weight: bold">
+                    Avaliação
+                </h1>
 
-                    <thead>
-                        <tr>
-                            <th scope="col">Nome</th>
-                            <th scope="col"></th>
-                            <th scope="col">Ações</th>
-                        </tr>
-                    </thead>
+                <div id="corpoTabela" class="col-md-12"> 
+                    @if (isset($lesson))        
+                        @if($lesson->hasTest == 1)
 
-                    <tbody>
-                        <tr>
-                            <td>
-                                <a href="#">{{ $test['title'] }}</a>
-                            </td>
+                    <div class="table-responsive">
 
-                            <td>
-                                0
-                            </td>
+                        <thead>
+                            <tr>
+                                <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
+                                <th id="TituloTabela" scope="col" class="text-center align-middle">???</th>
+                                <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
+                            </tr>
+                        </thead>
 
-                            <td>
-                                <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-info edit-btn">Editar</a> 
-                                <form action="{{ route('tests.destroy', ['lesson' => $lesson->id, 'id' => $test->id]) }}" method="POST" class="delete-form">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
-                                </form>
-                            </td>
-                        </tr>
-                    </tbody>
-                
-                </table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">{{ $test['title'] }}</a>
+                                </td>
 
-                    @else
-                    <div id="divcriaraula">
-                        <span id="cortexto">Esta Aula não possui avaliação.</span><a id="botaoCriarAulas" class="btn btn-custom" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">Adicionar Avaliação?</a>
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-info edit-btn">Editar</a> 
+                                    <form action="{{ route('tests.destroy', ['lesson' => $lesson->id, 'id' => $test->id]) }}" method="POST" class="delete-form">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+
+                        @else
+                        <div id="divcriaraula">
+                            <span id="cortexto">Esta Aula não possui avaliação.</span><a id="botaoCriarAulas" class="btn btn-custom" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">Adicionar Avaliação?</a>
+                        </div>
+                        @endif
+
+                        @else
+                            <input type="hidden" name="create_lesson_and_add_test" value="1">
+                            <span id="cortexto">Esta Aula não possui avaliação.</span><input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar Avaliação?">
+                        @endif
+
                     </div>
-                    @endif
-
-                    @else
-                    <input type="hidden" name="create_lesson_and_add_test" value="1">
-                    <span id="cortexto">Esta Aula não possui avaliação.</span><input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar Avaliação?">
-                    <!-- Botão de criar aula -->
-                    @endif
+                    
+                <button form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}</button>
 
             </div>
-            
-            <button form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}</button>
+
         </div>
+    </div>
 </div>
 
 @endsection
