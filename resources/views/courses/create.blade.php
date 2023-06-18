@@ -81,11 +81,6 @@
                                     {{ $lesson['seq'] }}
                                 </td>
 
-<<<<<<< HEAD
-                                <td id="linkDashboard" class="text-center align-middle">
-                                    <a id="linkDashboard" href="#" class="custom-link-animation">
-                                        {{ $lesson['title'] }}
-=======
                                         <td id="letraDashboard" scropt="row" class="text-center align-middle">
                                             {{ $lesson['seq'] }}
                                         </td>
