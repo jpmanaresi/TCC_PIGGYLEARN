@@ -80,8 +80,18 @@ class LessonController extends Controller
 }
 public function show($course,$lesson){
     $lesson = Lesson::FindOrFail($lesson);
+    $user = auth()->user();
+    $completed = $user->user_lessons()
+    ->where('course_id', $lesson->id)
+    ->where('completed', true)
+    ->exists(); 
+    if ($completed) {
+        $userhascompleted = true;
+    } else {
+        $userhascompleted = false;
+    }
     
-    return view('courses.lessons.show', ['course' => $lesson->course_id, 'lesson'=>$lesson]);
+    return view('courses.lessons.show', ['course' => $lesson->course_id, 'lesson'=>$lesson, 'completed' =>$userhascompleted]);
 }
 
 public function next($course, $lesson){
@@ -91,14 +101,15 @@ public function next($course, $lesson){
     $nextLesson = Lesson::where('course_id', $lesson->course_id)->where('seq', '>', $lesson->seq)->orderBy('seq')->first()?->id ?? 0; // Se for a última lição do curso, seta o valor para 0
     //return ($nextLesson);
     $user->user_lessons()->syncWithoutDetaching([
-        $lesson->id => ['completed' => false]
+        $lesson->id => ['completed' => true]
     ]);
     
-    
-   /* if($lesson->hasTest==true){
-        $test = Test::where('lesson_id',$lesson->id);
+    // Se houver avaliação, redireciona para a view do teste
+    if($lesson->hasTest==true){
+        $user->user_lessons()->updateExistingPivot($lesson->id, ['completed' => false]);
+        $test = Test::where('lesson_id',$lesson->id)->first();
         return redirect()->route('tests.show', ['course'=> $lesson->course_id, 'lesson'=> $lesson->id, 'test'=>$test->id]);
-    }*/
+    }
     //Se for a última lição do curso voltar para a homepage.
     if ($nextLesson == 0) {
         $user->user_courses()->updateExistingPivot($course->id, ['completed' => true]);

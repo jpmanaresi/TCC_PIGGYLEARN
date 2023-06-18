@@ -1,6 +1,6 @@
 @extends ('layouts.main')
 
-@section('title', $lesson->title ) 
+@section('title', $test->title ) 
 
 @section('content')
 
@@ -8,20 +8,20 @@
     <div class="col-md-10 offset-md-1">
         <div class="row">
             <div id="info-container" class="col">
-                <h1 id="tituloCurso">{{$lesson->title}}</h1>
+                <h1 id="tituloCurso">{{$test->title}}</h1>
             </div>
 
             <span id="regua"></span>
             <div class="col-md-12" id="description-container">
-                <p class="event-description" id="p-show1">{{$lesson->description}}</p>
+                <p class="event-description" id="p-show1">{{$test->description}}</p>
             </div>
                 <a href="{{route('home')}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula"> < Voltar </a>
-                <form action="{{route('lessons.next',['course' => $lesson->course_id, 'lesson' => $lesson->id])}}" method="post">
+                <form action="{{route('tests.start',['course' => $test->lesson->course_id, 'lesson' => $test->lesson->id, 'test' => $test->id])}}" method="post">
                     @csrf
                     <button type="submit" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
                         Próxima >
                     </button>
-                </form>
+        </form>
         </div>
     </div>
 </div>

@@ -46,6 +46,7 @@ Route::get('/courses/{id}/lessons/{lesson}/tests/create', [TestController::class
 Route::get('/lessons/{lesson}/tests/{test}/edit', [TestController::class, 'edit'])->name('tests.edit')->middleware('auth');
 Route::get('/courses/{course}/lessons/{lesson}/tests/{test}/show',[TestController::class, 'show'])->name('tests.show')->middleware('auth');
 Route::post('/tests',[TestController::class, 'store'])->name('tests.store');
+Route::post('/courses/{course}/lessons/{lesson}/tests/{test}/start',[TestController::class, 'start'])->name('tests.start');
 Route::put('/tests/{id}',[TestController::class, 'update'])->name('tests.update');
 Route::delete('/lessons/{lesson}/tests/{id}', [TestController::class, 'destroy'])->name('tests.destroy');
 
