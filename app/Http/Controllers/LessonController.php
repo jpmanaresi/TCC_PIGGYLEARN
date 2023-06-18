@@ -90,7 +90,10 @@ public function next($course, $lesson){
     $user= auth()->user();
     $nextLesson = Lesson::where('course_id', $lesson->course_id)->where('seq', '>', $lesson->seq)->orderBy('seq')->first()?->id ?? 0; // Se for a última lição do curso, seta o valor para 0
     //return ($nextLesson);
-    $user->user_lessons()->attach($lesson,['completed' => true]);
+    $user->user_lessons()->syncWithoutDetaching([
+        $lesson->id => ['completed' => false]
+    ]);
+    
     
    /* if($lesson->hasTest==true){
         $test = Test::where('lesson_id',$lesson->id);

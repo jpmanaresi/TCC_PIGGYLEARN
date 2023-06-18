@@ -216,7 +216,9 @@ public function destroy($id)
             $course= Course::findOrFail($course);
             //return ($course);
             $user= auth()->user();
-            $user->user_courses()->attach($course,['completed' => false]);
+            $user->user_courses()->syncWithoutDetaching([
+                $course->id => ['completed' => false]
+            ]);
             $firstLesson= Lesson::where('course_id', $course->id)->orderBy('seq')->firstOrFail();
 
             return redirect()->route('lessons.show',
