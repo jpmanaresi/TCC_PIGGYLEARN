@@ -28,13 +28,13 @@
                                     <th id="TituloTabela" scope="col" class="text-center align-middle">#</th>
                                     <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
                                     <!-- Quantidades de Aulas -->  
-                                    <th id="TituloTabela" scope="col" class="text-center align-middle">Tem teste?</th>
+                                    <th id="TituloTabela" scope="col" class="text-center align-middle">Completa?</th>
                                     <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
                                 </tr>
                             </thead>
 
                             <tbody>
-                                @foreach($lessons as $lesson)
+                                @foreach($completelessons as $lesson)
                                 <tr>
 
                                     <td id="letraDashboard" scropt="row" class="text-center align-middle">
@@ -48,7 +48,32 @@
                                     </td>
 
                                     <td id="letraDashboard" class="text-center align-middle">
-                                        0
+                                        Sim
+                                    </td>
+
+                                    <td id="letraDashboard" class="text-center align-middle">
+                                        <div class="d-flex flex-column align-items-center">
+                                            <a href="{{route('lessons.show',['course'=>$course->id, 'lesson'=> $lesson['id']])}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula" > Rever </a>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                @endforeach
+                                @foreach($incompletelessons as $lesson)
+                                <tr>
+
+                                    <td id="letraDashboard" scropt="row" class="text-center align-middle">
+                                        {{ $lesson['seq'] }}
+                                    </td>
+
+                                    <td id="linkDashboard" class="text-center align-middle">
+                                        <a id="linkDashboard" href="#" class="custom-link-animation">
+                                            {{ $lesson['title'] }}
+                                        </a>
+                                    </td>
+
+                                    <td id="letraDashboard" class="text-center align-middle">
+                                        Não
                                     </td>
 
                                     <td id="letraDashboard" class="text-center align-middle">
@@ -59,19 +84,28 @@
 
                                 </tr>
                                 @endforeach
-                                
                             </tbody>
                         </table>
                         
                     </div>
                 </div>
                 <a href="{{route('home')}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula"> < Voltar </a>
+                @if (!isset($hasjoined))
                 <form action="{{route('courses.start',['course' => $course->id])}}" method="post">
                     @csrf
                     <button type="submit" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
                         Iniciar >
                     </button>
         </form>
+        @elseif( !isset($completed))
+        <a href="{{route('lessons.show',['course'=>$course->id, 'lesson'=> $nextlesson->id])}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
+            Continuar >
+        </a>
+        @else
+        <a href="{{route('lessons.show',['course'=>$course->id, 'lesson'=> $firstlesson->id])}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
+            Rever Conteúdo >
+        </a>
+        @endif
         </div>
     </div>
 </div>

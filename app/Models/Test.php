@@ -29,6 +29,7 @@ class Test extends Model
         parent::boot();
         
         static::deleting(function ($test) {
+            $test->questions()->delete();
             $lesson = Lesson::where('test_id', $test->id)->first();
 
             if ($lesson) {

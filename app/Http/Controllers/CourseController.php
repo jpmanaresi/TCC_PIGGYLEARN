@@ -123,11 +123,46 @@ public function destroy($id)
 
         $course = Course::findOrFail($id);
         $user = auth()->user();
-        $lessons = Lesson::where('course_id', $course->id)->orderBy('seq')->get();
-       if($course->setvisible <> 1) {
+        // Buscar as lições completas do usuário no curso
+        $completedLessons = $course->lessons()->whereHas('user_lessons', function ($query) use ($user) {
+            $query->where('user_id', $user->id)->where('completed', true);
+        })->get()->toArray();
+        // Buscar as lições incompletas do curso
+        $incompleteLessons = $course->lessons()->where(function ($query) use ($user) {
+            $query->whereDoesntHave('user_lessons', function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+            })->orWhereHas('user_lessons', function ($query) use ($user) {
+                $query->where('user_id', $user->id)->where('completed', false);
+            });
+            })->get()->toArray();
+        if($course->setvisible <> 1) {
             return redirect()->route('home');
         }
-        return view('courses.show', ['course' => $course, 'lessons'=>$lessons]);
+        $hasJoined = $user->user_courses()
+        ->where('course_id', $course->id)
+        ->exists();
+        if ($hasJoined) {
+            $userhasjoined = true;
+            $completed = $user->user_courses()
+            ->where('course_id', $course->id)
+            ->where('completed', true)
+            ->exists(); 
+            if ($completed) {
+                $firstLesson= Lesson::where('course_id', $course->id)->orderBy('seq')->firstOrFail();
+                $userhascompleted = true;
+                return view('courses.show', ['course' => $course, 'completelessons'=>$completedLessons, 'incompletelessons'=>$incompleteLessons, 'hasjoined' => $userhasjoined, 'completed' => $userhascompleted, 'firstlesson' => $firstLesson]);
+            } else {
+                $nextLesson = Lesson::where('course_id', $course->id)
+                ->whereDoesntHave('users', function ($query) use ($user) {
+                $query->where('user_id', $user->id);
+                 })
+                ->orderBy('seq')
+                ->first();
+                return view('courses.show', ['course' => $course, 'completelessons'=>$completedLessons, 'incompletelessons'=>$incompleteLessons,'hasjoined' => $userhasjoined, 'nextlesson' => $nextLesson]);
+            }
+        }
+
+        return view('courses.show', ['course' => $course, 'completelessons'=>$completedLessons, 'incompletelessons'=>$incompleteLessons]);
         
     }
 
@@ -144,15 +179,15 @@ public function destroy($id)
         }
 
         public function start($course) {
-            $course= Course::where('id', $course)->get();
-            return ($course);
-            /*$user= auth()->user();
-            $user->user_courses()->attach($course->id);
-            $firstLesson= Lesson::where('course_id', $course->id)->orderBy('seq')->first()->get();
+            $course= Course::findOrFail($course);
+            //return ($course);
+            $user= auth()->user();
+            $user->user_courses()->attach($course,['completed' => false]);
+            $firstLesson= Lesson::where('course_id', $course->id)->orderBy('seq')->firstOrFail();
 
             return redirect()->route('lessons.show',
-            ['course'=>$course,
-            'lesson' => $firstLesson
-            ]);*/
+            ['course'=>$course->id,
+            'lesson' => $firstLesson->id
+            ]);
         }
     }
