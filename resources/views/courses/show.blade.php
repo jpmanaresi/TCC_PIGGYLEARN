@@ -34,6 +34,7 @@
                             </thead>
 
                             <tbody>
+                                <!-- Mostra as Aulas do curso que o usuário completou -->
                                 @foreach($completelessons as $lesson)
                                 <tr>
 
@@ -59,6 +60,7 @@
 
                                 </tr>
                                 @endforeach
+                                <!-- Mostra as Aulas do curso que o usuário NÃO completou -->
                                 @foreach($incompletelessons as $lesson)
                                 <tr>
 
@@ -78,7 +80,7 @@
 
                                     <td id="letraDashboard" class="text-center align-middle">
                                         <div class="d-flex flex-column align-items-center">
-                                            0
+                                            -
                                         </div>
                                     </td>
 
@@ -90,6 +92,7 @@
                     </div>
                 </div>
                 <a href="{{route('home')}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula"> < Voltar </a>
+                <!-- se o usuário NÃO COMEÇOU A FAZER o curso-->
                 @if (!isset($hasjoined))
                 <form action="{{route('courses.start',['course' => $course->id])}}" method="post">
                     @csrf
@@ -97,11 +100,13 @@
                         Iniciar >
                     </button>
         </form>
+        <!-- se o usuário COMEÇOU A FAZER o curso, MAS NÃO COMPLETOU -->
         @elseif( !isset($completed))
         <a href="{{route('lessons.show',['course'=>$course->id, 'lesson'=> $nextlesson->id])}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
             Continuar >
         </a>
         @else
+        <!-- se o usuário COMPLETOU O CURSO -->
         <a href="{{route('lessons.show',['course'=>$course->id, 'lesson'=> $firstlesson->id])}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
             Rever Conteúdo >
         </a>
