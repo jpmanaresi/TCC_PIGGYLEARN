@@ -21,7 +21,7 @@
         
         <div id="corpoCriarCurso">
 
-            <form id="create_lesson" action="{{ isset($lesson) ? route('lessons.update', ['course'=>$lesson->course_id,'lesson_id'=> $lesson->id]) : route('lessons.store', $course->id)}}" method="POST">
+            <form id="create_lesson" action="{{ isset($lesson) ? route('lessons.update', ['id'=>$lesson->course_id,'lesson_id'=> $lesson->id]) : route('lessons.store', $course->id)}}" method="POST">
                 @csrf
         
                 @if(isset($lesson))
