@@ -86,4 +86,26 @@ class QuestionController extends Controller
         'test'=> $question->test->id]); 
 
     }
+    public function show($course,$lesson,$test,$question){
+        $question = Question::FindOrFail($question); 
+        return view('courses.lessons.tests.questions.show',['course'=> $course, 'lesson' => $lesson, 'test' => $test, 'question' =>$question]);
+    }
+
+    public function validateAnswer(Request $request)
+{
+    $questionId = $request->input('questionId');
+    $selectedAnswer = $request->input('answer');
+    
+
+    // Lógica para verificar se a resposta selecionada está correta
+    $question = Question::find($questionId);
+    $isCorrect = ($selectedAnswer == $question->answer);
+
+    // Retorne a resposta em formato JSON
+    return response()->json([
+        'is_correct' => $isCorrect,
+        'correctAnswer' => $question->answer
+    ]);
+}
+
 }

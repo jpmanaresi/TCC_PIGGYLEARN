@@ -53,8 +53,10 @@ Route::delete('/lessons/{lesson}/tests/{id}', [TestController::class, 'destroy']
 /* Questões das avaliações */
 Route::get('/courses/{course}/lessons/{lesson}/tests/{test}/questions/create', [QuestionController::class, 'create'])->name('questions.create')->middleware('auth');
 Route::get('/tests/{test}/questions/{question}/edit/', [QuestionController::class, 'edit'])->name('questions.edit')->middleware('auth');
+Route::get('/courses/{course}/lessons/{lesson}/tests/{test}/questions/{question}/show',[QuestionController::class, 'show'])->name('questions.show')->middleware('auth');
 Route::post('/questions',[QuestionController::class, 'store'])->name('questions.store');
 Route::put('/questions/{id}',[QuestionController::class, 'update'])->name('questions.update');
+Route::post('/validate-answer',[QuestionController::class, 'validateAnswer']);
 Route::delete('/questions/{id}', [QuestionController::class, 'destroy'])->name('questions.destroy');
 
 /* Usuário */
