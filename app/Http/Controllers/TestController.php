@@ -73,6 +73,35 @@ class TestController extends Controller
         return redirect()->route('lessons.edit', ['course' => $test->lesson->course->id, 'lesson'=> $test->lesson->id]); 
 
     }
-    
+    public function show($course,$lesson,$test){
+        $test = Test::FindOrFail($test);
+        $user = auth()->user();
+        $completed = $user->user_tests()
+        ->where('test_id', $test->id)
+        ->where('passed', true)
+        ->exists(); 
+        if ($completed) {
+            $userhaspassed = true;
+        } else {
+            $userhaspassed = false;
+        }
+        
+        return view('courses.lessons.tests.show', ['course' => $test->lesson->course_id, 'lesson'=>$lesson, 'test' => $test, 'passed' =>$userhaspassed]);
+    }
+    public function start($test){
+        $test= Test::findOrFail($test);
+        $user= auth()->user();
+        $user->user_tests()->syncWithoutDetaching([
+            $test->id => ['passed' => false]
+        ]);
+        $firstQuestion= Question::where('id', $test->id)->orderBy('seq')->firstOrFail();
+
+        return redirect()->route('questions.show',
+        ['course'=>$test->lesson->course->id,
+        'lesson' => $test->lesson_id,
+        'test' => $test->id,
+        'question' => $firstQuestion->id
+        ]);
+    }
 }
 

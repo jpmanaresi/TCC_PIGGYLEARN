@@ -17,6 +17,7 @@
             <div class="col-md-12" id="description-container">
                 <p class="event-description" id="p-show1">{{$lesson->description}}</p>
             </div>
+<<<<<<< HEAD
 
             <a href="{{route('home')}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula"> 
                 < Voltar 
@@ -28,6 +29,15 @@
                     Próxima >
                 </button>
             </form>
+=======
+                <a href="{{route('home')}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula"> < Voltar </a>
+                <form action="{{route('lessons.next',['course' => $lesson->course_id, 'lesson' => $lesson->id])}}" method="post">
+                    @csrf
+                    <button type="submit" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
+                        Próxima >
+                    </button>
+                </form>
+>>>>>>> 766f26912b74fd8043240157290c61b19aeec464
         </div>
     </div>
 </div>
