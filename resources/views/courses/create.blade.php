@@ -81,9 +81,67 @@
                                     {{ $lesson['seq'] }}
                                 </td>
 
+<<<<<<< HEAD
                                 <td id="linkDashboard" class="text-center align-middle">
                                     <a id="linkDashboard" href="#" class="custom-link-animation">
                                         {{ $lesson['title'] }}
+=======
+                                        <td id="letraDashboard" scropt="row" class="text-center align-middle">
+                                            {{ $lesson['seq'] }}
+                                        </td>
+
+                                        <td id="linkDashboard" class="text-center align-middle">
+                                            <a id="linkDashboard" href="#" class="custom-link-animation">
+                                                {{ $lesson['title'] }}
+                                            </a>
+                                        </td>
+
+                                        <td id="letraDashboard" class="text-center align-middle">
+                                            @if ($lesson['hasTest']==1) Sim
+                                            @else Não
+                                            @endif
+                                        </td>
+
+                                        <td id="letraDashboard" class="text-center align-middle">
+                                            
+                                            <div class="d-flex justify-content-center">
+                                                <a id="botaoEditar" class="btn btn-custom mr-2" href="{{route('lessons.edit', ['course' => $course->id, 'lesson' =>$lesson['id']])}}">
+                                                    <img src="/img/pencil-square.svg" alt="Ícone Editar">
+                                                    <span>Editar</span>
+                                                </a>
+                                            
+                                                <form action="{{route('lessons.destroy', ['course' => $course->id, 'id' =>$lesson['id']])}}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button id="botaoDeletar" type="submit" class="btn btn-custom">
+                                                        <img src="/img/x-circle.svg" alt="Ícone Deletar">
+                                                        <span>Deletar</span>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                            
+
+                                    </tr>
+                                    @endforeach
+
+                                    <tr> 
+                                        <td colspan="4" class="text-center align-center" style="border: 0px"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
+                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom animated-button">
+                                                Adicionar +
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            
+                            
+                            
+                            @else
+                                <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
+                                    <p id="textoSemAula">Este Curso ainda não possui Aulas.</p>
+                                    <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create" class="btn btn-custom animated-button">Adicionar Aula
+>>>>>>> 9080a95102a5726cf450dd4375e502e95866a719
                                     </a>
                                 </td>
 

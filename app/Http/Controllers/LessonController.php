@@ -78,4 +78,33 @@ class LessonController extends Controller
     return redirect()->route('courses.edit', ['id' => $course->id]); 
 
 }
+public function show($course,$lesson){
+    $lesson = Lesson::FindOrFail($lesson);
+    
+    return view('courses.lessons.show', ['course' => $lesson->course_id, 'lesson'=>$lesson]);
+}
+
+public function next($course, $lesson){
+    $lesson = Lesson::FindOrFail($lesson);
+    $course = Course::FindOrFail($course);
+    $user= auth()->user();
+    $nextLesson = Lesson::where('course_id', $lesson->course_id)->where('seq', '>', $lesson->seq)->orderBy('seq')->first()?->id ?? 0; // Se for a última lição do curso, seta o valor para 0
+    //return ($nextLesson);
+    $user->user_lessons()->attach($lesson,['completed' => true]);
+    
+   /* if($lesson->hasTest==true){
+        $test = Test::where('lesson_id',$lesson->id);
+        return redirect()->route('tests.show', ['course'=> $lesson->course_id, 'lesson'=> $lesson->id, 'test'=>$test->id]);
+    }*/
+    //Se for a última lição do curso voltar para a homepage.
+    if ($nextLesson == 0) {
+        $user->user_courses()->updateExistingPivot($course->id, ['completed' => true]);
+        return redirect()->route('home')->with('msg', "Curso completo!");
+    }
+    //Avançar para a próxima aula
+    return redirect()->route('lessons.show',
+            ['course'=>$course->id,
+            'lesson' => $nextLesson
+            ]);
+}
 }
