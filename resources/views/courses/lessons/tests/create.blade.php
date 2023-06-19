@@ -147,7 +147,8 @@
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach   
+                            @endforeach  
+                            @endif 
                             <tr>
                                 <td colspan="4" class="text-center align-center" style="border-bottom-width: 0px; padding-bottom: 0px">
                                     <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}">
@@ -156,12 +157,10 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
-                    @endif
+                    </table>    
                 </div>
             </div>
 
-            
             <div class="col">
                 <div class="d-flex justify-content-end">
                     <input id="botaoCriarC" class="btn btn-custom" form="create_test" type="submit" name="action" value="Atualizar Avaliação">
