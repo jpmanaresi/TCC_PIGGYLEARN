@@ -99,7 +99,7 @@
           <div class="col-md-6">
             <a href="/dashboard" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
               <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
-              Curso Criados 
+              Meus Cursos 
             </a>
           </div>
           
@@ -148,7 +148,9 @@
         <div class="row">
 
             @if(session('msg'))
-              <p class="msg">{{session('msg')}}</p>
+              <p id="" class="msg">
+                {{session('msg')}}
+              </p>
             @endif
 
         </div>

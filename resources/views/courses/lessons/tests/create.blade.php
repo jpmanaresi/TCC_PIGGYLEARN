@@ -157,15 +157,17 @@
                             </tr>
                         </tbody>
                     </table>
+                    @endif
                 </div>
             </div>
 
-            @endif
+            
             <div class="col">
                 <div class="d-flex justify-content-end">
                     <input id="botaoCriarC" class="btn btn-custom" form="create_test" type="submit" name="action" value="Atualizar Avaliação">
                 </div>
             </div>
+            
             @endif
         </div>
     </div>

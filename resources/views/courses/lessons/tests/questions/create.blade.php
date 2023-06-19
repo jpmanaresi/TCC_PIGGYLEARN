@@ -9,7 +9,7 @@
 @section('content')
 
 <h1 id="tituloInicialp">
-    @if(isset($lesson))
+    @if(isset($question))
     Editar Questão   
     @else
     Criar Questão            
@@ -60,7 +60,7 @@
             <input type="radio" class="form-check-input" name="answer" value="alt_4" {{ isset($question) && $question->answer == 'alt_4' ? 'checked' : '' }}> Alternativa correta?
         </div>
         <div>
-            
+
         <button type="submit" name="action" value="{{isset($question) ? 'update_and_new' : 'create_and_new'}}">Salvar e Criar Nova</button>
         <button type="submit">{{isset($question) ? 'Salvar e Voltar' : 'Criar e Voltar'}}</button>
         
