@@ -74,17 +74,11 @@
                     <div class="container">
                         <div class="row align-items-center">
                     
-<<<<<<< HEAD
                             <div class="col" style="padding-left: 0px;">
-                                <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                                <a id="botaoVoltar" href="{{route('lessons.edit', ['course'=> $lesson->course_id,'lesson' => $lesson->id])}}" class="btn btn-custom mr-2" href="#">
                                     <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
                                     <span>Voltar</span>
-=======
-                            <div class="col"style="padding-left: 0px;">
-                                <a id="botãoVoltar" class="btn btn-custom" href="{{route('lessons.edit', ['course'=> $lesson->course_id,'lesson' => $lesson->id])}}">
-                                    Voltar
->>>>>>> 7322e1887b3007c79ab54784eb80ddec1ae04022
-                                </a>
+                                </a>   
                             </div>
                     
                             <div class="col text-center">
@@ -153,7 +147,8 @@
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach   
+                            @endforeach  
+                            @endif 
                             <tr>
                                 <td colspan="4" class="text-center align-center" style="border-bottom-width: 0px; padding-bottom: 0px">
                                     <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}">
@@ -162,12 +157,10 @@
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
-                    @endif
+                    </table>    
                 </div>
             </div>
 
-            
             <div class="col">
                 <div class="d-flex justify-content-end">
                     <input id="botaoCriarC" class="btn btn-custom" form="create_test" type="submit" name="action" value="Atualizar Avaliação">
