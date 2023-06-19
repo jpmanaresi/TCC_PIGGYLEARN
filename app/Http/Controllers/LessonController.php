@@ -43,7 +43,7 @@ class LessonController extends Controller
             
             return redirect()->route('courses.edit', ['id' => $request->course_id]);
     
-            }elseif ($request->action==='Adicionar Avaliação?') {
+            }elseif ($request->action==='Adicionar?') {
     
                 return redirect()->route('tests.create', ['id' => $lesson->course_id, 'lesson' => $lesson->id]);
             }
