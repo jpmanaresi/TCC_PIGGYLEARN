@@ -95,13 +95,13 @@ class QuestionController extends Controller
 {
     $questionId = $request->input('questionId');
     $selectedAnswer = $request->input('answer');
-    
+    $user = auth()->user();
 
     // Lógica para verificar se a resposta selecionada está correta
     $question = Question::find($questionId);
     $isCorrect = ($selectedAnswer == $question->answer);
-    $user->user_questions()->updateExistingPivot($question->id, ['passed' => true]);
-    // Retorne a resposta em formato JSON
+    $user->user_questions()->syncWithoutDetaching([$questionId => ['passed' => $isCorrect]]);
+       // Retorne a resposta em formato JSON
     return response()->json([
         'is_correct' => $isCorrect,
         'correctAnswer' => $question->answer
@@ -112,23 +112,23 @@ public function next(Request $request){
     $question = Question::FindOrFail($request->questionId);
     $user= auth()->user();
     $nextQuestion = Question::where('test_id', $question->test_id)->where('seq', '>', $question->seq)->orderBy('seq')->first()?->id ?? 0; // Se for a última lição do curso, seta o valor para 0.
-
     //Se for a última questão do teste redireciona para a rota end.
     if ($nextQuestion == 0) {
         $test = Test::FindOrFail($question->test_id);
+        $testcompleted = false;
         $totalQuestions = Question::where('test_id', $question->test_id)->orderByDesc('seq')->first()->seq;  
         $countPassedQuestions = $test->questions()
             ->whereHas('user_questions', function ($query) use ($user) {
                 $query->where('user_id', $user->id)->where('passed', true);
             })->count();
                 //Marca o teste como como passed dependendo se o usuário acertou todas as questões ou não.
+                
         if($totalQuestions==$countPassedQuestions){        
         $user->user_tests()->updateExistingPivot($test->id, ['passed' => true]);
         } else {
             $user->user_tests()->updateExistingPivot($test->id, ['passed' => false]);
         }
         $isTestPassed = $user->user_tests()->where('test_id', $test->id)->value('passed');
-        $testcompleted = false;
         if ($isTestPassed) {
         // Teste passado, redirecionar para a próxima aula
             $user->user_lessons()->syncWithoutDetaching([
@@ -139,8 +139,10 @@ public function next(Request $request){
         // Teste não passado, redirecionar para a lição atual
         $testcompleted = false;
     }
+    //return ($testcompleted);
+    //return($isTestPassed);
         //Redireciona para a rota end do teste.
-        return redirect()->route('tests.end', ['test' => $test->id, 'completed' => $testcompleted]);
+        return redirect()->route('tests.end', ['test' => $test->id]);
     }
     
     //Avançar para a próxima aula

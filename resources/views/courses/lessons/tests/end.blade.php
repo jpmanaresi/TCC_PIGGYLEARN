@@ -7,7 +7,7 @@
 <div class="container" id="cardBodyIndex1"> <!-- TEMPORARIO PORRA: Isso é a formatação do card inicial. Depois eu faço um proprio e tal -->
     <div class="col-md-10 offset-md-1">
         <div class="row">
-            @if (isset($completed) && $completed == true)
+            @if (isset($completed) && $completed == 1)
             <div id="info-container" class="col">
                 <h1 id="tituloCurso">Você conlucluiu o teste: {{$test->title}}.</h1>
             </div>
@@ -29,6 +29,7 @@
                 <a href="{{route('home')}}" class="btn btn-custom animated-button"  id="botaoAdicionarAula"> < Voltar </a>
                 <form action="{{route('tests.nextlesson',['course' => $test->lesson->course_id, 'lesson' => $test->lesson->id, 'test' => $test->id])}}" method="post">
                     @csrf
+                    <input type="hidden" name="completed" value="{{isset($completed) && $completed== true ? 1 : 0}}">
                     <button type="submit" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
                         Próxima Aula >
                     </button>

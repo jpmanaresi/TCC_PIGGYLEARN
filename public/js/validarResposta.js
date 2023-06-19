@@ -72,7 +72,7 @@
             if (xhr.status === 200) {
               var response = JSON.parse(xhr.responseText);
               var correctAnswer = response.correctAnswer;
-  
+              console.log(response);
               if (selectedAnswer === correctAnswer) {
                 // Resposta correta
                 answer.parentNode.classList.add('correctanswer');
@@ -93,7 +93,7 @@
             }
             var answerInputs = document.querySelectorAll('input[name="answer"]');
             answerInputs.forEach(function(input) {
-              input.disabled = true;
+              input.readOnly = true;
             });
 
             // Redirecionar para a rota "next" no QuestionController
@@ -114,7 +114,8 @@
             button.style.display = 'none';
           }
         };
-  
+        console.log([...formData]);
+        
         xhr.send(formData);
       }
     });

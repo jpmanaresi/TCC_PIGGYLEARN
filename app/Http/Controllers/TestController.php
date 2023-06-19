@@ -76,17 +76,9 @@ class TestController extends Controller
     public function show($course,$lesson,$test){
         $test = Test::FindOrFail($test);
         $user = auth()->user();
-        $completed = $user->user_tests()
-        ->where('test_id', $test->id)
-        ->where('passed', true)
-        ->exists(); 
-        if ($completed) {
-            $userhaspassed = true;
-        } else {
-            $userhaspassed = false;
-        }
+        $passed = $user->user_tests()->where('test_id', $test->id)->wherePivot('passed', true)->exists();
         
-        return view('courses.lessons.tests.show', ['course' => $test->lesson->course_id, 'lesson'=>$lesson, 'test' => $test, 'passed' =>$userhaspassed]);
+        return view('courses.lessons.tests.show', ['course' => $test->lesson->course_id, 'lesson'=>$lesson, 'test' => $test, 'passed' =>$passed]);
     }
     public function start($test){
         $test= Test::findOrFail($test);
@@ -94,8 +86,7 @@ class TestController extends Controller
         $user->user_tests()->syncWithoutDetaching([
             $test->id => ['passed' => false]
         ]);
-        $firstQuestion= Question::where('id', $test->id)->orderBy('seq')->firstOrFail();
-
+        $firstQuestion= Question::where('test_id', $test->id)->orderBy('seq')->firstOrFail();
         return redirect()->route('questions.show',
         ['course'=>$test->lesson->course->id,
         'lesson' => $test->lesson_id,
@@ -104,27 +95,35 @@ class TestController extends Controller
         ]);
     }
     public function end($test){
+        $user = auth()->user();
         $test = Test::FindOrFail($test);
-        return view('courses.lessons.tests.end', ['test' => $test]);
+        $passed = $user->user_tests()->where('test_id', $test->id)->wherePivot('passed', true)->exists();
+        return view('courses.lessons.tests.end', ['test' => $test, 'completed'=> $passed]);
     }
 
-    public function nextlesson($course,$lesson,$test) {
+    public function nextlesson($course,$lesson,$test,Request $request) {
         $user = auth()->user();
         $test = Test::findOrFail($test);
         $lesson = Lesson::findOrFail($lesson);
+        $nextLesson = Lesson::where('course_id', $lesson->course_id)->where('seq', '>', $lesson->seq)->orderBy('seq')->first()?->id ?? 0; // Se for a última lição do curso, seta o valor para 0
+        $completed = $request->completed;
     // Verificar se o teste foi passado
-        $isTestPassed = $user->user_tests()->where('test_id', $test->id)->value('passed');
 
-        if ($isTestPassed ==1) {
+        if ($completed == 1) {
         // Teste passado, redirecionar para a próxima aula
-        $testcompleted = true;
         $user->user_lessons()->syncWithoutDetaching([
             $lesson->id => ['completed' => true]
         ]);
-
-        return redirect()->route('lessons.next', ['lesson' => $lesson->id]);
+        if ($nextLesson == 0) {
+            $user->user_courses()->updateExistingPivot($lesson->course->id, ['completed' => true]);
+            return redirect()->route('home')->with('msg', "Curso completo!");
+        }
+        if($nextLesson->hasTest==true){
+            $test = Test::where('lesson_id',$lesson->id)->first();
+            return redirect()->route('tests.show', ['course'=> $lesson->course_id, 'lesson'=> $lesson->id, 'test'=>$test->id]);
+        }
+        return redirect()->route('lessons.show', ['course'=> $lesson->course_id, 'lesson' => $nextLesson->id]);
     } else {
-        $testcompleted = false;
         // Teste não passado, redirecionar para a lição atual
         return redirect()->route('lessons.show', ['course'=> $test->lesson->course_id, 'lesson' => $test->lesson_id]);
     }
