@@ -165,7 +165,7 @@
     } /* Index1 = Destaque */
 
         #cardBodyIndex1.card:hover {
-            transform: scale(1.1);
+            transform: scale(1.01);
             transition: all 0.01s ease-in-out;
             box-shadow: 0 8px 16px rgba(0,0,0,0.50);
         } /* Joga o card pra frente. Função basica do hover né */
@@ -371,7 +371,7 @@
 
 
 
-/* courses.blade - Criar Curso / Editar Curso */
+/* courses.blade - Criar Curso/Aula/Avaliação/Teste - Editar Curso/Aula/Avaliação/Teste*/
 
     #tituloCriarCurso {
         text-align: start; 
@@ -389,6 +389,26 @@
     #placeholderDesc {
         height: 120px;
     } /* Formatção do placeholder da Descrição */
+
+    #TituloTabelaDepoisD {
+        margin: 15px; 
+        font-weight: bold;
+    } /* Titulo depois da Descrição */
+
+    #botãoVoltar.btn-custom {
+        background-color: #42129b;
+        color: #ffffff;
+        margin-top: 16px;
+        
+    } /* Botão pra voltar na tela anterior */
+
+        #botãoVoltar.btn-custom:hover {
+            background-color: #25085a;
+            color: #ffffff;
+            margin-top: 16px;
+            transform: scale(1.1);
+            transition: all 0.01s ease-in-out;
+        } /* Anima;'ao do Botão pra voltar na tela anterior */
 
     #textoSemAula {
         margin: 10px;

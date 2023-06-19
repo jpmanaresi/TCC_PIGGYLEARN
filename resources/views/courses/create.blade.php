@@ -44,16 +44,31 @@
 
                         <div class="form-group">
                             <label id="descricaoCriarCurso" for="title" >       Descrição       </label>
-                            <textarea name="description" id="placeholderDesc" class="form-control" placeholder="Inserir Descrição">@if (isset($course)){{$course->course_description}}@endif</textarea>
+                            <textarea name="description" id="placeholderDesc" class="form-control" placeholder="Inserir descrição para esse curso">@if (isset($course)){{$course->course_description}}@endif</textarea>
                         </div>
                     </div>
                 </div>
 
             </form>
             
-            <h1 class="text-center align-self-center" style="margin: 15px; font-weight: bold">
-                Aulas
-            </h1> 
+            <div class="container">
+                <div class="row">
+
+                    <div class="col" style="padding-left: 0px;">
+                        <a id="botãoVoltar" class="btn btn-custom" href="#">
+                            Voltar
+                        </a>
+                    </div>
+
+                    <div class="col text-center">
+                        <h1 id="TituloTabelaDepoisD">
+                            Teste
+                        </h1>
+                    </div>
+
+                    <div class="col" style="padding-right: 0px;" alt="Coluna vazia pra deixar as coisas ajustadas"> </div>
+                </div>
+            </div>
                     
             <div id="corpoTabela" class="col-md-12"> 
 
@@ -115,7 +130,7 @@
                             </tr>
                             @endforeach
                             <tr> 
-                                <td colspan="4" class="text-center align-center"> 
+                                <td colspan="4" class="text-center align-center" style="border-bottom-width: 0px; padding-bottom: 0px">
                                     <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="/courses/{{$course->id}}/lessons/create">
                                         Adicionar +
                                     </a>
@@ -126,17 +141,22 @@
                             
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
-                            <p id="textoSemAula">Este Curso ainda não possui Aulas.</p>
-                            <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create" class="btn btn-custom animated-button">Adicionar Aula
+                            <p id="textoSemAula">
+                                Este Curso ainda não possui Aulas,
+                            </p>
+                            <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create" class="btn btn-custom animated-button">
+                                Adicionar?
                             </a>
                         </div>
                     @endif
 
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
-                            <p id="textoSemAula" class="align-self-center mt-3">Este Curso ainda não possui Aulas.</p>
+                            <p id="textoSemAula" class="align-self-center mt-3">
+                                Este Curso ainda não possui Aulas,
+                            </p>
                             <input type="hidden" name="create_course_and_add_lesson" value="1">
-                            <input form="create_course" id="botaoAdicionarAula" name="action" type="submit" class="btn btn-custom animated-button" value="Adicionar Aula">
+                            <input form="create_course" id="botaoAdicionarAula" name="action" type="submit" class="btn btn-custom animated-button" value="Adicionar?">
                         </div>
                     @endif                            
                 </div>
@@ -157,6 +177,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>

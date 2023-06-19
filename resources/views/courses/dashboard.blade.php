@@ -71,21 +71,21 @@
                                 @endforeach
                             </tbody>
                         </table>
-
                     </div>                 
                     
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
-                            <p id="textoSemAula" class="align-self-center mt-3">Você não criou nenhum curso.</p>
+                            <p id="textoSemAula" class="align-self-center mt-3">
+                                Você Não Criou Nenhum Curso.</p>
                             <input type="hidden" name="create_course_and_add_lesson" value="1">
                             <a href="/courses/create">
-                                <button id="botaoAdicionarAula" type="submit"  class="btn btn-custom animated-button">Criar Curso</button>
+                                <button id="botaoAdicionarAula" type="submit"  class="btn btn-custom animated-button">
+                                    Deseja Criar Curso?
+                                </button>
                             </a>
                         </div>   
                     @endif
-                    
-                    
-
+ 
                 </div>
             </div>
         </div>
