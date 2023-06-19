@@ -100,7 +100,7 @@ class QuestionController extends Controller
     // Lógica para verificar se a resposta selecionada está correta
     $question = Question::find($questionId);
     $isCorrect = ($selectedAnswer == $question->answer);
-
+    $user->user_questions()->updateExistingPivot($question->id, ['passed' => true]);
     // Retorne a resposta em formato JSON
     return response()->json([
         'is_correct' => $isCorrect,
@@ -112,14 +112,6 @@ public function next(Request $request){
     $question = Question::FindOrFail($request->questionId);
     $user= auth()->user();
     $nextQuestion = Question::where('test_id', $question->test_id)->where('seq', '>', $question->seq)->orderBy('seq')->first()?->id ?? 0; // Se for a última lição do curso, seta o valor para 0.
-    $user->user_questions()->syncWithoutDetaching([
-        $question->id => ['passed' => true]
-    ]);
-    
-    // Se o usuário acertou a resposta, marca a questão como correta
-    if($question->answer== $request->answer){
-        $user->user_questions()->updateExistingPivot($question->id, ['passed' => true]);
-    }
 
     //Se for a última questão do teste redireciona para a rota end.
     if ($nextQuestion == 0) {
@@ -135,9 +127,22 @@ public function next(Request $request){
         } else {
             $user->user_tests()->updateExistingPivot($test->id, ['passed' => false]);
         }
-        //Redireciona para a rota end do teste.
-        return redirect()->route('tests.end', ['test' => $test->id]);
+        $isTestPassed = $user->user_tests()->where('test_id', $test->id)->value('passed');
+        $testcompleted = false;
+        if ($isTestPassed) {
+        // Teste passado, redirecionar para a próxima aula
+            $user->user_lessons()->syncWithoutDetaching([
+            $test->lesson->id => ['completed' => true]
+        ]);
+        $testcompleted = true;
+    } else {
+        // Teste não passado, redirecionar para a lição atual
+        $testcompleted = false;
     }
+        //Redireciona para a rota end do teste.
+        return redirect()->route('tests.end', ['test' => $test->id, 'completed' => $testcompleted]);
+    }
+    
     //Avançar para a próxima aula
     return redirect()->route('questions.show', [
         'course'=> $question->test->lesson->course_id,

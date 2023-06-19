@@ -45,8 +45,10 @@ Route::delete('/courses/{course}/lessons/{id}', [LessonController::class, 'destr
 Route::get('/courses/{id}/lessons/{lesson}/tests/create', [TestController::class, 'create'])->name('tests.create')->middleware('auth');
 Route::get('/lessons/{lesson}/tests/{test}/edit', [TestController::class, 'edit'])->name('tests.edit')->middleware('auth');
 Route::get('/courses/{course}/lessons/{lesson}/tests/{test}/show',[TestController::class, 'show'])->name('tests.show')->middleware('auth');
+Route::get('tests/{test}/end',[TestController::class, 'end'])->name('tests.end')->middleware('auth');
 Route::post('/tests',[TestController::class, 'store'])->name('tests.store');
 Route::post('/courses/{course}/lessons/{lesson}/tests/{test}/start',[TestController::class, 'start'])->name('tests.start');
+Route::post('/courses/{course}/lessons/{lesson}/tests/{test}/nextlesson',[TestController::class, 'nextlesson'])->name('tests.nextlesson');
 Route::put('/tests/{id}',[TestController::class, 'update'])->name('tests.update');
 Route::delete('/lessons/{lesson}/tests/{id}', [TestController::class, 'destroy'])->name('tests.destroy');
 

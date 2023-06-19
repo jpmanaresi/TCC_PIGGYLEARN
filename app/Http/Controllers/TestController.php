@@ -103,5 +103,35 @@ class TestController extends Controller
         'question' => $firstQuestion->id
         ]);
     }
+    public function end($test){
+        $test = Test::FindOrFail($test);
+        return view('courses.lessons.tests.end', ['test' => $test]);
+    }
+
+    public function nextlesson($course,$lesson,$test) {
+        $user = auth()->user();
+        $test = Test::findOrFail($test);
+        $lesson = Lesson::findOrFail($lesson);
+    // Verificar se o teste foi passado
+        $isTestPassed = $user->user_tests()->where('test_id', $test->id)->value('passed');
+
+        if ($isTestPassed ==1) {
+        // Teste passado, redirecionar para a próxima aula
+        $testcompleted = true;
+        $user->user_lessons()->syncWithoutDetaching([
+            $lesson->id => ['completed' => true]
+        ]);
+
+        return redirect()->route('lessons.next', ['lesson' => $lesson->id]);
+    } else {
+        $testcompleted = false;
+        // Teste não passado, redirecionar para a lição atual
+        return redirect()->route('lessons.show', ['course'=> $test->lesson->course_id, 'lesson' => $test->lesson_id]);
+    }
+
+    // Caso haja mais lógica adicional, pode ser adicionada aqui
+
+    return redirect()->back();
+    }
 }
 
