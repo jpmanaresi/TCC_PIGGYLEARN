@@ -18,14 +18,21 @@
             <div class="row">
 
                 <div id="corpoTabela" class="col-md-12" >
+
+                    <div class="text-start align-self-start">
+                        <h2 id="tituloCreditosD">
+                            tituloInicialp
+                        </h2>
+                    </div>
+
                     @if(count($courses) > 0)
 
                     <div class="table-responsive">
 
                         <table class="table">
 
-                            <thead>
-                                <tr>
+                            <thead style="border-top: 1px; border-color: rgb(222, 226, 230); border-style: solid">
+                                <tr >
                                     <th id="TituloTabelaNu" scope="col" class="text-center align-middle">#</th>
                                     <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
                                     <!--  <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Participantes</th> -->
