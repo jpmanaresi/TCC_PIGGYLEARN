@@ -50,7 +50,7 @@
                     <div class="row align-items-center">
                 
                         <div class="col"style="padding-left: 0px;">
-                            <a id="botãoVoltar" class="btn btn-custom" href="#">
+                            <a id="botãoVoltar" class="btn btn-custom" href="{{route('courses.edit',['id' => $course->id]) }}">
                                 Voltar
                             </a>
                         </div>
