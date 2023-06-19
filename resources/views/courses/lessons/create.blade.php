@@ -49,9 +49,10 @@
                 <div class="container">
                     <div class="row align-items-center">
                 
-                        <div class="col"style="padding-left: 0px;">
-                            <a id="botãoVoltar" class="btn btn-custom" href="#">
-                                Voltar
+                        <div class="col" style="padding-left: 0px;">
+                            <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                                <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
+                                <span>Voltar</span>
                             </a>
                         </div>
                 
@@ -140,7 +141,6 @@
 
                 <div class="col">
                     <div class="d-flex justify-content-end">
-                    
                         <input id="botaoCriarC" class="btn btn-custom" form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">
                     <!-- Falta ter um aviso de "curso criado" -->
                     </div>

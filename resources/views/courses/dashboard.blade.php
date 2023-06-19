@@ -28,7 +28,7 @@
                                 <tr>
                                     <th id="TituloTabelaNu" scope="col" class="text-center align-middle">#</th>
                                     <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
-                                    <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Participantes</th>
+                                  <!--  <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Participantes</th> -->
                                     <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
                                 </tr>
                             </thead>
@@ -47,9 +47,9 @@
                                         </a>
                                     </td>
 
-                                    <td id="letraDashboard" class="text-center align-middle">
+                                   <!-- <td id="letraDashboard" class="text-center align-middle">
                                         0
-                                    </td>
+                                    </td> -->
 
                                     <td id="letraDashboard" class="text-center align-middle">
 

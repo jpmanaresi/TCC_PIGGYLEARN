@@ -42,23 +42,48 @@
                 </div>
 
                 @if (!isset($test))
-                    <button type="submit" name="action" value="create_questions">Criar Prova e Adicionar Questões</button>
-                    <button type="submit" name="action" value="create_test">Criar Prova</button>
+                <div class="container">
+                    <div class="row align-items-center">
+
+                        <div class="col" style="padding-left: 0px;">
+                            <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                                <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
+                                <span>Voltar</span>
+                            </a>
+                        </div>
+
+                        <div class="col d-flex justify-content-end" style="padding-right: 0px;">
+                            <button id="botaoCriarAV" class="btn btn-custom" type="submit" name="action" value="create_test">
+                                Criar Avaliação e Voltar
+                            </button>
+                        </div>
+                        
+                        <div class="row" style="margin: 0%; padding: 0%; margin-bottom: 5px">
+                            <div class="col d-flex" style="padding-right: 0px; padding-left: 0px;">
+                                <button id="botaoCriarC" class="btn btn-custom" style="width: 100%;" type="submit" name="action" value="create_questions">
+                                    Criar Avaliação e Criar as Questões                     
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 @else
+
             </form> 
 
                     <div class="container">
                         <div class="row align-items-center">
                     
-                            <div class="col"style="padding-left: 0px;">
-                                <a id="botãoVoltar" class="btn btn-custom" href="#">
-                                    Voltar
+                            <div class="col" style="padding-left: 0px;">
+                                <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                                    <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
+                                    <span>Voltar</span>
                                 </a>
                             </div>
                     
                             <div class="col text-center">
                                 <h1 id="TituloTabelaDepoisD">
-                                    Questão
+                                    Questões
                                 </h1>
                             </div>
                     
@@ -122,8 +147,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            @endforeach  
-                            
+                            @endforeach   
                             <tr>
                                 <td colspan="4" class="text-center align-center" style="border-bottom-width: 0px; padding-bottom: 0px">
                                     <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}">
@@ -137,8 +161,10 @@
             </div>
 
             @endif
-            <div>
-                <input id="botaoCriarC" class="btn btn-custom" form="create_test" type="submit" name="action" value="Atualizar Prova">
+            <div class="col">
+                <div class="d-flex justify-content-end">
+                    <input id="botaoCriarC" class="btn btn-custom" form="create_test" type="submit" name="action" value="Atualizar Avaliação">
+                </div>
             </div>
             @endif
         </div>

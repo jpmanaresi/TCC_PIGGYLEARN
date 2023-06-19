@@ -53,10 +53,11 @@
             
             <div class="container">
                 <div class="row align-items-center">
-            
-                    <div class="col"style="padding-left: 0px;">
-                        <a id="botãoVoltar" class="btn btn-custom" href="#">
-                            Voltar
+                    
+                    <div class="col" style="padding-left: 0px;">
+                        <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                            <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
+                            <span>Voltar</span>
                         </a>
                     </div>
             
@@ -81,11 +82,11 @@
 
                         <thead>
                             <tr>
-                                <th id="TituloTabelaNu" scope="col" class="text-center align-middle">#</th>
-                                <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
+                                <th id="TituloTabelaNu"     scope="col" class="text-center align-middle">#</th>
+                                <th id="TituloTabela2No"    scope="col" class="text-center align-middle">Nome</th>
                                 <!-- Quantidades de Aulas -->  
-                                <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Avaliação</th>
-                                <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
+                                <th id="TituloTabela3Av"    scope="col" class="text-center align-middle">Avaliação</th>
+                                <th id="TituloTabela4Ac"    scope="col" class="text-center align-middle">Ações</th>
                             </tr>
                         </thead>
 
@@ -176,8 +177,7 @@
                     </div>
                 </div>
             </div>
-            
-            
+
         </div>
     </div>
 </div>

@@ -47,7 +47,7 @@
             #botoesEntrarNav.btn-custom:hover {
                 background-color: #921992;
                 font-weight: bolder;
-                transform: scale(1.1);
+                transform: scale(1.01);
                 transition: all 0.01s ease-in-out;
             } /* Animação dos Botões de Entrar */
 
@@ -62,7 +62,7 @@
                 background-color: #ff00ff;
                 color: #ffffff;
                 font-weight: bold;
-                transform: scale(1.1);
+                transform: scale(1.01);
                 transition: all 0.01s ease-in-out;
             } /* Animação dos Botões de Criar Conta */
 
@@ -121,7 +121,7 @@
         {
             background-color: #fa294c;
             color: #ffffff;
-            transform: scale(1.1);
+            transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         } /* Cor dos Botão de sair: Hover */
 
@@ -191,7 +191,7 @@
     } /* Index2 = Sem Destaque */
 
         #cardBodyIndex2.card:hover {
-            transform: scale(1.1);
+            transform: scale(1.01);
             transition: all 0.01s ease-in-out;
             box-shadow: 0 8px 16px rgba(0,0,0,0.50);
         } /* Joga o card pra frente. Função basica do hover né */ 
@@ -326,7 +326,7 @@
                 background-color: #79042e65;
                 color: #ffffff;
                 font-weight: bold;
-                transform: scale(1.1);
+                transform: scale(1.01);
                 transition: all 0.01s ease-in-out;
             } /* Animação do botão de Entrar */
 
@@ -401,44 +401,35 @@
         font-weight: bold;
     } /* Titulo depois da Descrição */
 
-    #botãoVoltar.btn-custom {
+    #botaoVoltar.btn-custom {
         background-color: #42129b;
         color: #ffffff;
+        padding: 7px
     }
     
-    #botãoVoltar.btn-custom:hover {
-        background-color: #25085a;
-        color: #ffffff;
-        transform: scale(1.1);
-        transition: all 0.01s ease-in-out;
-    }
+        #botaoVoltar.btn-custom:hover {
+            background-color: #25085a;
+            color: #ffffff;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        }
     
-    #textoSemAula {
-        margin: 10px;
-        font-size: 15px;
-        font-family: 'Inria Sans', sans-serif;
-        color: #000000;
-        font-weight: bold;
-    } /* Formatação da descrição encima do placesholder */
-
     #botaoAdicionarAula.btn-custom {   
-        margin: 10px;
-        width: 130px;
-        background-color: #7e0a7e;
-        color: #ffffff;
-        border: 0; 
-    } /* Cor do botão criar Aula */ 
+            margin: 10px;
+            width: 130px;
+            background-color: #7e0a7e;
+            color: #ffffff;
+            border: 0; 
+        } /* Cor do botão criar Aula */ 
 
         #botaoAdicionarAula.btn-custom:hover {   
             background-color: #500d50;
             color: #ffffff;
             font-weight: bold;
             border: 0; 
-            transform: scale(1.1);
+            transform: scale(1.01);
             transition: all 0.01s ease-in-out;
-        } /* Animação do botão criar Aula */  
-    
-        .animated-button {
+        }   .animated-button {
             background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
             background-size: 200% 100%;
             transition: background-position 0.5s;
@@ -459,25 +450,92 @@
             background-position: right;
         }
         } /* Animação do botão criar Aula */ 
-      
+
     #botaoCriarC.btn-custom {
         padding: 7px; 
         font-size: larger;
-        background-color: #0f8e9b;
+        background-color: #008d6e;
         margin-top: 10px;
         margin-bottom: 5px;
         color: #ffffff;
         border: 0; 
     } /* Cor do botão criar Curso */ 
-
+    
         #botaoCriarC.btn-custom:hover {  
-            background-color: #08646e;
+            background-color: #008d6e;
             color: #ffffff;
             font-weight: bold;
             border: 0;
-            transform: scale(1.1);
+            transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         } /* Animação do botão criar Curso */ 
+
+    #botaoCriarAV.btn-custom {
+        padding: 7px; 
+        font-size: larger;
+        background-color: #42129b;
+        margin-top: 10px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        color: #ffffff;
+        border: 0; 
+    } /* Cor do botão Criar Avaliação e Voltar */ 
+
+        #botaoCriarAV.btn-custom:hover {  
+            background-color: #25085a;;
+            color: #ffffff;
+            font-weight: bold;
+            border: 0;
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        } /* Animação do botão Criar Avaliação e Voltar */        
+
+    #botaoAdicionarAula.btn-custom {   
+        margin: 10px;
+        width: 130px;
+        background-color: #7e0a7e;
+        color: #ffffff;
+        border: 0; 
+    } /* Cor do botão criar Aula */ 
+    
+        #botaoAdicionarAula.btn-custom:hover {   
+            background-color: #500d50;
+            color: #ffffff;
+            font-weight: bold;
+            border: 0; 
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
+        } /* Animação do botão criar Aula */  
+        
+        .animated-button {
+            background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
+            background-size: 200% 100%;
+            transition: background-position 0.5s;
+            animation: gradientAnimation 2s infinite;
+        } /* Animação do botão criar Aula */ 
+            
+        .animated-button:hover {
+            animation: gradientAnimation 2s infinite;
+    
+        }   @keyframes gradientAnimation {
+        0% {
+            background-position: right;
+        }
+        50% {
+            background-position: left;
+        }
+        100% {
+            background-position: right;
+        }
+        } /* Animação do botão criar Aula */ 
+        
+    #textoSemAula {
+        margin: 10px;
+        font-size: 15px;
+        font-family: 'Inria Sans', sans-serif;
+        color: #000000;
+        font-weight: bold;
+    } /* Formatação da descrição encima do placesholder */
 
     #tornarVisisel {
         padding-left: 6px;
@@ -558,6 +616,7 @@
     } /* Formatação das letras */
 
         #linkDashboard.custom-link-animation {
+            margin: 0%;
             font-weight: bold;
             text-transform: uppercase;
             text-decoration: none;
@@ -584,7 +643,7 @@
 
         #botaoEditar.btn-custom:hover {
             background-color: #472269;
-            transform: scale(1.1);
+            transform: scale(1.01);
             color: white;
             transition: all 0.01s ease-in-out;
         } /* Animação do botão de editar */ 
@@ -600,7 +659,7 @@
         #botaoDeletar.btn-custom:hover {
             background-color: #461320;
             color: white;
-            transform: scale(1.1);
+            transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         } /* Animação do botão de deletar */
 
@@ -611,6 +670,8 @@
     #corpoTabela {
         border-radius: 5px;
         background-color: #ffffff;
+        padding-left: 4px;
+        padding-right: 4px;
     } /* Formatação da Tabela */
 
     #corpoDash {
