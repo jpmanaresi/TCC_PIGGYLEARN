@@ -13,7 +13,7 @@ class Question extends Model
     }
 
     public function user_questions() {
-        return $this->belongsToMany ('App\Models\Question');
+        return $this->belongsToMany ('App\Models\User');
     }
 
     protected $fillable= [

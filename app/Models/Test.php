@@ -13,7 +13,7 @@ class Test extends Model
         return $this->belongsTo('App\Models\Lesson');
     }
     public function questions() {
-        return $this->hasMany('App\Models\question')->orderBy('seq');
+        return $this->hasMany('App\Models\Question')->orderBy('seq');
     }
 
     public function user_tests() {

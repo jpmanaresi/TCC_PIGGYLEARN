@@ -48,10 +48,10 @@
   document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('validate-question');
     var button = document.getElementById('botaoAdicionarAula');
-  
+
+
     button.addEventListener('click', function(event) {
       event.preventDefault();
-  
       // Obter a resposta selecionada pelo usuário
       var answer = document.querySelector('input[name="answer"]:checked');
       var selectedAnswer = answer && answer.value;
@@ -91,10 +91,27 @@
               // Adicionar classe errada à resposta selecionada
               answer.parentNode.classList.add('wronganswer');
             }
+            var answerInputs = document.querySelectorAll('input[name="answer"]');
+            answerInputs.forEach(function(input) {
+              input.disabled = true;
+            });
+
             // Redirecionar para a rota "next" no QuestionController
-            //form.action = '/next';
+            form.id = 'next';
+            form.action = '/questions/next';
             // Alterar texto do botão para "Continuar"
             button.value = 'Continuar';
+            button.setAttribute('form', 'next');
+            var continueButton = document.createElement('button');
+            var continueButton = document.createElement('button');
+            continueButton.textContent = 'Continuar';
+            continueButton.type = 'submit';
+            continueButton.className = button.className; // Copiar as classes do botão "BotaoAdicionarAula"
+
+// Adicionar o botão "Continuar" abaixo do botão de "Validar"
+            button.parentNode.insertBefore(continueButton, button.nextSibling);
+            form.appendChild(continueButton);
+            button.style.display = 'none';
           }
         };
   
@@ -102,4 +119,5 @@
       }
     });
   });
+
   

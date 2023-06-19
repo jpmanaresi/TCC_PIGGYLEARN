@@ -106,6 +106,45 @@ class QuestionController extends Controller
         'is_correct' => $isCorrect,
         'correctAnswer' => $question->answer
     ]);
+    
 }
+public function next(Request $request){
+    $question = Question::FindOrFail($request->questionId);
+    $user= auth()->user();
+    $nextQuestion = Question::where('test_id', $question->test_id)->where('seq', '>', $question->seq)->orderBy('seq')->first()?->id ?? 0; // Se for a última lição do curso, seta o valor para 0.
+    $user->user_questions()->syncWithoutDetaching([
+        $question->id => ['passed' => true]
+    ]);
+    
+    // Se o usuário acertou a resposta, marca a questão como correta
+    if($question->answer== $request->answer){
+        $user->user_questions()->updateExistingPivot($question->id, ['passed' => true]);
+    }
 
+    //Se for a última questão do teste redireciona para a rota end.
+    if ($nextQuestion == 0) {
+        $test = Test::FindOrFail($question->test_id);
+        $totalQuestions = Question::where('test_id', $question->test_id)->orderByDesc('seq')->first()->seq;  
+        $countPassedQuestions = $test->questions()
+            ->whereHas('user_questions', function ($query) use ($user) {
+                $query->where('user_id', $user->id)->where('passed', true);
+            })->count();
+                //Marca o teste como como passed dependendo se o usuário acertou todas as questões ou não.
+        if($totalQuestions==$countPassedQuestions){        
+        $user->user_tests()->updateExistingPivot($test->id, ['passed' => true]);
+        } else {
+            $user->user_tests()->updateExistingPivot($test->id, ['passed' => false]);
+        }
+        //Redireciona para a rota end do teste.
+        return redirect()->route('tests.end', ['test' => $test->id]);
+    }
+    //Avançar para a próxima aula
+    return redirect()->route('questions.show', [
+        'course'=> $question->test->lesson->course_id,
+        'lesson'=> $question->test->lesson->id,
+        'test'=>$question->test->id,
+        'question' =>$nextQuestion
+    ]);
+
+}
 }
