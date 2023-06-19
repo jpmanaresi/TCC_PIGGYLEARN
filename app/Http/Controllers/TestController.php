@@ -98,6 +98,11 @@ class TestController extends Controller
         $user = auth()->user();
         $test = Test::FindOrFail($test);
         $passed = $user->user_tests()->where('test_id', $test->id)->wherePivot('passed', true)->exists();
+        if(!$passed) {
+            $user->user_questions()->whereHas('test', function ($query) use ($test) {
+                $query->where('id', $test->id);
+            })->updateExistingPivot($test->id, ['passed' => false]);
+        }
         return view('courses.lessons.tests.end', ['test' => $test, 'completed'=> $passed]);
     }
 
