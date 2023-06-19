@@ -36,7 +36,7 @@
 
                         <div class="form-group">
                             <label id="tituloCriarCurso" for="title" >          Título          </label>
-                            <input type="text" class="form-control" name="title" placeholder="Inserir Título" @if(isset($course)) value="{{$course->course_title}}"@endif>
+                            <input type="text" id="placeholderTitulo" class="form-control" name="title" placeholder="Inserir Título" @if(isset($course)) value="{{$course->course_title}}"@endif>
                         </div> 
                     </div>
 
@@ -52,24 +52,24 @@
             </form>
             
             <div class="container">
-                <div class="row">
-
-                    <div class="col" style="padding-left: 0px;">
+                <div class="row align-items-center">
+            
+                    <div class="col"style="padding-left: 0px;">
                         <a id="botãoVoltar" class="btn btn-custom" href="#">
                             Voltar
                         </a>
                     </div>
-
+            
                     <div class="col text-center">
                         <h1 id="TituloTabelaDepoisD">
-                            Teste
+                            Aulas
                         </h1>
                     </div>
-
+            
                     <div class="col" style="padding-right: 0px;" alt="Coluna vazia pra deixar as coisas ajustadas"> </div>
                 </div>
             </div>
-                    
+            
             <div id="corpoTabela" class="col-md-12"> 
 
                 <div class="table-responsive">
@@ -162,21 +162,21 @@
                 </div>
             </div> 
                     
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex justify-content-start">
-                        <input id="ChecktornarVisisel" form="create_course" id="visible" type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}>
-                        <label id="tornarVisisel" for="visible">Tornar Curso Visível</label>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col d-flex align-items-center" style="padding-left: 0px;">
+                        <input form="create_course" id="visible" type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}>
+                        <label id="tornarVisisel" for="visible">
+                            Tornar Curso Visível
+                        </label>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="d-flex justify-content-end">
+                    
+                    <div class="col d-flex justify-content-end" style="padding-right: 0px;">
                         <input id="botaoCriarC" class="btn btn-custom" form="create_course" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
-                        <!-- Falta ter um aviso de "curso criado" -->
                     </div>
                 </div>
             </div>
+            
             
         </div>
     </div>

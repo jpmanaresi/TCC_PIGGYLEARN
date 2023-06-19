@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div alt="course-create-container" class="col-md-10 offset-md-1">
+<div alt="course-create-container" class="col-md-8 offset-md-2">
     <div class="container" id="corpoContainerDash">
 
         <div id="corpoDash">
@@ -16,6 +16,7 @@
             </div>
 
             <div class="row">
+
                 <div id="corpoTabela" class="col-md-12" >
                     @if(count($courses) > 0)
 
@@ -72,19 +73,28 @@
                             </tbody>
                         </table>
                     </div>                 
-                    
+
+                    <div class="text-center align-center">
+                        <button id="botaoAdicionarAula" type="submit"  class="btn btn-custom animated-button">
+                            Criar Curso
+                        </button>
+                    </div>
+
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
                             <p id="textoSemAula" class="align-self-center mt-3">
                                 Você Não Criou Nenhum Curso.</p>
                             <input type="hidden" name="create_course_and_add_lesson" value="1">
                             <a href="/courses/create">
+                                
                                 <button id="botaoAdicionarAula" type="submit"  class="btn btn-custom animated-button">
                                     Deseja Criar Curso?
                                 </button>
                             </a>
                         </div>   
                     @endif
+
+                    
  
                 </div>
             </div>

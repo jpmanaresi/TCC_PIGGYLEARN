@@ -33,7 +33,7 @@
                 
                 <div class="form-group">
                     <label id="tituloCriarCurso" for="title">           Nome da Avaliação       </label>
-                    <input type="text" id="title" class="form-control" name="title" value="{{ isset($test) ? $test->title : 'Avaliação: Aula ' . $lesson->seq }}" disabled>
+                    <input type="text" id="placeholderTitulo" class="form-control" name="title" value="{{ isset($test) ? $test->title : 'Avaliação: Aula ' . $lesson->seq }}" disabled>
                 </div>
 
                 <div class="form-group">
@@ -47,30 +47,25 @@
                 @else
             </form> 
 
-            <div class="container">
-                <div class="row">
-
                     <div class="container">
-                        <div class="row">
-        
-                            <div class="col" style="padding-left: 0px;">
+                        <div class="row align-items-center">
+                    
+                            <div class="col"style="padding-left: 0px;">
                                 <a id="botãoVoltar" class="btn btn-custom" href="#">
                                     Voltar
                                 </a>
                             </div>
-        
+                    
                             <div class="col text-center">
                                 <h1 id="TituloTabelaDepoisD">
-                                    Teste
+                                    Questão
                                 </h1>
                             </div>
-        
+                    
                             <div class="col" style="padding-right: 0px;" alt="Coluna vazia pra deixar as coisas ajustadas"> </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
+
             <div id="corpoTabela" class="col-md-12"> 
 
                 <div class="table-responsive">    
@@ -128,24 +123,26 @@
                                 </td>
                             </tr>
                             @endforeach  
+                            
+                            <tr>
+                                <td colspan="4" class="text-center align-center" style="border-bottom-width: 0px; padding-bottom: 0px">
+                                    <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}">
+                                        Adicionar +
+                                    </a> 
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-            
 
-                @endif
-                <input form="create_test" type="submit" name="action" value="Atualizar Prova">
-                        
-                <a href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-secondary">
-                    Adicionar Avaliação
-                </a>
-                        
-                
-                @endif
+            @endif
+            <div>
+                <input id="botaoCriarC" class="btn btn-custom" form="create_test" type="submit" name="action" value="Atualizar Prova">
+            </div>
+            @endif
         </div>
     </div>
 </div>
-
 
 @endsection

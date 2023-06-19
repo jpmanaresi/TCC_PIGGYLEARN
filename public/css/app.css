@@ -375,19 +375,25 @@
 
     #tituloCriarCurso {
         text-align: start; 
-        font-size: 16px;
+        font-size: 18px;
         padding: 5px; 
         font-weight: bold;
     } /* Formatção do titulos encima do placesholder */
 
     #descricaoCriarCurso {
         text-align: start; 
-        font-size: 14px;
+        font-size: 16px;
         padding: 5px; 
     } /* Formatção da descrição encima do placesholder */
 
+    #placeholderTitulo {
+        font-weight: bold;
+        font-size: 14px;
+    } /* Formatção do placeholder do Titulo */
+
     #placeholderDesc {
         height: 120px;
+        font-size: 14px;
     } /* Formatção do placeholder da Descrição */
 
     #TituloTabelaDepoisD {
@@ -398,18 +404,15 @@
     #botãoVoltar.btn-custom {
         background-color: #42129b;
         color: #ffffff;
-        margin-top: 16px;
-        
-    } /* Botão pra voltar na tela anterior */
-
-        #botãoVoltar.btn-custom:hover {
-            background-color: #25085a;
-            color: #ffffff;
-            margin-top: 16px;
-            transform: scale(1.1);
-            transition: all 0.01s ease-in-out;
-        } /* Anima;'ao do Botão pra voltar na tela anterior */
-
+    }
+    
+    #botãoVoltar.btn-custom:hover {
+        background-color: #25085a;
+        color: #ffffff;
+        transform: scale(1.1);
+        transition: all 0.01s ease-in-out;
+    }
+    
     #textoSemAula {
         margin: 10px;
         font-size: 15px;
@@ -476,14 +479,9 @@
             transition: all 0.01s ease-in-out;
         } /* Animação do botão criar Curso */ 
 
-    #ChecktornarVisisel {
-        margin-top: 17px;
-    } /* Formatação do check de Tornar Curso Visivel */
-
     #tornarVisisel {
-        margin-top: 17px;
         padding-left: 6px;
-    } /* Formatação texto Lembrar de mim */    
+    } /* Separando o texto da check */    
 
     #corpoAreasAulas {
         background-color: #ffffff91;
@@ -613,6 +611,7 @@
     #corpoTabela {
         border-radius: 5px;
         background-color: #ffffff;
+        pa
     } /* Formatação da Tabela */
 
     #corpoDash {
