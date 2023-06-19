@@ -66,11 +66,11 @@
 
                         <thead>
                             <tr>
-                                <th id="TituloTabela" scope="col" class="text-center align-middle">#</th>
-                                <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
+                                <th id="TituloTabelaNu" scope="col" class="text-center align-middle">#</th>
+                                <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
                                 <!-- Quantidades de Aulas -->  
-                                <th id="TituloTabela" scope="col" class="text-center align-middle">Teste</th>
-                                <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
+                                <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Avaliação</th>
+                                <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
                             </tr>
                         </thead>
 
@@ -81,52 +81,49 @@
                                     {{ $lesson['seq'] }}
                                 </td>
 
-                                        <td id="linkDashboard" class="text-center align-middle">
-                                            <a id="linkDashboard" href="#" class="custom-link-animation">
-                                                {{ $lesson['title'] }}
-                                            </a>
-                                        </td>
+                                <td id="linkDashboard" class="text-center align-middle">
+                                    <a id="linkDashboard" class="custom-link-animation" href="#" >
+                                        {{ $lesson['title'] }}
+                                    </a>
+                                </td>
 
-                                        <td id="letraDashboard" class="text-center align-middle">
-                                            @if ($lesson['hasTest']==1) Sim
-                                            @else Não
-                                            @endif
-                                        </td>
+                                <td id="letraDashboard" class="text-center align-middle">
+                                    @if ($lesson['hasTest']==1) <p id="linkDashboard" class="custom-link-animation">Tem</p>
+                                    @else Não Tem
+                                    @endif
+                                </td>
 
-                                        <td id="letraDashboard" class="text-center align-middle">
+                                <td id="letraDashboard" class="text-center align-middle">
                                             
-                                            <div class="d-flex justify-content-center">
-                                                <a id="botaoEditar" class="btn btn-custom mr-2" href="{{route('lessons.edit', ['course' => $course->id, 'lesson' =>$lesson['id']])}}">
-                                                    <img src="/img/pencil-square.svg" alt="Ícone Editar">
-                                                    <span>Editar</span>
-                                                </a>
-                                            
-                                                <form action="{{route('lessons.destroy', ['course' => $course->id, 'id' =>$lesson['id']])}}" method="POST">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button id="botaoDeletar" type="submit" class="btn btn-custom">
-                                                        <img src="/img/x-circle.svg" alt="Ícone Deletar">
-                                                        <span>Deletar</span>
-                                                    </button>
-                                                </form>
-                                            </div>
-                                            
+                                    <div class="d-flex justify-content-center">
 
-                                    </tr>
-                                    @endforeach
-
-                                    <tr> 
-                                        <td colspan="4" class="text-center align-center" style="border: 0px"> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
-                                            <a href="/courses/{{$course->id}}/lessons/create" id="botaoAdicionarAula" class="btn btn-custom animated-button">
-                                                Adicionar +
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-
-    
+                                        <a id="botaoEditar" class="btn btn-custom mr-2" href="{{route('lessons.edit', ['course' => $course->id, 'lesson' =>$lesson['id']])}}">
+                                            <img id="imgBotoes" src="/img/pencil-square.svg" alt="Ícone Editar">
+                                            <span>Editar</span>
+                                        </a>
+                                                
+                                        <form action="{{route('lessons.destroy', ['course' => $course->id, 'id' =>$lesson['id']])}}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button id="botaoDeletar" type="submit" class="btn btn-custom">
+                                                <img id="imgBotoes" src="/img/x-circle.svg" alt="Ícone Deletar">
+                                                <span>Deletar</span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                            <tr> 
+                                <td colspan="4" class="text-center align-center"> 
+                                    <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="/courses/{{$course->id}}/lessons/create">
+                                        Adicionar +
+                                    </a>
+                                </td>
+                            </tr> <!-- Botão de Criar Aulas depois de já existir uma tabela com algumas/uma aulas -->
+                        </tbody>
+                    </table>
+                            
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
                             <p id="textoSemAula">Este Curso ainda não possui Aulas.</p>
@@ -155,16 +152,13 @@
 
                 <div class="col">
                     <div class="d-flex justify-content-end">
-                        <input form="create_course" id="botaoCriarC" class="btn btn-custom" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
+                        <input id="botaoCriarC" class="btn btn-custom" form="create_course" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
                         <!-- Falta ter um aviso de "curso criado" -->
                     </div>
                 </div>
             </div>
-        
         </div>
-
     </div>
-
 </div>
 
 @endsection

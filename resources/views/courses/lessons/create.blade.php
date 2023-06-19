@@ -53,55 +53,75 @@
                         @if($lesson->hasTest == 1)
 
                     <div class="table-responsive">
+                        <table class="table">
 
-                        <thead>
-                            <tr>
-                                <th id="TituloTabela" scope="col" class="text-center align-middle">Nome</th>
-                                <th id="TituloTabela" scope="col" class="text-center align-middle">???</th>
-                                <th id="TituloTabela" scope="col" class="text-center align-middle">Ações</th>
-                            </tr>
-                        </thead>
+                            <thead>
+                                <tr>
+                                    <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
+                                    <th id="TituloTabelaNu" scope="col" class="text-center align-middle">???</th>
+                                    <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
+                                </tr>
+                            </thead>
 
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="#">{{ $test['title'] }}</a>
-                                </td>
+                            <tbody>
+                                <tr>
+                                    <td id="letraDashboard" class="text-center align-middle">
+                                        <a id="linkDashboard" class="custom-link-animation" href="#">{{ $test['title'] }}</a>
+                                    </td>
 
-                                <td>
-                                    0
-                                </td>
+                                    <td id="letraDashboard" class="text-center align-middle">
+                                        0
+                                    </td>
 
-                                <td>
-                                    <a href="{{ route('tests.edit', ['lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-info edit-btn">Editar</a> 
-                                    <form action="{{ route('tests.destroy', ['lesson' => $lesson->id, 'id' => $test->id]) }}" method="POST" class="delete-form">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
-                                    </form>
-                                </td>
-                            </tr>
-                        </tbody>
-                        
-                    </table>
+                                    <td id="letraDashboard" class="text-center align-middle">
+
+                                        <div class="d-flex justify-content-center">
+                                            <a id="botaoEditar" class="btn btn-custom mr-2" href="{{ route('tests.edit', ['lesson' => $lesson->id, 'test' => $test->id]) }}" class="btn btn-info edit-btn">
+                                                <img id="imgBotoes" src="/img/pencil-square.svg" alt="Ícone Editar">
+                                                <span>Editar</span>
+                                            </a>
+
+                                            <form action="{{ route('tests.destroy', ['lesson' => $lesson->id, 'id' => $test->id]) }}" method="POST" class="delete-form">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button id="botaoDeletar" type="submit" class="btn btn-custom">
+                                                    <img id="imgBotoes" src="/img/x-circle.svg" alt="Ícone Deletar">
+                                                    <span>Deletar</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
 
                         @else
-                        <div id="divcriaraula">
-                            <span id="cortexto">Esta Aula não possui avaliação.</span><a id="botaoCriarAulas" class="btn btn-custom" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">Adicionar Avaliação?</a>
-                        </div>
+                            <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
+                            
+                                <span id="textoSemAula">Esta Aula Não Possui Avaliação</span>
+                                <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">
+                                    Adicionar Avaliação?
+                                </a>
+                            </div>
                         @endif
 
                         @else
-                            <input type="hidden" name="create_lesson_and_add_test" value="1">
-                            <span id="cortexto">Esta Aula não possui avaliação.</span><input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar Avaliação?">
+                            <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
+                                <input type="hidden" name="create_lesson_and_add_test" value="1">
+                                <span id="textoSemAula">Esta Aula Não Possui Avaliação</span>
+                                <input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar Avaliação?">
+                            </div>
                         @endif
-
                     </div>
-                    
-                <input form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">
+                </div>
+
+                <div class="col">
+                    <div class="d-flex justify-content-end">
+                    <input id="botaoCriarC" class="btn btn-custom" form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">
+                    <!-- Falta ter um aviso de "curso criado" -->
+                </div>
 
             </div>
-
         </div>
     </div>
 </div>
