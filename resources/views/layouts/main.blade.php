@@ -25,7 +25,7 @@
     <nav class="navbar nav-border fixed-top" id="nav">
       <div class="container-fluid" alt="botaoMenu" >
     
-        <a href="#" class="btn btn-custom d-flex align-items-center" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+        <a href="#" class="btn btn-custom d-flex align-items-center"  role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
           <div class="col-auto">
             <img width="25px" src="/img/User-60.svg" alt="Icone Usuario">
           </div> 
@@ -86,39 +86,38 @@
           </div>
 
           @auth
-      
-          <div class="col-md-6">
-            <a href="/profile" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
-              <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
-              Meu Perfil
-            </a>
-          </div>
+            <div class="col-md-6">
+              <a href="/profile" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
+                <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
+                Meu Perfil
+              </a>
+            </div>
 
-          <div class="col-md-6">
-            <a href="/dashboard" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
-              <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
-              Meus Cursos 
-            </a>
-          </div>
-          @if (auth()->user()->usertype ==2)
-          <div class="col-md-6">
-            <a href="/courses/create" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start" > 
-              <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
-              Criar Curso  
-            </a>
-          </div>
-          @endif
+            <div class="col-md-6">
+              <a href="/dashboard" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
+                <img id="botoesImg"  src="/img/card-list.svg" alt="Icone Cursos"> 
+                Meus Cursos 
+              </a>
+            </div>
+
+            @if (auth()->user()->usertype ==2)
+              <div class="col-md-6">
+                <a href="/courses/create" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start" > 
+                  <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
+                  Criar Curso  
+                </a>
+              </div>
+            @endif
           @endauth
+
           <div class="col-md-6">
             <a href="/calculator" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
               <img id="botoesImg" src="\img\calculator.svg" alt="Icone Perfil">
-              Calculadora
+                Calculadora
             </a>
           </div>
         </div>
       </div>
-      
-      
       
       <!-- Creditos -->
       <div class="container">
@@ -158,11 +157,29 @@
                 </p>
               </div>
             </div>
+
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  var mensagemCard = document.getElementById('mensagemCard');
+          
+                  // Função para ocultar o card
+                  function ocultarCard() {
+                      mensagemCard.style.display = 'none';
+                  }
+          
+                  // Adicionar evento de clique para ocultar o card
+                  document.addEventListener('click', ocultarCard);
+                  
+                  // Impedir que o evento de clique no card se propague e seja capturado pelo documento
+                  mensagemCard.addEventListener('click', function(event) {
+                      event.stopPropagation();
+                  });
+              });
+            </script>
           @endif
     
       @yield('content')
-      
-    </div>       
+        </div>       
   </main>
 
 </body>   

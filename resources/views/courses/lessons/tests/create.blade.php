@@ -17,7 +17,7 @@
 </h1>
 
 <div alt="container-CriarCurso" class="col-md-6 offset-md-3">
-    <div id="corpoContainerCC" class="container" >
+    <div id="corpoContainerCC" class="container">
     
         <div id="corpoCriarCurso">
 
@@ -32,8 +32,12 @@
                 <input type="hidden" name="lesson_id" value="{{  $lesson->id }}">
                 
                 <div class="form-group">
-                    <label id="tituloCriarCurso" for="title">           Nome da Avaliação       </label>
-                    <input type="text" id="placeholderTitulo" class="form-control" name="title" value="{{ isset($test) ? $test->title : 'Avaliação: Aula ' . $lesson->seq }}" disabled>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div>
+                            <label id="tituloCriarQ" style="width: 258px;" for="title">           Nome da Avaliação       </label>
+                            <input id="placeholderCriarQ" class="form-control text-center" type="text"  name="title" value="{{ isset($test) ? $test->title : 'Avaliação: Aula ' . $lesson->seq }}" disabled>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -73,11 +77,11 @@
 
                     <div class="container">
                         <div class="row align-items-center">
-                    
-                            <div class="col"style="padding-left: 0px;">
-                                <a id="botãoVoltar" class="btn btn-custom mr-2" href="{{route('lessons.edit', ['course'=> $lesson->course_id,'lesson' => $lesson->id])}}">
-                                    <img src="public\img\arrow-left-short.svg" alt="">
-                                    <span> Voltar </span>
+
+                            <div class="col" style="padding-left: 0px;">
+                                <a id="botaoVoltar" class="btn btn-custom mr-2" href="{{route('lessons.edit', ['course'=> $lesson->course_id,'lesson' => $lesson->id])}}">
+                                    <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
+                                    <span>Voltar</span>
                                 </a>
                             </div>
                     
@@ -150,11 +154,11 @@
                             @endforeach  
                             @endif 
                             <tr>
-                                <td colspan="4" class="text-center align-center" style="border-bottom-width: 0px; padding-bottom: 0px">
+                                <div class="text-center align-center">
                                     <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="{{ route('questions.create', ['course' => $lesson->course_id, 'lesson' => $lesson->id, 'test' => $test->id]) }}">
                                         Adicionar +
                                     </a> 
-                                </td>
+                                </div>
                             </tr>
                         </tbody>
                     </table>    

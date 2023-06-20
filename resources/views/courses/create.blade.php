@@ -55,7 +55,7 @@
                 <div class="row align-items-center">
                     
                     <div class="col" style="padding-left: 0px;">
-                        <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                        <a id="botaoVoltar" class="btn btn-custom mr-2" href=":{{route('dashboard')}}">
                             <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
                             <span>Voltar</span>
                         </a>
@@ -92,16 +92,19 @@
 
                         <tbody>
                         @foreach($lessons as $lesson)
+                        
                             <tr>
                                 <td id="letraDashboard" scropt="row" class="text-center align-middle">
                                     {{ $lesson['seq'] }}
                                 </td>
 
-                                <td id="linkDashboard" class="text-center align-middle">
-                                    <a id="linkDashboard" class="custom-link-animation" href="#" >
+                                <td id="linkDashboard" class="col text-center align-middle">
+                                    <a id="linkDashboard" class="custom-link-animation" href="#" style="text-overflow: ellipsis;/* white-space: nowrap; */overflow: hidden;">
                                         {{ $lesson['title'] }}
                                     </a>
                                 </td>
+                                
+                                
 
                                 <td id="letraDashboard" class="text-center align-middle">
                                     @if ($lesson['hasTest']==1) <p id="linkDashboard" class="custom-link-animation">Tem</p>
@@ -143,7 +146,7 @@
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
                             <p id="textoSemAula">
-                                Este Curso ainda não possui Aulas,
+                                Este Curso ainda não possui Aulas.
                             </p>
                             <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create" class="btn btn-custom animated-button">
                                 Adicionar?
@@ -153,8 +156,8 @@
 
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
-                            <p id="textoSemAula" class="align-self-center mt-3">
-                                Este Curso ainda não possui Aulas,
+                            <p id="textoSemAula" class="align-self-center">
+                                Este Curso ainda não possui Aulas.
                             </p>
                             <input type="hidden" name="create_course_and_add_lesson" value="1">
                             <input form="create_course" id="botaoAdicionarAula" name="action" type="submit" class="btn btn-custom animated-button" value="Adicionar?">
@@ -167,7 +170,7 @@
                 <div class="row align-items-center">
                     <div class="col d-flex align-items-center" style="padding-left: 0px;">
                         <input form="create_course" id="visible" type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}>
-                        <label id="tornarVisisel" for="visible">
+                        <label id="TestoTornarV" for="visible">
                             Tornar Curso Visível
                         </label>
                     </div>

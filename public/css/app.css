@@ -1,5 +1,6 @@
 *{
     font-family:'Inria Sans', sans-serif;
+    font-weight: normal;
 } /* Fonte de todo html */    
 
 #corpot
@@ -24,31 +25,30 @@
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
   
-#imgBotoes {
-    padding-bottom: 2px;
-} /* Formataõ das imagens dentro dos botões */
 
 /* main.blade */
+
     #mensagem {
         margin-bottom: 0px;
-    }  /* Formtação da caixa de mensagem */
+        text-align: center;
+    }  /* Formtação do texto da caixa de mensagem */
 
     #mensagemCard {
         position: fixed;
-        top: 100%;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
         z-index: 9999;
-        background-color: #03d649b6;
+        background-color: #03d649e5;
         color: #ffffff;
         font-size: 20px;
-        align-items: center;
+        
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         color: #fff;
-        animation: slideDown 0.5s forwards, fadeOut 0.5s 4.5s forwards;
-        width: 300px; /* Defina a largura desejada */
-        max-width: 90%; /* Define a largura máxima para evitar esticamento em telas pequenas */
-    }  
+        animation: slideDown 0.5s forwards, fadeOut 0.5s 4s forwards;
+        width: 300px;
+        max-width: 90%;
+    } /* Formataõ das mensagens */
     @keyframes slideDown {
         0% {
         top: -100%;
@@ -63,7 +63,9 @@
         100% {
           opacity: 0;
         }
-    }
+    } /* Formataõ das mensagens */
+
+
 
     /* NavBar (NB) */
 
@@ -276,7 +278,6 @@
 
 /* login.blade - Area de Login */
 
-
         #tituloPlaceH {
             padding-bottom: 5px;
             padding-left: 9px;
@@ -406,7 +407,7 @@
 
 
 
-/* courses.blade - Criar Curso/Aula/Avaliação/Teste - Editar Curso/Aula/Avaliação/Teste*/
+/* courses.blade - Criar Curso/Aula/Avaliação/Teste/Questão - Editar Curso/Aula/Avaliação/Teste/Questão */
 
     #tituloCriarCurso {
         text-align: start; 
@@ -432,14 +433,16 @@
     } /* Formatção do placeholder da Descrição */
 
     #TituloTabelaDepoisD {
-        margin: 15px; 
+        margin: 9px; 
         font-weight: bold;
     } /* Titulo depois da Descrição */
 
     #botaoVoltar.btn-custom {
         background-color: #42129b;
         color: #ffffff;
-        padding: 7px
+        padding: 6px;
+        margin-top: 9px;
+        margin-bottom: 9px;
     }
     
         #botaoVoltar.btn-custom:hover {
@@ -464,7 +467,9 @@
             border: 0; 
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
-        }   .animated-button {
+        }   
+        
+        .animated-button {
             background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
             background-size: 200% 100%;
             transition: background-position 0.5s;
@@ -566,13 +571,14 @@
         
     #textoSemAula {
         margin: 10px;
+        margin-top: 10px;
         font-size: 15px;
         font-family: 'Inria Sans', sans-serif;
         color: #000000;
         font-weight: bold;
     } /* Formatação da descrição encima do placesholder */
 
-    #tornarVisisel {
+    #TestoTornarV {
         padding-left: 6px;
     } /* Separando o texto da check */    
 
@@ -600,13 +606,59 @@
         padding-right: 0px;
     } /* Formatação do container */
 
+/* testes */
+    
+#tituloCriarQ {
+    text-align: center; 
+    font-size: 18px;
+    padding: 5px; 
+    font-weight: bold;
+} /* Centralizando o titulo de criar questões */
+
+#placeholderCriarQ.d-flex {
+    text-align: center; 
+    width: 130px; /* Ajuste o valor para aumentar ou diminuir o tamanho */
+    font-size: 14px;
+    padding: 5px; 
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+} /* Centralizando o placeholder de criar questões */
+
+#tituloOpcoes {
+    text-align: start; 
+    font-size: 18px;
+    padding: 5px; 
+    font-weight: bold;
+    color: #000000;
+} /* Titulo das opções */
+
+#placeholderOpcoes {
+    border-color: #b4b4b4;
+    margin-bottom: 9px;
+} /* Placeholders das opções */
+
+#CheckAlternativaC  {
+    border-color: #000000;
+    margin-top: 0px;
+    margin-left: 9px;
+} /* Formatando o check de Alternativa Correta */  
+
+#textoAlternativaC {
+    color: #000000;
+    margin-bottom: 0px;
+} /* Separando o texto da check de Alternativa Correta */  
+
+
 /* courses */
 
 
 
 
 
-/* dashboard.blade */
+/* dashboard.blade - Meus Cursos */
 
     #tituloDash {
         margin-bottom: 10px; 
@@ -621,6 +673,7 @@
         margin-left: 9px;
         margin-bottom: 6px;
         color: #5a5a5a;
+        
     }
     #corpoContainerDash {
         margin-left: 0px; 
@@ -657,12 +710,12 @@
         
     } /* Formatação das letras */
 
-        #linkDashboard.custom-link-animation {
-            margin: 0%;
-            font-weight: bold;
-            text-transform: uppercase;
-            text-decoration: none;
-            animation: colorChange 4s infinite;
+    #linkDashboard.custom-link-animation {
+        margin: 0%;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        animation: colorChange 4s infinite;
         }   @keyframes colorChange {
             0% {
                 color: #800080;
@@ -727,8 +780,6 @@
         background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
     } /* Formatação do corpo do DashBoard */
-
-
 
 /* dashboard */
 
