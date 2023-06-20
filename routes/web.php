@@ -6,6 +6,7 @@ use App\Http\Controllers\CourseController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,9 @@ use App\Http\Controllers\QuestionController;
 /* Index */
 Route::get('/', [CourseController::class, 'index']);
 Route::get('/home', [CourseController::class, 'index'])->name('home');
+
+/* Calculadora Financeira */
+Route::get('/calculator', [CourseController::class, 'calculator'])->name('calc');
 
 /* Rotas das Views de Cursos */
 Route::get('/courses/create', [CourseController::class, 'create'])->name('courses.create')->middleware('auth');

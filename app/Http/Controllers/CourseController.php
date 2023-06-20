@@ -16,6 +16,10 @@ class CourseController extends Controller
     return view('index', ['courses' => $courses]);
     }
 
+    public function calculator(){
+        return view('calc');
+    }
+    
     public function create(){
         $course = new Course();
         $lessons = collect([new Lesson()]);

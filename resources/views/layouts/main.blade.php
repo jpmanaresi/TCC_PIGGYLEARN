@@ -86,7 +86,13 @@
               Destaques
             </a>
           </div>
-      
+
+          <div class="col-md-6">
+            <a href="/calculator" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
+              <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
+              Calculadora
+            </a>
+          </div>
           @auth
       
           <div class="col-md-6">
