@@ -159,16 +159,6 @@
               </div>
             </div>
           @endif
-
-<div id="mensagemCard" class="card">
-              <div class="card-body">
-                <p id="mensagem" class="msg">
-                  Curso criado com sucesso
-                </p>
-              </div>
-            </div>
-        </div>
-      </div>
     
       @yield('content')
       
