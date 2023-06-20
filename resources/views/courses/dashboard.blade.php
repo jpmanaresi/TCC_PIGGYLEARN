@@ -21,7 +21,7 @@
 
                     <div class="text-start align-self-start">
                         <h2 id="tituloCreditosD">
-                            Cursos criados por você
+                            Cursos Criados por Você:
                         </h2>
                     </div>
 
