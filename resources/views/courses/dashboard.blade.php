@@ -21,7 +21,7 @@
                     @if (auth()->user()->usertype == 2)
                     <div class="text-start align-self-start">
                         <h2 id="tituloCreditosD">
-                            tituloInicialp
+                            Cursos Criados por Você:
                         </h2>
                     </div>
                     

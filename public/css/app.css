@@ -29,10 +29,44 @@
 } /* Formataõ das imagens dentro dos botões */
 
 /* main.blade */
+    #mensagem {
+        margin-bottom: 0px;
+    }  /* Formtação da caixa de mensagem */
 
-    #msg {
-
-    } /* Formataõ das imagens dentro dos botões */
+    #mensagemCard {
+        position: fixed;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        background-color: #03d649b6;
+        color: #ffffff;
+        font-size: 20px;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        color: #fff;
+        animation: slideDown 0.5s forwards, fadeOut 0.5s 4.5s forwards;
+        width: 300px; /* Defina a largura desejada */
+        max-width: 90%; /* Define a largura máxima para evitar esticamento em telas pequenas */
+    }  
+    @keyframes slideDown {
+        0% {
+        top: -100%;
+        }
+        100% {
+        top: 50%;
+        }
+    } @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+    }
+  
+  
+   
     
     /* NavBar (NB) */
 

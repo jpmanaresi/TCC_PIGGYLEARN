@@ -9,8 +9,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/app.css">
 
-    
-    
     <!-- Fonte dos Titulos e Afins  -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,7 +111,7 @@
           @endauth
           <div class="col-md-6">
             <a href="/calculator" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
-              <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
+              <img id="botoesImg" src="\img\calculator.svg" alt="Icone Perfil">
               Calculadora
             </a>
           </div>
@@ -152,12 +150,23 @@
       <div class="container-fluid">
         <div class="row">
 
-            @if(session('msg'))
-              <p id="" class="msg">
-                {{session('msg')}}
-              </p>
-            @endif
+          @if(session('msg'))
+            <div id="mensagemCard" class="card">
+              <div class="card-body">
+                <p id="mensagem" class="msg">
+                  {{ session('msg') }}
+                </p>
+              </div>
+            </div>
+          @endif
 
+<div id="mensagemCard" class="card">
+              <div class="card-body">
+                <p id="mensagem" class="msg">
+                  Curso criado com sucesso
+                </p>
+              </div>
+            </div>
         </div>
       </div>
     
