@@ -4,30 +4,38 @@
 
 @section('content')
 
-<div alt="course-create-container" class="col-md-10 offset-md-1">
+<div alt="course-create-container" class="col-md-8 offset-md-2">
     <div class="container" id="corpoContainerDash">
 
         <div id="corpoDash">
 
             <div class="row">
                 <h1 class="text-center align-self-center" id="tituloDash">
-                    Curso Criados
+                    Meus Cursos
                 </h1>
             </div>
 
             <div class="row">
+
                 <div id="corpoTabela" class="col-md-12" >
+
+                    <div class="text-start align-self-start">
+                        <h2 id="tituloCreditosD">
+                            tituloInicialp
+                        </h2>
+                    </div>
+
                     @if(count($courses) > 0)
 
                     <div class="table-responsive">
 
                         <table class="table">
 
-                            <thead>
-                                <tr>
+                            <thead style="border-top: 1px; border-color: rgb(222, 226, 230); border-style: solid">
+                                <tr >
                                     <th id="TituloTabelaNu" scope="col" class="text-center align-middle">#</th>
                                     <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
-                                    <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Participantes</th>
+                                    <!--  <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Participantes</th> -->
                                     <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
                                 </tr>
                             </thead>
@@ -46,9 +54,9 @@
                                         </a>
                                     </td>
 
-                                    <td id="letraDashboard" class="text-center align-middle">
+                                   <!-- <td id="letraDashboard" class="text-center align-middle">
                                         0
-                                    </td>
+                                    </td> -->
 
                                     <td id="letraDashboard" class="text-center align-middle">
 
@@ -71,21 +79,26 @@
                                 @endforeach
                             </tbody>
                         </table>
-
                     </div>                 
-                    
+
+                    <div class="text-center align-center">
+                        <a id="botaoAdicionarAula" href="/courses/create" type="submit"  class="btn btn-custom animated-button">
+                            Criar Curso
+                        </a>
+                    </div>
+
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
-                            <p id="textoSemAula" class="align-self-center mt-3">Você não criou nenhum curso.</p>
-                            <input type="hidden" name="create_course_and_add_lesson" value="1">
-                            <a href="/courses/create">
-                                <button id="botaoAdicionarAula" type="submit"  class="btn btn-custom animated-button">Criar Curso</button>
+                            <p id="textoSemAula" class="align-self-center mt-3">
+                                Você Não Criou Nenhum Curso.</p>
+                            <a id="botaoAdicionarAula" href="/courses/create" class="btn btn-custom animated-button">  
+                                Deseja Criar Curso?
                             </a>
                         </div>   
                     @endif
-                    
-                    
 
+                    
+ 
                 </div>
             </div>
         </div>

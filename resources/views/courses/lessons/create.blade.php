@@ -17,7 +17,7 @@
 </h1>
 
 <div alt="container-CriarCurso" class="col-md-6 offset-md-3">
-    <div id="corpoContainerCC" class="container" >
+    <div id="corpoContainerCC" class="container">
         
         <div id="corpoCriarCurso">
 
@@ -32,21 +32,39 @@
                 <input type="hidden" name="course_id" value="{{ $course->id }}">
 
                 <div class="form-group">
-                    <label id="tituloCriarCurso" for="title" >          Título da Aula          </label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="Título da Aula." @if(isset($lesson)) value="{{$lesson->title}}"@endif>
+                    <label id="tituloCriarCurso" for="title">          Título da Aula          </label>
+                    <input type="text" class="form-control" id="placeholderTitulo" name="title" placeholder="Inserir Titulo" @if(isset($lesson)) value="{{$lesson->title}}"@endif>
                 </div>
 
                 <div class="form-group">
-                    <label id="descricaoCriarCurso" for="title" >       Conteudo      </label>
+                    <label id="descricaoCriarCurso" for="title">       Conteudo      </label>
                     <textarea name="content" id="placeholderDesc" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
                 </div>
 
             </form>
 
             <div class="form-group">
-                <h1 class="text-center align-self-center" style="margin: 15px; font-weight: bold">
-                    Avaliação
-                </h1>
+                
+                
+                <div class="container">
+                    <div class="row align-items-center">
+                
+                        <div class="col" style="padding-left: 0px;">
+                            <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                                <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
+                                <span>Voltar</span>
+                            </a>
+                        </div>
+                
+                        <div class="col text-center">
+                            <h1 id="TituloTabelaDepoisD">
+                                Avaliação
+                            </h1>
+                        </div>
+                
+                        <div class="col" style="padding-right: 0px;" alt="Coluna vazia pra deixar as coisas ajustadas"> </div>
+                    </div>
+                </div>
 
                 <div id="corpoTabela" class="col-md-12"> 
                     @if (isset($lesson))        
@@ -58,7 +76,7 @@
                             <thead>
                                 <tr>
                                     <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
-                                    <th id="TituloTabelaNu" scope="col" class="text-center align-middle">???</th>
+                              <!--       <th id="TituloTabelaNu" scope="col" class="text-center align-middle">Qtd.</th>  -->
                                     <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
                                 </tr>
                             </thead>
@@ -69,9 +87,9 @@
                                         <a id="linkDashboard" class="custom-link-animation" href="#">{{ $test['title'] }}</a>
                                     </td>
 
-                                    <td id="letraDashboard" class="text-center align-middle">
+                                   <!--  <td id="letraDashboard" class="text-center align-middle">
                                         0
-                                    </td>
+                                    </td>  -->  
 
                                     <td id="letraDashboard" class="text-center align-middle">
 
@@ -98,9 +116,12 @@
                         @else
                             <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
                             
-                                <span id="textoSemAula">Esta Aula Não Possui Avaliação</span>
+                                <span id="textoSemAula">
+                                    Esta Aula Não Possui Avaliação,
+                                </span>
+
                                 <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="{{route('tests.create',['id' => $course->id, 'lesson'=> $lesson->id])}}">
-                                    Adicionar Avaliação?
+                                    Adicionar?
                                 </a>
                             </div>
                         @endif
@@ -108,8 +129,11 @@
                         @else
                             <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
                                 <input type="hidden" name="create_lesson_and_add_test" value="1">
-                                <span id="textoSemAula">Esta Aula Não Possui Avaliação</span>
-                                <input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar Avaliação?">
+                                <span id="textoSemAula">
+                                    Esta Aula Não Possui Avaliação,
+                                </span>
+
+                                <input form="create_lesson" id="botaoAdicionarAula" type="submit" class="btn btn-custom animated-button" name="action" value="Adicionar?">
                             </div>
                         @endif
                     </div>
@@ -117,10 +141,10 @@
 
                 <div class="col">
                     <div class="d-flex justify-content-end">
-                    <input id="botaoCriarC" class="btn btn-custom" form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">
+                        <input id="botaoCriarC" class="btn btn-custom" form="create_lesson" type="submit" name="action" value="{{ isset($lesson) ? 'Atualizar Aula' : 'Criar Aula' }}">
                     <!-- Falta ter um aviso de "curso criado" -->
+                    </div>
                 </div>
-
             </div>
         </div>
     </div>

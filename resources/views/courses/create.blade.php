@@ -36,7 +36,7 @@
 
                         <div class="form-group">
                             <label id="tituloCriarCurso" for="title" >          Título          </label>
-                            <input type="text" class="form-control" name="title" placeholder="Inserir Título" @if(isset($course)) value="{{$course->course_title}}"@endif>
+                            <input type="text" id="placeholderTitulo" class="form-control" name="title" placeholder="Inserir Título" @if(isset($course)) value="{{$course->course_title}}"@endif>
                         </div> 
                     </div>
 
@@ -44,17 +44,33 @@
 
                         <div class="form-group">
                             <label id="descricaoCriarCurso" for="title" >       Descrição       </label>
-                            <textarea name="description" id="placeholderDesc" class="form-control" placeholder="Inserir Descrição">@if (isset($course)){{$course->course_description}}@endif</textarea>
+                            <textarea name="description" id="placeholderDesc" class="form-control" placeholder="Inserir descrição para esse curso">@if (isset($course)){{$course->course_description}}@endif</textarea>
                         </div>
                     </div>
                 </div>
 
             </form>
             
-            <h1 class="text-center align-self-center" style="margin: 15px; font-weight: bold">
-                Aulas
-            </h1> 
+            <div class="container">
+                <div class="row align-items-center">
                     
+                    <div class="col" style="padding-left: 0px;">
+                        <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                            <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
+                            <span>Voltar</span>
+                        </a>
+                    </div>
+            
+                    <div class="col text-center">
+                        <h1 id="TituloTabelaDepoisD">
+                            Aulas
+                        </h1>
+                    </div>
+            
+                    <div class="col" style="padding-right: 0px;" alt="Coluna vazia pra deixar as coisas ajustadas"> </div>
+                </div>
+            </div>
+            
             <div id="corpoTabela" class="col-md-12"> 
 
                 <div class="table-responsive">
@@ -66,11 +82,11 @@
 
                         <thead>
                             <tr>
-                                <th id="TituloTabelaNu" scope="col" class="text-center align-middle">#</th>
-                                <th id="TituloTabela2No" scope="col" class="text-center align-middle">Nome</th>
+                                <th id="TituloTabelaNu"     scope="col" class="text-center align-middle">#</th>
+                                <th id="TituloTabela2No"    scope="col" class="text-center align-middle">Nome</th>
                                 <!-- Quantidades de Aulas -->  
-                                <th id="TituloTabela3Av" scope="col" class="text-center align-middle">Avaliação</th>
-                                <th id="TituloTabela4Ac" scope="col" class="text-center align-middle">Ações</th>
+                                <th id="TituloTabela3Av"    scope="col" class="text-center align-middle">Avaliação</th>
+                                <th id="TituloTabela4Ac"    scope="col" class="text-center align-middle">Ações</th>
                             </tr>
                         </thead>
 
@@ -115,7 +131,7 @@
                             </tr>
                             @endforeach
                             <tr> 
-                                <td colspan="4" class="text-center align-center"> 
+                                <td colspan="4" class="text-center align-center" style="border-bottom-width: 0px; padding-bottom: 0px">
                                     <a id="botaoAdicionarAula" class="btn btn-custom animated-button" href="/courses/{{$course->id}}/lessons/create">
                                         Adicionar +
                                     </a>
@@ -126,37 +142,42 @@
                             
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
-                            <p id="textoSemAula">Este Curso ainda não possui Aulas.</p>
-                            <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create" class="btn btn-custom animated-button">Adicionar Aula
+                            <p id="textoSemAula">
+                                Este Curso ainda não possui Aulas,
+                            </p>
+                            <a id="botaoAdicionarAula"  href="/courses/{{$course->id}}/lessons/create" class="btn btn-custom animated-button">
+                                Adicionar?
                             </a>
                         </div>
                     @endif
 
                     @else
                         <div class="d-flex flex-wrap align-items-center justify-content-center text-center">
-                            <p id="textoSemAula" class="align-self-center mt-3">Este Curso ainda não possui Aulas.</p>
+                            <p id="textoSemAula" class="align-self-center mt-3">
+                                Este Curso ainda não possui Aulas,
+                            </p>
                             <input type="hidden" name="create_course_and_add_lesson" value="1">
-                            <input form="create_course" id="botaoAdicionarAula" name="action" type="submit" class="btn btn-custom animated-button" value="Adicionar Aula">
+                            <input form="create_course" id="botaoAdicionarAula" name="action" type="submit" class="btn btn-custom animated-button" value="Adicionar?">
                         </div>
                     @endif                            
                 </div>
             </div> 
                     
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex justify-content-start">
-                        <input id="ChecktornarVisisel" form="create_course" id="visible" type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}>
-                        <label id="tornarVisisel" for="visible">Tornar Curso Visível</label>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col d-flex align-items-center" style="padding-left: 0px;">
+                        <input form="create_course" id="visible" type="checkbox" name="setvisible" value="1"{{ isset($course) && $course->setvisible == 1 ? 'checked' : '' }}>
+                        <label id="tornarVisisel" for="visible">
+                            Tornar Curso Visível
+                        </label>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="d-flex justify-content-end">
+                    
+                    <div class="col d-flex justify-content-end" style="padding-right: 0px;">
                         <input id="botaoCriarC" class="btn btn-custom" form="create_course" type="submit" name="action" value="{{ isset($course) ? 'Salvar Alterações' : 'Criar Curso' }}">
-                        <!-- Falta ter um aviso de "curso criado" -->
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
