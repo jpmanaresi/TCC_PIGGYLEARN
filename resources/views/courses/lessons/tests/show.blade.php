@@ -21,12 +21,12 @@
                     <button type="submit" class="btn btn-custom animated-button"  id="botaoAdicionarAula" >
                         Próxima >
                     </button>
-                    @if(isset($passed) && $passed == 1)
-                    <button type="submit" class="btn btn-custom animated-button"  id="botaoAdicionarAula" name="action" value="{{isset($passed) && $passed == 1 ? 1 : 0}}">
-                        Pular Teste >
-                    </button>
-                    @endif
-        </form>
+                </form>
+                @if(isset($passed) && $passed == 1)
+                <a class="btn btn-custom animated-button"  id="botaoAdicionarAula"  href="{{route('tests.end',['test'=>$test->id])}}">
+                    Pular Teste >
+                </a>
+                @endif
         </div>
     </div>
 </div>

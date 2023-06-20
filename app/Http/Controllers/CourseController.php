@@ -9,18 +9,20 @@ use App\Models\Lesson;
 use App\Models\Test;
 class CourseController extends Controller
 {
+
     public function index() {
-    
     $courses = Course::where('setvisible', '1')->get();
     
     return view('index', ['courses' => $courses]);
+    
     }
 
     public function calculator(){
         return view('calc');
     }
-    
+
     public function create(){
+        $user = auth()->user;
         $course = new Course();
         $lessons = collect([new Lesson()]);
 
@@ -67,6 +69,7 @@ class CourseController extends Controller
 
     public function update(Request $request)
 {
+    $user = auth()->user();
     $data=$request->all();
     $course = Course::findOrFail($data['id']);
 
@@ -114,7 +117,7 @@ class CourseController extends Controller
 }
 public function destroy($id)
     {
-        
+        $user = auth()->user();
         $course = Course::find($id);
 
         $course->delete();
@@ -124,6 +127,7 @@ public function destroy($id)
     }
 
     public function show($id) {
+
         $course = Course::findOrFail($id);
         $user = auth()->user();
     
@@ -209,9 +213,15 @@ public function destroy($id)
 
             $user = auth()->user();
             $courses = $user->courses;
-
+            $completedCourses = $user->user_courses()
+            ->where('completed', true)
+            ->get()->toArray();
+            $incompleteCourses = $user->user_courses()
+            ->where('completed', false)
+            ->get();
+            //return($completedCourses);
             return view('courses.dashboard', 
-                ['courses' => $courses]
+                ['courses' => $courses, 'completedCourses' => $completedCourses, 'incompleteCourses' => $incompleteCourses]
             );
 
         }
