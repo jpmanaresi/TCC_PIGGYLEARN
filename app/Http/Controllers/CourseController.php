@@ -22,7 +22,6 @@ class CourseController extends Controller
     }
 
     public function create(){
-        $user = auth()->user;
         $course = new Course();
         $lessons = collect([new Lesson()]);
 
