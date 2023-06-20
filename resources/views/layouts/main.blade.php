@@ -100,14 +100,14 @@
               Meus Cursos 
             </a>
           </div>
-          
+          @if (auth()->user()->usertype ==2)
           <div class="col-md-6">
             <a href="/courses/create" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start" > 
               <img id="botoesImg" src="/img/pencil-fill.svg" alt="Icone Editar">
               Criar Curso  
             </a>
           </div>
-          
+          @endif
           @endauth
           <div class="col-md-6">
             <a href="/calculator" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
