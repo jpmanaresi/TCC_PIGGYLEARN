@@ -21,7 +21,7 @@
 
                     <div class="text-start align-self-start">
                         <h2 id="tituloCreditosD">
-                            tituloInicialp
+                            Cursos criados por você
                         </h2>
                     </div>
 
