@@ -184,11 +184,17 @@ public function destroy($id)
                 ]);
             } else {
                 $nextLesson = Lesson::where('course_id', $course->id)
-                    ->whereDoesntHave('user_lessons', function ($query) use ($user) {
+                ->where(function ($query) use ($user) {
+                    $query->whereDoesntHave('user_lessons', function ($query) use ($user) {
                         $query->where('user_id', $user->id);
-                    })
-                    ->orderBy('seq')
-                    ->first();
+                    })->orWhereHas('user_lessons', function ($query) use ($user) {
+                        $query->where('user_id', $user->id)
+                            ->where('completed', false);
+                    });
+                })
+                ->orderBy('seq')
+                ->first();
+
     
                 return view('courses.show', [
                     'course' => $course,

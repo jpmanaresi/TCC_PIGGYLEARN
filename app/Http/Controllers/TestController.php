@@ -54,7 +54,7 @@ class TestController extends Controller
     $test = Test::findOrFail($id);
     $action = $request->input('action');
 
-    if ($action === 'Atualizar Prova') {
+    if ($action === 'Atualizar Avaliação') {
         $test->description = $request->input('description');
         $test->save();
 
@@ -80,7 +80,7 @@ class TestController extends Controller
         
         return view('courses.lessons.tests.show', ['course' => $test->lesson->course_id, 'lesson'=>$lesson, 'test' => $test, 'passed' =>$passed]);
     }
-    public function start($test){
+    public function start($course, $lesson, $test){
         $test= Test::findOrFail($test);
         $user= auth()->user();
         $user->user_tests()->syncWithoutDetaching([
