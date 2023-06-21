@@ -37,7 +37,7 @@
             </div>
 
             @csrf
-            <input form="validate-question" type="submit" class="btn btn-custom animated-button"value="Validar Resposta">
+            <input form="validate-question" type="submit" class="btn btn-custom animated-button"value="Validar Resposta" id="btnvalidar">
                     
         </div>
     </div>

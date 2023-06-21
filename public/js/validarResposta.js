@@ -47,7 +47,7 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('validate-question');
-    var button = document.getElementById('botaoAdicionarAula');
+    var button = document.getElementById('btnvalidar');
 
 
     button.addEventListener('click', function(event) {
