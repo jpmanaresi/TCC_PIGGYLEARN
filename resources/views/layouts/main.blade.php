@@ -137,7 +137,7 @@
           <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
           
           <p class="text-center align-middle">
-            <a href="\views\credit.blade.php" > 
+            <a href="/credits" > 
               Créditos á &copy; 2023 PiggyLearn Inc. 
             </a>
           </p>

@@ -73,3 +73,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 Route::get('/dashboard', [CourseController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 Auth::routes();
 
+/* Créditos */
+route::get('/credits', function () {
+    return view('credit');
+})->name('credits');
+
