@@ -28,7 +28,7 @@
                                     <Label id="tituloCriarCurso" >   Tempo </Label>
                                 </div>
 
-                                <select class="form-select" aria-label="Default select example" style="font-size: 14px" name = "tempo" id="time">
+                                <select class="form-select" aria-label="Default select example" style="font-size: 14px;margin-top: 9px;margin-bottom: 9px;" name = "tempo" id="time">
                                     <option value="3" name="3m" >3 Meses</option>
                                     <option value="6" name="6m" >6 Meses</option>
                                     <option value="12" name="1a" >1 Ano</option>
