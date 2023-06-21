@@ -143,9 +143,9 @@
                                         <td id="letraDashboard" class="text-center align-middle">
 
                                             <div class="d-flex justify-content-center align-items-center">
-                                                <a id="botaoEditar" class="btn btn-custom" href="/courses/{{$course['id']}}/edit">
-                                                    <img id="imgBotoes" src="/img/pencil-square.svg" alt="Ícone Editar" style="padding-bottom: 2px">
-                                                    <span>Editar</span>
+                                                <a id="botaoEditar" class="btn btn-custom" href="/courses/{{$course['id']}}/show">
+                                                    <img id="imgBotoes" src="\img\arrow-counterclockwise.svg" alt="Icone de Rever">
+                                                    <span>Rever</span>
                                                 </a>
                                             </div>
                                         </td>
