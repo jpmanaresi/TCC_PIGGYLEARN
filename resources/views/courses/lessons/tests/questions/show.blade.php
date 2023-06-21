@@ -7,9 +7,11 @@
 <div alt="container-CriarCurso" class="col-md-6 offset-md-3">
     <div id="corpoContainerCC" class="container">
         <div id="corpoCriarCurso"> 
-
             <div id="corpoTabela" class="col-md-12" id="description-container">
-                <p id="descricaoMostrarP" class="event-description">{{$question->title}}</h1>
+                <p id="descricaoMostrarP" class="event-description"> Questão {{$question->seq}}:</h1>
+            </div>
+            <div id="corpoTabela" class="col-md-12" id="description-container">
+                <p id="descricaoMostrarP" class="event-description">{{$question->question}}</h1>
             </div>
             
             <div class="container">
