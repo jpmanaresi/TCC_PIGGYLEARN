@@ -1,6 +1,6 @@
 @extends ('layouts.main')
 
-@section('title', $question->title) 
+@section('title', ' PL - Questão '.$question->seq) 
 
 @section('content')
 
