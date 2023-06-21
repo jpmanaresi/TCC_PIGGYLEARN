@@ -51,7 +51,7 @@
                     <div class="row align-items-center">
                         <div class="col text-center">
                             <h1 id="TituloTabelaDepoisD">
-                                Avaliação
+                                Resultados
                             </h1>
                         </div>
                     </div>

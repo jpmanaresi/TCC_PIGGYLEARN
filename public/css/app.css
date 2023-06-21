@@ -40,6 +40,15 @@
     border: 1px;
 } /* Questão Se for Errada */
 
+#imgBotoes {
+    padding-bottom: 2px;
+}
+
+
+
+
+
+
 /* main.blade */
 
     #mensagem {
@@ -87,7 +96,7 @@
             height: 50px;
             padding-top: 5px;
             background-color: #1c1b1d;
-            border: 0;
+            
         } /* Cor e borda */
 
         #botoesEntrarNav.btn-custom {
@@ -137,7 +146,7 @@
         #sidebar-linhaCima.btn-custom {
             background-color: #1c1b1d;
             height: 50px;
-            border: 0;
+            
         } /* Barra superior  */
 
         #imgOpcoes {
@@ -204,8 +213,8 @@
     } /* Index2 = Sem Destaque */
         
     #cardBodyIndex1 {
-        border: 0;
         border-radius: 10px;
+        border: none;
         font-weight: bold;
         padding-left: 3px;
         padding-bottom: 3px;
@@ -230,7 +239,7 @@
     } /* Tirando o sublinhado azul da descrição? */
 
     #cardBodyIndex2 {
-        border: 0;
+        
         border-radius: 10px;
         font-weight: normal;
         padding-left: 3px;
@@ -360,7 +369,6 @@
             } /* Animação do botão de Entrar */
 
         #botaoEsqueciS.btn-custom {
-            
             color: #ffffff;
             font-style: italic;
             width: 80%;
@@ -395,7 +403,7 @@
         } /* Formatação do titulo do card */
 
         #cardLogin {
-            border: 0;
+            
             border-radius: 5px;
             padding: 0%;
             color: #ffffff; 
@@ -404,7 +412,7 @@
         } /* Formatação do header da caixa de login */
 
         #cardLogin2 {
-            border: 0;
+            
             border-radius: 5px;
             padding: 0%;
             color: #ffffff; 
@@ -450,7 +458,7 @@
     #botaoVoltar.btn-custom {
         background-color: #42129b;
         color: #ffffff;
-        padding: 6px;
+        padding: 4px;
         margin-top: 9px;
         margin-bottom: 9px;
     }
@@ -467,14 +475,12 @@
             width: 130px;
             background-color: #7e0a7e;
             color: #ffffff;
-            border: 0; 
         } /* Cor do botão criar Aula */ 
 
         #botaoAdicionarAula.btn-custom:hover {   
             background-color: #500d50;
             color: #ffffff;
             font-weight: bold;
-            border: 0; 
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         }   
@@ -511,14 +517,14 @@
         margin-top: 10px;
         margin-bottom: 5px;
         color: #ffffff;
-        border: 0; 
+         
     } /* Cor do botão criar Curso */ 
     
         #botaoCriarC.btn-custom:hover {  
             background-color: #008d6e;
             color: #ffffff;
             font-weight: bold;
-            border: 0;
+            
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         } /* Animação do botão criar Curso */ 
@@ -531,14 +537,14 @@
         margin-right: 5px;
         margin-bottom: 5px;
         color: #ffffff;
-        border: 0; 
+         
     } /* Cor do botão Criar Avaliação e Voltar */ 
 
         #botaoCriarAV.btn-custom:hover {  
             background-color: #25085a;;
             color: #ffffff;
             font-weight: bold;
-            border: 0;
+            
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         } /* Animação do botão Criar Avaliação e Voltar */        
@@ -548,40 +554,18 @@
         width: 130px;
         background-color: #7e0a7e;
         color: #ffffff;
-        border: 0; 
+         
     } /* Cor do botão criar Aula */ 
     
         #botaoAdicionarAula.btn-custom:hover {   
             background-color: #500d50;
             color: #ffffff;
             font-weight: bold;
-            border: 0; 
             transform: scale(1.01);
             transition: all 0.01s ease-in-out;
         } /* Animação do botão criar Aula */  
         
-        .animated-button {
-            background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
-            background-size: 200% 100%;
-            transition: background-position 0.5s;
-            animation: gradientAnimation 2s infinite;
-        } /* Animação do botão criar Aula */ 
-            
-        .animated-button:hover {
-            animation: gradientAnimation 2s infinite;
-    
-        }   @keyframes gradientAnimation {
-        0% {
-            background-position: right;
-        }
-        50% {
-            background-position: left;
-        }
-        100% {
-            background-position: right;
-        }
-        } /* Animação do botão criar Aula */ 
-        
+       
     #textoSemAula {
         margin: 10px;
         margin-top: 10px;
@@ -602,7 +586,7 @@
     } /* Corpo da Area dos Cursos */
 
     #corpoCriarCurso {
-        border: 0;
+        
         border-radius: 5px;
         font-weight: bold;
         margin: 9px;
@@ -610,7 +594,7 @@
         padding-left: 10px;
         padding-right: 10px;
         color: #ffffff; 
-        background: linear-gradient(270deg, rgba(255, 64, 129, 0.6) 0%, rgba(255, 64, 129, 0) 100%), #7C4DFF;
+        background: linear-gradient(to bottom right, rgb(188, 63, 212) 10%,rgb(39, 11, 110) 100%);
         box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.281);
     } /* Corpo do Criar Curso */
 
@@ -641,7 +625,7 @@
     } /* Centralizando o placeholder de criar questões */
 
     #tituloOpcoes {
-        text-align: start; 
+        align-self: center;
         font-size: 18px;
         padding: 5px; 
         font-weight: bold;
@@ -666,6 +650,65 @@
 
 /* courses */
 
+
+
+
+/* Show.blade - Mostrar Curso / Mostrar Aula / Mostrar Avaliação / Mostrar Questões */
+
+#tituloMostrarC {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 30px;
+    padding: 5px; 
+    font-weight: bold;
+} /* titulo Mostrar Curso */
+
+#descricaoMostrarT {
+    text-align: center;
+    font-size: 20px;
+} /* Mostar descrição Titulo */
+
+#descricaoMostrarP {
+    text-align: justify;
+    color: #000000;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 0px;
+} /* Mostar descrição Paragrafo */
+
+.incomplete {
+    opacity: 0.5; 
+} /* Defina o valor de opacidade dos conteudo incompletos */
+
+#botaoRever.btn-custom {
+    background-color: #7a4bd1;
+    color: #ffffff;
+    padding: 4px;
+    margin-top: 9px;
+     margin-bottom: 9px;
+} /* Cor do botão de rever */
+    
+    #botaoRever.btn-custom:hover {
+        background-color: #4b2d83;
+        color: #ffffff;
+        transform: scale(1.01);
+        transition: all 0.01s ease-in-out;
+    } /* Animação  do botão de rever */
+
+
+
+#botaoContinuar.btn-custom {
+
+}
+
+
+/* Show */
+
+
+
+
+
+
 /* calc.blade - Calculadora */
 
     #placeholderCalc {
@@ -682,6 +725,9 @@
     } /* Formatção do placeholder do Titulo da Calculadora caso o usuario não forneça numeros */
 
 /* Calculadora */
+
+
+
 
 
 /* dashboard.blade - Meus Cursos */
@@ -738,6 +784,9 @@
 
     #linkDashboard.custom-link-animation {
         margin: 0%;
+        font-size: 14px;
+        max-height: 15px;
+        word-wrap: break-word;
         font-weight: bold;
         text-transform: uppercase;
         text-decoration: none;
@@ -796,7 +845,7 @@
     } /* Formatação da Tabela */
 
     #corpoDash {
-        border: 0;
+        
         border-radius: 5px;
         padding-right: 20px;
         padding-left: 20px;

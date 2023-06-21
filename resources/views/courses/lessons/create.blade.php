@@ -55,11 +55,7 @@
                                 </a>
                             </div>
                     
-                            <div class="col text-center">
-                                <h1 id="TituloTabelaDepoisD">
-                                    Avaliação
-                                </h1>
-                            </div>
+                            
                     
                             <div class="col" style="padding-right: 0px;" alt="Coluna vazia pra deixar as coisas ajustadas"> </div>
                         </div>
