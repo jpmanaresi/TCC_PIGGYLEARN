@@ -166,7 +166,7 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                
                 
             </div>
             
@@ -177,6 +177,7 @@
 
                 <button id="botaoAdicionarAula" class="btn btn-custom animated-button" style="width: 160px;" type="submit" name="action" value="{{isset($question) ? 'update_and_new' : 'create_and_new'}}">Salvar e Criar Nova</button>
             </div>
+        </form>
         </div>
     </div>
 
