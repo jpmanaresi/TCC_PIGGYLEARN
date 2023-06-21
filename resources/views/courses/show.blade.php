@@ -123,8 +123,8 @@
                     @elseif( !isset($completed))
                     <!-- se o usuário COMEÇOU A FAZER o curso, MAS NÃO COMPLETOU -->
                     <div class="col d-flex justify-content-end" style="padding-right: 0px;">
-                        <a class="btn btn-custom animated-button" href="{{route('lessons.show',['course'=>$course->id, 'lesson'=> $nextlesson->id])}}">
-                            Continuar
+                        <a class="btn btn-custom animated-button mr-2" href="{{route('lessons.show',['course'=>$course->id, 'lesson'=> $nextlesson->id])}}">
+                            <span>Continuar</span>
                         </a>
                     </div>
 
