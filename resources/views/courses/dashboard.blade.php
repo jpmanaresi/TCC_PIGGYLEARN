@@ -205,7 +205,8 @@
 
                                             <div class="d-flex justify-content-center align-items-center">
                                                 <a id="botaoEditar" class="btn btn-custom" href="/courses/{{$course['id']}}/show">
-                                                    <span>Rever Curso</span>
+                                                    <img id="imgBotoes" src="\img\arrow-counterclockwise.svg" alt="Icone de Rever">
+                                                    <span>Rever</span>
                                                 </a>
                                             </div>
                                         </td>

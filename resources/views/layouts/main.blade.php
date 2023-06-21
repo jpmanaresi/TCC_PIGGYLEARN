@@ -135,8 +135,12 @@
 
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3"> </ul>
-            <p class="text-center text-muted">
-            &copy; 2023 PiggyLearn, Inc </p>
+          
+          <p class="text-center align-middle">
+            <a href="\views\credit.blade.php" > 
+              Créditos á &copy; 2023 PiggyLearn Inc. 
+            </a>
+          </p>
         </footer>
 
       </div>
