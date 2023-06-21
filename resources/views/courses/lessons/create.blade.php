@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label id="descricaoCriarCurso" for="title">       Conteudo      </label>
+                        <label id="descricaoCriarCurso" for="title">       Conteúdo      </label>
                         <textarea name="content" id="placeholderDesc" class="form-control" placeholder="Qual o conteúdo desta aula?">@if (isset($lesson)){{$lesson->content}}@endif</textarea>
                     </div>
 
@@ -49,7 +49,7 @@
                         <div class="row align-items-center">
                     
                             <div class="col" style="padding-left: 0px;">
-                                <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                                <a id="botaoVoltar" class="btn btn-custom mr-2" href="{{route('courses.edit',['id' => $lesson->course_id])}}">
                                     <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
                                     <span>Voltar</span>
                                 </a>
