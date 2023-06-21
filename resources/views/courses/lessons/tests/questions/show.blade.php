@@ -20,7 +20,7 @@
                     <div class="form-group">
                         <form action="/validate-answer" method="POST" id="validate-question">
                             @csrf
-                            <meta name="csrf-token" content="{{ csrf_token() }}">
+                            <meta name="csrf-token" content="{f{ csrf_token() }}">
                             <input type="hidden" name="questionId" value="{{$question->id}}">
                     
                             <div class="row justify-content-center">

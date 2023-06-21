@@ -648,6 +648,7 @@
 
     #textoRespostaQ {
         padding-top: 6px;
+        word-wrap: break-word;
         color: #000000;
         margin-right: 18px;
         margin-left: 16px;
