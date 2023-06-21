@@ -41,7 +41,7 @@
               <a href="/login" id="botoesEntrarNav" class="btn btn-custom text-start" type="button" style=""> 
                 Login   
               </a>
-              <a href="/register" id="botoesCriarCoNav" class="btn btn-custom text-start animated-button" type="button" > 
+              <a href="/register" id="botoesCriarCoNav" class="btn btn-custom text-start animated-button" style="margin-top: 6px;" type="button" > 
                 Criar Conta   
               </a>
             </div>
