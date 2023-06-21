@@ -20,7 +20,7 @@
                     <div class="form-group">
                         
                             @csrf
-                            <meta name="csrf-token" content="{f{ csrf_token() }}">
+                            <meta name="csrf-token" content="{{ csrf_token() }}">
                             <input type="hidden" name="questionId" value="{{$question->id}}">
                             <div class = "container" id="alt_1">
                             <div class="row justify-content-left">
