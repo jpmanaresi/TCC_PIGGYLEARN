@@ -5,7 +5,8 @@
 
 #corpot
 {
-    margin-top: 8rem;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
 } /* Divisão entre o topo da pagina com o conteudo */
 
 #tituloInicialp
@@ -24,7 +25,20 @@
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
+
+.correctanswer {
+    background-color: #49e74986;
+    border-color: #16b81686;
+    border-style: solid;
+    border: 1px;
+} /* Questão Se for Certa */
   
+.wronganswer {
+    background-color: #e7494986;
+    border-color: #e91e1ebb;
+    border-style: solid;
+    border: 1px;
+} /* Questão Se for Errada */
 
 /* main.blade */
 
@@ -45,7 +59,7 @@
         
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         color: #fff;
-        animation: slideDown 0.5s forwards, fadeOut 0.5s 4s forwards;
+        animation: slideDown 0.5s forwards, fadeOut 0.5s 3s forwards;
         width: 300px;
         max-width: 90%;
     } /* Formataõ das mensagens */
@@ -304,7 +318,6 @@
         #botaoEntrar.btn-custom {
             background-color: #14b69b;
             color: #ffffff;
-            border: none;
             width: 100%;
             margin-bottom: 16px;
         } /* Cor do botão de Entrar */
@@ -320,7 +333,6 @@
         #botaoCriarCo2.btn-custom {
             background-color: #1aa891;
             color: #ffffff;
-            border: none;
             width: 100%;
         } /* Cor do botão de Entrar */
 
@@ -335,7 +347,6 @@
         #botaoCriarCo.btn-custom {
             background-color: #2d79d1;
             color: #ffffff;
-            border: none;
             width: 100%;
         } /* cor do botão de Criar Conta */
 
@@ -352,7 +363,6 @@
             
             color: #ffffff;
             font-style: italic;
-            border: none;
             width: 80%;
             margin-right: 9px;
             margin-bottom: 18px;
@@ -472,11 +482,14 @@
         .animated-button {
             background-image: linear-gradient(to left, #8b5bff, #ff4b8b);
             background-size: 200% 100%;
+            color: #ffffff;
             transition: background-position 0.5s;
             animation: gradientAnimation 2s infinite;
         } /* Animação do botão criar Aula */ 
         
         .animated-button:hover {
+            transform: scale(1.01);
+            transition: all 0.01s ease-in-out;
             animation: gradientAnimation 2s infinite;
 
         }   @keyframes gradientAnimation {
@@ -606,56 +619,69 @@
         padding-right: 0px;
     } /* Formatação do container */
 
-/* testes */
+    /* testes */
     
-#tituloCriarQ {
-    text-align: center; 
-    font-size: 18px;
-    padding: 5px; 
-    font-weight: bold;
-} /* Centralizando o titulo de criar questões */
+    #tituloCriarQ {
+        text-align: center; 
+        font-size: 18px;
+        padding: 5px; 
+        font-weight: bold;
+    } /* Centralizando o titulo de criar questões */
 
-#placeholderCriarQ.d-flex {
-    text-align: center; 
-    width: 130px; /* Ajuste o valor para aumentar ou diminuir o tamanho */
-    font-size: 14px;
-    padding: 5px; 
-    font-weight: bold;
-    position: fixed;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-} /* Centralizando o placeholder de criar questões */
+    #placeholderCriarQ.d-flex {
+        text-align: center; 
+        width: 130px; /* Ajuste o valor para aumentar ou diminuir o tamanho */
+        font-size: 14px;
+        padding: 5px; 
+        font-weight: bold;
+        position: fixed;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+    } /* Centralizando o placeholder de criar questões */
 
-#tituloOpcoes {
-    text-align: start; 
-    font-size: 18px;
-    padding: 5px; 
-    font-weight: bold;
-    color: #000000;
-} /* Titulo das opções */
+    #tituloOpcoes {
+        text-align: start; 
+        font-size: 18px;
+        padding: 5px; 
+        font-weight: bold;
+        color: #000000;
+    } /* Titulo das opções */
 
-#placeholderOpcoes {
-    border-color: #b4b4b4;
-    margin-bottom: 9px;
-} /* Placeholders das opções */
+    #placeholderOpcoes {
+        border-color: #b4b4b4;
+        margin-bottom: 9px;
+    } /* Placeholders das opções */
 
-#CheckAlternativaC  {
-    border-color: #000000;
-    margin-top: 0px;
-    margin-left: 9px;
-} /* Formatando o check de Alternativa Correta */  
+    #CheckAlternativaC  {
+        border-color: #000000;
+        margin-top: 0px;
+        margin-left: 9px;
+    } /* Formatando o check de Alternativa Correta */  
 
-#textoAlternativaC {
-    color: #000000;
-    margin-bottom: 0px;
-} /* Separando o texto da check de Alternativa Correta */  
-
+    #textoAlternativaC {
+        color: #000000;
+        margin-bottom: 0px;
+    } /* Separando o texto da check de Alternativa Correta */  
 
 /* courses */
 
+/* calc.blade - Calculadora */
 
+    #placeholderCalc {
+        font-weight: bold;
+        color: #000000;
+        font-size: 14px;
+        border-color: #b4b4b4;
+        margin-bottom: 9px;
+    } /* Formatção do placeholder do Titulo da Calculadora */
 
+    #placeholderCalc:invalid {
+        border-color: red;
+        background-color: rgba(255, 71, 71, 0.5);
+    } /* Formatção do placeholder do Titulo da Calculadora caso o usuario não forneça numeros */
+
+/* Calculadora */
 
 
 /* dashboard.blade - Meus Cursos */

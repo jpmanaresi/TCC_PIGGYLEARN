@@ -85,13 +85,20 @@
             </a>
           </div>
 
+          <div class="col-md-6">
+            <a href="/calculator" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
+              <img id="botoesImg" src="\img\calculator.svg" alt="Icone Perfil">
+                Calculadora
+            </a>
+          </div>
+
           @auth
-            <div class="col-md-6">
+           <!-- <div class="col-md-6">
               <a href="/profile" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
                 <img id="botoesImg" src="/img/file-person.svg" alt="Icone Perfil">
                 Meu Perfil
               </a>
-            </div>
+            </div> -->
 
             <div class="col-md-6">
               <a href="/dashboard" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
@@ -109,16 +116,10 @@
               </div>
             @endif
           @endauth
-
-          <div class="col-md-6">
-            <a href="/calculator" id="botoesMenus" class="btn btn-custom btn-block btn-lg text-start"> 
-              <img id="botoesImg" src="\img\calculator.svg" alt="Icone Perfil">
-                Calculadora
-            </a>
-          </div>
+      
         </div>
       </div>
-      
+
       <!-- Creditos -->
       <div class="container">
       

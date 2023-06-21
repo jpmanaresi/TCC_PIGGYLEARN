@@ -7,7 +7,7 @@
   <h1 id="tituloInicialp">
     Destaques
   </h1>
-
+  
   <div class="container">
       <div class="row">  
 
@@ -28,6 +28,8 @@
           </div>
 
         @endforeach       
+      </div>
+  </div>
 
 @endsection
 
