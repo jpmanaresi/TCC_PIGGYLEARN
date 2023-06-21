@@ -28,18 +28,12 @@
 
 .correctanswer {
     background-color: #49e74986;
-    border-color: #16b81686;
     color: #008d6e;
-    border-style: solid;
-    border: 1px;
 } /* Questão Se for Certa */
   
 .wronganswer {
     background-color: #e7494986;
-    border-color: #e91e1ebb;
     color: #a50000;
-    border-style: solid;
-    border: 1px;
 } /* Questão Se for Errada */
 
 #imgBotoes {
@@ -95,7 +89,7 @@
     /* NavBar (NB) */
 
         #nav.navbar {
-            height: 50px;
+            height: 60px;
             padding-top: 5px;
             background-color: #1c1b1d;
             
@@ -655,7 +649,8 @@
     #textoRespostaQ {
         padding-top: 6px;
         color: #000000;
-        margin-right: 14px;
+        margin-right: 18px;
+        margin-left: 16px;
     } /* texto Resposta Questão */
 
 /* courses */
