@@ -17,7 +17,7 @@
                     <div class="container">
                         <div class="row d-flex justify-content-center">
                             <label id="tituloCriarCurso"class="text-center">Valor</label>
-                            <input id="placeholderCalc" class="form-control text-center" style="margin-bottom: 0px" type="text" pattern="[0-9]+" placeholder="Digite o valor inicial da aplicação" aria-label="default input example" name="valorini">
+                            <input id="valorini" class="form-control text-center" style="margin-bottom: 0px" type="text" pattern="[0-9]+" placeholder="Digite o valor inicial da aplicação" aria-label="default input example" name="valorini">
                         </div>
                         
 
@@ -42,7 +42,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <input class="btn btn-custom animated-button" class="form-control" type="submit" value="Calcular"> 
+                                    <input class="btn btn-custom animated-button" class="form-control" type="submit" value="Calcular" id="calcular"> 
                                 </div>
                             </div>
                         </div>
@@ -65,10 +65,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input id="placeholderCalc" class="form-control" type="text" value="6.17" name="txpoupanca" aria-label="Disabled input example">
+                                    <input id="txpoupanca" class="form-control" type="text" value="6.17" name="txpoupanca" aria-label="Disabled input example">
                                 </div>
                                 <div class="col-md-8">
-                                    <input id="placeholderCalc" class="form-control" type="text" value="" disabled readonly>
+                                    <input id="valorpoupanca" class="form-control" type="text" value="" disabled readonly>
                                 </div>
                             </div>
                         </div>
@@ -81,10 +81,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input id="placeholderCalc" class="form-control" type="text" value="13.75" name="txselic" aria-label="Disabled input example">
+                                    <input id="txcdb" class="form-control" type="text" value="13.75" name="txcdb" aria-label="Disabled input example">
                                 </div>
                                 <div class="col-md-8">
-                                    <input id="placeholderCalc" class="form-control" type="text" value="" disabled readonly id="valorselic">
+                                    <input id="valorcdb" class="form-control" type="text" value="" disabled readonly>
                                 </div>
                             </div>
                         </div>
@@ -97,10 +97,10 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input id="placeholderCalc" class="form-control" type="text" value="11.26" name="txcdb" aria-label="Disabled input example">
+                                    <input id="txselic" class="form-control" type="text" value="11.26" name="txselic" aria-label="Disabled input example">
                                 </div>
                                 <div class="col-md-8">
-                                    <input id="placeholderCalc" class="form-control" type="text" value="" disabled readonly id="valorcdb">
+                                    <input id="valorselic" class="form-control" type="text" value="" disabled readonly >
                                 </div>
                             </div>
                         </div>
