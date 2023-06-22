@@ -14,13 +14,11 @@ class QuestionController extends Controller
     public function create ($course, $lesson, $id) {
         $test = Test::Find($id);
         $lesson = Lesson::Find($lesson);
-        //return ($test);
         return view('courses.lessons.tests.questions.create', ['course' => $test->lesson->course, 'lesson' => $lesson, 'test' => $test]);
     }
     public function edit ($test, $id) {
         $question = Question::Find($id);
         $test = Test::Find($test);
-        //return($question);
         return view('courses.lessons.tests.questions.create', ['test' => $test, 'question' => $question]);
     }
 
@@ -66,7 +64,6 @@ class QuestionController extends Controller
             'answer' => $request->answer,
         ]);
         $action= $request->action;
-        //return ($request);
         if ($action==='create_and_new'){
             return redirect()->route('questions.create', ['course' => $question->test->lesson->course, 'lesson' => $question->test->lesson, 'test' => $question->test]);
         }else{
@@ -77,7 +74,6 @@ class QuestionController extends Controller
     {
         $question = Question::find($id);
 
-        //return($test->lesson->course->id);
         $question->delete();
 
         return redirect()->route('tests.edit', 
@@ -139,8 +135,6 @@ public function next(Request $request){
         // Teste não passado, redirecionar para a lição atual
         $testcompleted = false;
     }
-    //return ($testcompleted);
-    //return($isTestPassed);
         //Redireciona para a rota end do teste.
         return redirect()->route('tests.end', ['test' => $test->id]);
     }
