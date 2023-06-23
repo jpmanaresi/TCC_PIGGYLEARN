@@ -45,8 +45,10 @@
                             <input type="hidden" name="completed" value="{{isset($completed) && $completed== true ? 1 : 0}}">
                             
                             <button type="submit" class="btn btn-custom animated-button">
-                                <img id="imgBotoes" src="\img\arrow-counterclockwise.svg" alt="Icone de Rever">
-                                <span>Rever Conteúdo</span>
+                                @if (!isset($completed) && $completed== true)
+                                <img id="imgBotoes" src="{{isset($completed) && $completed== true ? 1 : 0}}" alt="Icone de Rever">
+                                @endif
+                                <span>@if (isset($completed) && $completed== true) Continuar @else Rever Conteúdo @endif</span>
                             </button>
                         </form>
                     </div>

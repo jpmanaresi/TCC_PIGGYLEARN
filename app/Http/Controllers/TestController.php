@@ -119,14 +119,15 @@ class TestController extends Controller
         $user->user_lessons()->syncWithoutDetaching([
             $lesson->id => ['completed' => true]
         ]);
-        if ($nextLesson == 0) {
+        if ($nextLesson === 0 or $nextLesson === null) {
             $user->user_courses()->updateExistingPivot($lesson->course->id, ['completed' => true]);
             return redirect()->route('home')->with('msg', "Curso completo!");
-        }
+
         if($nextLesson->hasTest==true){
             $test = Test::where('lesson_id',$lesson->id)->first();
             return redirect()->route('tests.show', ['course'=> $lesson->course_id, 'lesson'=> $lesson->id, 'test'=>$test->id]);
         }
+    }
         return redirect()->route('lessons.show', ['course'=> $lesson->course_id, 'lesson' => $nextLesson->id]);
     } else {
         // Teste não passado, redirecionar para a lição atual
