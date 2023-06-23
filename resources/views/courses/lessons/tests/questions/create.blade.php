@@ -55,7 +55,7 @@
                         <div class="row align-items-center">
 
                             <div class="col" style="padding-left: 0px;">
-                                <a id="botaoVoltar" class="btn btn-custom" href="">
+                                <a id="botaoVoltar" class="btn btn-custom" href="{{route('tests.edit', ['lesson' => $test->lesson_id, 'test' =>$test->id])}}">
                                     <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
                                     <span>Voltar</span>
                                 </a>
