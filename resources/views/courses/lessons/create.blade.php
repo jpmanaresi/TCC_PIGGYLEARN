@@ -49,7 +49,7 @@
                         <div class="row align-items-center">
                     
                             <div class="col" style="padding-left: 0px;">
-                                <a id="botaoVoltar" class="btn btn-custom mr-2" href="{{route('courses.edit',['id'=>$lesson->course_id])}}">
+                                <a id="botaoVoltar" class="btn btn-custom mr-2" href="{{route('courses.edit',['id'=>$course->course_id])}}">
                                     <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
                                     <span>Voltar</span>
                                 </a>

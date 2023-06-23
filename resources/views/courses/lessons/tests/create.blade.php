@@ -44,17 +44,18 @@
                     <label id="descricaoCriarCurso" for="title">       Descrição                </label>
                     <textarea name="description" id="placeholderDesc" class="form-control" placeholder="Descrição">{{ isset($test) ? $test->description : '' }}</textarea>
                 </div>
-
                 @if (!isset($test))
                 <div class="container">
                     <div class="row align-items-center">
 
                         <div class="col" style="padding-left: 0px;">
-                            <a id="botaoVoltar" class="btn btn-custom mr-2" href="#">
+                            <a id="botaoVoltar" class="btn btn-custom mr-2" href="{{route('lessons.edit', ['course'=> $lesson->course_id,'lesson' => $lesson->id])}}">
                                 <img id="imgBotoes" src="\img\arrow-left-short.svg" alt="icone de voltar">
                                 <span>Voltar</span>
                             </a>
                         </div>
+
+                        
 
                         <div class="col d-flex justify-content-end" style="padding-right: 0px;">
                             <button id="botaoCriarAV" class="btn btn-custom" type="submit" name="action" value="create_test">
