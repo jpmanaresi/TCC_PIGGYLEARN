@@ -45,6 +45,7 @@
             }
             // Adicionar classe errada à resposta selecionada
             answer.parentNode.classList.add('wronganswer');
+            console.log(response)
           }
   
           var answerInputs = document.querySelectorAll('input[name="answer"]');
