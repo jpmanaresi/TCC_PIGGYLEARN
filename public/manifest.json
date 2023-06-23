@@ -1,16 +1,16 @@
 {
-    "name": "Laravel Package Tutorial",
-    "short_name": "LPT",
+    "name": "PiggyLearn",
+    "short_name": "PiggyLearn",
     "start_url": "/index.php",
-    "background_color": "#6777ef",
-    "description": "Tutorial of Laravel Package",
+    "background_color": "#7C4DFF",
+    "description": "Aprenda Educação Financeira!",
     "display": "fullscreen",
-    "theme_color": "#6777ef",
+    "theme_color": "#7C4DFF",
     "icons": [
         {
-            "src": "/img/PorquinhoLogo.svg",
+            "src": "/img/logo.png",
             "sizes": "512x512",
-            "type": "image/svg",
+            "type": "image/png",
             "purpose": "any maskable"
         }
     ]
