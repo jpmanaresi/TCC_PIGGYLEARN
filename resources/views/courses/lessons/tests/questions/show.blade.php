@@ -33,8 +33,8 @@
                         </div>
                         <div class = "container" id="alt_2">
                             <div class="row justify-content-left">
-                                <div style="margin-left: 4px;" value="alt_2" class="col-auto d-flex align-items-center" id="alt_2">
-                                    <input type="radio" name="answer" id="answer_2"  data-question-id="{{$question->id}}">
+                                <div style="margin-left: 4px;"  class="col-auto d-flex align-items-center" id="alt_2">
+                                    <input type="radio" name="answer" id="answer_2" value="alt_2" data-question-id="{{$question->id}}">
                                 
                                     <p id="textoRespostaQ" class="event-description">{{$question->alt_2}}</p>
                                 </div>
